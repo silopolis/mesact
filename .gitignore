@@ -1,5 +1,7 @@
 docs/build
 docs/source
+firmware
+manuals
 mesact/debian/.debhelper
 mesact/debian/debhelper*
 mesact/debian/mesact
@@ -7,3 +9,4 @@ mesact/debian/mesact
 *.xz
 *.buildinfo
 *.changes
+*.substvars
