@@ -1,0 +1,92 @@
+#!/usr/bin/env python3
+
+"""
+To Do:
+
+"""
+VERSION = '0.0.1'
+
+import sys, os
+from functools import partial
+
+from PyQt5 import QtCore, uic, QtWidgets
+from PyQt5.QtWidgets import (QApplication, QMainWindow, QMessageBox,
+	QDialog, qApp)
+from PyQt5.QtGui import QPixmap
+
+from libmesact.ui_mesact import Ui_MainWindow
+from libmesact import utilities
+from libmesact import buildcombos
+from libmesact import firmware
+
+class VersionError(QMainWindow):
+	def __init__(self):
+		super(VersionError, self).__init__()
+		print('wrong python version')
+		msgBox = QMessageBox()
+		msgBox.setIcon(QMessageBox.Warning)
+		msgBox.setWindowTitle('Version Error')
+		msgBox.setText('Python 3.6 or newer is required.\nYour Python is {}'.format(sys.version[0:3]))
+		msgBox.setStandardButtons(QMessageBox.Ok)
+		msgBox.exec()
+		sys.exit()
+
+class MainWindow(QMainWindow, Ui_MainWindow):
+	def __init__(self):
+		super().__init__()
+		self.setupUi(self) # needed to load Ui_MainWindow
+		self.trans = QtCore.QTranslator(self)
+		if os.path.split(sys.argv[0])[0] == '/usr/bin':
+			self.lib_path = '/usr/lib/libmesact'
+			self.firmware_path = '/usr/lib/libmesact'
+
+		if os.path.split(sys.argv[0])[0] == '.':
+			srcPath = os.path.split(os.path.realpath(sys.argv[0]))[0]
+			self.lib_path = os.path.join(srcPath, 'libmesact')
+			self.firmware_path = os.path.join(srcPath, 'firmware')
+
+		self.version = VERSION
+		self.emcVersion = '1.1'
+		self.setWindowTitle(f'Mesa Configuration Tool Version {self.version}')
+		self.board = ''
+		self.fw = firmware
+		buildcombos.build(self)
+		#self.helpInfo = helptext.descriptions
+
+		#buildmenus.build(self)
+
+		#self.extcmd = extcmd.extcmd()
+		#self.ladderOptionsList = utilities.plcOptions()
+		self.setupConnections()
+		self.show()
+		#utilities.checks(self)
+
+
+	def setupConnections(self):
+		self.configName.textChanged[str].connect(partial(utilities.configNameChanged, self))
+		self.boardCB.currentIndexChanged.connect(partial(utilities.boardChanged, self))
+		self.firmwareCB.currentIndexChanged.connect(partial(utilities.firmwareChanged, self))
+
+	def change_language(self, tf = None):
+		#print(self.sender().text())
+		if not tf:
+			QtWidgets.QApplication.instance().removeTranslator(self.trans)
+			self.retranslateUi(self)
+		else:
+			self.trans.load(os.path.join(self.lib_path, tf))
+			QtWidgets.QApplication.instance().installTranslator(self.trans)
+			self.retranslateUi(self)
+
+
+
+def main():
+	app = QApplication(sys.argv)
+	if float(sys.version[0:3]) < 3.6:
+		ex = VersionError()
+	else:
+		ex = MainWindow()
+	sys.exit(app.exec_())
+
+if __name__ == "__main__":
+	main()
+

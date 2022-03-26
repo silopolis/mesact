@@ -1,0 +1,33 @@
+halrun
+loadrt hostmot2
+loadrt hm2_eth board_ip=10.10.10.10
+
+halcmd show > 7i80HD-All.txt
+
+loadrt hm2_pci config="num_encoders=3 num_pwmgens=3 num_stepgens=3 sserial_port_0=0000"
+
+help.py
+python3 -m PyQt5.uic.pyuic -x help.ui -o help.py
+about.py
+python3 -m PyQt5.uic.pyuic -x about.ui -o about.py
+
+create a changelog file
+
+dch --create
+
+Ctrl o to write out then Ctrl x
+
+Append a new entry to the current changelog
+dch --append
+
+To change the version
+dch -v 1.0.0
+
+change to released Note: you must either change something or use Ctrl o to save.
+dch --release
+
+Dependencies to build a deb
+sudo apt install dh-python
+
+to build a deb from the top most directory
+dpkg-buildpackage -us -uc
