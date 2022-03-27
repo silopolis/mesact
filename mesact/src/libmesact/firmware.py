@@ -23,62 +23,118 @@ def d7i76e(parent):
 	return daughters
 
 def d7i80db_16(parent):
-	pass
 	daughters = {
+	'7i80db_16_7i76x1_7i85sx2D.bit':['7i76', '7i85s'],
+	'7i80db_16_7i76x3D.bit':['7i76', '7i76'],
+	'7i80db_16_7i77x4.bit':['7i77', '7i77'],
+	'7i80db_16_7i76x2_7i77x2D.bit':['7i76', '7i76'],
+	'7i80db_16_7i76x4D.bit':['7i76', '7i76'],
+	'7i80db_16_7i76x3.bit':['7i76', '7i76'],
+	'7i80db_16_7i77x2_7I74x1D.bit':['7i77', '7i77'],
 		}
 	return daughters
 
 def d7i80db_25(parent):
-	pass
 	daughters = {
+	'7i80db_25_7i74x4.bit':[False, False],
+	'7i80db_25_7i76x2_7i74x2.bit':['7i76', '7i76'],
+	'7i80db_25_7i76x2_7i74x2D.bit':['7i76', '7i76'],
+	'7i80db_25_7i76x2_7i77x2.bit':['7i76', '7i76'],
+	'7i80db_25_7i76x2_7i77x2D.bit':['7i76', '7i76'],
+	'7i80db_25_7i76x3.bit':['7i76', '7i76'],
+	'7i80db_25_7i76x3_7i74.bit':['7i76', '7i76'],
+	'7i80db_25_7i76x3_7i74D.bit':['7i76', '7i76'],
+	'7i80db_25_7i76x3D.bit':['7i76', '7i76'],
+	'7i80db_25_7i77x2_7i74x2.bit':['7i77', '7i77'],
+	'7i80db_25_7i77x2_7i74x2.bit':['7i77', '7i77'],
+	'7i80db_25_7i77x4.bit':['7i77', '7i77'],
+	'7i80db_25_7i77x4D.bit':['7i77', '7i77'],
 		}
 	return daughters
 
 def d7i80hd_16(parent):
-	pass
 	daughters = {
+	'7i80hd_16_st12.bit':['7i47', '7i47'],
+	'7i80hd_16_sv12.bit':['7i33', '7i33'],
+	'7i80hd_16_sv4_7i47s.bit':['7i33', '7i47s'],
+	'7i80hd_16_svss6_6.bit':['7i33', False],
+	'7i80hd_16_svst4_8.bit':['7i33', '7i47'],
+	'7i80hd_16_svst8_4.bit':['7i33', '7i47'],
 		}
 	return daughters
 
 def d7i80hd_25(parent):
-	pass
 	daughters = {
+	'7i80hd_25_st12.bit':['7i47', '7i47'],
+	'7i80hd_25_st18.bit':['7i47', '7i47'],
+	'7i80hd_25_sv12.bit':['7i33', '7i33'],
+	'7i80hd_25_sv4_7i47s.bit':['7i33', '7i47'],
+	'7i80hd_25_svss6_6.bit':['7i33', False],
+	'7i80hd_25_svss6_8.bit':['7i33', False],
+	'7i80hd_25_svss8_44.bit':['7i33', False],
+	'7i80hd_25_svss8_8.bit':['7i33', False],
+	'7i80hd_25_svst4_8.bit':['7i33', '7i47'],
+	'7i80hd_25_svst8_4.bit':['7i33', '7i47'],
 		}
 	return daughters
 
 def d7i92(parent):
 	pass
 	daughters = {
+	'7i92_7i76_7i74D.bit':['7i76', False],
+	'7i92_7i76_7i78D.bit':['7i76', '7i78'],
+	'7i92_7i76x1D.bit':['7i76', 'False'],
+	'7i92_7i76x2D.bit':['7i76', '7i76'],
+	'7i92_7i77_7i74D.bit':['7i77', False],
+	'7i92_7i77_7i76D.bit':['7i77', '7i76'],
 		}
 	return daughters
 
 def d7i93(parent):
 	pass
 	daughters = {
+	'7i93_sv8d.bit':['7i33', '7i33'],
+	'7i93_svrm6.bit':['7i33', False],
+	'7i93_svss4_5d.bit':['7i33', False],
+	'7i93_svss4_8d.bit':['7i33', False],
+	'7i93_svss6_6d.bit':['7i33', False],
+	'7i93_svss6_8d.bit':['7i33', False],
+	'7i93_svst4_12d.bit':['7i33', '7i47'],
+	'7i93_svst4_4d.bit':['7i33', '7i47'],
 		}
 	return daughters
 
 def d7i95(parent):
 	pass
 	daughters = {
+	'':['', ''],
 		}
 	return daughters
 
 def d7i96(parent):
 	pass
 	daughters = {
+	'7i96_7i76d.bit':['7i76', False],
+	'7i96_7i76d.pin':['7i76', False],
+	'7i96_7i77d.bit':['7i77', False],
+	'7i96_7i78d.bit':['7i78', False],
+	'7i96_7i78d.pin':['7i78', False],
+	'7i96_7i85d.bit':['7i85', False],
+	'7i96_7i89d.bit':['7i89', False],
 		}
 	return daughters
 
 def d7i97(parent):
 	pass
 	daughters = {
+	'':['', ''],
 		}
 	return daughters
 
 def d7i98(parent):
 	pass
 	daughters = {
+	'7i98_7i77_7i74d.bit':['7i77', False],
 		}
 	return daughters
 

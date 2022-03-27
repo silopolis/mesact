@@ -57,6 +57,7 @@ def boardChanged(parent):
 					parent.firmwareCB.addItem(os.path.basename(file), file)
 			parent.machinePTE.appendPlainText(f'Firmware for {parent.boardCB.currentText()} Loaded')
 			parent.machinePTE.appendPlainText('Select Firmware for Daughter Cards')
+			parent.machinePTE.appendPlainText('Not all Firmware has a dictionary entry for Daughter Cards')
 		else:
 			parent.machinePTE.appendPlainText(f'No Firmware found {parent.boardCB.currentText()}!')
 			parent.machinePTE.appendPlainText(f'No Daughter Cards are available for {parent.boardCB.currentText()}')
@@ -100,6 +101,16 @@ def boardChanged(parent):
 			parent.boardLB.setPixmap(pixmap)
 			parent.daughterLB_0.setText('P1 Daughter Card')
 			parent.daughterLB_1.setText('P2 Daughter Card')
+			instructions = (
+			'Firmware Notes\n'
+			'SV = Servo\n'
+			'ST = Step\n'
+			'SS = SmartSerial\n'
+			'RM = Resolver\n'
+			'FA = Fanuc Absolute\n'
+			'BI = BISS\n'
+			'UA = UART\n')
+			parent.machinePTE.appendPlainText(instructions)
 
 		elif parent.boardCB.currentData() == '7i80hd_25':
 			parent.ipAddressCB.setEnabled(True)
@@ -107,6 +118,16 @@ def boardChanged(parent):
 			parent.boardLB.setPixmap(pixmap)
 			parent.daughterLB_0.setText('P1 Daughter Card')
 			parent.daughterLB_1.setText('P2 Daughter Card')
+			instructions = (
+			'Firmware Notes\n'
+			'SV = Servo\n'
+			'ST = Step\n'
+			'SS = SmartSerial\n'
+			'RM = Resolver\n'
+			'FA = Fanuc Absolute\n'
+			'BI = BISS\n'
+			'UA = UART\n')
+			parent.machinePTE.appendPlainText(instructions)
 
 		elif parent.boardCB.currentData() == '7i92':
 			parent.ipAddressCB.setEnabled(True)
