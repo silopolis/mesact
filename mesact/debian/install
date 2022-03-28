@@ -1,7 +1,7 @@
 src/mesact usr/bin
 src/mesact.ui usr/lib/lib7i76e
 src/libmesact/*.qm usr/lib/libmesact
-src/libmesact/*.png usr/lib/libmesact
+src/images/*.png usr/lib/libmesact
 src/libmesact/*.py usr/lib/python3/dist-packages/libmesact
 src/firmware/5i25/*.* usr/lib/libmesact/5i25
 src/firmware/7i76e/*.* usr/lib/libmesact/7i76e
