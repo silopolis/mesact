@@ -13,6 +13,6 @@ src/firmware/7i92/*.* usr/lib/libmesact/7i92
 src/firmware/7i93/*.* usr/lib/libmesact/7i93
 src/firmware/7i95/*.* usr/lib/libmesact/7i95
 src/firmware/7i96/*.* usr/lib/libmesact/7i96
-#src/firmware/7i97/*.* usr/lib/libmesact/7i97
+src/firmware/7i97/*.* usr/lib/libmesact/7i97
 src/firmware/7i98/*.* usr/lib/libmesact/7i98
 *.desktop usr/share/applications
