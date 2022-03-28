@@ -39,11 +39,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		if os.path.split(sys.argv[0])[0] == '/usr/bin':
 			self.lib_path = '/usr/lib/libmesact'
 			self.firmware_path = '/usr/lib/libmesact'
+			self.image_path = '/usr/lib/libmesact'
 
 		if os.path.split(sys.argv[0])[0] == '.':
 			srcPath = os.path.split(os.path.realpath(sys.argv[0]))[0]
 			self.lib_path = os.path.join(srcPath, 'libmesact')
 			self.firmware_path = os.path.join(srcPath, 'firmware')
+			self.image_path = os.path.join(srcPath, 'images')
 
 		self.version = VERSION
 		self.emcVersion = '1.1'
@@ -51,6 +53,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		self.board = ''
 		self.fw = firmware
 		buildcombos.build(self)
+		utilities.images(self)
 		#self.helpInfo = helptext.descriptions
 
 		#buildmenus.build(self)
@@ -66,6 +69,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		self.configName.textChanged[str].connect(partial(utilities.configNameChanged, self))
 		self.boardCB.currentIndexChanged.connect(partial(utilities.boardChanged, self))
 		self.firmwareCB.currentIndexChanged.connect(partial(utilities.firmwareChanged, self))
+
+
 
 	def change_language(self, tf = None):
 		#print(self.sender().text())

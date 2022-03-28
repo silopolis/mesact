@@ -63,11 +63,12 @@ def boardChanged(parent):
 			parent.machinePTE.appendPlainText(f'No Daughter Cards are available for {parent.boardCB.currentText()}')
 
 		if parent.boardCB.currentData() == '5i25':
+			parent.boardTW.setTabText(0, '5i25')
 			parent.ipAddressCB.setEnabled(False)
 			parent.daughterCB_0.setEnabled(True)
 			parent.daughterCB_1.setEnabled(True)
 			parent.ipAddressCB.setCurrentIndex(0)
-			pixmap = QPixmap(os.path.join(parent.lib_path, '5i25.png'))
+			pixmap = QPixmap(os.path.join(parent.image_path, '5i25-card.png'))
 			parent.boardLB.setPixmap(pixmap)
 			info = ('')
 			parent.boardInfoLB.setText(info)
@@ -75,29 +76,33 @@ def boardChanged(parent):
 			parent.daughterLB_1.setText('P3 Daughter Card')
 
 		elif parent.boardCB.currentData() == '7i76e':
+			parent.boardTW.setTabText(0, '7i76e')
 			parent.ipAddressCB.setEnabled(True)
-			pixmap = QPixmap(os.path.join(parent.lib_path, '7i76e.png'))
+			pixmap = QPixmap(os.path.join(parent.image_path, '7i76e-card.png'))
 			parent.boardLB.setPixmap(pixmap)
 			parent.daughterLB_0.setText('P1 Daughter Card')
 			parent.daughterLB_1.setText('P2 Daughter Card')
 
 		elif parent.boardCB.currentData() == '7i80db_16':
+			parent.boardTW.setTabText(0, '7i80DB')
 			parent.ipAddressCB.setEnabled(True)
-			pixmap = QPixmap(os.path.join(parent.lib_path, '7i80db.png'))
+			pixmap = QPixmap(os.path.join(parent.image_path, '7i80db-card.png'))
 			parent.boardLB.setPixmap(pixmap)
 			parent.daughterLB_0.setText('J2 Daughter Card')
 			parent.daughterLB_1.setText('J3 Daughter Card')
 
 		elif parent.boardCB.currentData() == '7i80db_25':
+			parent.boardTW.setTabText(0, '7i80DB')
 			parent.ipAddressCB.setEnabled(True)
-			pixmap = QPixmap(os.path.join(parent.lib_path, '7i80db.png'))
+			pixmap = QPixmap(os.path.join(parent.image_path, '7i80db-card.png'))
 			parent.boardLB.setPixmap(pixmap)
 			parent.daughterLB_0.setText('J2 Daughter Card')
 			parent.daughterLB_1.setText('J3 Daughter Card')
 
 		elif parent.boardCB.currentData() == '7i80hd_16':
+			parent.boardTW.setTabText(0, '7i80HD')
 			parent.ipAddressCB.setEnabled(True)
-			pixmap = QPixmap(os.path.join(parent.lib_path, '7i80hd.png'))
+			pixmap = QPixmap(os.path.join(parent.image_path, '7i80hd-card.png'))
 			parent.boardLB.setPixmap(pixmap)
 			parent.daughterLB_0.setText('P1 Daughter Card')
 			parent.daughterLB_1.setText('P2 Daughter Card')
@@ -113,8 +118,9 @@ def boardChanged(parent):
 			parent.machinePTE.appendPlainText(instructions)
 
 		elif parent.boardCB.currentData() == '7i80hd_25':
+			parent.boardTW.setTabText(0, '7i80HD')
 			parent.ipAddressCB.setEnabled(True)
-			pixmap = QPixmap(os.path.join(parent.lib_path, '7i80hd.png'))
+			pixmap = QPixmap(os.path.join(parent.image_path, '7i80hd-card.png'))
 			parent.boardLB.setPixmap(pixmap)
 			parent.daughterLB_0.setText('P1 Daughter Card')
 			parent.daughterLB_1.setText('P2 Daughter Card')
@@ -130,43 +136,52 @@ def boardChanged(parent):
 			parent.machinePTE.appendPlainText(instructions)
 
 		elif parent.boardCB.currentData() == '7i92':
+			parent.boardTW.setTabText(0, '7i92')
 			parent.ipAddressCB.setEnabled(True)
-			pixmap = QPixmap(os.path.join(parent.lib_path, '7i92.png'))
+			pixmap = QPixmap(os.path.join(parent.image_path, '7i92-card.png'))
 			parent.boardLB.setPixmap(pixmap)
 			parent.daughterLB_0.setText('P1 Daughter Card')
 			parent.daughterLB_1.setText('P2 Daughter Card')
 
 		elif parent.boardCB.currentData() == '7i93':
+			parent.boardTW.setTabText(0, '7i93')
 			parent.ipAddressCB.setEnabled(True)
-			pixmap = QPixmap(os.path.join(parent.lib_path, '7i93.png'))
+			pixmap = QPixmap(os.path.join(parent.image_path, '7i93-card.png'))
 			parent.boardLB.setPixmap(pixmap)
 			parent.daughterLB_0.setText('P1 Daughter Card')
 			parent.daughterLB_1.setText('P2 Daughter Card')
 
 		elif parent.boardCB.currentData() == '7i95':
+			parent.boardTW.setTabText(0, '7i95')
 			parent.ipAddressCB.setEnabled(True)
-			pixmap = QPixmap(os.path.join(parent.lib_path, '7i95.png'))
+			pixmap = QPixmap(os.path.join(parent.image_path, '7i95-card.png'))
 			parent.boardLB.setPixmap(pixmap)
 			parent.daughterLB_0.setText('P1 Daughter Card')
 			parent.daughterLB_1.setText('N/A')
 
 		elif parent.boardCB.currentData() == '7i96':
+			parent.boardTW.setTabText(0, '7i96')
 			parent.ipAddressCB.setEnabled(True)
-			pixmap = QPixmap(os.path.join(parent.lib_path, '7i96.png'))
+			pixmap = QPixmap(os.path.join(parent.image_path, '7i96.-cardpng'))
 			parent.boardLB.setPixmap(pixmap)
 			parent.daughterLB_0.setText('P1 Daughter Card')
 			parent.daughterLB_1.setText('N/A')
 
 		elif parent.boardCB.currentData() == '7i97':
+			parent.boardTW.setTabText(0, '7i97')
 			parent.ipAddressCB.setEnabled(True)
-			pixmap = QPixmap(os.path.join(parent.lib_path, '7i97.png'))
+			pixmap = QPixmap(os.path.join(parent.image_path, '7i97-card.png'))
 			parent.boardLB.setPixmap(pixmap)
+			pixmap = QPixmap(os.path.join(parent.image_path, '7i97-schematic-0.png'))
+			parent.schematicLB_0.setPixmap(pixmap)
+
 			parent.daughterLB_0.setText('P1 Daughter Card')
 			parent.daughterLB_1.setText('N/A')
 
 		elif parent.boardCB.currentData() == '7i98':
+			parent.boardTW.setTabText(0, '7i98')
 			parent.ipAddressCB.setEnabled(True)
-			pixmap = QPixmap(os.path.join(parent.lib_path, '7i98.png'))
+			pixmap = QPixmap(os.path.join(parent.image_path, '7i98-card.png'))
 			parent.boardLB.setPixmap(pixmap)
 			parent.daughterLB_0.setText('P1 Daughter Card')
 			parent.daughterLB_1.setText('P2 Daughter Card')
@@ -717,3 +732,10 @@ def add_menu(data, menu_obj):
 	else:
 		action = menu_obj.addAction(data)
 		action.setIconVisibleInMenu(False)
+
+def images(parent):
+	pixmap = QPixmap(os.path.join(parent.lib_path, '7i76.png'))
+	parent.card7i76LB.setPixmap(pixmap)
+	pixmap = QPixmap(os.path.join(parent.lib_path, '7i77.png'))
+	parent.card7i77LB.setPixmap(pixmap)
+
