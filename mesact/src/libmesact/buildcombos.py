@@ -29,8 +29,6 @@ def build(parent):
 	for item in boards:
 		parent.boardCB.addItem(item[0], item[1])
 
-	'''
-
 	ipAddress = [
 	['Select', False],
 	['10.10.10.10', '"10.10.10.10"'],
@@ -39,6 +37,8 @@ def build(parent):
 
 	for item in ipAddress:
 		parent.ipAddressCB.addItem(item[0], item[1])
+
+	'''
 
 	daughterCards = [
 	['Select', False],

@@ -53,7 +53,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		self.board = ''
 		self.fw = firmware
 		buildcombos.build(self)
-		utilities.images(self)
+		utilities.setup(self)
 		#self.helpInfo = helptext.descriptions
 
 		#buildmenus.build(self)
@@ -63,12 +63,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		self.setupConnections()
 		self.show()
 		#utilities.checks(self)
-
+		self.boardCB.setCurrentIndex(1)
+		self.firmwareCB.setCurrentIndex(1)
 
 	def setupConnections(self):
 		self.configName.textChanged[str].connect(partial(utilities.configNameChanged, self))
 		self.boardCB.currentIndexChanged.connect(partial(utilities.boardChanged, self))
 		self.firmwareCB.currentIndexChanged.connect(partial(utilities.firmwareChanged, self))
+		for i in range(2):
+			getattr(self, f'daughterCB_{i}').currentIndexChanged.connect(partial(utilities.daughterCardChanged, self))
 
 
 

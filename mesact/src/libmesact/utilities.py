@@ -63,6 +63,7 @@ def boardChanged(parent):
 			parent.machinePTE.appendPlainText(f'No Daughter Cards are available for {parent.boardCB.currentText()}')
 
 		if parent.boardCB.currentData() == '5i25':
+			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '5i25')
 			parent.ipAddressCB.setEnabled(False)
 			parent.daughterCB_0.setEnabled(True)
@@ -76,6 +77,9 @@ def boardChanged(parent):
 			parent.daughterLB_1.setText('P3 Daughter Card')
 
 		elif parent.boardCB.currentData() == '7i76e':
+			parent.mainTabs.setTabEnabled(3, True)
+			parent.cardTabs.setTabText(0, '7i76e')
+			parent.jointTabs_0.setTabEnabled(5, False)
 			parent.boardTW.setTabText(0, '7i76e')
 			parent.ipAddressCB.setEnabled(True)
 			pixmap = QPixmap(os.path.join(parent.image_path, '7i76e-card.png'))
@@ -84,6 +88,7 @@ def boardChanged(parent):
 			parent.daughterLB_1.setText('P2 Daughter Card')
 
 		elif parent.boardCB.currentData() == '7i80db_16':
+			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '7i80DB')
 			parent.ipAddressCB.setEnabled(True)
 			pixmap = QPixmap(os.path.join(parent.image_path, '7i80db-card.png'))
@@ -92,6 +97,7 @@ def boardChanged(parent):
 			parent.daughterLB_1.setText('J3 Daughter Card')
 
 		elif parent.boardCB.currentData() == '7i80db_25':
+			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '7i80DB')
 			parent.ipAddressCB.setEnabled(True)
 			pixmap = QPixmap(os.path.join(parent.image_path, '7i80db-card.png'))
@@ -100,6 +106,7 @@ def boardChanged(parent):
 			parent.daughterLB_1.setText('J3 Daughter Card')
 
 		elif parent.boardCB.currentData() == '7i80hd_16':
+			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '7i80HD')
 			parent.ipAddressCB.setEnabled(True)
 			pixmap = QPixmap(os.path.join(parent.image_path, '7i80hd-card.png'))
@@ -118,6 +125,7 @@ def boardChanged(parent):
 			parent.machinePTE.appendPlainText(instructions)
 
 		elif parent.boardCB.currentData() == '7i80hd_25':
+			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '7i80HD')
 			parent.ipAddressCB.setEnabled(True)
 			pixmap = QPixmap(os.path.join(parent.image_path, '7i80hd-card.png'))
@@ -136,6 +144,7 @@ def boardChanged(parent):
 			parent.machinePTE.appendPlainText(instructions)
 
 		elif parent.boardCB.currentData() == '7i92':
+			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '7i92')
 			parent.ipAddressCB.setEnabled(True)
 			pixmap = QPixmap(os.path.join(parent.image_path, '7i92-card.png'))
@@ -144,6 +153,7 @@ def boardChanged(parent):
 			parent.daughterLB_1.setText('P2 Daughter Card')
 
 		elif parent.boardCB.currentData() == '7i93':
+			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '7i93')
 			parent.ipAddressCB.setEnabled(True)
 			pixmap = QPixmap(os.path.join(parent.image_path, '7i93-card.png'))
@@ -152,6 +162,9 @@ def boardChanged(parent):
 			parent.daughterLB_1.setText('P2 Daughter Card')
 
 		elif parent.boardCB.currentData() == '7i95':
+			parent.mainTabs.setTabEnabled(3, True)
+			parent.cardTabs.setTabText(0, '7i95')
+			parent.jointTabs_0.setTabEnabled(5, True)
 			parent.boardTW.setTabText(0, '7i95')
 			parent.ipAddressCB.setEnabled(True)
 			pixmap = QPixmap(os.path.join(parent.image_path, '7i95-card.png'))
@@ -160,14 +173,20 @@ def boardChanged(parent):
 			parent.daughterLB_1.setText('N/A')
 
 		elif parent.boardCB.currentData() == '7i96':
+			parent.mainTabs.setTabEnabled(3, True)
+			parent.cardTabs.setTabText(0, '7i96')
+			parent.jointTabs_0.setTabEnabled(5, False)
 			parent.boardTW.setTabText(0, '7i96')
 			parent.ipAddressCB.setEnabled(True)
-			pixmap = QPixmap(os.path.join(parent.image_path, '7i96.-cardpng'))
+			pixmap = QPixmap(os.path.join(parent.image_path, '7i96-card.png'))
 			parent.boardLB.setPixmap(pixmap)
 			parent.daughterLB_0.setText('P1 Daughter Card')
 			parent.daughterLB_1.setText('N/A')
 
 		elif parent.boardCB.currentData() == '7i97':
+			parent.mainTabs.setTabEnabled(3, True)
+			parent.cardTabs.setTabText(0, '7i97')
+			parent.jointTabs_0.setTabEnabled(5, True)
 			parent.boardTW.setTabText(0, '7i97')
 			parent.ipAddressCB.setEnabled(True)
 			pixmap = QPixmap(os.path.join(parent.image_path, '7i97-card.png'))
@@ -179,6 +198,7 @@ def boardChanged(parent):
 			parent.daughterLB_1.setText('N/A')
 
 		elif parent.boardCB.currentData() == '7i98':
+			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '7i98')
 			parent.ipAddressCB.setEnabled(True)
 			pixmap = QPixmap(os.path.join(parent.image_path, '7i98-card.png'))
@@ -243,9 +263,53 @@ def firmwareChanged(parent):
 	else:
 		parent.machinePTE.clear()
 
-def cardChanged(parent):
-	#print(parent.sender().objectName())
 
+def daughterCardChanged(parent):
+	motherBoards = ['5i25', '7i80db', '7i80hd', '7i92', '7i93', '7i98' ]
+	axes = {'7i76': '5', '7i77': '6', '7i78': '4'}
+	stepper = ['7i76', '7i78']
+	servo = ['7i77']
+
+	if parent.sender().currentData():
+		if parent.sender().objectName() == 'daughterCB_0':
+			if parent.boardCB.currentData() in motherBoards:
+				parent.mainTabs.setTabEnabled(3, True)
+				parent.cardTabs.setTabText(0, parent.sender().currentData())
+				if axes[parent.sender().currentData()] == '6':
+					parent.jointTabs_0.setTabEnabled(4, True)
+					parent.jointTabs_0.setTabEnabled(5, True)
+				elif axes[parent.sender().currentData()] == '5':
+					parent.jointTabs_0.setTabEnabled(4, True)
+					parent.jointTabs_0.setTabEnabled(5, False)
+				elif axes[parent.sender().currentData()] == '4':
+					parent.jointTabs_0.setTabEnabled(4, False)
+					parent.jointTabs_0.setTabEnabled(5, False)
+
+		if parent.sender().objectName() == 'daughterCB_1':
+			if parent.boardCB.currentData() in motherBoards:
+				parent.mainTabs.setTabEnabled(3, True)
+				parent.cardTabs.setTabText(1, parent.sender().currentData())
+				parent.cardTabs.setCurrentIndex(1)
+				if axes[parent.sender().currentData()] == '6':
+					parent.jointTabs_1.setTabEnabled(4, True)
+					parent.jointTabs_1.setTabEnabled(5, True)
+				elif axes[parent.sender().currentData()] == '5':
+					parent.jointTabs_1.setTabEnabled(4, True)
+					parent.jointTabs_1.setTabEnabled(5, False)
+				elif axes[parent.sender().currentData()] == '4':
+					parent.jointTabs_1.setTabEnabled(4, False)
+					parent.jointTabs_1.setTabEnabled(5, False)
+
+		if parent.daughterCB_0.currentData():
+			parent.cardTabs.setTabEnabled(0, True)
+		else:
+			parent.cardTabs.setTabEnabled(0, False)
+		if parent.daughterCB_1.currentData():
+			parent.cardTabs.setTabEnabled(1, True)
+		else:
+			parent.cardTabs.setTabEnabled(1, False)
+
+	'''
 	if parent.daughterCB_0.currentText() != 'Select':
 		parent.mainTabs.setTabEnabled(2, True)
 	else:
@@ -310,6 +374,7 @@ def cardChanged(parent):
 				getattr(parent, f'p2_analogGB_{i}').setVisible(False)
 				getattr(parent, f'p2_encoderGB_{i}').setVisible(False)
 				getattr(parent, f'p2_stepgenGB_{i}').setVisible(True)
+	'''
 
 def connectorChanged(parent):
 	if parent.connectorCB.currentText() == 'P1':
@@ -733,7 +798,10 @@ def add_menu(data, menu_obj):
 		action = menu_obj.addAction(data)
 		action.setIconVisibleInMenu(False)
 
-def images(parent):
+def setup(parent):
+	parent.mainTabs.setTabEnabled(3, False)
+	for i in range(1,4):
+		parent.cardTabs.setTabEnabled(i, False)
 	pixmap = QPixmap(os.path.join(parent.lib_path, '7i76.png'))
 	parent.card7i76LB.setPixmap(pixmap)
 	pixmap = QPixmap(os.path.join(parent.lib_path, '7i77.png'))
