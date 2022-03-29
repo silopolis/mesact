@@ -901,7 +901,7 @@ QGroupBox::title {
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
-         <widget class="QTabWidget" name="tabWidget">
+         <widget class="QTabWidget" name="cardTabs">
           <property name="currentIndex">
            <number>0</number>
           </property>
