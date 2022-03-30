@@ -1,6 +1,5 @@
 docs/build
 docs/source
-firmware
 manuals
 mesact/debian/.debhelper
 mesact/debian/debhelper*
