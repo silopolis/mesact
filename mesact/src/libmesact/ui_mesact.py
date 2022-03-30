@@ -102,7 +102,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 914, 436))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 914, 412))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.scrollAreaWidgetContents)
         self.horizontalLayout.setObjectName("horizontalLayout")
@@ -14444,6 +14444,16 @@ class Ui_MainWindow(object):
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+        self.toolBar = QtWidgets.QToolBar(MainWindow)
+        self.toolBar.setStyleSheet("QToolBar{\n"
+"spacing: 5px;\n"
+"}\n"
+"QToolButton { \n"
+"    border: 1px solid #8f8f91;\n"
+"    border-radius: 6px;\n"
+"}")
+        self.toolBar.setObjectName("toolBar")
+        MainWindow.addToolBar(QtCore.Qt.TopToolBarArea, self.toolBar)
         self.actionOpen = QtWidgets.QAction(MainWindow)
         self.actionOpen.setObjectName("actionOpen")
         self.actionCheck = QtWidgets.QAction(MainWindow)
@@ -14465,6 +14475,9 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuFile.menuAction())
         self.menubar.addAction(self.menuConfig.menuAction())
         self.menubar.addAction(self.menuLanguage.menuAction())
+        self.toolBar.addAction(self.actionOpen)
+        self.toolBar.addAction(self.actionCheck)
+        self.toolBar.addAction(self.actionBuild)
 
         self.retranslateUi(MainWindow)
         self.mainTabs.setCurrentIndex(0)
@@ -17153,6 +17166,7 @@ class Ui_MainWindow(object):
         self.menuFile.setTitle(_translate("MainWindow", "File"))
         self.menuConfig.setTitle(_translate("MainWindow", "Tools"))
         self.menuLanguage.setTitle(_translate("MainWindow", "Language"))
+        self.toolBar.setWindowTitle(_translate("MainWindow", "toolBar"))
         self.actionOpen.setText(_translate("MainWindow", "Open .ini File"))
         self.actionCheck.setText(_translate("MainWindow", "Check Config"))
         self.actionBuild.setText(_translate("MainWindow", "Build Config"))

@@ -179,7 +179,7 @@ QGroupBox::title {
              <x>0</x>
              <y>0</y>
              <width>914</width>
-             <height>436</height>
+             <height>412</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout">
@@ -33913,6 +33913,29 @@ TB2 PIN	SIGNAL	CAT5 PIN	CAT5 568B COLOR
    <addaction name="menuLanguage"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QToolBar{
+spacing: 5px;
+}
+QToolButton { 
+    border: 1px solid #8f8f91;
+    border-radius: 6px;
+}</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="actionCheck"/>
+   <addaction name="actionBuild"/>
+  </widget>
   <action name="actionOpen">
    <property name="text">
     <string>Open .ini File</string>
