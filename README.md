@@ -27,3 +27,5 @@ Note: The Mesa requires LinuxCNC 2.8 Uspace or newer to work.
 [LinuxCNC 2.8](https://gnipsel.com/linuxcnc/uspace/debian10-emc.html)
 
 This has also been tested on Linux Mint 20.2
+
+Using Weblate.org to translate the text.
