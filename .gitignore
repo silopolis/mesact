@@ -1,5 +1,4 @@
 docs/build
-docs/source
 manuals
 mesact/debian/.debhelper
 mesact/debian/debhelper*
