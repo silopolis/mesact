@@ -31,3 +31,10 @@ sudo apt install dh-python
 
 to build a deb from the top most directory
 dpkg-buildpackage -us -uc
+
+QToolBar  QToolButton{
+border-width: 1px;
+border-style: outset;
+border-color: grey;
+border-radius: 25px;
+}
