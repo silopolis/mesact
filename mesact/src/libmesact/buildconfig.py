@@ -1,6 +1,28 @@
 import os, traceback
 
-def build(parent): # check for linuxcnc paths
+from libmesact import buildini
+from libmesact import buildhal
+from libmesact import buildio
+from libmesact import buildmisc
+from libmesact import buildss
+from libmesact import utilities
+
+def build(parent):
+
+	if not checkconfig.checkit(parent):
+		parent.machinePTE.appendPlainText('Build Failed')
+		return
+	if parent.backupCB.isChecked():
+		utilities.backupFiles(parent)
+	buildfiles.build(parent)
+	buildini.build(parent)
+	buildhal.build(parent)
+	buildio.build(parent)
+	buildmisc.build(parent)
+	buildss.build(parent)
+
+
+	# check for linuxcnc paths
 	if not os.path.exists(os.path.expanduser('~/linuxcnc')):
 		try:
 			os.mkdir(os.path.expanduser('~/linuxcnc'))
