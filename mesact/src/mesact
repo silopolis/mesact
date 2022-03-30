@@ -18,6 +18,8 @@ from libmesact.ui_mesact import Ui_MainWindow
 from libmesact import utilities
 from libmesact import buildcombos
 from libmesact import firmware
+from libmesact import loadini
+from libmesact import checkconfig
 
 class VersionError(QMainWindow):
 	def __init__(self):
@@ -51,6 +53,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		self.emcVersion = '1.1'
 		self.setWindowTitle(f'Mesa Configuration Tool Version {self.version}')
 		self.board = ''
+		self.boardType = ''
 		self.fw = firmware
 		buildcombos.build(self)
 		utilities.setup(self)
@@ -63,8 +66,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		self.setupConnections()
 		self.show()
 		#utilities.checks(self)
-		self.boardCB.setCurrentIndex(1)
-		self.firmwareCB.setCurrentIndex(1)
+		#self.boardCB.setCurrentIndex(1)
+		#self.firmwareCB.setCurrentIndex(1)
 
 	def setupConnections(self):
 		self.configName.textChanged[str].connect(partial(utilities.configNameChanged, self))
@@ -75,7 +78,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		self.actionEnglish.triggered.connect(partial(self.change_language, None))
 		self.actionGerman.triggered.connect(partial(self.change_language, 'eng-de'))
 		self.actionFrench.triggered.connect(partial(self.change_language, 'eng-fr'))
-
+		self.actionOpen.triggered.connect(partial(loadini.openini, self))
+		self.actionCheck.triggered.connect(partial(checkconfig.checkit, self))
+		#actionBuild
 
 
 	def change_language(self, translationFile = None):

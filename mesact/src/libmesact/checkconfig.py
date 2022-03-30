@@ -15,7 +15,13 @@ def checkit(parent):
 	if not parent.maxLinearVel.text():
 		tabError = True
 		configErrors.append('\tMaximum Linear Velocity must be set')
-	if parent.ipAddressCB.currentText() == 'Select':
+	if parent.boardCB.currentData() and not parent.firmwareCB.currentData():
+		tabError = True
+		configErrors.append(f'\tFirmware must be selected for {parent.board}')
+	if not parent.boardCB.currentData():
+		tabError = True
+		configErrors.append('\tA Board must be selected')
+	if parent.boardType == 'eth' and parent.ipAddressCB.currentText() == 'Select':
 		tabError = True
 		configErrors.append('\tAn IP address must be selected, 10.10.10.10 is recommended')
 

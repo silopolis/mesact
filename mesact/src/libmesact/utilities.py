@@ -73,6 +73,7 @@ def boardChanged(parent):
 			parent.machinePTE.appendPlainText(f'No Daughter Cards are available for {parent.boardCB.currentText()}')
 
 		if parent.boardCB.currentData() == '5i25':
+			parent.boardType = 'pci'
 			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '5i25')
 			parent.ipAddressCB.setEnabled(False)
@@ -87,6 +88,7 @@ def boardChanged(parent):
 			parent.daughterLB_1.setText('P3')
 
 		elif parent.boardCB.currentData() == '7i76e':
+			parent.boardType = 'eth'
 			parent.mainTabs.setTabEnabled(3, True)
 			parent.cardTabs.setTabText(0, '7i76e')
 			parent.jointTabs_0.setTabEnabled(5, False)
@@ -98,6 +100,7 @@ def boardChanged(parent):
 			parent.daughterLB_1.setText('P2')
 
 		elif parent.boardCB.currentData() == '7i80db_16':
+			parent.boardType = 'eth'
 			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '7i80DB')
 			parent.ipAddressCB.setEnabled(True)
@@ -107,6 +110,7 @@ def boardChanged(parent):
 			parent.daughterLB_1.setText('J3 Daughter Card')
 
 		elif parent.boardCB.currentData() == '7i80db_25':
+			parent.boardType = 'eth'
 			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '7i80DB')
 			parent.ipAddressCB.setEnabled(True)
@@ -116,6 +120,7 @@ def boardChanged(parent):
 			parent.daughterLB_1.setText('J3 Daughter Card')
 
 		elif parent.boardCB.currentData() == '7i80hd_16':
+			parent.boardType = 'eth'
 			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '7i80HD')
 			parent.ipAddressCB.setEnabled(True)
@@ -135,6 +140,7 @@ def boardChanged(parent):
 			parent.machinePTE.appendPlainText(instructions)
 
 		elif parent.boardCB.currentData() == '7i80hd_25':
+			parent.boardType = 'eth'
 			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '7i80HD')
 			parent.ipAddressCB.setEnabled(True)
@@ -154,6 +160,7 @@ def boardChanged(parent):
 			parent.machinePTE.appendPlainText(instructions)
 
 		elif parent.boardCB.currentData() == '7i92':
+			parent.boardType = 'eth'
 			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '7i92')
 			parent.ipAddressCB.setEnabled(True)
@@ -163,6 +170,7 @@ def boardChanged(parent):
 			parent.daughterLB_1.setText('P2')
 
 		elif parent.boardCB.currentData() == '7i93':
+			parent.boardType = 'eth'
 			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '7i93')
 			parent.ipAddressCB.setEnabled(True)
@@ -172,6 +180,7 @@ def boardChanged(parent):
 			parent.daughterLB_1.setText('P2')
 
 		elif parent.boardCB.currentData() == '7i95':
+			parent.boardType = 'eth'
 			parent.mainTabs.setTabEnabled(3, True)
 			parent.cardTabs.setTabText(0, '7i95')
 			parent.jointTabs_0.setTabEnabled(5, True)
@@ -183,6 +192,7 @@ def boardChanged(parent):
 			parent.daughterLB_1.setText('N/A')
 
 		elif parent.boardCB.currentData() == '7i96':
+			parent.boardType = 'eth'
 			parent.mainTabs.setTabEnabled(3, True)
 			parent.cardTabs.setTabText(0, '7i96')
 			parent.jointTabs_0.setTabEnabled(5, False)
@@ -194,6 +204,7 @@ def boardChanged(parent):
 			parent.daughterLB_1.setText('N/A')
 
 		elif parent.boardCB.currentData() == '7i97':
+			parent.boardType = 'eth'
 			parent.mainTabs.setTabEnabled(3, True)
 			parent.cardTabs.setTabText(0, '7i97')
 			parent.jointTabs_0.setTabEnabled(5, True)
@@ -208,6 +219,7 @@ def boardChanged(parent):
 			parent.daughterLB_1.setText('N/A')
 
 		elif parent.boardCB.currentData() == '7i98':
+			parent.boardType = 'eth'
 			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '7i98')
 			parent.ipAddressCB.setEnabled(True)
@@ -217,17 +229,19 @@ def boardChanged(parent):
 			parent.daughterLB_1.setText('P2')
 
 	else: # No Board Selected
-			parent.ipAddressCB.setEnabled(False)
-			parent.daughterCB_0.setEnabled(False)
-			parent.daughterCB_1.setEnabled(False)
-			parent.board = ''
-			parent.firmwareCB.clear()
-			parent.daughterLB_0.setText('N/A')
-			parent.daughterLB_1.setText('N/A')
-			parent.mainTabs.setTabText(2, 'N/A')
-			parent.mainTabs.setTabText(3, 'N/A')
-			parent.mainTabs.setTabEnabled(2, False)
-			parent.mainTabs.setTabEnabled(3, False)
+		parent.board = ''
+		parent.boardType = ''
+		parent.ipAddressCB.setEnabled(False)
+		parent.daughterCB_0.setEnabled(False)
+		parent.daughterCB_1.setEnabled(False)
+		parent.board = ''
+		parent.firmwareCB.clear()
+		parent.daughterLB_0.setText('N/A')
+		parent.daughterLB_1.setText('N/A')
+		parent.mainTabs.setTabText(2, 'N/A')
+		parent.mainTabs.setTabText(3, 'N/A')
+		parent.mainTabs.setTabEnabled(2, False)
+		parent.mainTabs.setTabEnabled(3, False)
 
 
 	'''
