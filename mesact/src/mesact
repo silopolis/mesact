@@ -72,18 +72,22 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		self.firmwareCB.currentIndexChanged.connect(partial(utilities.firmwareChanged, self))
 		for i in range(2):
 			getattr(self, f'daughterCB_{i}').currentIndexChanged.connect(partial(utilities.daughterCardChanged, self))
+		self.actionEnglish.triggered.connect(partial(self.change_language, None))
+		self.actionGerman.triggered.connect(partial(self.change_language, 'eng-de'))
+		self.actionFrench.triggered.connect(partial(self.change_language, 'eng-fr'))
 
 
 
-	def change_language(self, tf = None):
+	def change_language(self, translationFile = None):
 		#print(self.sender().text())
-		if not tf:
-			QtWidgets.QApplication.instance().removeTranslator(self.trans)
-			self.retranslateUi(self)
-		else:
-			self.trans.load(os.path.join(self.lib_path, tf))
+		if translationFile:
+			self.trans.load(os.path.join(self.lib_path, translationFile))
 			QtWidgets.QApplication.instance().installTranslator(self.trans)
 			self.retranslateUi(self)
+		else:
+			QtWidgets.QApplication.instance().removeTranslator(self.trans)
+			self.retranslateUi(self)
+
 
 
 

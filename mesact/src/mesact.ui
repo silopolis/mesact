@@ -98,7 +98,7 @@ QGroupBox::title {
            <item row="3" column="0">
             <widget class="QLabel" name="label_37">
              <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Max Linear Velocity&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>Max Linear Velocity</string>
              </property>
             </widget>
            </item>
@@ -33887,8 +33887,65 @@ TB2 PIN	SIGNAL	CAT5 PIN	CAT5 568B COLOR
      <height>24</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+   </widget>
+   <widget class="QMenu" name="menuConfig">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionCheck"/>
+    <addaction name="actionBuild"/>
+   </widget>
+   <widget class="QMenu" name="menuLanguage">
+    <property name="title">
+     <string>Language</string>
+    </property>
+    <addaction name="actionEnglish"/>
+    <addaction name="actionFrench"/>
+    <addaction name="actionGerman"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuConfig"/>
+   <addaction name="menuLanguage"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open .ini File</string>
+   </property>
+  </action>
+  <action name="actionCheck">
+   <property name="text">
+    <string>Check Config</string>
+   </property>
+  </action>
+  <action name="actionBuild">
+   <property name="text">
+    <string>Build Config</string>
+   </property>
+  </action>
+  <action name="actionEnglish">
+   <property name="text">
+    <string>English</string>
+   </property>
+  </action>
+  <action name="actionFrench">
+   <property name="text">
+    <string>Français</string>
+   </property>
+   <property name="iconText">
+    <string>Français</string>
+   </property>
+  </action>
+  <action name="actionGerman">
+   <property name="text">
+    <string>Deutsch</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
