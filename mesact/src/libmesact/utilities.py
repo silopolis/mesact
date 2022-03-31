@@ -86,6 +86,12 @@ def boardChanged(parent):
 			parent.boardInfoLB.setText(info)
 			parent.daughterLB_0.setText('P2')
 			parent.daughterLB_1.setText('P3')
+			parent.stepgensCB.clear()
+			parent.stepgensCB.addItem('N/A', False)
+			parent.pwmgensCB.clear()
+			parent.pwmgensCB.addItem('N/A', False)
+			parent.encodersCB.clear()
+			parent.encodersCB.addItem('N/A', False)
 
 		elif parent.boardCB.currentData() == '7i76e':
 			parent.boardType = 'eth'
@@ -98,6 +104,14 @@ def boardChanged(parent):
 			parent.boardLB.setPixmap(pixmap)
 			parent.daughterLB_0.setText('P1')
 			parent.daughterLB_1.setText('P2')
+			parent.stepgensCB.clear()
+			parent.stepgensCB.addItem('5', False)
+			for i in range(4, -1, -1):
+				parent.stepgensCB.addItem(f'{i}', f'{i}')
+			parent.pwmgensCB.clear()
+			parent.pwmgensCB.addItem('N/A', False)
+			parent.encodersCB.clear()
+			parent.encodersCB.addItem('N/A', False)
 
 		elif parent.boardCB.currentData() == '7i80db_16':
 			parent.boardType = 'eth'
@@ -108,6 +122,12 @@ def boardChanged(parent):
 			parent.boardLB.setPixmap(pixmap)
 			parent.daughterLB_0.setText('J2 Daughter Card')
 			parent.daughterLB_1.setText('J3 Daughter Card')
+			parent.stepgensCB.clear()
+			parent.stepgensCB.addItem('N/A', False)
+			parent.pwmgensCB.clear()
+			parent.pwmgensCB.addItem('N/A', False)
+			parent.encodersCB.clear()
+			parent.encodersCB.addItem('N/A', False)
 
 		elif parent.boardCB.currentData() == '7i80db_25':
 			parent.boardType = 'eth'
@@ -118,6 +138,12 @@ def boardChanged(parent):
 			parent.boardLB.setPixmap(pixmap)
 			parent.daughterLB_0.setText('J2 Daughter Card')
 			parent.daughterLB_1.setText('J3 Daughter Card')
+			parent.stepgensCB.clear()
+			parent.stepgensCB.addItem('N/A', False)
+			parent.pwmgensCB.clear()
+			parent.pwmgensCB.addItem('N/A', False)
+			parent.encodersCB.clear()
+			parent.encodersCB.addItem('N/A', False)
 
 		elif parent.boardCB.currentData() == '7i80hd_16':
 			parent.boardType = 'eth'
@@ -138,6 +164,12 @@ def boardChanged(parent):
 			'BI = BISS\n'
 			'UA = UART\n')
 			parent.machinePTE.appendPlainText(instructions)
+			parent.stepgensCB.clear()
+			parent.stepgensCB.addItem('N/A', False)
+			parent.pwmgensCB.clear()
+			parent.pwmgensCB.addItem('N/A', False)
+			parent.encodersCB.clear()
+			parent.encodersCB.addItem('N/A', False)
 
 		elif parent.boardCB.currentData() == '7i80hd_25':
 			parent.boardType = 'eth'
@@ -158,6 +190,12 @@ def boardChanged(parent):
 			'BI = BISS\n'
 			'UA = UART\n')
 			parent.machinePTE.appendPlainText(instructions)
+			parent.stepgensCB.clear()
+			parent.stepgensCB.addItem('N/A', False)
+			parent.pwmgensCB.clear()
+			parent.pwmgensCB.addItem('N/A', False)
+			parent.encodersCB.clear()
+			parent.encodersCB.addItem('N/A', False)
 
 		elif parent.boardCB.currentData() == '7i92':
 			parent.boardType = 'eth'
@@ -168,6 +206,11 @@ def boardChanged(parent):
 			parent.boardLB.setPixmap(pixmap)
 			parent.daughterLB_0.setText('P1')
 			parent.daughterLB_1.setText('P2')
+			parent.stepgensCB.clear()
+			parent.stepgensCB.addItem('N/A', False)
+			parent.pwmgensCB.clear()
+			parent.encodersCB.clear()
+			parent.encodersCB.addItem('N/A', False)
 
 		elif parent.boardCB.currentData() == '7i93':
 			parent.boardType = 'eth'
@@ -178,6 +221,12 @@ def boardChanged(parent):
 			parent.boardLB.setPixmap(pixmap)
 			parent.daughterLB_0.setText('P1')
 			parent.daughterLB_1.setText('P2')
+			parent.stepgensCB.clear()
+			parent.stepgensCB.addItem('N/A', False)
+			parent.pwmgensCB.clear()
+			parent.pwmgensCB.addItem('N/A', False)
+			parent.encodersCB.clear()
+			parent.encodersCB.addItem('N/A', False)
 
 		elif parent.boardCB.currentData() == '7i95':
 			parent.boardType = 'eth'
@@ -190,6 +239,14 @@ def boardChanged(parent):
 			parent.boardLB.setPixmap(pixmap)
 			parent.daughterLB_0.setText('P1')
 			parent.daughterLB_1.setText('N/A')
+			parent.stepgensCB.clear()
+			parent.stepgensCB.addItem('6', False)
+			for i in range(5, -1, -1):
+				parent.stepgensCB.addItem(f'{i}', f'{i}')
+			parent.pwmgensCB.clear()
+			parent.pwmgensCB.addItem('N/A', False)
+			parent.encodersCB.clear()
+			parent.encodersCB.addItem('N/A', False)
 
 		elif parent.boardCB.currentData() == '7i96':
 			parent.boardType = 'eth'
@@ -202,6 +259,14 @@ def boardChanged(parent):
 			parent.boardLB.setPixmap(pixmap)
 			parent.daughterLB_0.setText('P1')
 			parent.daughterLB_1.setText('N/A')
+			parent.stepgensCB.clear()
+			parent.stepgensCB.addItem('5', False)
+			for i in range(4, -1, -1):
+				parent.stepgensCB.addItem(f'{i}', f'{i}')
+			parent.pwmgensCB.clear()
+			parent.pwmgensCB.addItem('N/A', False)
+			parent.encodersCB.clear()
+			parent.encodersCB.addItem('N/A', False)
 
 		elif parent.boardCB.currentData() == '7i97':
 			parent.boardType = 'eth'
@@ -214,9 +279,18 @@ def boardChanged(parent):
 			parent.boardLB.setPixmap(pixmap)
 			pixmap = QPixmap(os.path.join(parent.image_path, '7i97-schematic-0.png'))
 			parent.schematicLB_0.setPixmap(pixmap)
-
 			parent.daughterLB_0.setText('P1')
 			parent.daughterLB_1.setText('N/A')
+			parent.stepgensCB.clear()
+			parent.stepgensCB.addItem('N/A', False)
+			parent.pwmgensCB.clear()
+			parent.pwmgensCB.addItem('6', False)
+			for i in range(5, -1, -1):
+				parent.pwmgensCB.addItem(f'{i}', f'{i}')
+			parent.encodersCB.clear()
+			parent.encodersCB.addItem('6', False)
+			for i in range(5, -1, -1):
+				parent.encodersCB.addItem(f'{i}', f'{i}')
 
 		elif parent.boardCB.currentData() == '7i98':
 			parent.boardType = 'eth'
@@ -227,6 +301,12 @@ def boardChanged(parent):
 			parent.boardLB.setPixmap(pixmap)
 			parent.daughterLB_0.setText('P1')
 			parent.daughterLB_1.setText('P2')
+			parent.stepgensCB.clear()
+			parent.stepgensCB.addItem('N/A', False)
+			parent.pwmgensCB.clear()
+			parent.pwmgensCB.addItem('N/A', False)
+			parent.encodersCB.clear()
+			parent.encodersCB.addItem('N/A', False)
 
 	else: # No Board Selected
 		parent.board = ''
@@ -242,6 +322,9 @@ def boardChanged(parent):
 		parent.mainTabs.setTabText(3, 'N/A')
 		parent.mainTabs.setTabEnabled(2, False)
 		parent.mainTabs.setTabEnabled(3, False)
+		parent.stepgensCB.clear()
+		parent.pwmgensCB.clear()
+		parent.encodersCB.clear()
 
 
 	'''

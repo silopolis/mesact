@@ -30,7 +30,7 @@ def checkit(parent):
 		nextHeader = len(configErrors)
 		tabError = False
 	# end of Machine Tab
-
+	'''
 	# check the Display Tab for errors
 	if parent.guiCB.currentText() == 'Select':
 		tabError = True
@@ -202,7 +202,7 @@ def checkit(parent):
 		tabError = False
 
 	# end of I/O Tab
-
+	'''
 
 	parent.machinePTE.clear()
 	if configErrors:

@@ -37,8 +37,8 @@ def openini(parent, configName = ''):
 		parent.machinePTE.appendPlainText('Open File Cancled')
 		iniFile = ''
 	if config.read(iniFile):
-		if config.has_option('7i92', 'VERSION'):
-			iniVersion = config['7i92']['VERSION']
+		if config.has_option('MESA', 'VERSION'):
+			iniVersion = config['MESA']['VERSION']
 			if iniVersion == parent.version:
 				loadini(parent, iniFile)
 			else:
@@ -56,8 +56,8 @@ def openini(parent, configName = ''):
 def loadini(parent, iniFile):
 	# Section, Item, Object Name
 	iniList = []
-	iniList.append(['7i92', 'CARD', 'cardCB'])
-	iniList.append(['7i92', 'CONNECTOR', 'connectorCB'])
+	iniList.append(['MESA', 'BOARD', 'boardCB'])
+	iniList.append(['MESA', 'FIRMWARE', 'firmwareCB'])
 
 	iniList.append(['EMC', 'MACHINE', 'configName'])
 
@@ -153,6 +153,7 @@ def loadini(parent, iniFile):
 
 #iniList.append(['', '', ''])
 	# iniList section, item, value
+	lookupText = ['DRIVE', 'FIRMWARE']
 	for item in iniList:
 		if config.has_option(item[0], item[1]):
 			if isinstance(getattr(parent, item[2]), QLabel):
@@ -169,7 +170,7 @@ def loadini(parent, iniFile):
 				getattr(parent, item[2]).setChecked(eval(config[item[0]][item[1]]))
 			elif isinstance(getattr(parent, item[2]), QComboBox):
 				index = getattr(parent, item[2]).findData(config[item[0]][item[1]])
-				if item[1] == 'DRIVE':
+				if item[1] in lookupText:
 					index = getattr(parent, item[2]).findText(config[item[0]][item[1]])
 				if index >= 0:
 					getattr(parent, item[2]).setCurrentIndex(index)

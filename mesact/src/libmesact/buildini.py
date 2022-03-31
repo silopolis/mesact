@@ -15,27 +15,32 @@ def build(parent):
 		except OSError:
 			parent.machinePTE.appendPlainText(f'OS error\n {traceback.print_exc()}')
 
-	iniContents = ['# This file was created with the 7i92 Configuration Tool on ']
+	iniContents = ['# This file was created with the Mesa Configuration Tool on ']
 	iniContents.append(datetime.now().strftime('%b %d %Y %H:%M:%S') + '\n')
 	iniContents.append('# Changes to most things are ok and will be read by the Configuration Tool\n')
 
-	# build the [7i92] section
-	iniContents.append('\n[7i92]\n')
+	# build the [Mesa] section
+	iniContents.append('\n[MESA]\n')
 	iniContents.append(f'VERSION = {parent.version}\n')
-	iniContents.append(f'CARD = {parent.cardCB.currentText()}\n')
-	iniContents.append(f'CONNECTOR = {parent.connectorCB.currentText()}\n')
+	iniContents.append(f'BOARD = {parent.boardCB.currentData()}\n')
+	iniContents.append(f'FIRMWARE = {parent.firmwareCB.currentText()}\n')
+	#iniContents.append(f'CARD = {parent.cardCB.currentText()}\n') daughterCB_0
+	#iniContents.append(f'CONNECTOR = {parent.connectorCB.currentText()}\n')
 
 	# build the [EMC] section
 	iniContents.append('\n[EMC]\n')
 	iniContents.append(f'VERSION = {parent.emcVersion}\n')
-	iniContents.append(f'MACHINE = {parent.configNameUnderscored}\n')
+	iniContents.append(f'MACHINE = {parent.configName.text()}\n')
 	iniContents.append(f'DEBUG = {parent.debugCB.currentData()}\n')
 
 	# build the [HOSTMOT2] section
 	iniContents.append('\n[HOSTMOT2]\n')
-	iniContents.append('DRIVER = hm2_eth\n')
-	iniContents.append(f'IPADDRESS = {parent.ipAddressCB.currentData()}\n')
-	iniContents.append('BOARD = 7i92\n')
+	if parent.boardType == 'eth':
+		iniContents.append('DRIVER = hm2_eth\n')
+		iniContents.append(f'IPADDRESS = {parent.ipAddressCB.currentData()}\n')
+	elif parent.boardType == 'pci':
+		iniContents.append('DRIVER = hm2_pci\n')
+	#iniContents.append('BOARD = 7i92\n') use MESA(BOARD)
 
 	# build the [DISPLAY] section maxFeedOverrideLE
 	iniContents.append('\n[DISPLAY]\n')
@@ -116,6 +121,7 @@ def build(parent):
 	# build the [HALUI] section
 	iniContents.append('\n[HALUI]\n')
 
+	'''
 	# build the axes
 	axes = []
 	for i in range(5):
@@ -309,6 +315,8 @@ def build(parent):
 		# 8 ss7i87in_
 		for i in range(8):
 			iniContents.append(f'SS_INPUT_{i} = {getattr(parent, "ss7i87in_" + str(i)).text()}\n')
+
+	'''
 
 	try:
 		with open(iniFilePath, 'w') as iniFile:

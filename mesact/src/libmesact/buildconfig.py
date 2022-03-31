@@ -1,5 +1,6 @@
 import os, traceback
 
+from libmesact import checkconfig
 from libmesact import buildini
 from libmesact import buildhal
 from libmesact import buildio
@@ -14,12 +15,6 @@ def build(parent):
 		return
 	if parent.backupCB.isChecked():
 		utilities.backupFiles(parent)
-	buildfiles.build(parent)
-	buildini.build(parent)
-	buildhal.build(parent)
-	buildio.build(parent)
-	buildmisc.build(parent)
-	buildss.build(parent)
 
 
 	# check for linuxcnc paths
@@ -47,5 +42,10 @@ def build(parent):
 		except OSError:
 			parent.machinePTE.appendPlainText(f'OS error\n {traceback.print_exc()}')
 
+	buildini.build(parent)
+	buildhal.build(parent)
+	#buildio.build(parent)
+	#buildmisc.build(parent)
+	#buildss.build(parent)
 
 

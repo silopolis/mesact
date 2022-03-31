@@ -179,7 +179,7 @@ QGroupBox::title {
              <x>0</x>
              <y>0</y>
              <width>914</width>
-             <height>412</height>
+             <height>378</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout">
@@ -242,80 +242,143 @@ QGroupBox::title {
           <property name="title">
            <string>Configuration Setup</string>
           </property>
-          <layout class="QGridLayout" name="gridLayout_26">
+          <layout class="QVBoxLayout" name="verticalLayout_18">
            <property name="topMargin">
             <number>15</number>
            </property>
-           <item row="1" column="2">
-            <widget class="QComboBox" name="ipAddressCB"/>
-           </item>
-           <item row="0" column="2">
-            <widget class="QComboBox" name="boardCB"/>
-           </item>
-           <item row="2" column="2">
-            <widget class="QComboBox" name="daughterCB_0"/>
-           </item>
-           <item row="3" column="2">
-            <widget class="QComboBox" name="daughterCB_1"/>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="daughterLB_0">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
+           <item>
+            <widget class="QTabWidget" name="tabWidget">
+             <property name="currentIndex">
+              <number>0</number>
              </property>
-             <property name="minimumSize">
-              <size>
-               <width>50</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="daughterLB_1">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QLabel" name="label_60">
-             <property name="text">
-              <string>Daughter Card</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
-            <widget class="QLabel" name="label_193">
-             <property name="text">
-              <string>Daughter Card</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0" colspan="2">
-            <widget class="QLabel" name="label_27">
-             <property name="text">
-              <string>IP Address</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0" colspan="2">
-            <widget class="QLabel" name="label_815">
-             <property name="text">
-              <string>Board</string>
-             </property>
+             <widget class="QWidget" name="tab_23">
+              <attribute name="title">
+               <string>Board</string>
+              </attribute>
+              <layout class="QGridLayout" name="gridLayout_38">
+               <item row="0" column="1">
+                <widget class="QLabel" name="label_815">
+                 <property name="text">
+                  <string>Board</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QComboBox" name="ipAddressCB"/>
+               </item>
+               <item row="2" column="1">
+                <widget class="QLabel" name="label_60">
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Daughter Card</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLabel" name="label_27">
+                 <property name="text">
+                  <string>IP Address</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QComboBox" name="boardCB"/>
+               </item>
+               <item row="2" column="2">
+                <widget class="QComboBox" name="daughterCB_0"/>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="daughterLB_0">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QLabel" name="label_193">
+                 <property name="text">
+                  <string>Daughter Card</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="2">
+                <widget class="QComboBox" name="daughterCB_1"/>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="daughterLB_1">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_24">
+              <attribute name="title">
+               <string>Options</string>
+              </attribute>
+              <layout class="QGridLayout" name="gridLayout_26">
+               <item row="0" column="1">
+                <widget class="QComboBox" name="stepgensCB"/>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_1501">
+                 <property name="text">
+                  <string>PWM Generators</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_1500">
+                 <property name="text">
+                  <string>Step Generators</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_1502">
+                 <property name="text">
+                  <string>Encoders</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QComboBox" name="pwmgensCB"/>
+               </item>
+               <item row="2" column="1">
+                <widget class="QComboBox" name="encodersCB"/>
+               </item>
+              </layout>
+             </widget>
             </widget>
            </item>
           </layout>

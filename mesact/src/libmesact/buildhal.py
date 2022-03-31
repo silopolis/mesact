@@ -2,15 +2,15 @@ import os
 from datetime import datetime
 
 def build(parent):
-	board = '7i92'
-	card = parent.cardCB.currentText()
-	port = parent.analogPort
+	board = parent.boardCB.currentData()
+	#card = parent.cardCB.currentText()
+	#port = parent.analogPort
 
 	halFilePath = os.path.join(parent.configPath, parent.configNameUnderscored + '.hal')
 	parent.machinePTE.appendPlainText(f'Building {halFilePath}')
 
 	halContents = []
-	halContents = ['# This file was created with the 7i95 Configuration Tool on ']
+	halContents = ['# This file was created with the Mesa Configuration Tool on ']
 	halContents.append(datetime.now().strftime('%b %d %Y %H:%M:%S') + '\n')
 	halContents.append('# If you make changes to this file DO NOT run the configuration tool again!\n')
 	halContents.append('# This file will be replaced with a new file if you do!\n\n')
@@ -23,11 +23,35 @@ def build(parent):
 	halContents.append('servo_period_nsec=[EMCMOT]SERVO_PERIOD ')
 	halContents.append('num_joints=[KINS]JOINTS\n\n')
 	halContents.append('# standard components\n')
-	halContents.append(f'loadrt pid num_chan={parent.axes + 1} \n\n')
+	#halContents.append(f'loadrt pid num_chan={parent.axes + 1} \n\n')
 	halContents.append('# hostmot2 driver\n')
 	halContents.append('loadrt hostmot2\n\n')
+
 	halContents.append('loadrt [HOSTMOT2](DRIVER) ')
-	halContents.append('board_ip=[HOSTMOT2](IPADDRESS) ')
+	if parent.boardType == 'eth':
+		halContents.append('board_ip=[HOSTMOT2](IPADDRESS) ')
+	config = False
+	if parent.stepgensCB.currentData():
+		config = True
+	elif parent.pwmgensCB.currentData():
+		config = True
+	elif parent.encodersCB.currentData():
+		config = True
+	if config:
+		halContents.append('config="')
+	if parent.encodersCB.currentData():
+		halContents.append('num_encoders=[HOSTMOT2](ENCODERS) ')
+	if parent.stepgensCB.currentData():
+		halContents.append('num_stepgens=[HOSTMOT2](STEPGENS) ')
+	if parent.pwmgensCB.currentData():
+		halContents.append('num_pwmgens=[HOSTMOT2](PWMS)')
+	if config:
+		halContents.append('"')
+	
+	
+	# loadrt [HOSTMOT2](DRIVER) config="num_encoders=1 num_pwmgens=0 num_stepgens=5 sserial_port_0=00xxxx"
+	halContents.append('loadrt [HOSTMOT2](DRIVER) ')
+
 
 	halContents.append(f'\nsetp hm2_{board}.0.watchdog.timeout_ns {parent.servoPeriodSB.value() * 5}\n')
 	halContents.append('\n# THREADS\n')
@@ -35,6 +59,7 @@ def build(parent):
 	halContents.append('addf motion-command-handler servo-thread\n')
 	halContents.append('addf motion-controller servo-thread\n')
 
+	'''
 	for i in range(parent.axes + 1):
 		halContents.append(f'addf pid.{i}.do-pid-calcs servo-thread\n')
 	halContents.append(f'addf hm2_{board}.0.write servo-thread\n')
@@ -182,6 +207,8 @@ def build(parent):
 		else:
 			halContents.append('loadrt classicladder_rt\n')
 		halContents.append('addf classicladder.0.refresh servo-thread 1\n')
+
+	'''
 
 	try:
 		with open(halFilePath, 'w') as halFile:
