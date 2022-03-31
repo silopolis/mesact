@@ -39,18 +39,22 @@ def build(parent):
 		config = True
 	if config:
 		halContents.append('config="')
-	if parent.encodersCB.currentData():
-		halContents.append('num_encoders=[HOSTMOT2](ENCODERS) ')
 	if parent.stepgensCB.currentData():
-		halContents.append('num_stepgens=[HOSTMOT2](STEPGENS) ')
+		halContents.append('num_stepgens=[HOSTMOT2](STEPGENS)')
+	if parent.encodersCB.currentData():
+		if parent.stepgensCB.currentData():
+			halContents.append(' ')
+		halContents.append('num_encoders=[HOSTMOT2](ENCODERS)')
 	if parent.pwmgensCB.currentData():
+		if parent.stepgensCB.currentData() or parent.encodersCB.currentData():
+			halContents.append(' ')
 		halContents.append('num_pwmgens=[HOSTMOT2](PWMS)')
 	if config:
-		halContents.append('"')
+		halContents.append('"\n')
 	
 	
 	# loadrt [HOSTMOT2](DRIVER) config="num_encoders=1 num_pwmgens=0 num_stepgens=5 sserial_port_0=00xxxx"
-	halContents.append('loadrt [HOSTMOT2](DRIVER) ')
+	#halContents.append('loadrt [HOSTMOT2](DRIVER) ')
 
 
 	halContents.append(f'\nsetp hm2_{board}.0.watchdog.timeout_ns {parent.servoPeriodSB.value() * 5}\n')

@@ -19,7 +19,7 @@ def build(parent):
 	iniContents.append(datetime.now().strftime('%b %d %Y %H:%M:%S') + '\n')
 	iniContents.append('# Changes to most things are ok and will be read by the Configuration Tool\n')
 
-	# build the [Mesa] section
+	# build the [MESA] section
 	iniContents.append('\n[MESA]\n')
 	iniContents.append(f'VERSION = {parent.version}\n')
 	iniContents.append(f'BOARD = {parent.boardCB.currentData()}\n')
@@ -40,6 +40,10 @@ def build(parent):
 		iniContents.append(f'IPADDRESS = {parent.ipAddressCB.currentData()}\n')
 	elif parent.boardType == 'pci':
 		iniContents.append('DRIVER = hm2_pci\n')
+	iniContents.append(f'STEPGENS = {parent.stepgensCB.currentData()}\n')
+	iniContents.append(f'PWMGENS = {parent.pwmgensCB.currentData()}\n')
+	iniContents.append(f'ENCODERS = {parent.encodersCB.currentData()}\n')
+
 	#iniContents.append('BOARD = 7i92\n') use MESA(BOARD)
 
 	# build the [DISPLAY] section maxFeedOverrideLE

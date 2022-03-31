@@ -2342,5 +2342,10 @@ TB2 PIN    SIGNAL    CAT5 PIN    CAT5 568B COLOR
         <source>Step Generators</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="ui_mesact.py" line="14551"/>
+        <source>Encoders</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

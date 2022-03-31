@@ -2,8 +2,8 @@ import os
 from datetime import datetime
 
 def build(parent):
-	card = parent.cardCB.currentText()
-	port = parent.ioPort
+	#card = parent.cardCB.currentText()
+	#port = parent.ioPort
 
 	filePath = os.path.join(parent.configPath, 'io.hal')
 	parent.machinePTE.appendPlainText(f'Building {filePath}')
@@ -11,7 +11,7 @@ def build(parent):
 	contents = ['# This file was created with the 7i92 Wizard on ']
 	contents.append(datetime.now().strftime('%b %d %Y %H:%M:%S') + '\n')
 	contents.append('# If you make changes to this file DO NOT use the Configuration Tool\n\n')
-
+	'''
 	input_dict = {
 		'Joint 0 Home':'net joint-0-home joint.0.home-sw-in <= ',
 		'Joint 1 Home':'net joint-1-home joint.1.home-sw-in <= ',
@@ -147,6 +147,7 @@ def build(parent):
 			if key == 'E Stop Out':
 				contents.append(f'net estop-loopin hm2_7i92.0.{card}.0.{port}.output-{i:02}\n')
 
+	'''
 
 	try:
 		with open(filePath, 'w') as f:

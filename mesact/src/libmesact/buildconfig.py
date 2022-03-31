@@ -44,8 +44,8 @@ def build(parent):
 
 	buildini.build(parent)
 	buildhal.build(parent)
-	#buildio.build(parent)
-	#buildmisc.build(parent)
+	buildio.build(parent)
+	buildmisc.build(parent)
 	#buildss.build(parent)
 
 
