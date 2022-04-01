@@ -65,7 +65,7 @@ def checkit(parent):
 		coordinates = parent.coordinatesLB.text()
 
 		for i in range(6): # Card
-			card = 'c0'
+			card = 'c0' # read card later
 			if getattr(parent, f'{card}_axisCB_{i}').currentText() != 'Select':
 				coordinates = coordinates[:1]
 				currentAxis = getattr(parent, f'{card}_axisCB_{i}').currentText()

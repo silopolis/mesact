@@ -125,20 +125,26 @@ def build(parent):
 	# build the [HALUI] section
 	iniContents.append('\n[HALUI]\n')
 
-	'''
+
 	# build the axes
+	card = 'c0' # read card later
 	axes = []
-	for i in range(5):
-		axis = getattr(parent, f'axisCB_{i}').currentData()
+	for i in range(6):
+		axis = getattr(parent, f'{card}_axisCB_{i}').currentData()
 		if axis and axis not in axes:
 			axes.append(axis)
-			jointTab = getattr(parent,'axisCB_' + str(i)).objectName()[7]
+			#jointTab = getattr(parent, f'{card}_axisCB_{i}')
 			iniContents.append(f'\n[AXIS_{axis}]\n')
-			iniContents.append(f'MIN_LIMIT = {getattr(parent, "minLimit_" + jointTab).text()}\n')
-			iniContents.append(f'MAX_LIMIT = {getattr(parent, "maxLimit_" + jointTab).text()}\n')
-			iniContents.append(f'MAX_VELOCITY = {getattr(parent, "maxVelocity_" + jointTab).text()}\n')
-			iniContents.append(f'MAX_ACCELERATION = {getattr(parent, "maxAccel_" + jointTab).text()}\n')
+			#print(getattr(parent, f'{card}_minLimit_{i}').text())
 
+			iniContents.append('MIN_LIMIT = ' + str(getattr(parent, f'{card}_minLimit_{i}').text()) + '\n')
+
+			iniContents.append('MAX_LIMIT = ')
+			iniContents.append(f'{getattr(parent, f"{card}_maxLimit_{i}").text()}\n')
+			iniContents.append(f'MAX_VELOCITY = {getattr(parent, card + "_maxVelocity_" + str(i)).text()}\n')
+			iniContents.append(f'MAX_ACCELERATION = {getattr(parent, card + "_maxAccel_" + str(i)).text()}\n')
+
+	'''
 	# build the [JOINT_n] sections
 	for i in range(parent.joints):
 		if getattr(parent, "axisCB_" + str(i)).currentData():
