@@ -74,6 +74,7 @@ def boardChanged(parent):
 
 		if parent.boardCB.currentData() == '5i25':
 			parent.boardType = 'pci'
+			parent.cardType_0 = ''
 			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '5i25')
 			parent.ipAddressCB.setEnabled(False)
@@ -93,8 +94,9 @@ def boardChanged(parent):
 			parent.encodersCB.clear()
 			parent.encodersCB.addItem('N/A', False)
 
-		elif parent.boardCB.currentData() == '7i76e':
+		elif parent.boardCB.currentData() == '7i76e': # 5 axes of step & dir
 			parent.boardType = 'eth'
+			parent.cardType_0 = 'step'
 			parent.mainTabs.setTabEnabled(3, True)
 			parent.cardTabs.setTabText(0, '7i76e')
 			parent.jointTabs_0.setTabEnabled(5, False)
@@ -112,9 +114,14 @@ def boardChanged(parent):
 			parent.pwmgensCB.addItem('N/A', False)
 			parent.encodersCB.clear()
 			parent.encodersCB.addItem('N/A', False)
+			for i in range(5):
+				getattr(parent, f'c0_stepgenGB_{i}').setVisible(True)
+				getattr(parent, f'c0_analogGB_{i}').setVisible(False)
+				getattr(parent, f'c0_encoderGB_{i}').setVisible(False)
 
 		elif parent.boardCB.currentData() == '7i80db_16':
 			parent.boardType = 'eth'
+			parent.cardType_0 = ''
 			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '7i80DB')
 			parent.ipAddressCB.setEnabled(True)
@@ -131,6 +138,7 @@ def boardChanged(parent):
 
 		elif parent.boardCB.currentData() == '7i80db_25':
 			parent.boardType = 'eth'
+			parent.cardType_0 = ''
 			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '7i80DB')
 			parent.ipAddressCB.setEnabled(True)
@@ -147,6 +155,7 @@ def boardChanged(parent):
 
 		elif parent.boardCB.currentData() == '7i80hd_16':
 			parent.boardType = 'eth'
+			parent.cardType_0 = ''
 			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '7i80HD')
 			parent.ipAddressCB.setEnabled(True)
@@ -173,6 +182,7 @@ def boardChanged(parent):
 
 		elif parent.boardCB.currentData() == '7i80hd_25':
 			parent.boardType = 'eth'
+			parent.cardType_0 = ''
 			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '7i80HD')
 			parent.ipAddressCB.setEnabled(True)
@@ -199,6 +209,7 @@ def boardChanged(parent):
 
 		elif parent.boardCB.currentData() == '7i92':
 			parent.boardType = 'eth'
+			parent.cardType_0 = ''
 			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '7i92')
 			parent.ipAddressCB.setEnabled(True)
@@ -214,6 +225,7 @@ def boardChanged(parent):
 
 		elif parent.boardCB.currentData() == '7i93':
 			parent.boardType = 'eth'
+			parent.cardType_0 = ''
 			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '7i93')
 			parent.ipAddressCB.setEnabled(True)
@@ -228,8 +240,9 @@ def boardChanged(parent):
 			parent.encodersCB.clear()
 			parent.encodersCB.addItem('N/A', False)
 
-		elif parent.boardCB.currentData() == '7i95':
+		elif parent.boardCB.currentData() == '7i95': # 6 axes of step & dir
 			parent.boardType = 'eth'
+			parent.cardType_0 = 'step'
 			parent.mainTabs.setTabEnabled(3, True)
 			parent.cardTabs.setTabText(0, '7i95')
 			parent.jointTabs_0.setTabEnabled(5, True)
@@ -247,9 +260,14 @@ def boardChanged(parent):
 			parent.pwmgensCB.addItem('N/A', False)
 			parent.encodersCB.clear()
 			parent.encodersCB.addItem('N/A', False)
+			for i in range(5):
+				getattr(parent, f'c0_stepgenGB_{i}').setVisible(True)
+				getattr(parent, f'c0_analogGB_{i}').setVisible(False)
+				getattr(parent, f'c0_encoderGB_{i}').setVisible(False)
 
-		elif parent.boardCB.currentData() == '7i96':
+		elif parent.boardCB.currentData() == '7i96': # 5 axes of step & dir
 			parent.boardType = 'eth'
+			parent.cardType_0 = 'step'
 			parent.mainTabs.setTabEnabled(3, True)
 			parent.cardTabs.setTabText(0, '7i96')
 			parent.jointTabs_0.setTabEnabled(5, False)
@@ -267,9 +285,14 @@ def boardChanged(parent):
 			parent.pwmgensCB.addItem('N/A', False)
 			parent.encodersCB.clear()
 			parent.encodersCB.addItem('N/A', False)
+			for i in range(5):
+				getattr(parent, f'c0_stepgenGB_{i}').setVisible(True)
+				getattr(parent, f'c0_analogGB_{i}').setVisible(False)
+				getattr(parent, f'c0_encoderGB_{i}').setVisible(False)
 
-		elif parent.boardCB.currentData() == '7i97':
+		elif parent.boardCB.currentData() == '7i97': # 6 axes of analog servo
 			parent.boardType = 'eth'
+			parent.cardType_0 = 'servo'
 			parent.mainTabs.setTabEnabled(3, True)
 			parent.cardTabs.setTabText(0, '7i97')
 			parent.jointTabs_0.setTabEnabled(5, True)
@@ -291,9 +314,14 @@ def boardChanged(parent):
 			parent.encodersCB.addItem('6', False)
 			for i in range(5, -1, -1):
 				parent.encodersCB.addItem(f'{i}', f'{i}')
+			for i in range(5):
+				getattr(parent, f'c0_stepgenGB_{i}').setVisible(False)
+				getattr(parent, f'c0_analogGB_{i}').setVisible(True)
+				getattr(parent, f'c0_encoderGB_{i}').setVisible(True)
 
 		elif parent.boardCB.currentData() == '7i98':
 			parent.boardType = 'eth'
+			parent.cardType_0 = ''
 			parent.mainTabs.setTabEnabled(3, False)
 			parent.boardTW.setTabText(0, '7i98')
 			parent.ipAddressCB.setEnabled(True)
@@ -491,6 +519,40 @@ def connectorChanged(parent):
 		parent.ioPort = '0'
 		parent.analogPort = '1'
 
+def updateAxisInfo(parent):
+	if parent.sender().objectName() == 'actionOpen':
+		return
+	card = parent.sender().objectName()[:2]
+	joint = parent.sender().objectName()[-1]
+	scale = getattr(parent, f'{card}_scale_' + joint).text()
+	if scale and isNumber(scale):
+		scale = float(scale)
+	else:
+		return
+
+	maxVelocity = getattr(parent, f'{card}_maxVelocity_' + joint).text()
+	if maxVelocity and isNumber(maxVelocity):
+		maxVelocity = float(maxVelocity)
+	else:
+		return
+
+	maxAccel = getattr(parent, f'{card}_maxAccel_' + joint).text()
+	if maxAccel and isNumber(maxAccel):
+		maxAccel = float(maxAccel)
+	else:
+		return
+
+	if not parent.linearUnitsCB.currentData():
+		parent.errorDialog('Machine Tab:\nLinear Units must be selected')
+		return
+	accelTime = maxVelocity / maxAccel
+	getattr(parent, f'{card}_timeJoint_' + joint).setText(f'{accelTime:.2f} seconds')
+	accelDistance = accelTime * 0.5 * maxVelocity
+	getattr(parent, f'{card}_distanceJoint_' + joint).setText(f'{accelDistance:.2f} {parent.linearUnitsCB.currentData()}')
+	stepRate = scale * maxVelocity
+	getattr(parent, f'{card}_stepRateJoint_' + joint).setText(f'{abs(stepRate):.0f} pulses')
+
+
 def axisChanged(parent):
 	connector = parent.sender().objectName()[:3]
 	joint = parent.sender().objectName()[-1]
@@ -503,19 +565,21 @@ def axisChanged(parent):
 		getattr(parent, f'{connector}axisType_{joint}').setText('')
 	coordList = []
 
-	for i in range(6): # P1
-		axisLetter = getattr(parent, f'p1_axisCB_{i}').currentText()
+	for i in range(6): # Card 0
+		axisLetter = getattr(parent, f'c0_axisCB_{i}').currentText()
 		if axisLetter != 'Select':
 			coordList.append(axisLetter)
 		parent.coordinatesLB.setText(''.join(coordList))
 		parent.axes = len(parent.coordinatesLB.text())
 
-	for i in range(6): # P2
-		axisLetter = getattr(parent, f'p2_axisCB_{i}').currentText()
+	'''
+	for i in range(6): # Card 1
+		axisLetter = getattr(parent, f'c1_axisCB_{i}').currentText()
 		if axisLetter != 'Select':
 			coordList.append(axisLetter)
 		parent.coordinatesLB.setText(''.join(coordList))
 		parent.axes = len(parent.coordinatesLB.text())
+	'''
 
 def maxVelChanged(parent, text):
 	if text:

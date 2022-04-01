@@ -30,7 +30,7 @@ def checkit(parent):
 		nextHeader = len(configErrors)
 		tabError = False
 	# end of Machine Tab
-	'''
+
 	# check the Display Tab for errors
 	if parent.guiCB.currentText() == 'Select':
 		tabError = True
@@ -57,89 +57,95 @@ def checkit(parent):
 	if len(parent.coordinatesLB.text()) == 0:
 		tabError = True
 		configErrors.append('\tAt least one Joint must be configured starting with Joint 0')
+
+
+
 	else: #check the joints
 		# make this a loop getattr(parent, f'_{i}')
 		coordinates = parent.coordinatesLB.text()
 
-		for i in range(6):
-			if getattr(parent, f'axisCB_{i}').currentText() != 'Select':
+		for i in range(6): # Card
+			card = 'c0'
+			if getattr(parent, f'{card}_axisCB_{i}').currentText() != 'Select':
 				coordinates = coordinates[:1]
-				currentAxis = getattr(parent, f"axisCB_{i}").currentText()
+				currentAxis = getattr(parent, f'{card}_axisCB_{i}').currentText()
 				if currentAxis in coordinates: # multiple joints on one axis
 					if i != coordinates.index(currentAxis):
-						if getattr(parent, f'homeSequence_{coordinates.index(currentAxis)}').text()[0] == '-':
+						if getattr(parent, f'{card}_homeSequence_{coordinates.index(currentAxis)}').text()[0] == '-':
 							firstJoint = True
 						else:
 							firstJoint = False
-						if getattr(parent, f'homeSequence_{i}').text()[0] == '-':
+						if getattr(parent, f'{card}_homeSequence_{i}').text()[0] == '-':
 							secondJoint = True
 						else:
 							secondJoint = False
 						if not firstJoint and not secondJoint:
 							configErrors.append(f'\tThe Home Sequence for a Gantry must be negative for at least one Joint')
 							configErrors.append(f'\tEither Joint {coordinates.index(currentAxis)} or Joint {i} must be negative')
-				if not getattr(parent, f'scale_{i}').text():
+
+				if not getattr(parent, f'{card}_scale_{i}').text():
 					tabError = True
 					configErrors.append(f'\tThe Scale must be specified for Joint {i}')
-				if not getattr(parent, f'minLimit_{i}').text():
+				if not getattr(parent, f'{card}_minLimit_{i}').text():
 					tabError = True
 					configErrors.append(f'\tThe Mininum Limit for Joint {i} must be specified')
-				if not getattr(parent, f'maxLimit_{i}').text():
+				if not getattr(parent, f'{card}_maxLimit_{i}').text():
 					tabError = True
 					configErrors.append(f'\tThe Maximum Limit for Joint {i} must be specified')
-				if not getattr(parent, f'maxVelocity_{i}').text():
+				if not getattr(parent, f'{card}_maxVelocity_{i}').text():
 					tabError = True
 					configErrors.append(f'\tThe Maximum Velocity for Joint {i} must be specified')
-				if not getattr(parent, f'maxAccel_{i}').text():
+				if not getattr(parent, f'{card}_maxAccel_{i}').text():
 					tabError = True
 					configErrors.append(f'\tThe Maximum Acceleration for Joint {i} must be specified')
-				if not getattr(parent, f'p_{i}').text():
+				if not getattr(parent, f'{card}_p_{i}').text():
 					tabError = True
 					configErrors.append(f'\tThe P for Joint {i} must be specified')
-				if not getattr(parent, f'i_{i}').text():
+				if not getattr(parent, f'{card}_i_{i}').text():
 					tabError = True
 					configErrors.append(f'\tThe I for Joint {i} must be specified')
-				if not getattr(parent, f'd_{i}').text():
+				if not getattr(parent, f'{card}_d_{i}').text():
 					tabError = True
 					configErrors.append(f'\tThe D for Joint {i} must be specified')
-				if not getattr(parent, f'ff0_{i}').text():
+				if not getattr(parent, f'{card}_ff0_{i}').text():
 					tabError = True
 					configErrors.append(f'\tThe FF0 for Joint {i} must be specified')
-				if not getattr(parent, f'ff1_{i}').text():
+				if not getattr(parent, f'{card}_ff1_{i}').text():
 					tabError = True
 					configErrors.append(f'\tThe FF1 for Joint {i} must be specified')
-				if not getattr(parent, f'ff2_{i}').text():
+				if not getattr(parent, f'{card}_ff2_{i}').text():
 					tabError = True
 					configErrors.append(f'\tThe FF2 for Joint {i} must be specified')
 				# stepper only checks
-				if parent.cardCB.currentText() == '7i76':
-					if not getattr(parent, f'stepTime_{i}').text():
+				if parent.cardType_0 == 'step':
+					if not getattr(parent, f'{card}_stepTime_{i}').text():
 						tabError = True
 						configErrors.append(f'\tThe Step Time for Joint {i} must be specified')
-					if not getattr(parent, f'stepSpace_{i}').text():
+					if not getattr(parent, f'{card}_stepSpace_{i}').text():
 						tabError = True
 						configErrors.append(f'\tThe Step Space for Joint {i} must be specified')
-					if not getattr(parent, f'dirSetup_{i}').text():
+					if not getattr(parent, f'{card}_dirSetup_{i}').text():
 						tabError = True
 						configErrors.append(f'\tThe Direction Setup for Joint {i} must be specified')
-					if not getattr(parent, f'dirHold_{i}').text():
+					if not getattr(parent, f'{card}_dirHold_{i}').text():
 						tabError = True
 						configErrors.append(f'\tThe Direction Hold for Joint {i} must be specified')
 				# servo only checks
-				if parent.cardCB.currentText() == '7i77':
-					if not getattr(parent, f'analogMinLimit_{i}').text():
+				if parent.cardType_0 == 'servo':
+					if not getattr(parent, f'{card}_analogMinLimit_{i}').text():
 						tabError = True
 						configErrors.append(f'\tThe Analog Min Limit for Joint {i} must be specified')
 					if not getattr(parent, f'analogMaxLimit_{i}').text():
 						tabError = True
 						configErrors.append(f'\tThe Analog Max Limit for Joint {i} must be specified')
-					if not getattr(parent, f'analogScaleMax_{i}').text():
+					if not getattr(parent, f'{card}_analogScaleMax_{i}').text():
 						tabError = True
 						configErrors.append(f'\tThe Analog Scale Max for Joint {i} must be specified')
-					if not getattr(parent, f'encoderScale_{i}').text():
+					if not getattr(parent, f'{card}_encoderScale_{i}').text():
 						tabError = True
 						configErrors.append(f'\tThe Encoder Scale for Joint {i} must be specified')
 
+	'''
 				# add sanity check for home entries
 				if getattr(parent, f'home_{i}').text():
 					if not isNumber(getattr(parent, f'home_{i}').text()):
@@ -163,12 +169,15 @@ def checkit(parent):
 						hs = getattr(parent, f'homeSequence_{i}').text()
 						configErrors.append(f'\tThe Home Sequence for Joint {i} must be a number not {hs}')
 
+	'''
 
 	if tabError:
-		configErrors.insert(nextHeader, 'Axis Tab:')
+		configErrors.insert(nextHeader, f'Cards, {parent.cardTabs.tabText(0)} Tab:')
 		nextHeader = len(configErrors)
 		tabError = False
 	# end of Axis Tab
+
+	'''
 
 	# check the I/O Tab for errors
 	for i in range(32):

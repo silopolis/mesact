@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>956</width>
-    <height>833</height>
+    <height>910</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -179,7 +179,7 @@ QGroupBox::title {
              <x>0</x>
              <y>0</y>
              <width>914</width>
-             <height>378</height>
+             <height>455</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout">
@@ -1027,175 +1027,6 @@ QGroupBox::title {
                 <string>Joint 0</string>
                </attribute>
                <layout class="QGridLayout" name="gridLayout_2">
-                <item row="0" column="0" colspan="2">
-                 <widget class="QGroupBox" name="p1_jointAxisGroup_0">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true"/>
-                  </property>
-                  <property name="title">
-                   <string>Axis</string>
-                  </property>
-                  <layout class="QGridLayout" name="gridLayout_4">
-                   <property name="leftMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="verticalSpacing">
-                    <number>6</number>
-                   </property>
-                   <item row="2" column="3">
-                    <widget class="QLineEdit" name="c0_minLimit_0">
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="4">
-                    <widget class="QLineEdit" name="c0_maxLimit_0">
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="5">
-                    <widget class="QLineEdit" name="c0_maxVelocity_0">
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="0">
-                    <widget class="QComboBox" name="c0_axisCB_0"/>
-                   </item>
-                   <item row="2" column="6">
-                    <widget class="QLineEdit" name="c0_maxAccel_0">
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="7">
-                    <widget class="QCheckBox" name="c0_reverse_0">
-                     <property name="text">
-                      <string>Reverse Dir</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="2">
-                    <widget class="QLineEdit" name="c0_scale_0"/>
-                   </item>
-                   <item row="2" column="1">
-                    <widget class="QLabel" name="c0_axisType_0">
-                     <property name="frameShape">
-                      <enum>QFrame::Box</enum>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="2">
-                    <widget class="QLabel" name="label_45">
-                     <property name="text">
-                      <string>Scale</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignBottom|Qt::AlignHCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="0">
-                    <widget class="QLabel" name="label_43">
-                     <property name="text">
-                      <string>Axis</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignBottom|Qt::AlignHCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="1">
-                    <widget class="QLabel" name="label_4">
-                     <property name="text">
-                      <string>Axis Type</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="3">
-                    <widget class="QLabel" name="label_62">
-                     <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignBottom|Qt::AlignHCenter</set>
-                     </property>
-                     <property name="wordWrap">
-                      <bool>true</bool>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="4">
-                    <widget class="QLabel" name="label_67">
-                     <property name="text">
-                      <string>Maximum Limit</string>
-                     </property>
-                     <property name="textFormat">
-                      <enum>Qt::AutoText</enum>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignBottom|Qt::AlignHCenter</set>
-                     </property>
-                     <property name="wordWrap">
-                      <bool>true</bool>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="5">
-                    <widget class="QLabel" name="label_72">
-                     <property name="text">
-                      <string>Maximum Velocity</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignBottom|Qt::AlignHCenter</set>
-                     </property>
-                     <property name="wordWrap">
-                      <bool>true</bool>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="6">
-                    <widget class="QLabel" name="label_73">
-                     <property name="text">
-                      <string>Maximum Acceleration</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignBottom|Qt::AlignHCenter</set>
-                     </property>
-                     <property name="wordWrap">
-                      <bool>true</bool>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
                 <item row="1" column="0">
                  <widget class="QGroupBox" name="groupBox_2">
                   <property name="minimumSize">
@@ -1226,10 +1057,20 @@ QGroupBox::title {
                    <property name="spacing">
                     <number>5</number>
                    </property>
-                   <item row="0" column="0">
-                    <widget class="QLabel" name="label_215">
+                   <item row="4" column="0">
+                    <widget class="QLabel" name="label_219">
                      <property name="text">
-                      <string>P</string>
+                      <string>FF1</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="3">
+                    <widget class="QLineEdit" name="c0_maxOutput_0">
+                     <property name="text">
+                      <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1246,38 +1087,8 @@ QGroupBox::title {
                      </property>
                     </widget>
                    </item>
-                   <item row="0" column="2">
-                    <widget class="QLabel" name="label_214">
-                     <property name="text">
-                      <string>Deadband</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="3">
-                    <widget class="QLineEdit" name="c0_deadband_0">
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="0">
-                    <widget class="QLabel" name="label_216">
-                     <property name="text">
-                      <string>I</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="1">
-                    <widget class="QLineEdit" name="c0_i_0">
+                   <item row="4" column="1">
+                    <widget class="QLineEdit" name="c0_ff1_0">
                      <property name="text">
                       <string/>
                      </property>
@@ -1296,48 +1107,8 @@ QGroupBox::title {
                      </property>
                     </widget>
                    </item>
-                   <item row="1" column="3">
-                    <widget class="QLineEdit" name="c0_bias_0">
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="0">
-                    <widget class="QLabel" name="label_217">
-                     <property name="text">
-                      <string>D</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="1">
-                    <widget class="QLineEdit" name="c0_d_0">
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="2">
-                    <widget class="QLabel" name="label_222">
-                     <property name="text">
-                      <string>Max Output</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="3">
-                    <widget class="QLineEdit" name="c0_maxOutput_0">
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="c0_i_0">
                      <property name="text">
                       <string/>
                      </property>
@@ -1356,8 +1127,65 @@ QGroupBox::title {
                      </property>
                     </widget>
                    </item>
-                   <item row="3" column="1">
-                    <widget class="QLineEdit" name="c0_ff0_0">
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_215">
+                     <property name="text">
+                      <string>P</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="label_216">
+                     <property name="text">
+                      <string>I</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="label_217">
+                     <property name="text">
+                      <string>D</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="3">
+                    <widget class="QPushButton" name="c0_pidDefault_0">
+                     <property name="text">
+                      <string>Default Values</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="QLabel" name="label_214">
+                     <property name="text">
+                      <string>Deadband</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="2">
+                    <widget class="QLabel" name="label_222">
+                     <property name="text">
+                      <string>Max Output</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QLineEdit" name="c0_d_0">
                      <property name="text">
                       <string/>
                      </property>
@@ -1366,18 +1194,18 @@ QGroupBox::title {
                      </property>
                     </widget>
                    </item>
-                   <item row="4" column="0">
-                    <widget class="QLabel" name="label_219">
+                   <item row="0" column="3">
+                    <widget class="QLineEdit" name="c0_deadband_0">
                      <property name="text">
-                      <string>FF1</string>
+                      <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
-                   <item row="4" column="1">
-                    <widget class="QLineEdit" name="c0_ff1_0">
+                   <item row="3" column="1">
+                    <widget class="QLineEdit" name="c0_ff0_0">
                      <property name="text">
                       <string/>
                      </property>
@@ -1396,8 +1224,8 @@ QGroupBox::title {
                      </property>
                     </widget>
                    </item>
-                   <item row="5" column="1">
-                    <widget class="QLineEdit" name="c0_ff2_0">
+                   <item row="1" column="3">
+                    <widget class="QLineEdit" name="c0_bias_0">
                      <property name="text">
                       <string/>
                      </property>
@@ -1406,10 +1234,10 @@ QGroupBox::title {
                      </property>
                     </widget>
                    </item>
-                   <item row="5" column="3">
-                    <widget class="QPushButton" name="c0_pidDefault_0">
-                     <property name="text">
-                      <string>Default Values</string>
+                   <item row="3" column="3">
+                    <widget class="QLineEdit" name="c0_maxError_0">
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
@@ -1420,8 +1248,11 @@ QGroupBox::title {
                      </property>
                     </widget>
                    </item>
-                   <item row="3" column="3">
-                    <widget class="QLineEdit" name="c0_maxError_0">
+                   <item row="5" column="1">
+                    <widget class="QLineEdit" name="c0_ff2_0">
+                     <property name="text">
+                      <string/>
+                     </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
@@ -2015,15 +1846,8 @@ QGroupBox::title {
                   </layout>
                  </widget>
                 </item>
-               </layout>
-              </widget>
-              <widget class="QWidget" name="joint1tab">
-               <attribute name="title">
-                <string>Joint 1</string>
-               </attribute>
-               <layout class="QGridLayout" name="gridLayout_131">
                 <item row="0" column="0" colspan="2">
-                 <widget class="QGroupBox" name="p1_jointAxisGroup_1">
+                 <widget class="QGroupBox" name="p1_jointAxisGroup_0">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                     <horstretch>0</horstretch>
@@ -2036,7 +1860,7 @@ QGroupBox::title {
                   <property name="title">
                    <string>Axis</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_6">
+                  <layout class="QGridLayout" name="gridLayout_4">
                    <property name="leftMargin">
                     <number>10</number>
                    </property>
@@ -2053,48 +1877,48 @@ QGroupBox::title {
                     <number>6</number>
                    </property>
                    <item row="2" column="3">
-                    <widget class="QLineEdit" name="p1_minLimit_1">
+                    <widget class="QLineEdit" name="c0_minLimit_0">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="4">
-                    <widget class="QLineEdit" name="p1_maxLimit_1">
+                    <widget class="QLineEdit" name="c0_maxLimit_0">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="5">
-                    <widget class="QLineEdit" name="p1_maxVelocity_1">
+                    <widget class="QLineEdit" name="c0_maxVelocity_0">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="0">
-                    <widget class="QComboBox" name="p1_axisCB_1"/>
+                    <widget class="QComboBox" name="c0_axisCB_0"/>
                    </item>
                    <item row="2" column="6">
-                    <widget class="QLineEdit" name="p1_maxAccel_1">
+                    <widget class="QLineEdit" name="c0_maxAccel_0">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="7">
-                    <widget class="QCheckBox" name="p1_reverse_1">
+                    <widget class="QCheckBox" name="c0_reverse_0">
                      <property name="text">
                       <string>Reverse Dir</string>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="2">
-                    <widget class="QLineEdit" name="p1_scale_1"/>
+                    <widget class="QLineEdit" name="c0_scale_0"/>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLabel" name="p1_axisType_1">
+                    <widget class="QLabel" name="c0_axisType_0">
                      <property name="frameShape">
                       <enum>QFrame::Box</enum>
                      </property>
@@ -2104,7 +1928,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="2">
-                    <widget class="QLabel" name="label_46">
+                    <widget class="QLabel" name="label_45">
                      <property name="text">
                       <string>Scale</string>
                      </property>
@@ -2114,7 +1938,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="0">
-                    <widget class="QLabel" name="label_50">
+                    <widget class="QLabel" name="label_43">
                      <property name="text">
                       <string>Axis</string>
                      </property>
@@ -2124,7 +1948,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <widget class="QLabel" name="label_5">
+                    <widget class="QLabel" name="label_4">
                      <property name="text">
                       <string>Axis Type</string>
                      </property>
@@ -2134,7 +1958,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="3">
-                    <widget class="QLabel" name="label_63">
+                    <widget class="QLabel" name="label_62">
                      <property name="text">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -2147,7 +1971,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="4">
-                    <widget class="QLabel" name="label_68">
+                    <widget class="QLabel" name="label_67">
                      <property name="text">
                       <string>Maximum Limit</string>
                      </property>
@@ -2163,7 +1987,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="5">
-                    <widget class="QLabel" name="label_74">
+                    <widget class="QLabel" name="label_72">
                      <property name="text">
                       <string>Maximum Velocity</string>
                      </property>
@@ -2176,7 +2000,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="6">
-                    <widget class="QLabel" name="label_75">
+                    <widget class="QLabel" name="label_73">
                      <property name="text">
                       <string>Maximum Acceleration</string>
                      </property>
@@ -2191,8 +2015,15 @@ QGroupBox::title {
                   </layout>
                  </widget>
                 </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="joint1tab">
+               <attribute name="title">
+                <string>Joint 1</string>
+               </attribute>
+               <layout class="QGridLayout" name="gridLayout_134">
                 <item row="1" column="0">
-                 <widget class="QGroupBox" name="groupBox_4">
+                 <widget class="QGroupBox" name="groupBox_5">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -2205,7 +2036,7 @@ QGroupBox::title {
                   <property name="title">
                    <string>PID Settings</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_8">
+                  <layout class="QGridLayout" name="gridLayout_9">
                    <property name="leftMargin">
                     <number>10</number>
                    </property>
@@ -2221,20 +2052,10 @@ QGroupBox::title {
                    <property name="spacing">
                     <number>5</number>
                    </property>
-                   <item row="0" column="0">
-                    <widget class="QLabel" name="label_224">
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="label_230">
                      <property name="text">
-                      <string>P</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_p_1">
-                     <property name="text">
-                      <string/>
+                      <string>FF0</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2251,28 +2072,8 @@ QGroupBox::title {
                      </property>
                     </widget>
                    </item>
-                   <item row="0" column="3">
-                    <widget class="QLineEdit" name="p1_deadband_1">
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="0">
-                    <widget class="QLabel" name="label_226">
-                     <property name="text">
-                      <string>I</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="1">
-                    <widget class="QLineEdit" name="p1_i_1">
+                   <item row="2" column="3">
+                    <widget class="QLineEdit" name="c0_maxOutput_1">
                      <property name="text">
                       <string/>
                      </property>
@@ -2292,7 +2093,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="3">
-                    <widget class="QLineEdit" name="p1_bias_1">
+                    <widget class="QLineEdit" name="c0_bias_1">
                      <property name="text">
                       <string/>
                      </property>
@@ -2301,20 +2102,67 @@ QGroupBox::title {
                      </property>
                     </widget>
                    </item>
-                   <item row="2" column="0">
-                    <widget class="QLabel" name="label_228">
+                   <item row="5" column="3">
+                    <widget class="QPushButton" name="c0_pidDefault_1">
                      <property name="text">
-                      <string>D</string>
+                      <string>Default Values</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="0">
+                    <widget class="QLabel" name="label_232">
+                     <property name="text">
+                      <string>FF1</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
-                   <item row="2" column="1">
-                    <widget class="QLineEdit" name="p1_d_1">
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="c0_p_1">
                      <property name="text">
                       <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="1">
+                    <widget class="QLineEdit" name="c0_ff0_1">
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="1">
+                    <widget class="QLineEdit" name="c0_ff1_1">
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="c0_i_1">
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="label_226">
+                     <property name="text">
+                      <string>I</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2331,8 +2179,8 @@ QGroupBox::title {
                      </property>
                     </widget>
                    </item>
-                   <item row="2" column="3">
-                    <widget class="QLineEdit" name="p1_maxOutput_1">
+                   <item row="2" column="1">
+                    <widget class="QLineEdit" name="c0_d_1">
                      <property name="text">
                       <string/>
                      </property>
@@ -2341,18 +2189,8 @@ QGroupBox::title {
                      </property>
                     </widget>
                    </item>
-                   <item row="3" column="0">
-                    <widget class="QLabel" name="label_230">
-                     <property name="text">
-                      <string>FF0</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="1">
-                    <widget class="QLineEdit" name="p1_ff0_1">
+                   <item row="0" column="3">
+                    <widget class="QLineEdit" name="c0_deadband_1">
                      <property name="text">
                       <string/>
                      </property>
@@ -2361,23 +2199,30 @@ QGroupBox::title {
                      </property>
                     </widget>
                    </item>
-                   <item row="4" column="0">
-                    <widget class="QLabel" name="label_232">
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_224">
                      <property name="text">
-                      <string>FF1</string>
+                      <string>P</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
-                   <item row="4" column="1">
-                    <widget class="QLineEdit" name="p1_ff1_1">
+                   <item row="5" column="1">
+                    <widget class="QLineEdit" name="c0_ff2_1">
                      <property name="text">
                       <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="2">
+                    <widget class="QLabel" name="label_188">
+                     <property name="text">
+                      <string>Max Error</string>
                      </property>
                     </widget>
                    </item>
@@ -2391,32 +2236,18 @@ QGroupBox::title {
                      </property>
                     </widget>
                    </item>
-                   <item row="5" column="1">
-                    <widget class="QLineEdit" name="p1_ff2_1">
-                     <property name="text">
-                      <string/>
-                     </property>
+                   <item row="3" column="3">
+                    <widget class="QLineEdit" name="c0_maxError_1">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
-                   <item row="5" column="3">
-                    <widget class="QPushButton" name="p1_pidDefault_1">
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="label_228">
                      <property name="text">
-                      <string>Default Values</string>
+                      <string>D</string>
                      </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="2">
-                    <widget class="QLabel" name="label_188">
-                     <property name="text">
-                      <string>Max Error</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="3">
-                    <widget class="QLineEdit" name="p1_maxError_1">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
@@ -2426,7 +2257,7 @@ QGroupBox::title {
                  </widget>
                 </item>
                 <item row="1" column="1" rowspan="2">
-                 <widget class="QGroupBox" name="groupBox_5">
+                 <widget class="QGroupBox" name="groupBox_4">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -2439,7 +2270,7 @@ QGroupBox::title {
                   <property name="title">
                    <string>Homing</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_9">
+                  <layout class="QGridLayout" name="gridLayout_7">
                    <property name="leftMargin">
                     <number>10</number>
                    </property>
@@ -2486,7 +2317,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="1">
-                    <widget class="QLineEdit" name="p1_homeOffset_1">
+                    <widget class="QLineEdit" name="c0_homeOffset_1">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home Offset can be used to back off of the home switch&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -2496,7 +2327,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="7" column="1">
-                    <widget class="QCheckBox" name="p1_homeIgnoreLimits_1">
+                    <widget class="QCheckBox" name="c0_homeIgnoreLimits_1">
                      <property name="text">
                       <string>Home Ignore Limits</string>
                      </property>
@@ -2513,7 +2344,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="5" column="1">
-                    <widget class="QLineEdit" name="p1_homeSequence_1">
+                    <widget class="QLineEdit" name="c0_homeSequence_1">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home sequences start at 0 and do not skip a number.&lt;/p&gt;&lt;p&gt;Multiple joint axis use a negative number.&lt;/p&gt;&lt;p&gt;Leave blank to home the joint manually.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -2523,14 +2354,14 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="9" column="1">
-                    <widget class="QCheckBox" name="p1_homeSwitchShared_1">
+                    <widget class="QCheckBox" name="c0_homeSwitchShared_1">
                      <property name="text">
                       <string>Home Switch is Shared</string>
                      </property>
                     </widget>
                    </item>
                    <item row="3" column="1">
-                    <widget class="QLineEdit" name="p1_homeLatchVel_1">
+                    <widget class="QLineEdit" name="c0_homeLatchVel_1">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Latch Velocity is in user units per second&lt;br/&gt;usually set slower than Search Velocity&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -2540,7 +2371,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="8" column="1">
-                    <widget class="QCheckBox" name="p1_homeUseIndex_1">
+                    <widget class="QCheckBox" name="c0_homeUseIndex_1">
                      <property name="text">
                       <string>Home Use Index</string>
                      </property>
@@ -2557,7 +2388,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_home_1">
+                    <widget class="QLineEdit" name="c0_home_1">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home is usually set to 0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -2567,7 +2398,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLineEdit" name="p1_homeSearchVel_1">
+                    <widget class="QLineEdit" name="c0_homeSearchVel_1">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Search Velocity is in units per second&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -2587,7 +2418,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="4" column="1">
-                    <widget class="QLineEdit" name="p1_homeFinalVelocity_1">
+                    <widget class="QLineEdit" name="c0_homeFinalVelocity_1">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
@@ -2597,14 +2428,79 @@ QGroupBox::title {
                  </widget>
                 </item>
                 <item row="2" column="0" rowspan="2">
-                 <widget class="QGroupBox" name="p1_stepgenGB_1">
+                 <widget class="QGroupBox" name="c0_analogGB_1">
+                  <property name="title">
+                   <string>Analog Output</string>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_116">
+                   <item row="2" column="1">
+                    <widget class="QLineEdit" name="c0_analogScaleMax_1"/>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="label_20">
+                     <property name="text">
+                      <string>Analog Max Limit</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="c0_analogMinLimit_1"/>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="label_22">
+                     <property name="text">
+                      <string>Analog Scale Max</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="c0_analogMaxLimit_1"/>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="QPushButton" name="c0_analogDefault_1">
+                     <property name="text">
+                      <string>Default Values</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_23">
+                     <property name="text">
+                      <string>Analog Min Limit</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QGroupBox" name="c0_encoderGB_1">
+                  <property name="title">
+                   <string>Encoder</string>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_122">
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_810">
+                     <property name="text">
+                      <string>Encoder Scale</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="c0_encoderScale_1"/>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QGroupBox" name="c0_stepgenGB_1">
                   <property name="styleSheet">
                    <string notr="true"/>
                   </property>
                   <property name="title">
                    <string>StepGen Settings</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_7">
+                  <layout class="QGridLayout" name="gridLayout_8">
                    <property name="leftMargin">
                     <number>10</number>
                    </property>
@@ -2749,7 +2645,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="3">
-                    <widget class="QComboBox" name="p1_driveCB_1">
+                    <widget class="QComboBox" name="c0_driveCB_1">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -2765,7 +2661,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLineEdit" name="p1_dirSetup_1">
+                    <widget class="QLineEdit" name="c0_dirSetup_1">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -2793,7 +2689,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="3" column="1">
-                    <widget class="QLineEdit" name="p1_dirHold_1">
+                    <widget class="QLineEdit" name="c0_dirHold_1">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -2821,7 +2717,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="1">
-                    <widget class="QLineEdit" name="p1_stepSpace_1">
+                    <widget class="QLineEdit" name="c0_stepSpace_1">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -2849,7 +2745,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_stepTime_1">
+                    <widget class="QLineEdit" name="c0_stepTime_1">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -2882,71 +2778,6 @@ QGroupBox::title {
                   </layout>
                  </widget>
                 </item>
-                <item row="3" column="1">
-                 <widget class="QGroupBox" name="p1_encoderGB_1">
-                  <property name="title">
-                   <string>Encoder</string>
-                  </property>
-                  <layout class="QGridLayout" name="gridLayout_122">
-                   <item row="0" column="0">
-                    <widget class="QLabel" name="label_810">
-                     <property name="text">
-                      <string>Encoder Scale</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_encoderScale_1"/>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item row="4" column="0">
-                 <widget class="QGroupBox" name="p1_analogGB_1">
-                  <property name="title">
-                   <string>Analog Output</string>
-                  </property>
-                  <layout class="QGridLayout" name="gridLayout_116">
-                   <item row="2" column="1">
-                    <widget class="QLineEdit" name="p1_analogScaleMax_1"/>
-                   </item>
-                   <item row="1" column="0">
-                    <widget class="QLabel" name="label_20">
-                     <property name="text">
-                      <string>Analog Max Limit</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_analogMinLimit_1"/>
-                   </item>
-                   <item row="2" column="0">
-                    <widget class="QLabel" name="label_22">
-                     <property name="text">
-                      <string>Analog Scale Max</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="1">
-                    <widget class="QLineEdit" name="p1_analogMaxLimit_1"/>
-                   </item>
-                   <item row="0" column="2">
-                    <widget class="QPushButton" name="p1_analogDefault_1">
-                     <property name="text">
-                      <string>Default Values</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="0">
-                    <widget class="QLabel" name="label_23">
-                     <property name="text">
-                      <string>Analog Min Limit</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
                 <item row="4" column="1">
                  <widget class="QGroupBox" name="gridGroupBox_7">
                   <property name="styleSheet">
@@ -2964,7 +2795,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="1">
-                    <widget class="QLabel" name="p1_distanceJoint_1">
+                    <widget class="QLabel" name="c0_distanceJoint_1">
                      <property name="frameShape">
                       <enum>QFrame::Box</enum>
                      </property>
@@ -2981,7 +2812,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <widget class="QLabel" name="p1_timeJoint_1">
+                    <widget class="QLabel" name="c0_timeJoint_1">
                      <property name="frameShape">
                       <enum>QFrame::Box</enum>
                      </property>
@@ -2991,7 +2822,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLabel" name="p1_stepRateJoint_1">
+                    <widget class="QLabel" name="c0_stepRateJoint_1">
                      <property name="frameShape">
                       <enum>QFrame::Box</enum>
                      </property>
@@ -3010,13 +2841,182 @@ QGroupBox::title {
                   </layout>
                  </widget>
                 </item>
+                <item row="0" column="0" colspan="2">
+                 <widget class="QGroupBox" name="p1_jointAxisGroup_1">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="title">
+                   <string>Axis</string>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_6">
+                   <property name="leftMargin">
+                    <number>10</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>10</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>10</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>10</number>
+                   </property>
+                   <property name="verticalSpacing">
+                    <number>6</number>
+                   </property>
+                   <item row="2" column="3">
+                    <widget class="QLineEdit" name="c0_minLimit_1">
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="4">
+                    <widget class="QLineEdit" name="c0_maxLimit_1">
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="5">
+                    <widget class="QLineEdit" name="c0_maxVelocity_1">
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QComboBox" name="c0_axisCB_1"/>
+                   </item>
+                   <item row="2" column="6">
+                    <widget class="QLineEdit" name="c0_maxAccel_1">
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="7">
+                    <widget class="QCheckBox" name="c0_reverse_1">
+                     <property name="text">
+                      <string>Reverse Dir</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="2">
+                    <widget class="QLineEdit" name="c0_scale_1"/>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QLabel" name="c0_axisType_1">
+                     <property name="frameShape">
+                      <enum>QFrame::Box</enum>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="QLabel" name="label_46">
+                     <property name="text">
+                      <string>Scale</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_50">
+                     <property name="text">
+                      <string>Axis</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLabel" name="label_5">
+                     <property name="text">
+                      <string>Axis Type</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="3">
+                    <widget class="QLabel" name="label_63">
+                     <property name="text">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                     </property>
+                     <property name="wordWrap">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="4">
+                    <widget class="QLabel" name="label_68">
+                     <property name="text">
+                      <string>Maximum Limit</string>
+                     </property>
+                     <property name="textFormat">
+                      <enum>Qt::AutoText</enum>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                     </property>
+                     <property name="wordWrap">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="5">
+                    <widget class="QLabel" name="label_74">
+                     <property name="text">
+                      <string>Maximum Velocity</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                     </property>
+                     <property name="wordWrap">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="6">
+                    <widget class="QLabel" name="label_75">
+                     <property name="text">
+                      <string>Maximum Acceleration</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                     </property>
+                     <property name="wordWrap">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
                </layout>
               </widget>
               <widget class="QWidget" name="joint2tab">
                <attribute name="title">
                 <string>Joint 2</string>
                </attribute>
-               <layout class="QGridLayout" name="gridLayout_132">
+               <layout class="QGridLayout" name="gridLayout_133">
                 <item row="0" column="0" colspan="2">
                  <widget class="QGroupBox" name="p1_jointAxisGroup_2">
                   <property name="sizePolicy">
@@ -3048,48 +3048,48 @@ QGroupBox::title {
                     <number>6</number>
                    </property>
                    <item row="2" column="3">
-                    <widget class="QLineEdit" name="p1_minLimit_2">
+                    <widget class="QLineEdit" name="c0_minLimit_2">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="4">
-                    <widget class="QLineEdit" name="p1_maxLimit_2">
+                    <widget class="QLineEdit" name="c0_maxLimit_2">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="5">
-                    <widget class="QLineEdit" name="p1_maxVelocity_2">
+                    <widget class="QLineEdit" name="c0_maxVelocity_2">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="0">
-                    <widget class="QComboBox" name="p1_axisCB_2"/>
+                    <widget class="QComboBox" name="c0_axisCB_2"/>
                    </item>
                    <item row="2" column="6">
-                    <widget class="QLineEdit" name="p1_maxAccel_2">
+                    <widget class="QLineEdit" name="c0_maxAccel_2">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="7">
-                    <widget class="QCheckBox" name="p1_reverse_2">
+                    <widget class="QCheckBox" name="c0_reverse_2">
                      <property name="text">
                       <string>Reverse Dir</string>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="2">
-                    <widget class="QLineEdit" name="p1_scale_2"/>
+                    <widget class="QLineEdit" name="c0_scale_2"/>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLabel" name="p1_axisType_2">
+                    <widget class="QLabel" name="c0_axisType_2">
                      <property name="frameShape">
                       <enum>QFrame::Box</enum>
                      </property>
@@ -3187,14 +3187,20 @@ QGroupBox::title {
                  </widget>
                 </item>
                 <item row="1" column="0">
-                 <widget class="QGroupBox" name="groupBox_7">
+                 <widget class="QGroupBox" name="groupBox_8">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>200</height>
+                   </size>
+                  </property>
                   <property name="styleSheet">
                    <string notr="true"/>
                   </property>
                   <property name="title">
                    <string>PID Settings</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_12">
+                  <layout class="QGridLayout" name="gridLayout_13">
                    <property name="leftMargin">
                     <number>10</number>
                    </property>
@@ -3221,7 +3227,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_p_2">
+                    <widget class="QLineEdit" name="c0_p_2">
                      <property name="text">
                       <string/>
                      </property>
@@ -3241,7 +3247,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="3">
-                    <widget class="QLineEdit" name="p1_deadband_2">
+                    <widget class="QLineEdit" name="c0_deadband_2">
                      <property name="text">
                       <string/>
                      </property>
@@ -3261,7 +3267,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="1">
-                    <widget class="QLineEdit" name="p1_i_2">
+                    <widget class="QLineEdit" name="c0_i_2">
                      <property name="text">
                       <string/>
                      </property>
@@ -3281,7 +3287,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="3">
-                    <widget class="QLineEdit" name="p1_bias_2">
+                    <widget class="QLineEdit" name="c0_bias_2">
                      <property name="text">
                       <string/>
                      </property>
@@ -3301,7 +3307,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLineEdit" name="p1_d_2">
+                    <widget class="QLineEdit" name="c0_d_2">
                      <property name="text">
                       <string/>
                      </property>
@@ -3321,7 +3327,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="3">
-                    <widget class="QLineEdit" name="p1_maxOutput_2">
+                    <widget class="QLineEdit" name="c0_maxOutput_2">
                      <property name="text">
                       <string/>
                      </property>
@@ -3341,7 +3347,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="3" column="1">
-                    <widget class="QLineEdit" name="p1_ff0_2">
+                    <widget class="QLineEdit" name="c0_ff0_2">
                      <property name="text">
                       <string/>
                      </property>
@@ -3361,7 +3367,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="4" column="1">
-                    <widget class="QLineEdit" name="p1_ff1_2">
+                    <widget class="QLineEdit" name="c0_ff1_2">
                      <property name="text">
                       <string/>
                      </property>
@@ -3381,7 +3387,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="5" column="1">
-                    <widget class="QLineEdit" name="p1_ff2_2">
+                    <widget class="QLineEdit" name="c0_ff2_2">
                      <property name="text">
                       <string/>
                      </property>
@@ -3391,7 +3397,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="5" column="3">
-                    <widget class="QPushButton" name="p1_pidDefault_2">
+                    <widget class="QPushButton" name="c0_pidDefault_2">
                      <property name="text">
                       <string>Default Values</string>
                      </property>
@@ -3405,7 +3411,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="3" column="3">
-                    <widget class="QLineEdit" name="p1_maxError_2">
+                    <widget class="QLineEdit" name="c0_maxError_2">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
@@ -3415,14 +3421,20 @@ QGroupBox::title {
                  </widget>
                 </item>
                 <item row="1" column="1" rowspan="2">
-                 <widget class="QGroupBox" name="groupBox_8">
+                 <widget class="QGroupBox" name="groupBox_7">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>275</height>
+                   </size>
+                  </property>
                   <property name="styleSheet">
                    <string notr="true"/>
                   </property>
                   <property name="title">
                    <string>Homing</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_13">
+                  <layout class="QGridLayout" name="gridLayout_11">
                    <property name="leftMargin">
                     <number>10</number>
                    </property>
@@ -3449,7 +3461,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="5" column="0">
-                    <widget class="QLabel" name="label_70">
+                    <widget class="QLabel" name="label_59">
                      <property name="text">
                       <string>Home Sequence</string>
                      </property>
@@ -3469,7 +3481,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="1">
-                    <widget class="QLineEdit" name="p1_homeOffset_2">
+                    <widget class="QLineEdit" name="c0_homeOffset_2">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home Offset can be used to back off of the home switch&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -3479,7 +3491,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="7" column="1">
-                    <widget class="QCheckBox" name="p1_homeIgnoreLimits_2">
+                    <widget class="QCheckBox" name="c0_homeIgnoreLimits_2">
                      <property name="text">
                       <string>Home Ignore Limits</string>
                      </property>
@@ -3496,7 +3508,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="5" column="1">
-                    <widget class="QLineEdit" name="p1_homeSequence_2">
+                    <widget class="QLineEdit" name="c0_homeSequence_2">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home sequences start at 0 and do not skip a number.&lt;/p&gt;&lt;p&gt;Multiple joint axis use a negative number.&lt;/p&gt;&lt;p&gt;Leave blank to home the joint manually.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -3506,14 +3518,14 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="9" column="1">
-                    <widget class="QCheckBox" name="p1_homeSwitchShared_2">
+                    <widget class="QCheckBox" name="c0_homeSwitchShared_2">
                      <property name="text">
                       <string>Home Switch is Shared</string>
                      </property>
                     </widget>
                    </item>
                    <item row="3" column="1">
-                    <widget class="QLineEdit" name="p1_homeLatchVel_2">
+                    <widget class="QLineEdit" name="c0_homeLatchVel_2">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Latch Velocity is in user units per second&lt;br/&gt;usually set slower than Search Velocity&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -3523,7 +3535,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="8" column="1">
-                    <widget class="QCheckBox" name="p1_homeUseIndex_2">
+                    <widget class="QCheckBox" name="c0_homeUseIndex_2">
                      <property name="text">
                       <string>Home Use Index</string>
                      </property>
@@ -3540,7 +3552,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_home_2">
+                    <widget class="QLineEdit" name="c0_home_2">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home is usually set to 0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -3550,7 +3562,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLineEdit" name="p1_homeSearchVel_2">
+                    <widget class="QLineEdit" name="c0_homeSearchVel_2">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Search Velocity is in units per second&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -3570,7 +3582,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="4" column="1">
-                    <widget class="QLineEdit" name="p1_homeFinalVelocity_2">
+                    <widget class="QLineEdit" name="c0_homeFinalVelocity_2">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
@@ -3580,14 +3592,79 @@ QGroupBox::title {
                  </widget>
                 </item>
                 <item row="2" column="0" rowspan="2">
-                 <widget class="QGroupBox" name="p1_stepgenGB_2">
+                 <widget class="QGroupBox" name="c0_analogGB_2">
+                  <property name="title">
+                   <string>Analog Output</string>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_117">
+                   <item row="2" column="1">
+                    <widget class="QLineEdit" name="c0_analogScaleMax_2"/>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="label_24">
+                     <property name="text">
+                      <string>Analog Max Limit</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="c0_analogMinLimit_2"/>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="label_25">
+                     <property name="text">
+                      <string>Analog Scale Max</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="c0_analogMaxLimit_2"/>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="QPushButton" name="c0_analogDefault_2">
+                     <property name="text">
+                      <string>Default Values</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_26">
+                     <property name="text">
+                      <string>Analog Min Limit</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QGroupBox" name="c0_encoderGB_2">
+                  <property name="title">
+                   <string>Encoder</string>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_123">
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_811">
+                     <property name="text">
+                      <string>Encoder Scale</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="c0_encoderScale_2"/>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QGroupBox" name="c0_stepgenGB_2">
                   <property name="styleSheet">
                    <string notr="true"/>
                   </property>
                   <property name="title">
                    <string>StepGen Settings</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_11">
+                  <layout class="QGridLayout" name="gridLayout_12">
                    <property name="leftMargin">
                     <number>10</number>
                    </property>
@@ -3604,7 +3681,7 @@ QGroupBox::title {
                     <number>5</number>
                    </property>
                    <item row="0" column="0">
-                    <widget class="QLabel" name="label_59">
+                    <widget class="QLabel" name="label_61">
                      <property name="text">
                       <string>Step Time</string>
                      </property>
@@ -3636,7 +3713,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="0">
-                    <widget class="QLabel" name="label_61">
+                    <widget class="QLabel" name="label_65">
                      <property name="text">
                       <string>Step Space</string>
                      </property>
@@ -3668,7 +3745,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="0">
-                    <widget class="QLabel" name="label_65">
+                    <widget class="QLabel" name="label_66">
                      <property name="text">
                       <string>Direction Setup</string>
                      </property>
@@ -3700,7 +3777,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="3" column="0">
-                    <widget class="QLabel" name="label_66">
+                    <widget class="QLabel" name="label_70">
                      <property name="text">
                       <string>Direction Hold</string>
                      </property>
@@ -3732,7 +3809,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="3">
-                    <widget class="QComboBox" name="p1_driveCB_2">
+                    <widget class="QComboBox" name="c0_driveCB_2">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -3748,7 +3825,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLineEdit" name="p1_dirSetup_2">
+                    <widget class="QLineEdit" name="c0_dirSetup_2">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -3776,7 +3853,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="3" column="1">
-                    <widget class="QLineEdit" name="p1_dirHold_2">
+                    <widget class="QLineEdit" name="c0_dirHold_2">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -3804,7 +3881,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="1">
-                    <widget class="QLineEdit" name="p1_stepSpace_2">
+                    <widget class="QLineEdit" name="c0_stepSpace_2">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -3832,7 +3909,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_stepTime_2">
+                    <widget class="QLineEdit" name="c0_stepTime_2">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -3865,71 +3942,6 @@ QGroupBox::title {
                   </layout>
                  </widget>
                 </item>
-                <item row="3" column="1">
-                 <widget class="QGroupBox" name="p1_encoderGB_2">
-                  <property name="title">
-                   <string>Encoder</string>
-                  </property>
-                  <layout class="QGridLayout" name="gridLayout_123">
-                   <item row="0" column="0">
-                    <widget class="QLabel" name="label_811">
-                     <property name="text">
-                      <string>Encoder Scale</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_encoderScale_2"/>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item row="4" column="0">
-                 <widget class="QGroupBox" name="p1_analogGB_2">
-                  <property name="title">
-                   <string>Analog Output</string>
-                  </property>
-                  <layout class="QGridLayout" name="gridLayout_117">
-                   <item row="2" column="1">
-                    <widget class="QLineEdit" name="p1_analogScaleMax_2"/>
-                   </item>
-                   <item row="1" column="0">
-                    <widget class="QLabel" name="label_24">
-                     <property name="text">
-                      <string>Analog Max Limit</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_analogMinLimit_2"/>
-                   </item>
-                   <item row="2" column="0">
-                    <widget class="QLabel" name="label_25">
-                     <property name="text">
-                      <string>Analog Scale Max</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="1">
-                    <widget class="QLineEdit" name="p1_analogMaxLimit_2"/>
-                   </item>
-                   <item row="0" column="2">
-                    <widget class="QPushButton" name="p1_analogDefault_2">
-                     <property name="text">
-                      <string>Default Values</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="0">
-                    <widget class="QLabel" name="label_26">
-                     <property name="text">
-                      <string>Analog Min Limit</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
                 <item row="4" column="1">
                  <widget class="QGroupBox" name="gridGroupBox_8">
                   <property name="styleSheet">
@@ -3947,7 +3959,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="1">
-                    <widget class="QLabel" name="p1_distanceJoint_2">
+                    <widget class="QLabel" name="c0_distanceJoint_2">
                      <property name="frameShape">
                       <enum>QFrame::Box</enum>
                      </property>
@@ -3964,7 +3976,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <widget class="QLabel" name="p1_timeJoint_2">
+                    <widget class="QLabel" name="c0_timeJoint_2">
                      <property name="frameShape">
                       <enum>QFrame::Box</enum>
                      </property>
@@ -3974,7 +3986,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLabel" name="p1_stepRateJoint_2">
+                    <widget class="QLabel" name="c0_stepRateJoint_2">
                      <property name="frameShape">
                       <enum>QFrame::Box</enum>
                      </property>
@@ -3999,7 +4011,7 @@ QGroupBox::title {
                <attribute name="title">
                 <string>Joint 3</string>
                </attribute>
-               <layout class="QGridLayout" name="gridLayout_133">
+               <layout class="QGridLayout" name="gridLayout_132">
                 <item row="0" column="0" colspan="2">
                  <widget class="QGroupBox" name="p1_jointAxisGroup_3">
                   <property name="sizePolicy">
@@ -4031,48 +4043,48 @@ QGroupBox::title {
                     <number>6</number>
                    </property>
                    <item row="2" column="3">
-                    <widget class="QLineEdit" name="p1_minLimit_3">
+                    <widget class="QLineEdit" name="c0_minLimit_3">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="4">
-                    <widget class="QLineEdit" name="p1_maxLimit_3">
+                    <widget class="QLineEdit" name="c0_maxLimit_3">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="5">
-                    <widget class="QLineEdit" name="p1_maxVelocity_3">
+                    <widget class="QLineEdit" name="c0_maxVelocity_3">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="0">
-                    <widget class="QComboBox" name="p1_axisCB_3"/>
+                    <widget class="QComboBox" name="c0_axisCB_3"/>
                    </item>
                    <item row="2" column="6">
-                    <widget class="QLineEdit" name="p1_maxAccel_3">
+                    <widget class="QLineEdit" name="c0_maxAccel_3">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="7">
-                    <widget class="QCheckBox" name="p1_reverse_3">
+                    <widget class="QCheckBox" name="c0_reverse_3">
                      <property name="text">
                       <string>Reverse Dir</string>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="2">
-                    <widget class="QLineEdit" name="p1_scale_3"/>
+                    <widget class="QLineEdit" name="c0_scale_3"/>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLabel" name="p1_axisType_3">
+                    <widget class="QLabel" name="c0_axisType_3">
                      <property name="frameShape">
                       <enum>QFrame::Box</enum>
                      </property>
@@ -4170,14 +4182,20 @@ QGroupBox::title {
                  </widget>
                 </item>
                 <item row="1" column="0">
-                 <widget class="QGroupBox" name="groupBox_9">
+                 <widget class="QGroupBox" name="groupBox_11">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>200</height>
+                   </size>
+                  </property>
                   <property name="styleSheet">
                    <string notr="true"/>
                   </property>
                   <property name="title">
                    <string>PID Settings</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_16">
+                  <layout class="QGridLayout" name="gridLayout_17">
                    <property name="leftMargin">
                     <number>10</number>
                    </property>
@@ -4204,7 +4222,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_p_3">
+                    <widget class="QLineEdit" name="c0_p_3">
                      <property name="text">
                       <string/>
                      </property>
@@ -4224,7 +4242,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="3">
-                    <widget class="QLineEdit" name="p1_deadband_3">
+                    <widget class="QLineEdit" name="c0_deadband_3">
                      <property name="text">
                       <string/>
                      </property>
@@ -4244,7 +4262,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="1">
-                    <widget class="QLineEdit" name="p1_i_3">
+                    <widget class="QLineEdit" name="c0_i_3">
                      <property name="text">
                       <string/>
                      </property>
@@ -4264,7 +4282,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="3">
-                    <widget class="QLineEdit" name="p1_bias_3">
+                    <widget class="QLineEdit" name="c0_bias_3">
                      <property name="text">
                       <string/>
                      </property>
@@ -4284,7 +4302,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLineEdit" name="p1_d_3">
+                    <widget class="QLineEdit" name="c0_d_3">
                      <property name="text">
                       <string/>
                      </property>
@@ -4304,7 +4322,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="3">
-                    <widget class="QLineEdit" name="p1_maxOutput_3">
+                    <widget class="QLineEdit" name="c0_maxOutput_3">
                      <property name="text">
                       <string/>
                      </property>
@@ -4324,7 +4342,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="3" column="1">
-                    <widget class="QLineEdit" name="p1_ff0_3">
+                    <widget class="QLineEdit" name="c0_ff0_3">
                      <property name="text">
                       <string/>
                      </property>
@@ -4344,7 +4362,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="4" column="1">
-                    <widget class="QLineEdit" name="p1_ff1_3">
+                    <widget class="QLineEdit" name="c0_ff1_3">
                      <property name="text">
                       <string/>
                      </property>
@@ -4364,7 +4382,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="5" column="1">
-                    <widget class="QLineEdit" name="p1_ff2_3">
+                    <widget class="QLineEdit" name="c0_ff2_3">
                      <property name="text">
                       <string/>
                      </property>
@@ -4374,7 +4392,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="5" column="3">
-                    <widget class="QPushButton" name="p1_pidDefault_3">
+                    <widget class="QPushButton" name="c0_pidDefault_3">
                      <property name="text">
                       <string>Default Values</string>
                      </property>
@@ -4388,7 +4406,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="3" column="3">
-                    <widget class="QLineEdit" name="p1_maxError_3">
+                    <widget class="QLineEdit" name="c0_maxError_3">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
@@ -4398,14 +4416,20 @@ QGroupBox::title {
                  </widget>
                 </item>
                 <item row="1" column="1" rowspan="2">
-                 <widget class="QGroupBox" name="groupBox_11">
+                 <widget class="QGroupBox" name="groupBox_9">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>275</height>
+                   </size>
+                  </property>
                   <property name="styleSheet">
                    <string notr="true"/>
                   </property>
                   <property name="title">
                    <string>Homing</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_17">
+                  <layout class="QGridLayout" name="gridLayout_15">
                    <property name="leftMargin">
                     <number>10</number>
                    </property>
@@ -4422,7 +4446,7 @@ QGroupBox::title {
                     <number>5</number>
                    </property>
                    <item row="1" column="0">
-                    <widget class="QLabel" name="label_99">
+                    <widget class="QLabel" name="label_95">
                      <property name="text">
                       <string>Home Offset</string>
                      </property>
@@ -4432,7 +4456,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="5" column="0">
-                    <widget class="QLabel" name="label_100">
+                    <widget class="QLabel" name="label_96">
                      <property name="text">
                       <string>Home Sequence</string>
                      </property>
@@ -4442,7 +4466,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="0">
-                    <widget class="QLabel" name="label_101">
+                    <widget class="QLabel" name="label_97">
                      <property name="text">
                       <string>Home Search Velocity</string>
                      </property>
@@ -4452,7 +4476,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="1">
-                    <widget class="QLineEdit" name="p1_homeOffset_3">
+                    <widget class="QLineEdit" name="c0_homeOffset_3">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home Offset can be used to back off of the home switch&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -4462,14 +4486,14 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="7" column="1">
-                    <widget class="QCheckBox" name="p1_homeIgnoreLimits_3">
+                    <widget class="QCheckBox" name="c0_homeIgnoreLimits_3">
                      <property name="text">
                       <string>Home Ignore Limits</string>
                      </property>
                     </widget>
                    </item>
                    <item row="3" column="0">
-                    <widget class="QLabel" name="label_106">
+                    <widget class="QLabel" name="label_98">
                      <property name="text">
                       <string>Home Latch Velocity</string>
                      </property>
@@ -4479,7 +4503,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="5" column="1">
-                    <widget class="QLineEdit" name="p1_homeSequence_3">
+                    <widget class="QLineEdit" name="c0_homeSequence_3">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home sequences start at 0 and do not skip a number.&lt;/p&gt;&lt;p&gt;Multiple joint axis use a negative number.&lt;/p&gt;&lt;p&gt;Leave blank to home the joint manually.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -4489,14 +4513,14 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="9" column="1">
-                    <widget class="QCheckBox" name="p1_homeSwitchShared_3">
+                    <widget class="QCheckBox" name="c0_homeSwitchShared_3">
                      <property name="text">
                       <string>Home Switch is Shared</string>
                      </property>
                     </widget>
                    </item>
                    <item row="3" column="1">
-                    <widget class="QLineEdit" name="p1_homeLatchVel_3">
+                    <widget class="QLineEdit" name="c0_homeLatchVel_3">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Latch Velocity is in user units per second&lt;br/&gt;usually set slower than Search Velocity&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -4506,14 +4530,14 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="8" column="1">
-                    <widget class="QCheckBox" name="p1_homeUseIndex_3">
+                    <widget class="QCheckBox" name="c0_homeUseIndex_3">
                      <property name="text">
                       <string>Home Use Index</string>
                      </property>
                     </widget>
                    </item>
                    <item row="0" column="0">
-                    <widget class="QLabel" name="label_120">
+                    <widget class="QLabel" name="label_99">
                      <property name="text">
                       <string>Home</string>
                      </property>
@@ -4523,7 +4547,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_home_3">
+                    <widget class="QLineEdit" name="c0_home_3">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home is usually set to 0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -4533,7 +4557,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLineEdit" name="p1_homeSearchVel_3">
+                    <widget class="QLineEdit" name="c0_homeSearchVel_3">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Search Velocity is in units per second&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -4553,7 +4577,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="4" column="1">
-                    <widget class="QLineEdit" name="p1_homeFinalVelocity_3">
+                    <widget class="QLineEdit" name="c0_homeFinalVelocity_3">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
@@ -4563,14 +4587,79 @@ QGroupBox::title {
                  </widget>
                 </item>
                 <item row="2" column="0" rowspan="2">
-                 <widget class="QGroupBox" name="p1_stepgenGB_3">
+                 <widget class="QGroupBox" name="c0_analogGB_3">
+                  <property name="title">
+                   <string>Analog Output</string>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_118">
+                   <item row="2" column="1">
+                    <widget class="QLineEdit" name="c0_analogScaleMax_3"/>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="label_28">
+                     <property name="text">
+                      <string>Analog Max Limit</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="c0_analogMinLimit_3"/>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="label_29">
+                     <property name="text">
+                      <string>Analog Scale Max</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="c0_analogMaxLimit_3"/>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="QPushButton" name="c0_analogDefault_3">
+                     <property name="text">
+                      <string>Default Values</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_30">
+                     <property name="text">
+                      <string>Analog Min Limit</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QGroupBox" name="c0_encoderGB_3">
+                  <property name="title">
+                   <string>Encoder</string>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_124">
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_812">
+                     <property name="text">
+                      <string>Encoder Scale</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="c0_encoderScale_3"/>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QGroupBox" name="c0_stepgenGB_3">
                   <property name="styleSheet">
                    <string notr="true"/>
                   </property>
                   <property name="title">
                    <string>StepGen Settings</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_15">
+                  <layout class="QGridLayout" name="gridLayout_16">
                    <property name="leftMargin">
                     <number>10</number>
                    </property>
@@ -4587,7 +4676,7 @@ QGroupBox::title {
                     <number>5</number>
                    </property>
                    <item row="0" column="0">
-                    <widget class="QLabel" name="label_95">
+                    <widget class="QLabel" name="label_100">
                      <property name="text">
                       <string>Step Time</string>
                      </property>
@@ -4619,7 +4708,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="0">
-                    <widget class="QLabel" name="label_96">
+                    <widget class="QLabel" name="label_101">
                      <property name="text">
                       <string>Step Space</string>
                      </property>
@@ -4651,7 +4740,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="0">
-                    <widget class="QLabel" name="label_97">
+                    <widget class="QLabel" name="label_106">
                      <property name="text">
                       <string>Direction Setup</string>
                      </property>
@@ -4683,7 +4772,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="3" column="0">
-                    <widget class="QLabel" name="label_98">
+                    <widget class="QLabel" name="label_119">
                      <property name="text">
                       <string>Direction Hold</string>
                      </property>
@@ -4693,7 +4782,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="3" column="2">
-                    <widget class="QLabel" name="label_119">
+                    <widget class="QLabel" name="label_120">
                      <property name="minimumSize">
                       <size>
                        <width>20</width>
@@ -4715,7 +4804,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="3">
-                    <widget class="QComboBox" name="p1_driveCB_3">
+                    <widget class="QComboBox" name="c0_driveCB_3">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -4731,7 +4820,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLineEdit" name="p1_dirSetup_3">
+                    <widget class="QLineEdit" name="c0_dirSetup_3">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -4759,7 +4848,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="3" column="1">
-                    <widget class="QLineEdit" name="p1_dirHold_3">
+                    <widget class="QLineEdit" name="c0_dirHold_3">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -4787,7 +4876,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="1">
-                    <widget class="QLineEdit" name="p1_stepSpace_3">
+                    <widget class="QLineEdit" name="c0_stepSpace_3">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -4815,7 +4904,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_stepTime_3">
+                    <widget class="QLineEdit" name="c0_stepTime_3">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -4848,71 +4937,6 @@ QGroupBox::title {
                   </layout>
                  </widget>
                 </item>
-                <item row="3" column="1">
-                 <widget class="QGroupBox" name="p1_encoderGB_3">
-                  <property name="title">
-                   <string>Encoder</string>
-                  </property>
-                  <layout class="QGridLayout" name="gridLayout_124">
-                   <item row="0" column="0">
-                    <widget class="QLabel" name="label_812">
-                     <property name="text">
-                      <string>Encoder Scale</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_encoderScale_3"/>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item row="4" column="0">
-                 <widget class="QGroupBox" name="p1_analogGB_3">
-                  <property name="title">
-                   <string>Analog Output</string>
-                  </property>
-                  <layout class="QGridLayout" name="gridLayout_118">
-                   <item row="2" column="1">
-                    <widget class="QLineEdit" name="p1_analogScaleMax_3"/>
-                   </item>
-                   <item row="1" column="0">
-                    <widget class="QLabel" name="label_28">
-                     <property name="text">
-                      <string>Analog Max Limit</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_analogMinLimit_3"/>
-                   </item>
-                   <item row="2" column="0">
-                    <widget class="QLabel" name="label_29">
-                     <property name="text">
-                      <string>Analog Scale Max</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="1">
-                    <widget class="QLineEdit" name="p1_analogMaxLimit_3"/>
-                   </item>
-                   <item row="0" column="2">
-                    <widget class="QPushButton" name="p1_analogDefault_3">
-                     <property name="text">
-                      <string>Default Values</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="0">
-                    <widget class="QLabel" name="label_30">
-                     <property name="text">
-                      <string>Analog Min Limit</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
                 <item row="4" column="1">
                  <widget class="QGroupBox" name="gridGroupBox_9">
                   <property name="styleSheet">
@@ -4930,7 +4954,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="1">
-                    <widget class="QLabel" name="p1_distanceJoint_3">
+                    <widget class="QLabel" name="c0_distanceJoint_3">
                      <property name="frameShape">
                       <enum>QFrame::Box</enum>
                      </property>
@@ -4947,7 +4971,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <widget class="QLabel" name="p1_timeJoint_3">
+                    <widget class="QLabel" name="c0_timeJoint_3">
                      <property name="frameShape">
                       <enum>QFrame::Box</enum>
                      </property>
@@ -4957,7 +4981,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLabel" name="p1_stepRateJoint_3">
+                    <widget class="QLabel" name="c0_stepRateJoint_3">
                      <property name="frameShape">
                       <enum>QFrame::Box</enum>
                      </property>
@@ -4982,7 +5006,7 @@ QGroupBox::title {
                <attribute name="title">
                 <string>Joint 4</string>
                </attribute>
-               <layout class="QGridLayout" name="gridLayout_134">
+               <layout class="QGridLayout" name="gridLayout_131">
                 <item row="0" column="0" colspan="2">
                  <widget class="QGroupBox" name="p1_jointAxisGroup_4">
                   <property name="sizePolicy">
@@ -5014,48 +5038,48 @@ QGroupBox::title {
                     <number>6</number>
                    </property>
                    <item row="2" column="3">
-                    <widget class="QLineEdit" name="p1_minLimit_4">
+                    <widget class="QLineEdit" name="c0_minLimit_4">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="4">
-                    <widget class="QLineEdit" name="p1_maxLimit_4">
+                    <widget class="QLineEdit" name="c0_maxLimit_4">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="5">
-                    <widget class="QLineEdit" name="p1_maxVelocity_4">
+                    <widget class="QLineEdit" name="c0_maxVelocity_4">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="0">
-                    <widget class="QComboBox" name="p1_axisCB_4"/>
+                    <widget class="QComboBox" name="c0_axisCB_4"/>
                    </item>
                    <item row="2" column="6">
-                    <widget class="QLineEdit" name="p1_maxAccel_4">
+                    <widget class="QLineEdit" name="c0_maxAccel_4">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="7">
-                    <widget class="QCheckBox" name="p1_reverse_4">
+                    <widget class="QCheckBox" name="c0_reverse_4">
                      <property name="text">
                       <string>Reverse Dir</string>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="2">
-                    <widget class="QLineEdit" name="p1_scale_4"/>
+                    <widget class="QLineEdit" name="c0_scale_4"/>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLabel" name="p1_axisType_4">
+                    <widget class="QLabel" name="c0_axisType_4">
                      <property name="frameShape">
                       <enum>QFrame::Box</enum>
                      </property>
@@ -5153,14 +5177,20 @@ QGroupBox::title {
                  </widget>
                 </item>
                 <item row="1" column="0">
-                 <widget class="QGroupBox" name="groupBox_12">
+                 <widget class="QGroupBox" name="groupBox_13">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>200</height>
+                   </size>
+                  </property>
                   <property name="styleSheet">
                    <string notr="true"/>
                   </property>
                   <property name="title">
                    <string>PID Settings</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_20">
+                  <layout class="QGridLayout" name="gridLayout_21">
                    <property name="leftMargin">
                     <number>10</number>
                    </property>
@@ -5187,7 +5217,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_p_4">
+                    <widget class="QLineEdit" name="c0_p_4">
                      <property name="text">
                       <string/>
                      </property>
@@ -5207,7 +5237,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="3">
-                    <widget class="QLineEdit" name="p1_deadband_4">
+                    <widget class="QLineEdit" name="c0_deadband_4">
                      <property name="text">
                       <string/>
                      </property>
@@ -5227,7 +5257,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="1">
-                    <widget class="QLineEdit" name="p1_i_4">
+                    <widget class="QLineEdit" name="c0_i_4">
                      <property name="text">
                       <string/>
                      </property>
@@ -5247,7 +5277,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="3">
-                    <widget class="QLineEdit" name="p1_bias_4">
+                    <widget class="QLineEdit" name="c0_bias_4">
                      <property name="text">
                       <string/>
                      </property>
@@ -5267,7 +5297,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLineEdit" name="p1_d_4">
+                    <widget class="QLineEdit" name="c0_d_4">
                      <property name="text">
                       <string/>
                      </property>
@@ -5287,7 +5317,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="3">
-                    <widget class="QLineEdit" name="p1_maxOutput_4">
+                    <widget class="QLineEdit" name="c0_maxOutput_4">
                      <property name="text">
                       <string/>
                      </property>
@@ -5307,7 +5337,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="3" column="1">
-                    <widget class="QLineEdit" name="p1_ff0_4">
+                    <widget class="QLineEdit" name="c0_ff0_4">
                      <property name="text">
                       <string/>
                      </property>
@@ -5327,7 +5357,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="4" column="1">
-                    <widget class="QLineEdit" name="p1_ff1_4">
+                    <widget class="QLineEdit" name="c0_ff1_4">
                      <property name="text">
                       <string/>
                      </property>
@@ -5347,7 +5377,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="5" column="1">
-                    <widget class="QLineEdit" name="p1_ff2_4">
+                    <widget class="QLineEdit" name="c0_ff2_4">
                      <property name="text">
                       <string/>
                      </property>
@@ -5357,7 +5387,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="5" column="3">
-                    <widget class="QPushButton" name="p1_pidDefault_4">
+                    <widget class="QPushButton" name="c0_pidDefault_4">
                      <property name="text">
                       <string>Default Values</string>
                      </property>
@@ -5371,7 +5401,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="3" column="3">
-                    <widget class="QLineEdit" name="p1_maxError_4">
+                    <widget class="QLineEdit" name="c0_maxError_4">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
@@ -5381,14 +5411,20 @@ QGroupBox::title {
                  </widget>
                 </item>
                 <item row="1" column="1" rowspan="2">
-                 <widget class="QGroupBox" name="groupBox_13">
+                 <widget class="QGroupBox" name="groupBox_12">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>275</height>
+                   </size>
+                  </property>
                   <property name="styleSheet">
                    <string notr="true"/>
                   </property>
                   <property name="title">
                    <string>Homing</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_21">
+                  <layout class="QGridLayout" name="gridLayout_19">
                    <property name="leftMargin">
                     <number>10</number>
                    </property>
@@ -5405,7 +5441,7 @@ QGroupBox::title {
                     <number>5</number>
                    </property>
                    <item row="1" column="0">
-                    <widget class="QLabel" name="label_135">
+                    <widget class="QLabel" name="label_127">
                      <property name="text">
                       <string>Home Offset</string>
                      </property>
@@ -5415,7 +5451,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="5" column="0">
-                    <widget class="QLabel" name="label_136">
+                    <widget class="QLabel" name="label_128">
                      <property name="text">
                       <string>Home Sequence</string>
                      </property>
@@ -5425,7 +5461,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="0">
-                    <widget class="QLabel" name="label_137">
+                    <widget class="QLabel" name="label_129">
                      <property name="text">
                       <string>Home Search Velocity</string>
                      </property>
@@ -5435,7 +5471,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="1">
-                    <widget class="QLineEdit" name="p1_homeOffset_4">
+                    <widget class="QLineEdit" name="c0_homeOffset_4">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home Offset can be used to back off of the home switch&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -5445,14 +5481,14 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="7" column="1">
-                    <widget class="QCheckBox" name="p1_homeIgnoreLimits_4">
+                    <widget class="QCheckBox" name="c0_homeIgnoreLimits_4">
                      <property name="text">
                       <string>Home Ignore Limits</string>
                      </property>
                     </widget>
                    </item>
                    <item row="3" column="0">
-                    <widget class="QLabel" name="label_138">
+                    <widget class="QLabel" name="label_130">
                      <property name="text">
                       <string>Home Latch Velocity</string>
                      </property>
@@ -5462,7 +5498,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="5" column="1">
-                    <widget class="QLineEdit" name="p1_homeSequence_4">
+                    <widget class="QLineEdit" name="c0_homeSequence_4">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home sequences start at 0 and do not skip a number.&lt;/p&gt;&lt;p&gt;Multiple joint axis use a negative number.&lt;/p&gt;&lt;p&gt;Leave blank to home the joint manually.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -5472,14 +5508,14 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="9" column="1">
-                    <widget class="QCheckBox" name="p1_homeSwitchShared_4">
+                    <widget class="QCheckBox" name="c0_homeSwitchShared_4">
                      <property name="text">
                       <string>Home Switch is Shared</string>
                      </property>
                     </widget>
                    </item>
                    <item row="3" column="1">
-                    <widget class="QLineEdit" name="p1_homeLatchVel_4">
+                    <widget class="QLineEdit" name="c0_homeLatchVel_4">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Latch Velocity is in user units per second&lt;br/&gt;usually set slower than Search Velocity&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -5489,14 +5525,14 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="8" column="1">
-                    <widget class="QCheckBox" name="p1_homeUseIndex_4">
+                    <widget class="QCheckBox" name="c0_homeUseIndex_4">
                      <property name="text">
                       <string>Home Use Index</string>
                      </property>
                     </widget>
                    </item>
                    <item row="0" column="0">
-                    <widget class="QLabel" name="label_139">
+                    <widget class="QLabel" name="label_131">
                      <property name="text">
                       <string>Home</string>
                      </property>
@@ -5506,7 +5542,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_home_4">
+                    <widget class="QLineEdit" name="c0_home_4">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home is usually set to 0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -5516,7 +5552,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLineEdit" name="p1_homeSearchVel_4">
+                    <widget class="QLineEdit" name="c0_homeSearchVel_4">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Search Velocity is in units per second&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -5536,7 +5572,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="4" column="1">
-                    <widget class="QLineEdit" name="p1_homeFinalVelocity_4">
+                    <widget class="QLineEdit" name="c0_homeFinalVelocity_4">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
@@ -5546,14 +5582,79 @@ QGroupBox::title {
                  </widget>
                 </item>
                 <item row="2" column="0" rowspan="2">
-                 <widget class="QGroupBox" name="p1_stepgenGB_4">
+                 <widget class="QGroupBox" name="c0_analogGB_4">
+                  <property name="title">
+                   <string>Analog Output</string>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_119">
+                   <item row="2" column="1">
+                    <widget class="QLineEdit" name="c0_analogScaleMax_4"/>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="label_31">
+                     <property name="text">
+                      <string>Analog Max Limit</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="c0_analogMinLimit_4"/>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="label_32">
+                     <property name="text">
+                      <string>Analog Scale Max</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="c0_analogMaxLimit_4"/>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="QPushButton" name="c0_analogDefault_4">
+                     <property name="text">
+                      <string>Default Values</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_33">
+                     <property name="text">
+                      <string>Analog Min Limit</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QGroupBox" name="c0_encoderGB_4">
+                  <property name="title">
+                   <string>Encoder</string>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_125">
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_813">
+                     <property name="text">
+                      <string>Encoder Scale</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="c0_encoderScale_4"/>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QGroupBox" name="c0_stepgenGB_4">
                   <property name="styleSheet">
                    <string notr="true"/>
                   </property>
                   <property name="title">
                    <string>StepGen Settings</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_19">
+                  <layout class="QGridLayout" name="gridLayout_20">
                    <property name="leftMargin">
                     <number>10</number>
                    </property>
@@ -5570,7 +5671,7 @@ QGroupBox::title {
                     <number>5</number>
                    </property>
                    <item row="0" column="0">
-                    <widget class="QLabel" name="label_127">
+                    <widget class="QLabel" name="label_132">
                      <property name="text">
                       <string>Step Time</string>
                      </property>
@@ -5580,7 +5681,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="2">
-                    <widget class="QLabel" name="label_128">
+                    <widget class="QLabel" name="label_133">
                      <property name="minimumSize">
                       <size>
                        <width>20</width>
@@ -5602,7 +5703,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="0">
-                    <widget class="QLabel" name="label_129">
+                    <widget class="QLabel" name="label_134">
                      <property name="text">
                       <string>Step Space</string>
                      </property>
@@ -5612,7 +5713,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="2">
-                    <widget class="QLabel" name="label_130">
+                    <widget class="QLabel" name="label_135">
                      <property name="minimumSize">
                       <size>
                        <width>20</width>
@@ -5634,7 +5735,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="0">
-                    <widget class="QLabel" name="label_131">
+                    <widget class="QLabel" name="label_136">
                      <property name="text">
                       <string>Direction Setup</string>
                      </property>
@@ -5644,7 +5745,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="2">
-                    <widget class="QLabel" name="label_132">
+                    <widget class="QLabel" name="label_137">
                      <property name="minimumSize">
                       <size>
                        <width>20</width>
@@ -5666,7 +5767,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="3" column="0">
-                    <widget class="QLabel" name="label_133">
+                    <widget class="QLabel" name="label_138">
                      <property name="text">
                       <string>Direction Hold</string>
                      </property>
@@ -5676,7 +5777,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="3" column="2">
-                    <widget class="QLabel" name="label_134">
+                    <widget class="QLabel" name="label_139">
                      <property name="minimumSize">
                       <size>
                        <width>20</width>
@@ -5698,7 +5799,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="3">
-                    <widget class="QComboBox" name="p1_driveCB_4">
+                    <widget class="QComboBox" name="c0_driveCB_4">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -5714,7 +5815,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLineEdit" name="p1_dirSetup_4">
+                    <widget class="QLineEdit" name="c0_dirSetup_4">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -5742,7 +5843,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="3" column="1">
-                    <widget class="QLineEdit" name="p1_dirHold_4">
+                    <widget class="QLineEdit" name="c0_dirHold_4">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -5770,7 +5871,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="1">
-                    <widget class="QLineEdit" name="p1_stepSpace_4">
+                    <widget class="QLineEdit" name="c0_stepSpace_4">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -5798,7 +5899,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_stepTime_4">
+                    <widget class="QLineEdit" name="c0_stepTime_4">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -5831,71 +5932,6 @@ QGroupBox::title {
                   </layout>
                  </widget>
                 </item>
-                <item row="3" column="1">
-                 <widget class="QGroupBox" name="p1_encoderGB_4">
-                  <property name="title">
-                   <string>Encoder</string>
-                  </property>
-                  <layout class="QGridLayout" name="gridLayout_125">
-                   <item row="0" column="0">
-                    <widget class="QLabel" name="label_813">
-                     <property name="text">
-                      <string>Encoder Scale</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_encoderScale_4"/>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item row="4" column="0">
-                 <widget class="QGroupBox" name="p1_analogGB_4">
-                  <property name="title">
-                   <string>Analog Output</string>
-                  </property>
-                  <layout class="QGridLayout" name="gridLayout_119">
-                   <item row="2" column="1">
-                    <widget class="QLineEdit" name="p1_analogScaleMax_4"/>
-                   </item>
-                   <item row="1" column="0">
-                    <widget class="QLabel" name="label_31">
-                     <property name="text">
-                      <string>Analog Max Limit</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_analogMinLimit_4"/>
-                   </item>
-                   <item row="2" column="0">
-                    <widget class="QLabel" name="label_32">
-                     <property name="text">
-                      <string>Analog Scale Max</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="1">
-                    <widget class="QLineEdit" name="p1_analogMaxLimit_4"/>
-                   </item>
-                   <item row="0" column="2">
-                    <widget class="QPushButton" name="p1_analogDefault_4">
-                     <property name="text">
-                      <string>Default Values</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="0">
-                    <widget class="QLabel" name="label_33">
-                     <property name="text">
-                      <string>Analog Min Limit</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
                 <item row="4" column="1">
                  <widget class="QGroupBox" name="gridGroupBox_10">
                   <property name="styleSheet">
@@ -5913,7 +5949,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="1">
-                    <widget class="QLabel" name="p1_distanceJoint_4">
+                    <widget class="QLabel" name="c0_distanceJoint_4">
                      <property name="frameShape">
                       <enum>QFrame::Box</enum>
                      </property>
@@ -5930,7 +5966,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <widget class="QLabel" name="p1_timeJoint_4">
+                    <widget class="QLabel" name="c0_timeJoint_4">
                      <property name="frameShape">
                       <enum>QFrame::Box</enum>
                      </property>
@@ -5940,7 +5976,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLabel" name="p1_stepRateJoint_4">
+                    <widget class="QLabel" name="c0_stepRateJoint_4">
                      <property name="frameShape">
                       <enum>QFrame::Box</enum>
                      </property>
@@ -5965,7 +6001,7 @@ QGroupBox::title {
                <attribute name="title">
                 <string>Joint 5</string>
                </attribute>
-               <layout class="QGridLayout" name="gridLayout_135">
+               <layout class="QGridLayout" name="gridLayout_106">
                 <item row="0" column="0" colspan="2">
                  <widget class="QGroupBox" name="p1_jointAxisGroup_5">
                   <property name="sizePolicy">
@@ -5997,48 +6033,48 @@ QGroupBox::title {
                     <number>6</number>
                    </property>
                    <item row="2" column="3">
-                    <widget class="QLineEdit" name="p1_minLimit_5">
+                    <widget class="QLineEdit" name="c0_minLimit_5">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="4">
-                    <widget class="QLineEdit" name="p1_maxLimit_5">
+                    <widget class="QLineEdit" name="c0_maxLimit_5">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="5">
-                    <widget class="QLineEdit" name="p1_maxVelocity_5">
+                    <widget class="QLineEdit" name="c0_maxVelocity_5">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="0">
-                    <widget class="QComboBox" name="p1_axisCB_5"/>
+                    <widget class="QComboBox" name="c0_axisCB_5"/>
                    </item>
                    <item row="2" column="6">
-                    <widget class="QLineEdit" name="p1_maxAccel_5">
+                    <widget class="QLineEdit" name="c0_maxAccel_5">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="7">
-                    <widget class="QCheckBox" name="p1_reverse_5">
+                    <widget class="QCheckBox" name="c0_reverse_5">
                      <property name="text">
                       <string>Reverse Dir</string>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="2">
-                    <widget class="QLineEdit" name="p1_scale_5"/>
+                    <widget class="QLineEdit" name="c0_scale_5"/>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLabel" name="p1_axisType_5">
+                    <widget class="QLabel" name="c0_axisType_5">
                      <property name="frameShape">
                       <enum>QFrame::Box</enum>
                      </property>
@@ -6048,7 +6084,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="2">
-                    <widget class="QLabel" name="label_141">
+                    <widget class="QLabel" name="label_140">
                      <property name="text">
                       <string>Scale</string>
                      </property>
@@ -6058,7 +6094,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="0">
-                    <widget class="QLabel" name="label_748">
+                    <widget class="QLabel" name="label_141">
                      <property name="text">
                       <string>Axis</string>
                      </property>
@@ -6068,7 +6104,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <widget class="QLabel" name="label_749">
+                    <widget class="QLabel" name="label_35">
                      <property name="text">
                       <string>Axis Type</string>
                      </property>
@@ -6078,7 +6114,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="3">
-                    <widget class="QLabel" name="label_750">
+                    <widget class="QLabel" name="label_293">
                      <property name="text">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -6091,7 +6127,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="4">
-                    <widget class="QLabel" name="label_751">
+                    <widget class="QLabel" name="label_419">
                      <property name="text">
                       <string>Maximum Limit</string>
                      </property>
@@ -6107,7 +6143,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="5">
-                    <widget class="QLabel" name="label_752">
+                    <widget class="QLabel" name="label_747">
                      <property name="text">
                       <string>Maximum Velocity</string>
                      </property>
@@ -6120,7 +6156,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="6">
-                    <widget class="QLabel" name="label_753">
+                    <widget class="QLabel" name="label_748">
                      <property name="text">
                       <string>Maximum Acceleration</string>
                      </property>
@@ -6136,240 +6172,18 @@ QGroupBox::title {
                  </widget>
                 </item>
                 <item row="1" column="0">
-                 <widget class="QGroupBox" name="groupBox_15">
+                 <widget class="QGroupBox" name="groupBox_16">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>200</height>
+                   </size>
+                  </property>
                   <property name="styleSheet">
                    <string notr="true"/>
                   </property>
                   <property name="title">
                    <string>PID Settings</string>
-                  </property>
-                  <layout class="QGridLayout" name="gridLayout_24">
-                   <property name="leftMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="spacing">
-                    <number>5</number>
-                   </property>
-                   <item row="0" column="0">
-                    <widget class="QLabel" name="label_762">
-                     <property name="text">
-                      <string>P</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_p_5">
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="2">
-                    <widget class="QLabel" name="label_763">
-                     <property name="text">
-                      <string>Deadband</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="3">
-                    <widget class="QLineEdit" name="p1_deadband_5">
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="0">
-                    <widget class="QLabel" name="label_764">
-                     <property name="text">
-                      <string>I</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="1">
-                    <widget class="QLineEdit" name="p1_i_5">
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="2">
-                    <widget class="QLabel" name="label_765">
-                     <property name="text">
-                      <string>Bias</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="3">
-                    <widget class="QLineEdit" name="p1_bias_5">
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="0">
-                    <widget class="QLabel" name="label_766">
-                     <property name="text">
-                      <string>D</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="1">
-                    <widget class="QLineEdit" name="p1_d_5">
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="2">
-                    <widget class="QLabel" name="label_767">
-                     <property name="text">
-                      <string>Max Output</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="3">
-                    <widget class="QLineEdit" name="p1_maxOutput_5">
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="0">
-                    <widget class="QLabel" name="label_768">
-                     <property name="text">
-                      <string>FF0</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="1">
-                    <widget class="QLineEdit" name="p1_ff0_5">
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="4" column="0">
-                    <widget class="QLabel" name="label_769">
-                     <property name="text">
-                      <string>FF1</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="4" column="1">
-                    <widget class="QLineEdit" name="p1_ff1_5">
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="5" column="0">
-                    <widget class="QLabel" name="label_770">
-                     <property name="text">
-                      <string>FF2</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="5" column="1">
-                    <widget class="QLineEdit" name="p1_ff2_5">
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="5" column="3">
-                    <widget class="QPushButton" name="p1_pidDefault_5">
-                     <property name="text">
-                      <string>Default Values</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="2">
-                    <widget class="QLabel" name="label_771">
-                     <property name="text">
-                      <string>Max Error</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="3">
-                    <widget class="QLineEdit" name="p1_maxError_5">
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item row="1" column="1" rowspan="2">
-                 <widget class="QGroupBox" name="groupBox_16">
-                  <property name="styleSheet">
-                   <string notr="true"/>
-                  </property>
-                  <property name="title">
-                   <string>Homing</string>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_25">
                    <property name="leftMargin">
@@ -6387,10 +6201,160 @@ QGroupBox::title {
                    <property name="spacing">
                     <number>5</number>
                    </property>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_765">
+                     <property name="text">
+                      <string>P</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="c0_p_5">
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="QLabel" name="label_766">
+                     <property name="text">
+                      <string>Deadband</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="3">
+                    <widget class="QLineEdit" name="c0_deadband_5">
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
                    <item row="1" column="0">
+                    <widget class="QLabel" name="label_767">
+                     <property name="text">
+                      <string>I</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="c0_i_5">
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="2">
+                    <widget class="QLabel" name="label_768">
+                     <property name="text">
+                      <string>Bias</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="3">
+                    <widget class="QLineEdit" name="c0_bias_5">
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="label_769">
+                     <property name="text">
+                      <string>D</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QLineEdit" name="c0_d_5">
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="2">
+                    <widget class="QLabel" name="label_770">
+                     <property name="text">
+                      <string>Max Output</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="3">
+                    <widget class="QLineEdit" name="c0_maxOutput_5">
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="label_771">
+                     <property name="text">
+                      <string>FF0</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="1">
+                    <widget class="QLineEdit" name="c0_ff0_5">
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="0">
                     <widget class="QLabel" name="label_772">
                      <property name="text">
-                      <string>Home Offset</string>
+                      <string>FF1</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="1">
+                    <widget class="QLineEdit" name="c0_ff1_5">
+                     <property name="text">
+                      <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -6400,6 +6364,90 @@ QGroupBox::title {
                    <item row="5" column="0">
                     <widget class="QLabel" name="label_773">
                      <property name="text">
+                      <string>FF2</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="1">
+                    <widget class="QLineEdit" name="c0_ff2_5">
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="3">
+                    <widget class="QPushButton" name="c0_pidDefault_5">
+                     <property name="text">
+                      <string>Default Values</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="2">
+                    <widget class="QLabel" name="label_774">
+                     <property name="text">
+                      <string>Max Error</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="3">
+                    <widget class="QLineEdit" name="c0_maxError_5">
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="1" column="1" rowspan="2">
+                 <widget class="QGroupBox" name="groupBox_15">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>275</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="title">
+                   <string>Homing</string>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_23">
+                   <property name="leftMargin">
+                    <number>10</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>10</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>10</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>10</number>
+                   </property>
+                   <property name="spacing">
+                    <number>5</number>
+                   </property>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="label_749">
+                     <property name="text">
+                      <string>Home Offset</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="0">
+                    <widget class="QLabel" name="label_750">
+                     <property name="text">
                       <string>Home Sequence</string>
                      </property>
                      <property name="alignment">
@@ -6408,7 +6456,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="0">
-                    <widget class="QLabel" name="label_774">
+                    <widget class="QLabel" name="label_751">
                      <property name="text">
                       <string>Home Search Velocity</string>
                      </property>
@@ -6418,7 +6466,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="1">
-                    <widget class="QLineEdit" name="p1_homeOffset_5">
+                    <widget class="QLineEdit" name="c0_homeOffset_5">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home Offset can be used to back off of the home switch&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -6428,14 +6476,14 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="7" column="1">
-                    <widget class="QCheckBox" name="p1_homeIgnoreLimits_5">
+                    <widget class="QCheckBox" name="c0_homeIgnoreLimits_5">
                      <property name="text">
                       <string>Home Ignore Limits</string>
                      </property>
                     </widget>
                    </item>
                    <item row="3" column="0">
-                    <widget class="QLabel" name="label_775">
+                    <widget class="QLabel" name="label_752">
                      <property name="text">
                       <string>Home Latch Velocity</string>
                      </property>
@@ -6445,7 +6493,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="5" column="1">
-                    <widget class="QLineEdit" name="p1_homeSequence_5">
+                    <widget class="QLineEdit" name="c0_homeSequence_5">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home sequences start at 0 and do not skip a number.&lt;/p&gt;&lt;p&gt;Multiple joint axis use a negative number.&lt;/p&gt;&lt;p&gt;Leave blank to home the joint manually.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -6455,14 +6503,14 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="9" column="1">
-                    <widget class="QCheckBox" name="p1_homeSwitchShared_5">
+                    <widget class="QCheckBox" name="c0_homeSwitchShared_5">
                      <property name="text">
                       <string>Home Switch is Shared</string>
                      </property>
                     </widget>
                    </item>
                    <item row="3" column="1">
-                    <widget class="QLineEdit" name="p1_homeLatchVel_5">
+                    <widget class="QLineEdit" name="c0_homeLatchVel_5">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Latch Velocity is in user units per second&lt;br/&gt;usually set slower than Search Velocity&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -6472,14 +6520,14 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="8" column="1">
-                    <widget class="QCheckBox" name="p1_homeUseIndex_5">
+                    <widget class="QCheckBox" name="c0_homeUseIndex_5">
                      <property name="text">
                       <string>Home Use Index</string>
                      </property>
                     </widget>
                    </item>
                    <item row="0" column="0">
-                    <widget class="QLabel" name="label_776">
+                    <widget class="QLabel" name="label_753">
                      <property name="text">
                       <string>Home</string>
                      </property>
@@ -6489,7 +6537,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_home_5">
+                    <widget class="QLineEdit" name="c0_home_5">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home is usually set to 0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -6499,7 +6547,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLineEdit" name="p1_homeSearchVel_5">
+                    <widget class="QLineEdit" name="c0_homeSearchVel_5">
                      <property name="toolTip">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Search Velocity is in units per second&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
@@ -6509,7 +6557,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="4" column="0">
-                    <widget class="QLabel" name="label_808">
+                    <widget class="QLabel" name="label_36">
                      <property name="text">
                       <string>Home Final Velocity</string>
                      </property>
@@ -6519,7 +6567,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="4" column="1">
-                    <widget class="QLineEdit" name="p1_homeFinalVelocity_5">
+                    <widget class="QLineEdit" name="c0_homeFinalVelocity_5">
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
@@ -6529,14 +6577,79 @@ QGroupBox::title {
                  </widget>
                 </item>
                 <item row="2" column="0" rowspan="2">
-                 <widget class="QGroupBox" name="p1_stepgenGB_5">
+                 <widget class="QGroupBox" name="c0_analogGB_5">
+                  <property name="title">
+                   <string>Analog Output</string>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_120">
+                   <item row="2" column="1">
+                    <widget class="QLineEdit" name="c0_analogScaleMax_5"/>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="label_775">
+                     <property name="text">
+                      <string>Analog Max Limit</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="c0_analogMinLimit_5"/>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="label_776">
+                     <property name="text">
+                      <string>Analog Scale Max</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="c0_analogMaxLimit_5"/>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="QPushButton" name="c0_analogDefault_5">
+                     <property name="text">
+                      <string>Default Values</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_808">
+                     <property name="text">
+                      <string>Analog Min Limit</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QGroupBox" name="c0_encoderGB_5">
+                  <property name="title">
+                   <string>Encoder</string>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_126">
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_814">
+                     <property name="text">
+                      <string>Encoder Scale</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="c0_encoderScale_5"/>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QGroupBox" name="c0_stepgenGB_5">
                   <property name="styleSheet">
                    <string notr="true"/>
                   </property>
                   <property name="title">
                    <string>StepGen Settings</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_23">
+                  <layout class="QGridLayout" name="gridLayout_24">
                    <property name="leftMargin">
                     <number>10</number>
                    </property>
@@ -6681,7 +6794,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="3">
-                    <widget class="QComboBox" name="p1_driveCB_5">
+                    <widget class="QComboBox" name="c0_driveCB_5">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -6697,7 +6810,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLineEdit" name="p1_dirSetup_5">
+                    <widget class="QLineEdit" name="c0_dirSetup_5">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -6725,7 +6838,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="3" column="1">
-                    <widget class="QLineEdit" name="p1_dirHold_5">
+                    <widget class="QLineEdit" name="c0_dirHold_5">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -6753,7 +6866,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="1">
-                    <widget class="QLineEdit" name="p1_stepSpace_5">
+                    <widget class="QLineEdit" name="c0_stepSpace_5">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -6781,7 +6894,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_stepTime_5">
+                    <widget class="QLineEdit" name="c0_stepTime_5">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -6814,71 +6927,6 @@ QGroupBox::title {
                   </layout>
                  </widget>
                 </item>
-                <item row="3" column="1">
-                 <widget class="QGroupBox" name="p1_encoderGB_5">
-                  <property name="title">
-                   <string>Encoder</string>
-                  </property>
-                  <layout class="QGridLayout" name="gridLayout_126">
-                   <item row="0" column="0">
-                    <widget class="QLabel" name="label_814">
-                     <property name="text">
-                      <string>Encoder Scale</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_encoderScale_5"/>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item row="4" column="0">
-                 <widget class="QGroupBox" name="p1_analogGB_5">
-                  <property name="title">
-                   <string>Analog Output</string>
-                  </property>
-                  <layout class="QGridLayout" name="gridLayout_120">
-                   <item row="2" column="1">
-                    <widget class="QLineEdit" name="p1_analogScaleMax_5"/>
-                   </item>
-                   <item row="1" column="0">
-                    <widget class="QLabel" name="label_35">
-                     <property name="text">
-                      <string>Analog Max Limit</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="1">
-                    <widget class="QLineEdit" name="p1_analogMinLimit_5"/>
-                   </item>
-                   <item row="2" column="0">
-                    <widget class="QLabel" name="label_36">
-                     <property name="text">
-                      <string>Analog Scale Max</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="1">
-                    <widget class="QLineEdit" name="p1_analogMaxLimit_5"/>
-                   </item>
-                   <item row="0" column="2">
-                    <widget class="QPushButton" name="p1_analogDefault_5">
-                     <property name="text">
-                      <string>Default Values</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="0">
-                    <widget class="QLabel" name="label_140">
-                     <property name="text">
-                      <string>Analog Min Limit</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
                 <item row="4" column="1">
                  <widget class="QGroupBox" name="gridGroupBox_11">
                   <property name="styleSheet">
@@ -6889,14 +6937,14 @@ QGroupBox::title {
                   </property>
                   <layout class="QGridLayout" name="gridLayout_55">
                    <item row="0" column="0">
-                    <widget class="QLabel" name="label_293">
+                    <widget class="QLabel" name="label_762">
                      <property name="text">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Time to accelerate&lt;br/&gt;to max speed&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
                     </widget>
                    </item>
                    <item row="1" column="1">
-                    <widget class="QLabel" name="p1_distanceJoint_5">
+                    <widget class="QLabel" name="c0_distanceJoint_5">
                      <property name="frameShape">
                       <enum>QFrame::Box</enum>
                      </property>
@@ -6906,14 +6954,14 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="1" column="0">
-                    <widget class="QLabel" name="label_419">
+                    <widget class="QLabel" name="label_763">
                      <property name="text">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Distance to accelerate&lt;br/&gt;to max speed&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
                     </widget>
                    </item>
                    <item row="0" column="1">
-                    <widget class="QLabel" name="p1_timeJoint_5">
+                    <widget class="QLabel" name="c0_timeJoint_5">
                      <property name="frameShape">
                       <enum>QFrame::Box</enum>
                      </property>
@@ -6923,7 +6971,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QLabel" name="p1_stepRateJoint_5">
+                    <widget class="QLabel" name="c0_stepRateJoint_5">
                      <property name="frameShape">
                       <enum>QFrame::Box</enum>
                      </property>
@@ -6933,7 +6981,7 @@ QGroupBox::title {
                     </widget>
                    </item>
                    <item row="2" column="0">
-                    <widget class="QLabel" name="label_747">
+                    <widget class="QLabel" name="label_764">
                      <property name="text">
                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Step rate at&lt;br/&gt;max speed&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>

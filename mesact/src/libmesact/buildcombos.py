@@ -38,22 +38,23 @@ def build(parent):
 	for item in ipAddress:
 		parent.ipAddressCB.addItem(item[0], item[1])
 
-	'''
+	axes = [
+		['Select', False],
+		['X', 'X'],
+		['Y', 'Y'],
+		['Z', 'Z'],
+		['A', 'A'],
+		['B', 'B'],
+		['C', 'C'],
+		['U', 'U'],
+		['V', 'V'],
+		['W', 'W']
+		]
 
-	daughterCards = [
-	['Select', False],
-	['7i76', '7i76'],
-	['7i77', '7i77'],
-	['7i78', '7i78'],
-	['7i85', '7i85'],
-	['7i85S', '7i85s'],
-	['7i88', '7i88'],
-	['7i89', '7i89'],
-	]
-	for item in daughterCards:
-		parent.daughterCB_0.addItem(item[0], item[1])
-		parent.daughterCB_1.addItem(item[0], item[1])
-
+	for i in range(6):
+		for item in axes:
+			getattr(parent, f'c0_axisCB_{i}').addItem(item[0], item[1])
+			#getattr(parent, f'c1_axisCB_{i}').addItem(item[0], item[1])
 
 	gui = [
 		['Select', False],
@@ -61,6 +62,7 @@ def build(parent):
 		['Touchy', 'touchy']
 		]
 
+	# Display Tab
 	for item in gui:
 		parent.guiCB.addItem(item[0], item[1])
 
@@ -82,23 +84,36 @@ def build(parent):
 	for item in positionFeedback:
 		parent.positionFeedbackCB.addItem(item[0], item[1])
 
-	axes = [
-		['Select', False],
-		['X', 'X'],
-		['Y', 'Y'],
-		['Z', 'Z'],
-		['A', 'A'],
-		['B', 'B'],
-		['C', 'C'],
-		['U', 'U'],
-		['V', 'V'],
-		['W', 'W']
-		]
+	editors = {'Gedit':'gedit', 'Geany':'geany', 'Pyroom':'pyroom',
+		'Pluma':'pluma', 'Scite':'scite', 'Kwrite':'kwrite',
+		'Kate':'kate', 'Mousepad':'mousepad', 'Jedit':'jedit',
+		'XED':'xed'}
+	installed = False
+	for key, value in editors.items():
+		if shutil.which(value) is not None:
+			if not installed:
+				parent.editorCB.addItem('Select', False)
+				installed = True
+			parent.editorCB.addItem(key, value)
+	if not installed:
+		parent.editorCB.addItem('None', False)
+		parent.machinePTE.appendPlainText('No Editors were found!')
 
-	for i in range(6):
-		for item in axes:
-			getattr(parent, f'p1_axisCB_{i}').addItem(item[0], item[1])
-			getattr(parent, f'p2_axisCB_{i}').addItem(item[0], item[1])
+	'''
+./up
+	daughterCards = [
+	['Select', False],
+	['7i76', '7i76'],
+	['7i77', '7i77'],
+	['7i78', '7i78'],
+	['7i85', '7i85'],
+	['7i85S', '7i85s'],
+	['7i88', '7i88'],
+	['7i89', '7i89'],
+	]
+	for item in daughterCards:
+		parent.daughterCB_0.addItem(item[0], item[1])
+		parent.daughterCB_1.addItem(item[0], item[1])
 
 	ssCards = [
 		['Select', False],
@@ -147,21 +162,6 @@ def build(parent):
 		for item in drives:
 			getattr(parent, f'p1_driveCB_{i}').addItem(item[0], item[1])
 			getattr(parent, f'p2_driveCB_{i}').addItem(item[0], item[1])
-
-	editors = {'Gedit':'gedit', 'Geany':'geany', 'Pyroom':'pyroom',
-		'Pluma':'pluma', 'Scite':'scite', 'Kwrite':'kwrite',
-		'Kate':'kate', 'Mousepad':'mousepad', 'Jedit':'jedit',
-		'XED':'xed'}
-	installed = False
-	for key, value in editors.items():
-		if shutil.which(value) is not None:
-			if not installed:
-				parent.editorCB.addItem('Select', False)
-				installed = True
-			parent.editorCB.addItem(key, value)
-	if not installed:
-		parent.editorCB.addItem('None', False)
-		parent.machinePTE.appendPlainText('No Editors were found!')
 
 	debug = [
 		['Debug Off', '0x00000000'],

@@ -55,7 +55,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		self.emcVersion = '1.1'
 		self.setWindowTitle(f'Mesa Configuration Tool Version {self.version}')
 		self.board = ''
-		self.boardType = ''
+		self.boardType = '' # pci or eth
+		self.cardType_0 = '' # step or servo
 		self.fw = firmware
 		buildcombos.build(self)
 		utilities.setup(self)
@@ -68,14 +69,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		self.setupConnections()
 		self.show()
 		#loadini.openini(self, 'mesa-5i25')
-		loadini.openini(self, 'mesa-7i76e')
+		#loadini.openini(self, 'mesa-7i76e')
+		loadini.openini(self, 'mesa-7i95')
 
 	def setupConnections(self):
-		self.configName.textChanged[str].connect(partial(utilities.configNameChanged, self))
-		self.boardCB.currentIndexChanged.connect(partial(utilities.boardChanged, self))
-		self.firmwareCB.currentIndexChanged.connect(partial(utilities.firmwareChanged, self))
-		for i in range(2):
-			getattr(self, f'daughterCB_{i}').currentIndexChanged.connect(partial(utilities.daughterCardChanged, self))
+		# Menu Items
 		self.actionEnglish.triggered.connect(partial(self.change_language, None))
 		self.actionGerman.triggered.connect(partial(self.change_language, 'eng-de'))
 		self.actionFrench.triggered.connect(partial(self.change_language, 'eng-fr'))
@@ -83,6 +81,24 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		self.actionCheck.triggered.connect(partial(checkconfig.checkit, self))
 		self.actionBuild.triggered.connect(partial(buildconfig.build, self))
 
+		# Machine Tab
+		self.configName.textChanged[str].connect(partial(utilities.configNameChanged, self))
+		self.boardCB.currentIndexChanged.connect(partial(utilities.boardChanged, self))
+		self.firmwareCB.currentIndexChanged.connect(partial(utilities.firmwareChanged, self))
+		for i in range(2):
+			getattr(self, f'daughterCB_{i}').currentIndexChanged.connect(partial(utilities.daughterCardChanged, self))
+
+		# Joint Tabs
+		for i in range(6): # First Card Only for now
+			getattr(self, f'c0_axisCB_{i}').currentIndexChanged.connect(partial(utilities.axisChanged, self))
+			getattr(self, f'c0_scale_{i}').textChanged.connect(partial(utilities.updateAxisInfo, self))
+			getattr(self, f'c0_maxVelocity_{i}').textChanged.connect(partial(utilities.updateAxisInfo, self))
+			getattr(self, f'c0_maxAccel_{i}').textChanged.connect(partial(utilities.updateAxisInfo, self))
+			getattr(self, f'c0_pidDefault_{i}').clicked.connect(partial(utilities.pidSetDefault, self))
+			getattr(self, f'c0_driveCB_{i}').currentIndexChanged.connect(partial(utilities.driveChanged, self))
+
+		# Spindle Tab
+		self.pidDefault_s.clicked.connect(partial(utilities.pidSetDefault, self))
 
 	def change_language(self, translationFile = None):
 		#print(self.sender().text())
