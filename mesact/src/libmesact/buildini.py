@@ -137,20 +137,27 @@ def build(parent):
 			iniContents.append(f'\n[AXIS_{axis}]\n')
 			#print(getattr(parent, f'{card}_minLimit_{i}').text())
 
-			iniContents.append('MIN_LIMIT = ' + str(getattr(parent, f'{card}_minLimit_{i}').text()) + '\n')
-
-			iniContents.append('MAX_LIMIT = ')
-			iniContents.append(f'{getattr(parent, f"{card}_maxLimit_{i}").text()}\n')
-			iniContents.append(f'MAX_VELOCITY = {getattr(parent, card + "_maxVelocity_" + str(i)).text()}\n')
-			iniContents.append(f'MAX_ACCELERATION = {getattr(parent, card + "_maxAccel_" + str(i)).text()}\n')
+			iniContents.append(f'MIN_LIMIT = {getattr(parent, f"{card}_minLimit_{i}").text()}\n')
+			iniContents.append(f'MAX_LIMIT = {getattr(parent, f"{card}_maxLimit_{i}").text()}\n')
+			iniContents.append(f'MAX_VELOCITY = {getattr(parent, f"{card}_maxVelocity_{i}").text()}\n')
+			iniContents.append(f'MAX_ACCELERATION = {getattr(parent, f"{card}_maxAccel_{i}").text()}\n')
 
 	'''
+		card = 'c0'
+		i = 0
+		test = []
+		#print(getattr(self, f'{card}_minLimit_{i}').text())
+		test.append(f'MIN_LIMIT = {getattr(self, f"{card}_minLimit_{i}").text()}')
+		print(test)
+	'''
+
 	# build the [JOINT_n] sections
-	for i in range(parent.joints):
-		if getattr(parent, "axisCB_" + str(i)).currentData():
+	for i in range(6):
+		if getattr(parent, f'{card}_axisCB_{i}').currentData():
 			iniContents.append(f'\n[JOINT_{i}]\n')
-			iniContents.append(f'AXIS = {getattr(parent, "axisCB_" + str(i)).currentData()}\n')
-			iniContents.append(f'MIN_LIMIT = {getattr(parent, "minLimit_" + str(i)).text()}\n')
+			iniContents.append(f'AXIS = {getattr(parent, f"{card}_axisCB_{i}").currentData()}\n')
+			iniContents.append(f'MIN_LIMIT = {getattr(parent, f"{card}_minLimit_{i}").text()}\n')
+	'''
 			iniContents.append(f'MAX_LIMIT = {getattr(parent, "maxLimit_" + str(i)).text()}\n')
 			iniContents.append(f'MAX_VELOCITY = {getattr(parent, "maxVelocity_" + str(i)).text()}\n')
 			iniContents.append(f'MAX_ACCELERATION = {getattr(parent, "maxAccel_" + str(i)).text()}\n')
