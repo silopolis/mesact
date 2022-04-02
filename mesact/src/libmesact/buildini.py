@@ -218,7 +218,7 @@ def build(parent):
 				iniContents.append('HOME_USE_INDEX = True\n')
 			if getattr(parent, f"{card}_homeSwitchShared_{i}").isChecked():
 				iniContents.append('HOME_IS_SHARED = True\n')
-	'''
+
 	# build the [SPINDLE] section if enabled
 
 	iniContents.append('\n[SPINDLE]\n')
@@ -334,8 +334,6 @@ def build(parent):
 		# 8 ss7i87in_
 		for i in range(8):
 			iniContents.append(f'SS_INPUT_{i} = {getattr(parent, "ss7i87in_" + str(i)).text()}\n')
-
-	'''
 
 	try:
 		with open(iniFilePath, 'w') as iniFile:

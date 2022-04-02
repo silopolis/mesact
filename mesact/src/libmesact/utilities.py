@@ -76,6 +76,7 @@ def boardChanged(parent):
 			parent.boardType = 'pci'
 			parent.cardType_0 = ''
 			parent.mainTabs.setTabEnabled(3, False)
+			parent.mainTabs.setTabEnabled(4, False)
 			parent.boardTW.setTabText(0, '5i25')
 			parent.ipAddressCB.setEnabled(False)
 			parent.daughterCB_0.setEnabled(True)
@@ -94,10 +95,16 @@ def boardChanged(parent):
 			parent.encodersCB.clear()
 			parent.encodersCB.addItem('N/A', False)
 
-		elif parent.boardCB.currentData() == '7i76e': # 5 axes of step & dir
+		# 5 axes of step & dir 32 sinking inputs and 16 sourcing outputs
+		elif parent.boardCB.currentData() == '7i76e':
 			parent.boardType = 'eth'
 			parent.cardType_0 = 'step'
 			parent.mainTabs.setTabEnabled(3, True)
+			parent.mainTabs.setTabEnabled(4, True)
+			for i in range(32):
+				getattr(parent, f'inputPB_{i}').setEnabled(True)
+			for i in range(16):
+				getattr(parent, f'outputPB_{i}').setEnabled(True)
 			parent.cardTabs.setTabText(0, '7i76e')
 			parent.jointTabs_0.setTabEnabled(5, False)
 			parent.boardTW.setTabText(0, '7i76e')
@@ -123,6 +130,7 @@ def boardChanged(parent):
 			parent.boardType = 'eth'
 			parent.cardType_0 = ''
 			parent.mainTabs.setTabEnabled(3, False)
+			parent.mainTabs.setTabEnabled(4, False)
 			parent.boardTW.setTabText(0, '7i80DB')
 			parent.ipAddressCB.setEnabled(True)
 			pixmap = QPixmap(os.path.join(parent.image_path, '7i80db-card.png'))
@@ -140,6 +148,7 @@ def boardChanged(parent):
 			parent.boardType = 'eth'
 			parent.cardType_0 = ''
 			parent.mainTabs.setTabEnabled(3, False)
+			parent.mainTabs.setTabEnabled(4, False)
 			parent.boardTW.setTabText(0, '7i80DB')
 			parent.ipAddressCB.setEnabled(True)
 			pixmap = QPixmap(os.path.join(parent.image_path, '7i80db-card.png'))
@@ -157,6 +166,7 @@ def boardChanged(parent):
 			parent.boardType = 'eth'
 			parent.cardType_0 = ''
 			parent.mainTabs.setTabEnabled(3, False)
+			parent.mainTabs.setTabEnabled(4, False)
 			parent.boardTW.setTabText(0, '7i80HD')
 			parent.ipAddressCB.setEnabled(True)
 			pixmap = QPixmap(os.path.join(parent.image_path, '7i80hd-card.png'))
@@ -184,6 +194,7 @@ def boardChanged(parent):
 			parent.boardType = 'eth'
 			parent.cardType_0 = ''
 			parent.mainTabs.setTabEnabled(3, False)
+			parent.mainTabs.setTabEnabled(4, False)
 			parent.boardTW.setTabText(0, '7i80HD')
 			parent.ipAddressCB.setEnabled(True)
 			pixmap = QPixmap(os.path.join(parent.image_path, '7i80hd-card.png'))
@@ -211,6 +222,7 @@ def boardChanged(parent):
 			parent.boardType = 'eth'
 			parent.cardType_0 = ''
 			parent.mainTabs.setTabEnabled(3, False)
+			parent.mainTabs.setTabEnabled(4, False)
 			parent.boardTW.setTabText(0, '7i92')
 			parent.ipAddressCB.setEnabled(True)
 			pixmap = QPixmap(os.path.join(parent.image_path, '7i92-card.png'))
@@ -227,6 +239,7 @@ def boardChanged(parent):
 			parent.boardType = 'eth'
 			parent.cardType_0 = ''
 			parent.mainTabs.setTabEnabled(3, False)
+			parent.mainTabs.setTabEnabled(4, False)
 			parent.boardTW.setTabText(0, '7i93')
 			parent.ipAddressCB.setEnabled(True)
 			pixmap = QPixmap(os.path.join(parent.image_path, '7i93-card.png'))
@@ -240,12 +253,23 @@ def boardChanged(parent):
 			parent.encodersCB.clear()
 			parent.encodersCB.addItem('N/A', False)
 
-		elif parent.boardCB.currentData() == '7i95': # 6 axes of step & dir
+		# 6 axes of step & dir 24 isolated inputs 6 isolated outputs
+		elif parent.boardCB.currentData() == '7i95':
 			parent.boardType = 'eth'
 			parent.cardType_0 = 'step'
 			parent.mainTabs.setTabEnabled(3, True)
+			parent.mainTabs.setTabEnabled(4, True)
+			for i in range(24):
+				getattr(parent, f'inputPB_{i}').setEnabled(True)
+			for i in range(6):
+				getattr(parent, f'outputPB_{i}').setEnabled(True)
+			for i in range(24,32):
+				getattr(parent, f'inputPB_{i}').setEnabled(False)
+			for i in range(6,16):
+				getattr(parent, f'outputPB_{i}').setEnabled(False)
 			parent.cardTabs.setTabText(0, '7i95')
 			parent.jointTabs_0.setTabEnabled(5, True)
+			parent.mainTabs.setTabEnabled(4, True)
 			parent.boardTW.setTabText(0, '7i95')
 			parent.ipAddressCB.setEnabled(True)
 			pixmap = QPixmap(os.path.join(parent.image_path, '7i95-card.png'))
@@ -265,10 +289,20 @@ def boardChanged(parent):
 				getattr(parent, f'c0_analogGB_{i}').setVisible(False)
 				getattr(parent, f'c0_encoderGB_{i}').setVisible(False)
 
-		elif parent.boardCB.currentData() == '7i96': # 5 axes of step & dir
+		# 5 axes of step & dir 11 isolated inputs 6 isolated outputs
+		elif parent.boardCB.currentData() == '7i96':
 			parent.boardType = 'eth'
 			parent.cardType_0 = 'step'
 			parent.mainTabs.setTabEnabled(3, True)
+			parent.mainTabs.setTabEnabled(4, True)
+			for i in range(11):
+				getattr(parent, f'inputPB_{i}').setEnabled(True)
+			for i in range(6):
+				getattr(parent, f'outputPB_{i}').setEnabled(True)
+			for i in range(11,32):
+				getattr(parent, f'inputPB_{i}').setEnabled(False)
+			for i in range(6,16):
+				getattr(parent, f'outputPB_{i}').setEnabled(False)
 			parent.cardTabs.setTabText(0, '7i96')
 			parent.jointTabs_0.setTabEnabled(5, False)
 			parent.boardTW.setTabText(0, '7i96')
@@ -290,10 +324,20 @@ def boardChanged(parent):
 				getattr(parent, f'c0_analogGB_{i}').setVisible(False)
 				getattr(parent, f'c0_encoderGB_{i}').setVisible(False)
 
-		elif parent.boardCB.currentData() == '7i97': # 6 axes of analog servo
+		# 6 axes of analog servo 16 isolated inputs 6 isolated outputs
+		elif parent.boardCB.currentData() == '7i97':
 			parent.boardType = 'eth'
 			parent.cardType_0 = 'servo'
 			parent.mainTabs.setTabEnabled(3, True)
+			parent.mainTabs.setTabEnabled(4, True)
+			for i in range(16):
+				getattr(parent, f'inputPB_{i}').setEnabled(True)
+			for i in range(6):
+				getattr(parent, f'outputPB_{i}').setEnabled(True)
+			for i in range(16,32):
+				getattr(parent, f'inputPB_{i}').setEnabled(False)
+			for i in range(6,16):
+				getattr(parent, f'outputPB_{i}').setEnabled(False)
 			parent.cardTabs.setTabText(0, '7i97')
 			parent.jointTabs_0.setTabEnabled(5, True)
 			parent.boardTW.setTabText(0, '7i97')
@@ -323,6 +367,7 @@ def boardChanged(parent):
 			parent.boardType = 'eth'
 			parent.cardType_0 = ''
 			parent.mainTabs.setTabEnabled(3, False)
+			parent.mainTabs.setTabEnabled(4, False)
 			parent.boardTW.setTabText(0, '7i98')
 			parent.ipAddressCB.setEnabled(True)
 			pixmap = QPixmap(os.path.join(parent.image_path, '7i98-card.png'))

@@ -124,21 +124,6 @@ def build(parent):
 			getattr(parent, f'c0_driveCB_{i}').addItem(item[0], item[1])
 			#getattr(parent, f'c1_driveCB_{i}').addItem(item[0], item[1])
 
-	'''
-./up
-	daughterCards = [
-	['Select', False],
-	['7i76', '7i76'],
-	['7i77', '7i77'],
-	['7i78', '7i78'],
-	['7i85', '7i85'],
-	['7i85S', '7i85s'],
-	['7i88', '7i88'],
-	['7i89', '7i89'],
-	]
-	for item in daughterCards:
-		parent.daughterCB_0.addItem(item[0], item[1])
-		parent.daughterCB_1.addItem(item[0], item[1])
 
 	ssCards = [
 		['Select', False],
@@ -197,6 +182,21 @@ def build(parent):
 	for item in cpuSpeed:
 		parent.cpuSpeedCB.addItem(item[0], item[1])
 
+	'''
+
+	daughterCards = [
+	['Select', False],
+	['7i76', '7i76'],
+	['7i77', '7i77'],
+	['7i78', '7i78'],
+	['7i85', '7i85'],
+	['7i85S', '7i85s'],
+	['7i88', '7i88'],
+	['7i89', '7i89'],
+	]
+	for item in daughterCards:
+		parent.daughterCB_0.addItem(item[0], item[1])
+		parent.daughterCB_1.addItem(item[0], item[1])
 
 	
 	# firmware combobox

@@ -18,6 +18,7 @@ from PyQt5.QtGui import QPixmap
 from libmesact.ui_mesact import Ui_MainWindow
 from libmesact import utilities
 from libmesact import buildcombos
+from libmesact import buildmenus
 from libmesact import firmware
 from libmesact import loadini
 from libmesact import checkconfig
@@ -59,10 +60,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		self.cardType_0 = '' # step or servo
 		self.fw = firmware
 		buildcombos.build(self)
+		buildmenus.build(self)
 		utilities.setup(self)
 		#self.helpInfo = helptext.descriptions
-
-		#buildmenus.build(self)
 
 		#self.extcmd = extcmd.extcmd()
 		#self.ladderOptionsList = utilities.plcOptions()
@@ -99,6 +99,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 		# Spindle Tab
 		self.pidDefault_s.clicked.connect(partial(utilities.pidSetDefault, self))
+
+		# Smart Serial Tab
+		self.ssCardCB.currentIndexChanged.connect(partial(utilities.ssCardChanged, self))
 
 	def change_language(self, translationFile = None):
 		#print(self.sender().text())
