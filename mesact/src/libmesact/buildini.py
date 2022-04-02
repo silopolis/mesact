@@ -175,12 +175,12 @@ def build(parent):
 				iniContents.append(f'DIRHOLD = {getattr(parent, f"{card}_dirHold_{i}").text()}\n')
 				iniContents.append(f'STEPLEN = {getattr(parent, f"{card}_stepTime_{i}").text()}\n')
 				iniContents.append(f'STEPSPACE = {getattr(parent, f"{card}_stepSpace_{i}").text()}\n')
-	'''
+
 			if parent.cardType_0 == 'servo':
-				iniContents.append(f'ENCODER_SCALE = {getattr(parent, "encoderScale_" + str(i)).text()}\n')
-				iniContents.append(f'ANALOG_SCALE_MAX = {getattr(parent, "analogScaleMax_" + str(i)).text()}\n')
-				iniContents.append(f'ANALOG_MIN_LIMIT = {getattr(parent, "analogMinLimit_" + str(i)).text()}\n')
-				iniContents.append(f'ANALOG_MAX_LIMIT = {getattr(parent, "analogMaxLimit_" + str(i)).text()}\n')
+				iniContents.append(f'ENCODER_SCALE = {getattr(parent, f"{card}_encoderScale_{i}").text()}\n')
+				iniContents.append(f'ANALOG_SCALE_MAX = {getattr(parent, f"{card}_analogScaleMax_{i}").text()}\n')
+				iniContents.append(f'ANALOG_MIN_LIMIT = {getattr(parent, f"{card}_analogMinLimit_{i}").text()}\n')
+				iniContents.append(f'ANALOG_MAX_LIMIT = {getattr(parent, f"{card}_analogMaxLimit_{i}").text()}\n')
 
 			if parent.linearUnitsCB.currentData()  == 'inch':
 				iniContents.append('FERROR = 0.5\n')
@@ -188,35 +188,37 @@ def build(parent):
 			else:
 				iniContents.append('FERROR = 0.0051\n')
 				iniContents.append('MIN_FERROR = 0.0025\n')
-			iniContents.append(f'DEADBAND = {getattr(parent, "deadband_" + str(i)).text()}\n')
-			iniContents.append(f'P = {getattr(parent, "p_" + str(i)).text()}\n')
-			iniContents.append(f'I = {getattr(parent, "i_" + str(i)).text()}\n')
-			iniContents.append(f'D = {getattr(parent, "d_" + str(i)).text()}\n')
-			iniContents.append(f'FF0 = {getattr(parent, "ff0_" + str(i)).text()}\n')
-			iniContents.append(f'FF1 = {getattr(parent, "ff1_" + str(i)).text()}\n')
-			iniContents.append(f'FF2 = {getattr(parent, "ff2_" + str(i)).text()}\n')
-			iniContents.append(f'BIAS = {getattr(parent, "bias_" + str(i)).text()}\n')
-			iniContents.append(f'MAX_OUTPUT = {getattr(parent, "maxOutput_" + str(i)).text()}\n')
-			iniContents.append(f'MAX_ERROR = {getattr(parent, "maxError_" + str(i)).text()}\n')
-			if getattr(parent, "home_" + str(i)).text():
-				iniContents.append(f'HOME = {getattr(parent, "home_" + str(i)).text()}\n')
-			if getattr(parent, "homeOffset_" + str(i)).text():
-				iniContents.append(f'HOME_OFFSET = {getattr(parent, "homeOffset_" + str(i)).text()}\n')
-			if getattr(parent, "homeSearchVel_" + str(i)).text():
-				iniContents.append(f'HOME_SEARCH_VEL = {getattr(parent, "homeSearchVel_" + str(i)).text()}\n')
-			if getattr(parent, "homeLatchVel_" + str(i)).text():
-				iniContents.append(f'HOME_LATCH_VEL = {getattr(parent, "homeLatchVel_" + str(i)).text()}\n')
-			if getattr(parent, "homeFinalVelocity_" + str(i)).text():
-				iniContents.append(f'HOME_FINAL_VEL = {getattr(parent, "homeFinalVelocity_" + str(i)).text()}\n')
-			if getattr(parent, "homeSequence_" + str(i)).text():
-				iniContents.append(f'HOME_SEQUENCE = {getattr(parent, "homeSequence_" + str(i)).text()}\n')
-			if getattr(parent, "homeIgnoreLimits_" + str(i)).isChecked():
-				iniContents.append('HOME_IGNORE_LIMITS = True\n')
-			if getattr(parent, "homeUseIndex_" + str(i)).isChecked():
-				iniContents.append('HOME_USE_INDEX = True\n')
-			if getattr(parent, "homeSwitchShared_" + str(i)).isChecked():
-				iniContents.append('HOME_IS_SHARED = True\n')
 
+			iniContents.append(f'DEADBAND = {getattr(parent, f"{card}_deadband_{i}").text()}\n')
+			iniContents.append(f'P = {getattr(parent, f"{card}_p_{i}").text()}\n')
+			iniContents.append(f'I = {getattr(parent, f"{card}_i_{i}").text()}\n')
+			iniContents.append(f'D = {getattr(parent, f"{card}_d_{i}").text()}\n')
+			iniContents.append(f'FF0 = {getattr(parent, f"{card}_ff0_{i}").text()}\n')
+			iniContents.append(f'FF1 = {getattr(parent, f"{card}_ff1_{i}").text()}\n')
+			iniContents.append(f'FF2 = {getattr(parent, f"{card}_ff2_{i}").text()}\n')
+			iniContents.append(f'BIAS = {getattr(parent, f"{card}_bias_{i}").text()}\n')
+			iniContents.append(f'MAX_OUTPUT = {getattr(parent, f"{card}_maxOutput_{i}").text()}\n')
+			iniContents.append(f'MAX_ERROR = {getattr(parent, f"{card}_maxError_{i}").text()}\n')
+
+			if getattr(parent, f"{card}_home_" + str(i)).text():
+				iniContents.append(f'HOME = {getattr(parent, f"{card}_home_{i}").text()}\n')
+			if getattr(parent, f"{card}_homeOffset_{i}").text():
+				iniContents.append(f'HOME_OFFSET = {getattr(parent, f"{card}_homeOffset_{i}").text()}\n')
+			if getattr(parent, f"{card}_homeSearchVel_{i}").text():
+				iniContents.append(f'HOME_SEARCH_VEL = {getattr(parent, f"{card}_homeSearchVel_{i}").text()}\n')
+			if getattr(parent, f"{card}_homeLatchVel_{i}").text():
+				iniContents.append(f'HOME_LATCH_VEL = {getattr(parent, f"{card}_homeLatchVel_{i}").text()}\n')
+			if getattr(parent, f"{card}_homeFinalVelocity_{i}").text():
+				iniContents.append(f'HOME_FINAL_VEL = {getattr(parent, f"{card}_homeFinalVelocity_{i}").text()}\n')
+			if getattr(parent, f"{card}_homeSequence_{i}").text():
+				iniContents.append(f'HOME_SEQUENCE = {getattr(parent, f"{card}_homeSequence_{i}").text()}\n')
+			if getattr(parent, f"{card}_homeIgnoreLimits_{i}").isChecked():
+				iniContents.append('HOME_IGNORE_LIMITS = True\n')
+			if getattr(parent, f"{card}_homeUseIndex_{i}").isChecked():
+				iniContents.append('HOME_USE_INDEX = True\n')
+			if getattr(parent, f"{card}_homeSwitchShared_{i}").isChecked():
+				iniContents.append('HOME_IS_SHARED = True\n')
+	'''
 	# build the [SPINDLE] section if enabled
 
 	iniContents.append('\n[SPINDLE]\n')
