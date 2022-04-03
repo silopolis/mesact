@@ -79,7 +79,7 @@
     </message>
     <message>
         <location filename="ui_mesact.py" line="14563"/>
-        <source>Read</source>
+        <source>Read HMID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -105,11 +105,6 @@
     <message>
         <location filename="ui_mesact.py" line="17197"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="ui_mesact.py" line="14569"/>
-        <source>View Pin File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2345,6 +2340,16 @@ TB2 PIN    SIGNAL    CAT5 PIN    CAT5 568B COLOR
     <message>
         <location filename="ui_mesact.py" line="14559"/>
         <source>Encoders</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ui_mesact.py" line="14569"/>
+        <source>Read Pin Descriptions from board</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ui_mesact.py" line="14570"/>
+        <source>Read PD</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
