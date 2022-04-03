@@ -38,3 +38,10 @@ border-style: outset;
 border-color: grey;
 border-radius: 25px;
 }
+
+Note that you can get daughterboard terminal names from mesaflash, for example with 7I96+7i78 firmware,
+
+pcw@HP-8300 ~/bitfiles $ mesaflash --device 7i96 --addr 10.10.10.10 --readhmid --dbname3 7i78
+
+translated file > base file > new file
+lconvert -i eng-de-translated.ts eng-de-base.ts -o eng-de.ts
