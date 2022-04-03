@@ -1,5 +1,6 @@
 docs/build
 manuals
+translate
 mesact/debian/.debhelper
 mesact/debian/debhelper*
 mesact/debian/mesact
