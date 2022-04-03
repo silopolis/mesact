@@ -161,7 +161,9 @@ QGroupBox::title {
            <item row="0" column="1" colspan="2">
             <widget class="QLineEdit" name="configName">
              <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Any combination of letters and digits&lt;br/&gt;including the dash and underscore.&lt;br/&gt;Spaces are replaced with underscore.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>Any combination of letters and digits
+including the dash and underscore.
+Spaces are replaced with underscore.</string>
              </property>
             </widget>
            </item>
@@ -446,7 +448,8 @@ QGroupBox::title {
            <item row="1" column="6">
             <widget class="QPushButton" name="copyPB">
              <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Copy the Output&lt;br/&gt;to the clipboard&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>Copy the Output
+to the clipboard</string>
              </property>
              <property name="statusTip">
               <string>Copy to Clipboard</string>
@@ -1324,7 +1327,8 @@ QGroupBox::title {
                    <item row="1" column="1">
                     <widget class="QLineEdit" name="c0_homeOffset_0">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home Offset can be used to back off of the home switch&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Home Offset can be used to back
+off of the home switch</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1351,7 +1355,9 @@ QGroupBox::title {
                    <item row="5" column="1">
                     <widget class="QLineEdit" name="c0_homeSequence_0">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home sequences start at 0 and do not skip a number.&lt;/p&gt;&lt;p&gt;Multiple joint axis use a negative number.&lt;/p&gt;&lt;p&gt;Leave blank to home the joint manually.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Home sequences start at 0 and do not skip a number.
+Multiple joint axis use a negative number.
+Leave blank to home the joint manually.</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1368,7 +1374,8 @@ QGroupBox::title {
                    <item row="3" column="1">
                     <widget class="QLineEdit" name="c0_homeLatchVel_0">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Latch Velocity is in user units per second&lt;br/&gt;usually set slower than Search Velocity&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Latch Velocity is in user units per second
+usually set slower than Search Velocity</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1395,7 +1402,7 @@ QGroupBox::title {
                    <item row="0" column="1">
                     <widget class="QLineEdit" name="c0_home_0">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home is usually set to 0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Home is usually set to 0</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1405,7 +1412,7 @@ QGroupBox::title {
                    <item row="2" column="1">
                     <widget class="QLineEdit" name="c0_homeSearchVel_0">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Search Velocity is in units per second&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Search Velocity is in units per second</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1960,7 +1967,8 @@ QGroupBox::title {
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_62">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -2319,7 +2327,8 @@ QGroupBox::title {
                    <item row="1" column="1">
                     <widget class="QLineEdit" name="c0_homeOffset_1">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home Offset can be used to back off of the home switch&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Home Offset can be used to back
+off of the home switch</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2346,7 +2355,9 @@ QGroupBox::title {
                    <item row="5" column="1">
                     <widget class="QLineEdit" name="c0_homeSequence_1">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home sequences start at 0 and do not skip a number.&lt;/p&gt;&lt;p&gt;Multiple joint axis use a negative number.&lt;/p&gt;&lt;p&gt;Leave blank to home the joint manually.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Home sequences start at 0 and do not skip a number.
+Multiple joint axis use a negative number.
+Leave blank to home the joint manually.</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2363,7 +2374,8 @@ QGroupBox::title {
                    <item row="3" column="1">
                     <widget class="QLineEdit" name="c0_homeLatchVel_1">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Latch Velocity is in user units per second&lt;br/&gt;usually set slower than Search Velocity&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Latch Velocity is in user units per second
+usually set slower than Search Velocity</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2390,7 +2402,7 @@ QGroupBox::title {
                    <item row="0" column="1">
                     <widget class="QLineEdit" name="c0_home_1">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home is usually set to 0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Home is usually set to 0</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2400,7 +2412,7 @@ QGroupBox::title {
                    <item row="2" column="1">
                     <widget class="QLineEdit" name="c0_homeSearchVel_1">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Search Velocity is in units per second&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Search Velocity is in units per second</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2955,7 +2967,8 @@ QGroupBox::title {
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_63">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -3131,7 +3144,8 @@ QGroupBox::title {
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_64">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -3483,7 +3497,8 @@ QGroupBox::title {
                    <item row="1" column="1">
                     <widget class="QLineEdit" name="c0_homeOffset_2">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home Offset can be used to back off of the home switch&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Home Offset can be used to back
+off of the home switch</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -3510,7 +3525,9 @@ QGroupBox::title {
                    <item row="5" column="1">
                     <widget class="QLineEdit" name="c0_homeSequence_2">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home sequences start at 0 and do not skip a number.&lt;/p&gt;&lt;p&gt;Multiple joint axis use a negative number.&lt;/p&gt;&lt;p&gt;Leave blank to home the joint manually.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Home sequences start at 0 and do not skip a number.
+Multiple joint axis use a negative number.
+Leave blank to home the joint manually.</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -3527,7 +3544,8 @@ QGroupBox::title {
                    <item row="3" column="1">
                     <widget class="QLineEdit" name="c0_homeLatchVel_2">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Latch Velocity is in user units per second&lt;br/&gt;usually set slower than Search Velocity&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Latch Velocity is in user units per second
+usually set slower than Search Velocity</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -3554,7 +3572,7 @@ QGroupBox::title {
                    <item row="0" column="1">
                     <widget class="QLineEdit" name="c0_home_2">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home is usually set to 0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Home is usually set to 0</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -3564,7 +3582,7 @@ QGroupBox::title {
                    <item row="2" column="1">
                     <widget class="QLineEdit" name="c0_homeSearchVel_2">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Search Velocity is in units per second&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Search Velocity is in units per second</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -4126,7 +4144,8 @@ QGroupBox::title {
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_79">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -4478,7 +4497,8 @@ QGroupBox::title {
                    <item row="1" column="1">
                     <widget class="QLineEdit" name="c0_homeOffset_3">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home Offset can be used to back off of the home switch&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Home Offset can be used to back
+off of the home switch</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -4505,7 +4525,9 @@ QGroupBox::title {
                    <item row="5" column="1">
                     <widget class="QLineEdit" name="c0_homeSequence_3">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home sequences start at 0 and do not skip a number.&lt;/p&gt;&lt;p&gt;Multiple joint axis use a negative number.&lt;/p&gt;&lt;p&gt;Leave blank to home the joint manually.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Home sequences start at 0 and do not skip a number.
+Multiple joint axis use a negative number.
+Leave blank to home the joint manually.</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -4522,7 +4544,8 @@ QGroupBox::title {
                    <item row="3" column="1">
                     <widget class="QLineEdit" name="c0_homeLatchVel_3">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Latch Velocity is in user units per second&lt;br/&gt;usually set slower than Search Velocity&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Latch Velocity is in user units per second
+usually set slower than Search Velocity</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -4549,7 +4572,7 @@ QGroupBox::title {
                    <item row="0" column="1">
                     <widget class="QLineEdit" name="c0_home_3">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home is usually set to 0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Home is usually set to 0</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -4559,7 +4582,7 @@ QGroupBox::title {
                    <item row="2" column="1">
                     <widget class="QLineEdit" name="c0_homeSearchVel_3">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Search Velocity is in units per second&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Search Velocity is in units per second</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -5121,7 +5144,8 @@ QGroupBox::title {
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_123">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -5473,7 +5497,8 @@ QGroupBox::title {
                    <item row="1" column="1">
                     <widget class="QLineEdit" name="c0_homeOffset_4">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home Offset can be used to back off of the home switch&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Home Offset can be used to back
+off of the home switch</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -5500,7 +5525,9 @@ QGroupBox::title {
                    <item row="5" column="1">
                     <widget class="QLineEdit" name="c0_homeSequence_4">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home sequences start at 0 and do not skip a number.&lt;/p&gt;&lt;p&gt;Multiple joint axis use a negative number.&lt;/p&gt;&lt;p&gt;Leave blank to home the joint manually.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Home sequences start at 0 and do not skip a number.
+Multiple joint axis use a negative number.
+Leave blank to home the joint manually.</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -5517,7 +5544,8 @@ QGroupBox::title {
                    <item row="3" column="1">
                     <widget class="QLineEdit" name="c0_homeLatchVel_4">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Latch Velocity is in user units per second&lt;br/&gt;usually set slower than Search Velocity&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Latch Velocity is in user units per second
+usually set slower than Search Velocity</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -5544,7 +5572,7 @@ QGroupBox::title {
                    <item row="0" column="1">
                     <widget class="QLineEdit" name="c0_home_4">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home is usually set to 0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Home is usually set to 0</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -5554,7 +5582,7 @@ QGroupBox::title {
                    <item row="2" column="1">
                     <widget class="QLineEdit" name="c0_homeSearchVel_4">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Search Velocity is in units per second&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Search Velocity is in units per second</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -6116,7 +6144,8 @@ QGroupBox::title {
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_293">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -6468,7 +6497,8 @@ QGroupBox::title {
                    <item row="1" column="1">
                     <widget class="QLineEdit" name="c0_homeOffset_5">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home Offset can be used to back off of the home switch&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Home Offset can be used to back
+off of the home switch</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -6495,7 +6525,9 @@ QGroupBox::title {
                    <item row="5" column="1">
                     <widget class="QLineEdit" name="c0_homeSequence_5">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home sequences start at 0 and do not skip a number.&lt;/p&gt;&lt;p&gt;Multiple joint axis use a negative number.&lt;/p&gt;&lt;p&gt;Leave blank to home the joint manually.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Home sequences start at 0 and do not skip a number.
+Multiple joint axis use a negative number.
+Leave blank to home the joint manually.</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -6512,7 +6544,8 @@ QGroupBox::title {
                    <item row="3" column="1">
                     <widget class="QLineEdit" name="c0_homeLatchVel_5">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Latch Velocity is in user units per second&lt;br/&gt;usually set slower than Search Velocity&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Latch Velocity is in user units per second
+usually set slower than Search Velocity</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -6539,7 +6572,7 @@ QGroupBox::title {
                    <item row="0" column="1">
                     <widget class="QLineEdit" name="c0_home_5">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Home is usually set to 0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Home is usually set to 0</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -6549,7 +6582,7 @@ QGroupBox::title {
                    <item row="2" column="1">
                     <widget class="QLineEdit" name="c0_homeSearchVel_5">
                      <property name="toolTip">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Search Velocity is in units per second&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Search Velocity is in units per second</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

@@ -14546,7 +14546,9 @@ class Ui_MainWindow(object):
         self.label.setText(_translate("MainWindow", "Configuration Name"))
         self.label_10.setText(_translate("MainWindow", "Coordinates"))
         self.label_34.setText(_translate("MainWindow", "Selected Linear Units per Second"))
-        self.configName.setToolTip(_translate("MainWindow", "<html><head/><body><p>Any combination of letters and digits<br/>including the dash and underscore.<br/>Spaces are replaced with underscore.</p></body></html>"))
+        self.configName.setToolTip(_translate("MainWindow", "Any combination of letters and digits\n"
+"including the dash and underscore.\n"
+"Spaces are replaced with underscore."))
         self.label_292.setText(_translate("MainWindow", "Press F1 for help on current tab"))
         self.gridGroupBox_2.setTitle(_translate("MainWindow", "Configuration Setup"))
         self.label_815.setText(_translate("MainWindow", "Board"))
@@ -14563,7 +14565,8 @@ class Ui_MainWindow(object):
         self.readhmidPB.setText(_translate("MainWindow", "Read HMID"))
         self.reloadPB.setStatusTip(_translate("MainWindow", "Reload Firmware"))
         self.reloadPB.setText(_translate("MainWindow", "Reload"))
-        self.copyPB.setToolTip(_translate("MainWindow", "<html><head/><body><p>Copy the Output<br/>to the clipboard</p></body></html>"))
+        self.copyPB.setToolTip(_translate("MainWindow", "Copy the Output\n"
+"to the clipboard"))
         self.copyPB.setStatusTip(_translate("MainWindow", "Copy to Clipboard"))
         self.copyPB.setText(_translate("MainWindow", "Copy"))
         self.readpdPB.setStatusTip(_translate("MainWindow", "Read Pin Descriptions from board"))
@@ -14618,16 +14621,20 @@ class Ui_MainWindow(object):
         self.label_83.setText(_translate("MainWindow", "Home Offset"))
         self.label_38.setText(_translate("MainWindow", "Home Sequence"))
         self.label_84.setText(_translate("MainWindow", "Home Search Velocity"))
-        self.c0_homeOffset_0.setToolTip(_translate("MainWindow", "<html><head/><body><p>Home Offset can be used to back off of the home switch</p></body></html>"))
+        self.c0_homeOffset_0.setToolTip(_translate("MainWindow", "Home Offset can be used to back\n"
+"off of the home switch"))
         self.c0_homeIgnoreLimits_0.setText(_translate("MainWindow", "Home Ignore Limits"))
         self.label_85.setText(_translate("MainWindow", "Home Latch Velocity"))
-        self.c0_homeSequence_0.setToolTip(_translate("MainWindow", "<html><head/><body><p>Home sequences start at 0 and do not skip a number.</p><p>Multiple joint axis use a negative number.</p><p>Leave blank to home the joint manually.</p></body></html>"))
+        self.c0_homeSequence_0.setToolTip(_translate("MainWindow", "Home sequences start at 0 and do not skip a number.\n"
+"Multiple joint axis use a negative number.\n"
+"Leave blank to home the joint manually."))
         self.c0_homeSwitchShared_0.setText(_translate("MainWindow", "Home Switch is Shared"))
-        self.c0_homeLatchVel_0.setToolTip(_translate("MainWindow", "<html><head/><body><p>Latch Velocity is in user units per second<br/>usually set slower than Search Velocity</p></body></html>"))
+        self.c0_homeLatchVel_0.setToolTip(_translate("MainWindow", "Latch Velocity is in user units per second\n"
+"usually set slower than Search Velocity"))
         self.c0_homeUseIndex_0.setText(_translate("MainWindow", "Home Use Index"))
         self.label_82.setText(_translate("MainWindow", "Home"))
-        self.c0_home_0.setToolTip(_translate("MainWindow", "<html><head/><body><p>Home is usually set to 0</p></body></html>"))
-        self.c0_homeSearchVel_0.setToolTip(_translate("MainWindow", "<html><head/><body><p>Search Velocity is in units per second</p></body></html>"))
+        self.c0_home_0.setToolTip(_translate("MainWindow", "Home is usually set to 0"))
+        self.c0_homeSearchVel_0.setToolTip(_translate("MainWindow", "Search Velocity is in units per second"))
         self.label_11.setText(_translate("MainWindow", "Home Final Velocity"))
         self.c0_analogGB_0.setTitle(_translate("MainWindow", "Analog Output"))
         self.label_18.setText(_translate("MainWindow", "Analog Max Limit"))
@@ -14657,7 +14664,8 @@ class Ui_MainWindow(object):
         self.label_45.setText(_translate("MainWindow", "Scale"))
         self.label_43.setText(_translate("MainWindow", "Axis"))
         self.label_4.setText(_translate("MainWindow", "Axis Type"))
-        self.label_62.setText(_translate("MainWindow", "<html><head/><body><p>Minimum<br/>Limit</p></body></html>"))
+        self.label_62.setText(_translate("MainWindow", "Minimum\n"
+"Limit"))
         self.label_67.setText(_translate("MainWindow", "Maximum Limit"))
         self.label_72.setText(_translate("MainWindow", "Maximum Velocity"))
         self.label_73.setText(_translate("MainWindow", "Maximum Acceleration"))
@@ -14678,16 +14686,20 @@ class Ui_MainWindow(object):
         self.label_86.setText(_translate("MainWindow", "Home Offset"))
         self.label_39.setText(_translate("MainWindow", "Home Sequence"))
         self.label_87.setText(_translate("MainWindow", "Home Search Velocity"))
-        self.c0_homeOffset_1.setToolTip(_translate("MainWindow", "<html><head/><body><p>Home Offset can be used to back off of the home switch</p></body></html>"))
+        self.c0_homeOffset_1.setToolTip(_translate("MainWindow", "Home Offset can be used to back\n"
+"off of the home switch"))
         self.c0_homeIgnoreLimits_1.setText(_translate("MainWindow", "Home Ignore Limits"))
         self.label_88.setText(_translate("MainWindow", "Home Latch Velocity"))
-        self.c0_homeSequence_1.setToolTip(_translate("MainWindow", "<html><head/><body><p>Home sequences start at 0 and do not skip a number.</p><p>Multiple joint axis use a negative number.</p><p>Leave blank to home the joint manually.</p></body></html>"))
+        self.c0_homeSequence_1.setToolTip(_translate("MainWindow", "Home sequences start at 0 and do not skip a number.\n"
+"Multiple joint axis use a negative number.\n"
+"Leave blank to home the joint manually."))
         self.c0_homeSwitchShared_1.setText(_translate("MainWindow", "Home Switch is Shared"))
-        self.c0_homeLatchVel_1.setToolTip(_translate("MainWindow", "<html><head/><body><p>Latch Velocity is in user units per second<br/>usually set slower than Search Velocity</p></body></html>"))
+        self.c0_homeLatchVel_1.setToolTip(_translate("MainWindow", "Latch Velocity is in user units per second\n"
+"usually set slower than Search Velocity"))
         self.c0_homeUseIndex_1.setText(_translate("MainWindow", "Home Use Index"))
         self.label_89.setText(_translate("MainWindow", "Home"))
-        self.c0_home_1.setToolTip(_translate("MainWindow", "<html><head/><body><p>Home is usually set to 0</p></body></html>"))
-        self.c0_homeSearchVel_1.setToolTip(_translate("MainWindow", "<html><head/><body><p>Search Velocity is in units per second</p></body></html>"))
+        self.c0_home_1.setToolTip(_translate("MainWindow", "Home is usually set to 0"))
+        self.c0_homeSearchVel_1.setToolTip(_translate("MainWindow", "Search Velocity is in units per second"))
         self.label_12.setText(_translate("MainWindow", "Home Final Velocity"))
         self.c0_analogGB_1.setTitle(_translate("MainWindow", "Analog Output"))
         self.label_20.setText(_translate("MainWindow", "Analog Max Limit"))
@@ -14717,7 +14729,8 @@ class Ui_MainWindow(object):
         self.label_46.setText(_translate("MainWindow", "Scale"))
         self.label_50.setText(_translate("MainWindow", "Axis"))
         self.label_5.setText(_translate("MainWindow", "Axis Type"))
-        self.label_63.setText(_translate("MainWindow", "<html><head/><body><p>Minimum<br/>Limit</p></body></html>"))
+        self.label_63.setText(_translate("MainWindow", "Minimum\n"
+"Limit"))
         self.label_68.setText(_translate("MainWindow", "Maximum Limit"))
         self.label_74.setText(_translate("MainWindow", "Maximum Velocity"))
         self.label_75.setText(_translate("MainWindow", "Maximum Acceleration"))
@@ -14727,7 +14740,8 @@ class Ui_MainWindow(object):
         self.label_57.setText(_translate("MainWindow", "Scale"))
         self.label_58.setText(_translate("MainWindow", "Axis"))
         self.label_6.setText(_translate("MainWindow", "Axis Type"))
-        self.label_64.setText(_translate("MainWindow", "<html><head/><body><p>Minimum<br/>Limit</p></body></html>"))
+        self.label_64.setText(_translate("MainWindow", "Minimum\n"
+"Limit"))
         self.label_69.setText(_translate("MainWindow", "Maximum Limit"))
         self.label_76.setText(_translate("MainWindow", "Maximum Velocity"))
         self.label_77.setText(_translate("MainWindow", "Maximum Acceleration"))
@@ -14747,16 +14761,20 @@ class Ui_MainWindow(object):
         self.label_90.setText(_translate("MainWindow", "Home Offset"))
         self.label_59.setText(_translate("MainWindow", "Home Sequence"))
         self.label_91.setText(_translate("MainWindow", "Home Search Velocity"))
-        self.c0_homeOffset_2.setToolTip(_translate("MainWindow", "<html><head/><body><p>Home Offset can be used to back off of the home switch</p></body></html>"))
+        self.c0_homeOffset_2.setToolTip(_translate("MainWindow", "Home Offset can be used to back\n"
+"off of the home switch"))
         self.c0_homeIgnoreLimits_2.setText(_translate("MainWindow", "Home Ignore Limits"))
         self.label_92.setText(_translate("MainWindow", "Home Latch Velocity"))
-        self.c0_homeSequence_2.setToolTip(_translate("MainWindow", "<html><head/><body><p>Home sequences start at 0 and do not skip a number.</p><p>Multiple joint axis use a negative number.</p><p>Leave blank to home the joint manually.</p></body></html>"))
+        self.c0_homeSequence_2.setToolTip(_translate("MainWindow", "Home sequences start at 0 and do not skip a number.\n"
+"Multiple joint axis use a negative number.\n"
+"Leave blank to home the joint manually."))
         self.c0_homeSwitchShared_2.setText(_translate("MainWindow", "Home Switch is Shared"))
-        self.c0_homeLatchVel_2.setToolTip(_translate("MainWindow", "<html><head/><body><p>Latch Velocity is in user units per second<br/>usually set slower than Search Velocity</p></body></html>"))
+        self.c0_homeLatchVel_2.setToolTip(_translate("MainWindow", "Latch Velocity is in user units per second\n"
+"usually set slower than Search Velocity"))
         self.c0_homeUseIndex_2.setText(_translate("MainWindow", "Home Use Index"))
         self.label_93.setText(_translate("MainWindow", "Home"))
-        self.c0_home_2.setToolTip(_translate("MainWindow", "<html><head/><body><p>Home is usually set to 0</p></body></html>"))
-        self.c0_homeSearchVel_2.setToolTip(_translate("MainWindow", "<html><head/><body><p>Search Velocity is in units per second</p></body></html>"))
+        self.c0_home_2.setToolTip(_translate("MainWindow", "Home is usually set to 0"))
+        self.c0_homeSearchVel_2.setToolTip(_translate("MainWindow", "Search Velocity is in units per second"))
         self.label_13.setText(_translate("MainWindow", "Home Final Velocity"))
         self.c0_analogGB_2.setTitle(_translate("MainWindow", "Analog Output"))
         self.label_24.setText(_translate("MainWindow", "Analog Max Limit"))
@@ -14787,7 +14805,8 @@ class Ui_MainWindow(object):
         self.label_71.setText(_translate("MainWindow", "Scale"))
         self.label_78.setText(_translate("MainWindow", "Axis"))
         self.label_7.setText(_translate("MainWindow", "Axis Type"))
-        self.label_79.setText(_translate("MainWindow", "<html><head/><body><p>Minimum<br/>Limit</p></body></html>"))
+        self.label_79.setText(_translate("MainWindow", "Minimum\n"
+"Limit"))
         self.label_80.setText(_translate("MainWindow", "Maximum Limit"))
         self.label_81.setText(_translate("MainWindow", "Maximum Velocity"))
         self.label_94.setText(_translate("MainWindow", "Maximum Acceleration"))
@@ -14807,16 +14826,20 @@ class Ui_MainWindow(object):
         self.label_95.setText(_translate("MainWindow", "Home Offset"))
         self.label_96.setText(_translate("MainWindow", "Home Sequence"))
         self.label_97.setText(_translate("MainWindow", "Home Search Velocity"))
-        self.c0_homeOffset_3.setToolTip(_translate("MainWindow", "<html><head/><body><p>Home Offset can be used to back off of the home switch</p></body></html>"))
+        self.c0_homeOffset_3.setToolTip(_translate("MainWindow", "Home Offset can be used to back\n"
+"off of the home switch"))
         self.c0_homeIgnoreLimits_3.setText(_translate("MainWindow", "Home Ignore Limits"))
         self.label_98.setText(_translate("MainWindow", "Home Latch Velocity"))
-        self.c0_homeSequence_3.setToolTip(_translate("MainWindow", "<html><head/><body><p>Home sequences start at 0 and do not skip a number.</p><p>Multiple joint axis use a negative number.</p><p>Leave blank to home the joint manually.</p></body></html>"))
+        self.c0_homeSequence_3.setToolTip(_translate("MainWindow", "Home sequences start at 0 and do not skip a number.\n"
+"Multiple joint axis use a negative number.\n"
+"Leave blank to home the joint manually."))
         self.c0_homeSwitchShared_3.setText(_translate("MainWindow", "Home Switch is Shared"))
-        self.c0_homeLatchVel_3.setToolTip(_translate("MainWindow", "<html><head/><body><p>Latch Velocity is in user units per second<br/>usually set slower than Search Velocity</p></body></html>"))
+        self.c0_homeLatchVel_3.setToolTip(_translate("MainWindow", "Latch Velocity is in user units per second\n"
+"usually set slower than Search Velocity"))
         self.c0_homeUseIndex_3.setText(_translate("MainWindow", "Home Use Index"))
         self.label_99.setText(_translate("MainWindow", "Home"))
-        self.c0_home_3.setToolTip(_translate("MainWindow", "<html><head/><body><p>Home is usually set to 0</p></body></html>"))
-        self.c0_homeSearchVel_3.setToolTip(_translate("MainWindow", "<html><head/><body><p>Search Velocity is in units per second</p></body></html>"))
+        self.c0_home_3.setToolTip(_translate("MainWindow", "Home is usually set to 0"))
+        self.c0_homeSearchVel_3.setToolTip(_translate("MainWindow", "Search Velocity is in units per second"))
         self.label_14.setText(_translate("MainWindow", "Home Final Velocity"))
         self.c0_analogGB_3.setTitle(_translate("MainWindow", "Analog Output"))
         self.label_28.setText(_translate("MainWindow", "Analog Max Limit"))
@@ -14847,7 +14870,8 @@ class Ui_MainWindow(object):
         self.label_121.setText(_translate("MainWindow", "Scale"))
         self.label_122.setText(_translate("MainWindow", "Axis"))
         self.label_15.setText(_translate("MainWindow", "Axis Type"))
-        self.label_123.setText(_translate("MainWindow", "<html><head/><body><p>Minimum<br/>Limit</p></body></html>"))
+        self.label_123.setText(_translate("MainWindow", "Minimum\n"
+"Limit"))
         self.label_124.setText(_translate("MainWindow", "Maximum Limit"))
         self.label_125.setText(_translate("MainWindow", "Maximum Velocity"))
         self.label_126.setText(_translate("MainWindow", "Maximum Acceleration"))
@@ -14867,16 +14891,20 @@ class Ui_MainWindow(object):
         self.label_127.setText(_translate("MainWindow", "Home Offset"))
         self.label_128.setText(_translate("MainWindow", "Home Sequence"))
         self.label_129.setText(_translate("MainWindow", "Home Search Velocity"))
-        self.c0_homeOffset_4.setToolTip(_translate("MainWindow", "<html><head/><body><p>Home Offset can be used to back off of the home switch</p></body></html>"))
+        self.c0_homeOffset_4.setToolTip(_translate("MainWindow", "Home Offset can be used to back\n"
+"off of the home switch"))
         self.c0_homeIgnoreLimits_4.setText(_translate("MainWindow", "Home Ignore Limits"))
         self.label_130.setText(_translate("MainWindow", "Home Latch Velocity"))
-        self.c0_homeSequence_4.setToolTip(_translate("MainWindow", "<html><head/><body><p>Home sequences start at 0 and do not skip a number.</p><p>Multiple joint axis use a negative number.</p><p>Leave blank to home the joint manually.</p></body></html>"))
+        self.c0_homeSequence_4.setToolTip(_translate("MainWindow", "Home sequences start at 0 and do not skip a number.\n"
+"Multiple joint axis use a negative number.\n"
+"Leave blank to home the joint manually."))
         self.c0_homeSwitchShared_4.setText(_translate("MainWindow", "Home Switch is Shared"))
-        self.c0_homeLatchVel_4.setToolTip(_translate("MainWindow", "<html><head/><body><p>Latch Velocity is in user units per second<br/>usually set slower than Search Velocity</p></body></html>"))
+        self.c0_homeLatchVel_4.setToolTip(_translate("MainWindow", "Latch Velocity is in user units per second\n"
+"usually set slower than Search Velocity"))
         self.c0_homeUseIndex_4.setText(_translate("MainWindow", "Home Use Index"))
         self.label_131.setText(_translate("MainWindow", "Home"))
-        self.c0_home_4.setToolTip(_translate("MainWindow", "<html><head/><body><p>Home is usually set to 0</p></body></html>"))
-        self.c0_homeSearchVel_4.setToolTip(_translate("MainWindow", "<html><head/><body><p>Search Velocity is in units per second</p></body></html>"))
+        self.c0_home_4.setToolTip(_translate("MainWindow", "Home is usually set to 0"))
+        self.c0_homeSearchVel_4.setToolTip(_translate("MainWindow", "Search Velocity is in units per second"))
         self.label_16.setText(_translate("MainWindow", "Home Final Velocity"))
         self.c0_analogGB_4.setTitle(_translate("MainWindow", "Analog Output"))
         self.label_31.setText(_translate("MainWindow", "Analog Max Limit"))
@@ -14907,7 +14935,8 @@ class Ui_MainWindow(object):
         self.label_140.setText(_translate("MainWindow", "Scale"))
         self.label_141.setText(_translate("MainWindow", "Axis"))
         self.label_35.setText(_translate("MainWindow", "Axis Type"))
-        self.label_293.setText(_translate("MainWindow", "<html><head/><body><p>Minimum<br/>Limit</p></body></html>"))
+        self.label_293.setText(_translate("MainWindow", "Minimum\n"
+"Limit"))
         self.label_419.setText(_translate("MainWindow", "Maximum Limit"))
         self.label_747.setText(_translate("MainWindow", "Maximum Velocity"))
         self.label_748.setText(_translate("MainWindow", "Maximum Acceleration"))
@@ -14927,16 +14956,20 @@ class Ui_MainWindow(object):
         self.label_749.setText(_translate("MainWindow", "Home Offset"))
         self.label_750.setText(_translate("MainWindow", "Home Sequence"))
         self.label_751.setText(_translate("MainWindow", "Home Search Velocity"))
-        self.c0_homeOffset_5.setToolTip(_translate("MainWindow", "<html><head/><body><p>Home Offset can be used to back off of the home switch</p></body></html>"))
+        self.c0_homeOffset_5.setToolTip(_translate("MainWindow", "Home Offset can be used to back\n"
+"off of the home switch"))
         self.c0_homeIgnoreLimits_5.setText(_translate("MainWindow", "Home Ignore Limits"))
         self.label_752.setText(_translate("MainWindow", "Home Latch Velocity"))
-        self.c0_homeSequence_5.setToolTip(_translate("MainWindow", "<html><head/><body><p>Home sequences start at 0 and do not skip a number.</p><p>Multiple joint axis use a negative number.</p><p>Leave blank to home the joint manually.</p></body></html>"))
+        self.c0_homeSequence_5.setToolTip(_translate("MainWindow", "Home sequences start at 0 and do not skip a number.\n"
+"Multiple joint axis use a negative number.\n"
+"Leave blank to home the joint manually."))
         self.c0_homeSwitchShared_5.setText(_translate("MainWindow", "Home Switch is Shared"))
-        self.c0_homeLatchVel_5.setToolTip(_translate("MainWindow", "<html><head/><body><p>Latch Velocity is in user units per second<br/>usually set slower than Search Velocity</p></body></html>"))
+        self.c0_homeLatchVel_5.setToolTip(_translate("MainWindow", "Latch Velocity is in user units per second\n"
+"usually set slower than Search Velocity"))
         self.c0_homeUseIndex_5.setText(_translate("MainWindow", "Home Use Index"))
         self.label_753.setText(_translate("MainWindow", "Home"))
-        self.c0_home_5.setToolTip(_translate("MainWindow", "<html><head/><body><p>Home is usually set to 0</p></body></html>"))
-        self.c0_homeSearchVel_5.setToolTip(_translate("MainWindow", "<html><head/><body><p>Search Velocity is in units per second</p></body></html>"))
+        self.c0_home_5.setToolTip(_translate("MainWindow", "Home is usually set to 0"))
+        self.c0_homeSearchVel_5.setToolTip(_translate("MainWindow", "Search Velocity is in units per second"))
         self.label_36.setText(_translate("MainWindow", "Home Final Velocity"))
         self.c0_analogGB_5.setTitle(_translate("MainWindow", "Analog Output"))
         self.label_775.setText(_translate("MainWindow", "Analog Max Limit"))
