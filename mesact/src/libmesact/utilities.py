@@ -53,12 +53,13 @@ def boardChanged(parent):
 
 		files = sorted([entry.path for entry in os.scandir(path) if entry.is_file()])
 		bitFiles = False
+
 		for file in files:
 			if os.path.splitext(file)[1] == '.bit':
+				# might want to do ('Default', False) for 7i76e, 7i95, 7i96, 7i97
 				parent.firmwareCB.addItem('Select', False)
 				bitFiles = True
 				break
-
 
 		for file in files:
 			if os.path.splitext(file)[1] == '.bit':

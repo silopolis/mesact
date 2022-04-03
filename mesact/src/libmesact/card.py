@@ -13,32 +13,41 @@ def check_emc():
 	else:
 		return False
 
-def readCard(parent, board):
+def readpd(parent):
 	if check_emc():
-		parent.errorMsgOk(f'LinuxCNC must NOT be running\n to read the {board}', 'Error')
+		parent.errorMsgOk(f'LinuxCNC must NOT be running\n to read the {parent.board}', 'Error')
 		return
 	if check_ip(parent):
 		ipAddress = parent.ipAddressCB.currentText()
-		arguments = ["--device", board, "--addr", ipAddress, "--readhmid"]
+		arguments = ["--device", parent.board, "--addr", ipAddress, "--print-pd"]
+		parent.extcmd.job(cmd="mesaflash", args=arguments, dest=parent.machinePTE)
+
+def readhmid(parent):
+	if check_emc():
+		parent.errorMsgOk(f'LinuxCNC must NOT be running\n to read the {parent.board}', 'Error')
+		return
+	if check_ip(parent):
+		ipAddress = parent.ipAddressCB.currentText()
+		arguments = ["--device", parent.board, "--addr", ipAddress, "--readhmid"]
+
 		parent.extcmd.job(cmd="mesaflash", args=arguments, dest=parent.machinePTE)
 
 def flashCard(parent):
-	board = parent.board
 	arguments = []
 	print(board)
 	if check_emc():
-		parent.errorMsgOk(f'LinuxCNC must NOT be running\n to flash the {board}', 'Error')
+		parent.errorMsgOk(f'LinuxCNC must NOT be running\n to flash the {parent.board}', 'Error')
 		return
 	if parent.firmwareCB.currentData():
 		firmware = os.path.join(parent.lib_path, parent.firmwareCB.currentData())
-		if board == '7i92':
+		if parent.boardType == 'eth':
 			if check_ip(parent):
 				ipAddress = parent.ipAddressCB.currentText()
-				arguments = ["--device", board, "--addr", ipAddress, "--write", firmware]
+				arguments = ["--device", parent.board, "--addr", ipAddress, "--write", firmware]
 			else:
 				return
-		elif board == '5i25':
-			arguments = ["--device", board, "--write", firmware]
+		elif parent.boardType == 'pci':
+			arguments = ["--device", parent.board, "--write", firmware]
 
 		print(arguments)
 		return
@@ -47,29 +56,26 @@ def flashCard(parent):
 		parent.errorMsgOk('A firmware must be selected', 'Error!')
 		return
 
-
 	parent.statusbar.showMessage(f'Flashing the {board}...')
 	parent.extcmd.job(cmd="mesaflash", args=arguments, dest=parent.machinePTE)
 
 def reloadCard(parent):
-	board = parent.board
 	if check_emc():
 		parent.errorMsgOk(f'LinuxCNC must NOT be running\n to reload the {board}', 'Error')
 		return
 	if check_ip(parent):
 		ipAddress = parent.ipAddressCB.currentText()
-		arguments = ["--device", board, "--addr", ipAddress, "--reload"]
+		arguments = ["--device", parent.board, "--addr", ipAddress, "--reload"]
 		parent.extcmd.job(cmd="mesaflash", args=arguments, dest=parent.machinePTE)
 
 def verifyCard(parent):
-	board = parent.board
 	if check_emc():
 		parent.errorMsgOk(f'LinuxCNC must NOT be running\n to verify the {board}', 'Error')
 		return
 	if check_ip(parent):
 		ipAddress = parent.ipAddressCB.currentText()
 		firmware = os.path.join(parent.lib_path, parent.firmwareCB.currentData())
-		arguments = ["--device", board, "--addr", ipAddress, "--verify", firmware]
+		arguments = ["--device", parent.board, "--addr", ipAddress, "--verify", firmware]
 		parent.extcmd.job(cmd="mesaflash", args=arguments, dest=parent.machinePTE)
 
 def getCardPins(parent):

@@ -20,9 +20,11 @@ from libmesact import utilities
 from libmesact import buildcombos
 from libmesact import buildmenus
 from libmesact import firmware
+from libmesact import card
 from libmesact import loadini
 from libmesact import checkconfig
 from libmesact import buildconfig
+from libmesact import extcmd
 
 class VersionError(QMainWindow):
 	def __init__(self):
@@ -64,13 +66,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		utilities.setup(self)
 		#self.helpInfo = helptext.descriptions
 
-		#self.extcmd = extcmd.extcmd()
+		self.extcmd = extcmd.extcmd()
 		#self.ladderOptionsList = utilities.plcOptions()
 		self.setupConnections()
 		self.show()
 		#loadini.openini(self, 'mesa-5i25')
 		#loadini.openini(self, 'mesa-7i76e')
-		loadini.openini(self, 'mesa-7i95')
+		#loadini.openini(self, 'mesa-7i95')
 
 	def setupConnections(self):
 		# Menu Items
@@ -81,12 +83,17 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		self.actionCheck.triggered.connect(partial(checkconfig.checkit, self))
 		self.actionBuild.triggered.connect(partial(buildconfig.build, self))
 
-		# Machine Tab
+		# Machine Group
 		self.configName.textChanged[str].connect(partial(utilities.configNameChanged, self))
 		self.boardCB.currentIndexChanged.connect(partial(utilities.boardChanged, self))
 		self.firmwareCB.currentIndexChanged.connect(partial(utilities.firmwareChanged, self))
 		for i in range(2):
 			getattr(self, f'daughterCB_{i}').currentIndexChanged.connect(partial(utilities.daughterCardChanged, self))
+
+		# Firmware Group
+		self.readpdPB.clicked.connect(partial(card.readpd, self))
+		self.readhmidPB.clicked.connect(partial(card.readhmid, self))
+
 
 		# Joint Tabs
 		for i in range(6): # First Card Only for now
