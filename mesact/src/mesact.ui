@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>956</width>
+    <width>961</width>
     <height>910</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Main Window</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -180,7 +180,7 @@ Spaces are replaced with underscore.</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>914</width>
+             <width>919</width>
              <height>455</height>
             </rect>
            </property>
@@ -7170,7 +7170,8 @@ usually set slower than Search Velocity</string>
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_825">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -8165,7 +8166,8 @@ usually set slower than Search Velocity</string>
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_885">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -9148,7 +9150,8 @@ usually set slower than Search Velocity</string>
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_923">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -10131,7 +10134,8 @@ usually set slower than Search Velocity</string>
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_961">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -11114,7 +11118,8 @@ usually set slower than Search Velocity</string>
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_999">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -12097,7 +12102,8 @@ usually set slower than Search Velocity</string>
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_1037">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -13106,7 +13112,8 @@ usually set slower than Search Velocity</string>
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_1047">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -14101,7 +14108,8 @@ usually set slower than Search Velocity</string>
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_1085">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -15084,7 +15092,8 @@ usually set slower than Search Velocity</string>
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_1123">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -16067,7 +16076,8 @@ usually set slower than Search Velocity</string>
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_1161">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -17050,7 +17060,8 @@ usually set slower than Search Velocity</string>
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_1199">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -18033,7 +18044,8 @@ usually set slower than Search Velocity</string>
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_1237">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -19042,7 +19054,8 @@ usually set slower than Search Velocity</string>
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_1275">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -20037,7 +20050,8 @@ usually set slower than Search Velocity</string>
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_1313">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -21020,7 +21034,8 @@ usually set slower than Search Velocity</string>
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_1351">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -22003,7 +22018,8 @@ usually set slower than Search Velocity</string>
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_1389">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -22986,7 +23002,8 @@ usually set slower than Search Velocity</string>
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_1427">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -23969,7 +23986,8 @@ usually set slower than Search Velocity</string>
                    <item row="0" column="3">
                     <widget class="QLabel" name="label_1465">
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum&lt;br/&gt;Limit&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>Minimum
+Limit</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -33899,7 +33917,7 @@ TB2 PIN	SIGNAL	CAT5 PIN	CAT5 568B COLOR
               <widget class="QLabel" name="label_204">
                <property name="font">
                 <font>
-                 <pointsize>8</pointsize>
+                 <pointsize>12</pointsize>
                 </font>
                </property>
                <property name="text">
@@ -33917,7 +33935,7 @@ TB2 PIN	SIGNAL	CAT5 PIN	CAT5 568B COLOR
              <item row="3" column="0" colspan="3">
               <widget class="QLabel" name="label_295">
                <property name="text">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;In a terminal run this to get CPU speed&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                <string>In a terminal run this to get CPU speed</string>
                </property>
                <property name="textInteractionFlags">
                 <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
@@ -33973,7 +33991,10 @@ TB2 PIN	SIGNAL	CAT5 PIN	CAT5 568B COLOR
              <enum>QFrame::Box</enum>
             </property>
             <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Packet Time and Threshold are&lt;br/&gt;are in units of servo thread period.&lt;br/&gt;If the Packet Time is greater than 50%&lt;br/&gt;try increasing the thread period.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>Packet Time and Threshold are
+are in units of servo thread period.
+If the Packet Time is greater than 50%
+try increasing the thread period.</string>
             </property>
            </widget>
            <widget class="QPushButton" name="readTmaxPB">
@@ -33986,7 +34007,8 @@ TB2 PIN	SIGNAL	CAT5 PIN	CAT5 568B COLOR
              </rect>
             </property>
             <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;LinuxCNC must be running&lt;/p&gt;&lt;p&gt;the configuration&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>LinuxCNC must be running
+the configuration.</string>
             </property>
             <property name="text">
              <string>Read tMax</string>
@@ -34010,7 +34032,8 @@ TB2 PIN	SIGNAL	CAT5 PIN	CAT5 568B COLOR
              </font>
             </property>
             <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The Ethernet Card must be connected and LinuxCNC running a&lt;br/&gt; configuration before trying to read tMax.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>The Ethernet Card must be connected and LinuxCNC running a
+configuration before trying to read tMax.</string>
             </property>
            </widget>
           </widget>
@@ -34027,7 +34050,7 @@ TB2 PIN	SIGNAL	CAT5 PIN	CAT5 568B COLOR
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>956</width>
+     <width>961</width>
      <height>24</height>
     </rect>
    </property>

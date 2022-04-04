@@ -15,7 +15,7 @@ from PyQt5.QtWidgets import (QApplication, QMainWindow, QMessageBox,
 	QDialog, qApp)
 from PyQt5.QtGui import QPixmap
 
-from libmesact.ui_mesact import Ui_MainWindow
+from libmesact.ui_mesact import Ui_mainWindow
 from libmesact import utilities
 from libmesact import buildcombos
 from libmesact import buildmenus
@@ -38,7 +38,7 @@ class VersionError(QMainWindow):
 		msgBox.exec()
 		sys.exit()
 
-class MainWindow(QMainWindow, Ui_MainWindow):
+class MainWindow(QMainWindow, Ui_mainWindow):
 	def __init__(self):
 		super().__init__()
 		self.setupUi(self) # needed to load Ui_MainWindow
@@ -93,6 +93,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		# Firmware Group
 		self.readpdPB.clicked.connect(partial(card.readpd, self))
 		self.readhmidPB.clicked.connect(partial(card.readhmid, self))
+		self.flashPB.clicked.connect(partial(card.flashCard, self))
+		self.reloadPB.clicked.connect(partial(card.reloadCard, self))
+		self.verifyPB.clicked.connect(partial(card.verifyCard, self))
 
 
 		# Joint Tabs
