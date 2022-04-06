@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="fr" sourcelanguage="">
-<context>
-    <name>MainWindow</name>
-    <message>
-        <location filename="ui_mesact.py" line="14579"/>
-        <source>Machine</source>
-        <translation type="obsolete">Machine</translation>
-    </message>
-    <message>
-        <location filename="ui_mesact.py" line="14546"/>
-        <source>Configuration Name</source>
-        <translation type="obsolete">Nom de configuration</translation>
-    </message>
-</context>
+<!DOCTYPE TS>
+<TS version="2.1" language="fr">
 <context>
     <name>mainWindow</name>
     <message>
@@ -23,7 +11,7 @@
     <message>
         <location filename="ui_mesact.py" line="7561"/>
         <source>Machine</source>
-        <translation type="unfinished">Machine</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="ui_mesact.py" line="7525"/>
@@ -43,7 +31,7 @@
     <message>
         <location filename="ui_mesact.py" line="7528"/>
         <source>Configuration Name</source>
-        <translation type="unfinished">Nom de configuration</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="ui_mesact.py" line="7529"/>
@@ -438,8 +426,9 @@ usually set slower than Search Velocity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ui_mesact.py" line="7954"/>
-        <source>Home is usually set to 0</source>
+        <location filename="ui_mesact.py" line="8035"/>
+        <source>Step rate at
+max speed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -518,6 +507,18 @@ usually set slower than Search Velocity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="ui_mesact.py" line="8031"/>
+        <source>Time to accelerate
+to max speed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ui_mesact.py" line="8033"/>
+        <source>Distance to accelerate
+to max speed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="ui_mesact.py" line="8040"/>
         <source>Axis</source>
         <translation type="unfinished"></translation>
@@ -561,6 +562,11 @@ Limit</source>
     <message>
         <location filename="ui_mesact.py" line="8047"/>
         <source>Joint 0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="ui_mesact.py" line="7954"/>
+        <source>Home is usually set to 0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2349,7 +2355,7 @@ configuration before trying to read tMax.</source>
         <source>English</source>
         <translation type="unfinished"></translation>
     </message>
-    <message encoding="UTF-8">
+    <message>
         <location filename="ui_mesact.py" line="9236"/>
         <source>Français</source>
         <translation type="unfinished"></translation>
@@ -2357,24 +2363,6 @@ configuration before trying to read tMax.</source>
     <message>
         <location filename="ui_mesact.py" line="9237"/>
         <source>Deutsch</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="ui_mesact.py" line="8031"/>
-        <source>Time to accelerate
-to max speed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="ui_mesact.py" line="8033"/>
-        <source>Distance to accelerate
-to max speed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="ui_mesact.py" line="8035"/>
-        <source>Step rate at
-max speed</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
