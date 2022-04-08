@@ -618,14 +618,12 @@ def axisChanged(parent):
 		parent.coordinatesLB.setText(''.join(coordList))
 		parent.axes = len(parent.coordinatesLB.text())
 
-	'''
 	for i in range(6): # Card 1
 		axisLetter = getattr(parent, f'c1_axisCB_{i}').currentText()
 		if axisLetter != 'Select':
 			coordList.append(axisLetter)
 		parent.coordinatesLB.setText(''.join(coordList))
 		parent.axes = len(parent.coordinatesLB.text())
-	'''
 
 def maxVelChanged(parent, text):
 	if text:

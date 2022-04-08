@@ -58,12 +58,17 @@ def loadini(parent, iniFile):
 	iniList = []
 	iniList.append(['MESA', 'BOARD', 'boardCB'])
 	iniList.append(['MESA', 'FIRMWARE', 'firmwareCB'])
+	iniList.append(['MESA', 'CARD_0', 'daughterCB_0'])
+	iniList.append(['MESA', 'CARD_1', 'daughterCB_1'])
 
 	iniList.append(['EMC', 'MACHINE', 'configName'])
 
 	iniList.append(['EMC', 'DEBUG', 'debugCB'])
 
-	iniList.append(['HOSTMOT2', 'IPADDRESS', 'ipAddressCB'])
+	iniList.append(['HM2', 'IPADDRESS', 'ipAddressCB'])
+	iniList.append(['HM2', 'STEPGENS', 'stepgensCB'])
+	iniList.append(['HM2', 'PWMGENS', 'pwmgensCB'])
+	iniList.append(['HM2', 'ENCODERS', 'encodersCB'])
 
 	iniList.append(['DISPLAY', 'DISPLAY', 'guiCB'])
 	iniList.append(['DISPLAY', 'EDITOR', 'editorCB'])
@@ -78,43 +83,50 @@ def loadini(parent, iniFile):
 	iniList.append(['TRAJ', 'COORDINATES', 'coordinatesLB'])
 	iniList.append(['TRAJ', 'MAX_LINEAR_VELOCITY', 'maxLinearVel'])
 
-	for i in range(6):
-		card = 'c0' # read card later
-		iniList.append([f'JOINT_{i}', 'AXIS', f'{card}_axisCB_{i}'])
-		iniList.append([f'JOINT_{i}', 'DRIVE', f'{card}_driveCB_{i}'])
-		iniList.append([f'JOINT_{i}', 'STEPLEN', f'{card}_stepTime_{i}'])
-		iniList.append([f'JOINT_{i}', 'STEPSPACE', f'{card}_stepSpace_{i}'])
-		iniList.append([f'JOINT_{i}', 'DIRSETUP', f'{card}_dirSetup_{i}'])
-		iniList.append([f'JOINT_{i}', 'DIRHOLD', f'{card}_dirHold_{i}'])
-		iniList.append([f'JOINT_{i}', 'MIN_LIMIT', f'{card}_minLimit_{i}'])
-		iniList.append([f'JOINT_{i}', 'MAX_LIMIT', f'{card}_maxLimit_{i}'])
-		iniList.append([f'JOINT_{i}', 'MAX_VELOCITY', f'{card}_maxVelocity_{i}'])
-		iniList.append([f'JOINT_{i}', 'MAX_ACCELERATION', f'{card}_maxAccel_{i}'])
-		iniList.append([f'JOINT_{i}', 'SCALE', f'{card}_scale_{i}'])
-		iniList.append([f'JOINT_{i}', 'HOME', f'{card}_home_{i}'])
-		iniList.append([f'JOINT_{i}', 'HOME_OFFSET', f'{card}_homeOffset_{i}'])
-		iniList.append([f'JOINT_{i}', 'HOME_SEARCH_VEL', f'{card}_homeSearchVel_{i}'])
-		iniList.append([f'JOINT_{i}', 'HOME_LATCH_VEL', f'{card}_homeLatchVel_{i}'])
-		iniList.append([f'JOINT_{i}', 'HOME_FINAL_VEL', f'{card}_homeFinalVelocity_{i}'])
-		iniList.append([f'JOINT_{i}', 'HOME_USE_INDEX', f'{card}_homeUseIndex_{i}'])
-		iniList.append([f'JOINT_{i}', 'HOME_IGNORE_LIMITS', f'{card}_homeIgnoreLimits_{i}'])
-		iniList.append([f'JOINT_{i}', 'HOME_IS_SHARED', f'{card}_homeSwitchShared_{i}'])
-		iniList.append([f'JOINT_{i}', 'HOME_SEQUENCE', f'{card}_homeSequence_{i}'])
-		iniList.append([f'JOINT_{i}', 'P', f'{card}_p_{i}'])
-		iniList.append([f'JOINT_{i}', 'I', f'{card}_i_{i}'])
-		iniList.append([f'JOINT_{i}', 'D', f'{card}_d_{i}'])
-		iniList.append([f'JOINT_{i}', 'FF0', f'{card}_ff0_{i}'])
-		iniList.append([f'JOINT_{i}', 'FF1', f'{card}_ff1_{i}'])
-		iniList.append([f'JOINT_{i}', 'FF2', f'{card}_ff2_{i}'])
-		iniList.append([f'JOINT_{i}', 'DEADBAND', f'{card}_deadband_{i}'])
-		iniList.append([f'JOINT_{i}', 'BIAS', f'{card}_bias_{i}'])
-		iniList.append([f'JOINT_{i}', 'MAX_OUTPUT', f'{card}_maxOutput_{i}'])
-		iniList.append([f'JOINT_{i}', 'MAX_ERROR', f'{card}_maxError_{i}'])
+	if config.has_option('MESA', 'CARD_0'):
+		if config['MESA']['CARD_0']:
+			card = '0'
+	if config.has_option('MESA', 'CARD_1'):
+		if config['MESA']['CARD_1']:
+			card = '1'
 
-		iniList.append([f'JOINT_{i}', 'ENCODER_SCALE', f'{card}_encoderScale_{i}'])
-		iniList.append([f'JOINT_{i}', 'ANALOG_SCALE_MAX', f'{card}_analogScaleMax_{i}'])
-		iniList.append([f'JOINT_{i}', 'ANALOG_MIN_LIMIT', f'{card}_analogMinLimit_{i}'])
-		iniList.append([f'JOINT_{i}', 'ANALOG_MAX_LIMIT', f'{card}_analogMaxLimit_{i}'])
+
+	for i in range(6):
+			iniList.append([f'JOINT_{i}', 'AXIS', f'c{card}_axisCB_{i}'])
+			iniList.append([f'JOINT_{i}', 'DRIVE', f'c{card}_driveCB_{i}'])
+			iniList.append([f'JOINT_{i}', 'STEPLEN', f'c{card}_stepTime_{i}'])
+			iniList.append([f'JOINT_{i}', 'STEPSPACE', f'c{card}_stepSpace_{i}'])
+			iniList.append([f'JOINT_{i}', 'DIRSETUP', f'c{card}_dirSetup_{i}'])
+			iniList.append([f'JOINT_{i}', 'DIRHOLD', f'c{card}_dirHold_{i}'])
+			iniList.append([f'JOINT_{i}', 'MIN_LIMIT', f'c{card}_minLimit_{i}'])
+			iniList.append([f'JOINT_{i}', 'MAX_LIMIT', f'c{card}_maxLimit_{i}'])
+			iniList.append([f'JOINT_{i}', 'MAX_VELOCITY', f'c{card}_maxVelocity_{i}'])
+			iniList.append([f'JOINT_{i}', 'MAX_ACCELERATION', f'c{card}_maxAccel_{i}'])
+			iniList.append([f'JOINT_{i}', 'SCALE', f'c{card}_scale_{i}'])
+			iniList.append([f'JOINT_{i}', 'HOME', f'c{card}_home_{i}'])
+			iniList.append([f'JOINT_{i}', 'HOME_OFFSET', f'c{card}_homeOffset_{i}'])
+			iniList.append([f'JOINT_{i}', 'HOME_SEARCH_VEL', f'c{card}_homeSearchVel_{i}'])
+			iniList.append([f'JOINT_{i}', 'HOME_LATCH_VEL', f'c{card}_homeLatchVel_{i}'])
+			iniList.append([f'JOINT_{i}', 'HOME_FINAL_VEL', f'c{card}_homeFinalVelocity_{i}'])
+			iniList.append([f'JOINT_{i}', 'HOME_USE_INDEX', f'c{card}_homeUseIndex_{i}'])
+			iniList.append([f'JOINT_{i}', 'HOME_IGNORE_LIMITS', f'c{card}_homeIgnoreLimits_{i}'])
+			iniList.append([f'JOINT_{i}', 'HOME_IS_SHARED', f'c{card}_homeSwitchShared_{i}'])
+			iniList.append([f'JOINT_{i}', 'HOME_SEQUENCE', f'c{card}_homeSequence_{i}'])
+			iniList.append([f'JOINT_{i}', 'P', f'c{card}_p_{i}'])
+			iniList.append([f'JOINT_{i}', 'I', f'c{card}_i_{i}'])
+			iniList.append([f'JOINT_{i}', 'D', f'c{card}_d_{i}'])
+			iniList.append([f'JOINT_{i}', 'FF0', f'c{card}_ff0_{i}'])
+			iniList.append([f'JOINT_{i}', 'FF1', f'c{card}_ff1_{i}'])
+			iniList.append([f'JOINT_{i}', 'FF2', f'c{card}_ff2_{i}'])
+			iniList.append([f'JOINT_{i}', 'DEADBAND', f'c{card}_deadband_{i}'])
+			iniList.append([f'JOINT_{i}', 'BIAS', f'c{card}_bias_{i}'])
+			iniList.append([f'JOINT_{i}', 'MAX_OUTPUT', f'c{card}_maxOutput_{i}'])
+			iniList.append([f'JOINT_{i}', 'MAX_ERROR', f'c{card}_maxError_{i}'])
+
+			iniList.append([f'JOINT_{i}', 'ENCODER_SCALE', f'c{card}_encoderScale_{i}'])
+			iniList.append([f'JOINT_{i}', 'ANALOG_SCALE_MAX', f'c{card}_analogScaleMax_{i}'])
+			iniList.append([f'JOINT_{i}', 'ANALOG_MIN_LIMIT', f'c{card}_analogMinLimit_{i}'])
+			iniList.append([f'JOINT_{i}', 'ANALOG_MAX_LIMIT', f'c{card}_analogMaxLimit_{i}'])
 
 	iniList.append(['SPINDLE', 'OUTPUT_TYPE', 'spindleTypeCB'])
 	iniList.append(['SPINDLE', 'SCALE', 'spindleScale'])

@@ -24,7 +24,8 @@ def build(parent):
 	iniContents.append(f'VERSION = {parent.version}\n')
 	iniContents.append(f'BOARD = {parent.boardCB.currentData()}\n')
 	iniContents.append(f'FIRMWARE = {parent.firmwareCB.currentText()}\n')
-	#iniContents.append(f'CARD = {parent.cardCB.currentText()}\n') daughterCB_0
+	iniContents.append(f'CARD_0 = {parent.daughterCB_0.currentData()}\n') 
+	iniContents.append(f'CARD_1 = {parent.daughterCB_1.currentData()}\n') 
 	#iniContents.append(f'CONNECTOR = {parent.connectorCB.currentText()}\n')
 
 	# build the [EMC] section
@@ -33,8 +34,8 @@ def build(parent):
 	iniContents.append(f'MACHINE = {parent.configName.text()}\n')
 	iniContents.append(f'DEBUG = {parent.debugCB.currentData()}\n')
 
-	# build the [HOSTMOT2] section
-	iniContents.append('\n[HOSTMOT2]\n')
+	# build the [HM2] section
+	iniContents.append('\n[HM2]\n')
 	if parent.boardType == 'eth':
 		iniContents.append('DRIVER = hm2_eth\n')
 		iniContents.append(f'IPADDRESS = {parent.ipAddressCB.currentData()}\n')
@@ -127,7 +128,10 @@ def build(parent):
 
 
 	# build the axes
-	card = 'c0' # read card later
+	if parent.cardTabs.isTabEnabled(0):
+		card = 'c0'
+	elif parent.cardTabs.isTabEnabled(1):
+		card = 'c1'
 	axes = []
 	for i in range(6):
 		axis = getattr(parent, f'{card}_axisCB_{i}').currentData()

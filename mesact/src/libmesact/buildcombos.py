@@ -54,7 +54,7 @@ def build(parent):
 	for i in range(6):
 		for item in axes:
 			getattr(parent, f'c0_axisCB_{i}').addItem(item[0], item[1])
-			#getattr(parent, f'c1_axisCB_{i}').addItem(item[0], item[1])
+			getattr(parent, f'c1_axisCB_{i}').addItem(item[0], item[1])
 
 	gui = [
 		['Select', False],
@@ -122,7 +122,7 @@ def build(parent):
 	for i in range(6):
 		for item in drives:
 			getattr(parent, f'c0_driveCB_{i}').addItem(item[0], item[1])
-			#getattr(parent, f'c1_driveCB_{i}').addItem(item[0], item[1])
+			getattr(parent, f'c1_driveCB_{i}').addItem(item[0], item[1])
 
 
 	ssCards = [

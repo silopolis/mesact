@@ -3,6 +3,7 @@ from datetime import datetime
 
 def build(parent):
 	board = parent.boardCB.currentData()
+	mainboards = ['5i25', '7i80hd', '7i80db', '7i92', '7i93', '7i98']
 	#card = parent.cardCB.currentText()
 	#port = parent.analogPort
 
@@ -23,13 +24,13 @@ def build(parent):
 	halContents.append('servo_period_nsec=[EMCMOT]SERVO_PERIOD ')
 	halContents.append('num_joints=[KINS]JOINTS\n\n')
 	halContents.append('# standard components\n')
-	#halContents.append(f'loadrt pid num_chan={parent.axes + 1} \n\n')
+	halContents.append(f'loadrt pid num_chan={parent.axes + 1} \n\n')
 	halContents.append('# hostmot2 driver\n')
 	halContents.append('loadrt hostmot2\n\n')
 
-	halContents.append('loadrt [HOSTMOT2](DRIVER) ')
+	halContents.append('loadrt [HM2](DRIVER) ')
 	if parent.boardType == 'eth':
-		halContents.append('board_ip=[HOSTMOT2](IPADDRESS) ')
+		halContents.append('board_ip=[HM2](IPADDRESS) ')
 	config = False
 	if parent.stepgensCB.currentData():
 		config = True
@@ -40,21 +41,21 @@ def build(parent):
 	if config:
 		halContents.append('config="')
 	if parent.stepgensCB.currentData():
-		halContents.append('num_stepgens=[HOSTMOT2](STEPGENS)')
+		halContents.append('num_stepgens=[HM2](STEPGENS)')
 	if parent.encodersCB.currentData():
 		if parent.stepgensCB.currentData():
 			halContents.append(' ')
-		halContents.append('num_encoders=[HOSTMOT2](ENCODERS)')
+		halContents.append('num_encoders=[HM2](ENCODERS)')
 	if parent.pwmgensCB.currentData():
 		if parent.stepgensCB.currentData() or parent.encodersCB.currentData():
 			halContents.append(' ')
-		halContents.append('num_pwmgens=[HOSTMOT2](PWMS)')
+		halContents.append('num_pwmgens=[HM2](PWMS)')
 	if config:
 		halContents.append('"\n')
 	
 	
-	# loadrt [HOSTMOT2](DRIVER) config="num_encoders=1 num_pwmgens=0 num_stepgens=5 sserial_port_0=00xxxx"
-	#halContents.append('loadrt [HOSTMOT2](DRIVER) ')
+	# loadrt [HM2](DRIVER) config="num_encoders=1 num_pwmgens=0 num_stepgens=5 sserial_port_0=00xxxx"
+	#halContents.append('loadrt [HM2](DRIVER) ')
 
 
 	halContents.append(f'\nsetp hm2_{board}.0.watchdog.timeout_ns {parent.servoPeriodSB.value() * 5}\n')
@@ -63,7 +64,7 @@ def build(parent):
 	halContents.append('addf motion-command-handler servo-thread\n')
 	halContents.append('addf motion-controller servo-thread\n')
 
-	'''
+
 	for i in range(parent.axes + 1):
 		halContents.append(f'addf pid.{i}.do-pid-calcs servo-thread\n')
 	halContents.append(f'addf hm2_{board}.0.write servo-thread\n')
@@ -89,7 +90,7 @@ def build(parent):
 		halContents.append(f'\nnet joint-{i}-enable <= joint.{i}.amp-enable-out\n')
 		halContents.append(f'net joint-{i}-enable => pid.{i}.enable\n')
 
-		if card == '7i76':
+		if parent.cardType_0 == 'step':
 			halContents.append(f'\nnet joint-{i}-enable => hm2_{board}.0.stepgen.0{i}.enable\n')
 
 			halContents.append(f'\nsetp hm2_{board}.0.stepgen.0{i}.dirsetup [JOINT_{i}]DIRSETUP\n')
@@ -113,7 +114,9 @@ def build(parent):
 			halContents.append(f'\nnet joint.{i}.output <= pid.{i}.output\n')
 			halContents.append(f'net joint.{i}.output => hm2_{board}.0.stepgen.0{i}.velocity-cmd\n')
 
-		if card == '7i77':
+		if parent.board in mainboards:
+			card = parent.board
+		if parent.cardType_0 == 'servo':
 			halContents.append('# amp enable\n')
 			halContents.append(f'net amp-enable joint.0.amp-enable-out hm2_{board}.0.{card}.0.{port}.analogena\n')
 			halContents.append('\n# PWM setup\n')
@@ -212,7 +215,7 @@ def build(parent):
 			halContents.append('loadrt classicladder_rt\n')
 		halContents.append('addf classicladder.0.refresh servo-thread 1\n')
 
-	'''
+
 
 	try:
 		with open(halFilePath, 'w') as halFile:
