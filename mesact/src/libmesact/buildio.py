@@ -101,7 +101,16 @@ def build(parent):
 	{'Spindle':['Spindle Amp Fault', 'Spindle Inhibit', 'Spindle Oriented', 'Spindle Orient Fault']},
 
 	# build inputs from qpushbutton menus
+	'''
+	hm2_7i92.0.7i76.0.0.input-00
+	hm2_7i92.0.7i76.0.0.input-00-not
+	hm2_7i92.0.7i76.0.0.output-00
+	hm2_7i92.0.7i76.0.0.spindir
+	hm2_7i92.0.7i76.0.0.spinena
+	hm2_7i92.0.7i76.0.0.spinout
+	'''
 	for i in range(32):
+
 		key = getattr(parent, 'inputPB_' + str(i)).text()
 		invert = '-not' if getattr(parent, 'inputInvertCB_' + str(i)).isChecked() else ''
 		#hm2_7i92.0.7i77.0.0.input-00 hm2_7i92.0.7i77.0.0.input-00-not

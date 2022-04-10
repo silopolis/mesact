@@ -448,10 +448,13 @@ def firmwareChanged(parent):
 def daughterCardChanged(parent):
 	motherBoards = ['5i25', '7i80db', '7i80hd', '7i92', '7i93', '7i98' ]
 	axes = {'7i76': '5', '7i77': '6', '7i78': '4'}
+	inputs = {'7i76': '32', '7i77': '32', '7i78': '0'}
+	outputs = {'7i76': '16', '7i77': '16', '7i78': '0'}
 	stepper = ['7i76', '7i78']
 	servo = ['7i77']
 
 	if parent.sender().currentData():
+		parent.mainTabs.setTabEnabled(4, True)
 		if parent.sender().objectName() == 'daughterCB_0':
 			if parent.boardCB.currentData() in motherBoards:
 				parent.mainTabs.setTabEnabled(3, True)
@@ -489,6 +492,7 @@ def daughterCardChanged(parent):
 			parent.cardTabs.setTabEnabled(1, True)
 		else:
 			parent.cardTabs.setTabEnabled(1, False)
+
 
 	'''
 	if parent.daughterCB_0.currentText() != 'Select':
@@ -588,15 +592,13 @@ def updateAxisInfo(parent):
 	else:
 		return
 
-	if not parent.linearUnitsCB.currentData():
-		parent.errorDialog('Machine Tab:\nLinear Units must be selected')
-		return
-	accelTime = maxVelocity / maxAccel
-	getattr(parent, f'{card}_timeJoint_' + joint).setText(f'{accelTime:.2f} seconds')
-	accelDistance = accelTime * 0.5 * maxVelocity
-	getattr(parent, f'{card}_distanceJoint_' + joint).setText(f'{accelDistance:.2f} {parent.linearUnitsCB.currentData()}')
-	stepRate = scale * maxVelocity
-	getattr(parent, f'{card}_stepRateJoint_' + joint).setText(f'{abs(stepRate):.0f} pulses')
+	if parent.linearUnitsCB.currentData():
+		accelTime = maxVelocity / maxAccel
+		getattr(parent, f'{card}_timeJoint_' + joint).setText(f'{accelTime:.2f} seconds')
+		accelDistance = accelTime * 0.5 * maxVelocity
+		getattr(parent, f'{card}_distanceJoint_' + joint).setText(f'{accelDistance:.2f} {parent.linearUnitsCB.currentData()}')
+		stepRate = scale * maxVelocity
+		getattr(parent, f'{card}_stepRateJoint_' + joint).setText(f'{abs(stepRate):.0f} pulses')
 
 
 def axisChanged(parent):
