@@ -71,9 +71,10 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 		#self.ladderOptionsList = utilities.plcOptions()
 		self.setupConnections()
 		self.show()
-		loadini.openini(self, 'mesa-5i25-7i76')
+		#loadini.openini(self, 'mesa-5i25-7i76')
 		#loadini.openini(self, 'mesa-5i25-7i77')
 		#loadini.openini(self, 'mesa-7i76e')
+		#loadini.openini(self, 'mesa-7i92-7i76')
 		#loadini.openini(self, 'mesa-7i95')
 		#loadini.openini(self, 'mesa-7i96')
 
