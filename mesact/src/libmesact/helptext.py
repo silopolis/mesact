@@ -89,6 +89,22 @@ Scale is the number of steps to move one user unit (inch or mm).
 Limits are in user units.
 Velocity is user units per second, Acceleration is user units per second per second
 
+PID Settings
+P = Proportional  P = (Commanded - Measured) * Pgain. 
+I = Integral  I(new) = I(old) + Igain * (Commanded - Measured). 
+D = Derivative  D = Dgain * (New_measured - Old_Measured)
+FF0 = Commanded position * FF0 + Output
+FF1 = First derivative of position * FF1
+FF2 = Second derivative of position * FF2
+
+FF0 is proportional to position (assuming an axis) or otherwise whatever
+parameter is the input to the PID.
+
+FF1 is the first derivative of position, so that is proportional
+to velocity.
+
+FF2 is second derivative of position, so it is proportional to acceleration.
+
 Axis, PID Settings and StepGen Settings are required.
 
 Homing fields are optional.
