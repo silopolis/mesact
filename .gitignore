@@ -4,6 +4,7 @@ translate
 mesact/debian/.debhelper
 mesact/debian/debhelper*
 mesact/debian/mesact
+mesact/debian/files
 *.dsc
 *.xz
 *.buildinfo
