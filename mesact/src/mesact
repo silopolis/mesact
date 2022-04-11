@@ -59,18 +59,21 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 		self.setWindowTitle(f'Mesa Configuration Tool Version {self.version}')
 		self.board = ''
 		self.boardType = '' # pci or eth
+		self.device = '' # needed for mesaflash
 		self.cardType_0 = '' # step or servo
 		self.fw = firmware
 		self.axes = 0
 		buildcombos.build(self)
 		buildmenus.build(self)
 		utilities.setup(self)
+		utilities.checks(self)
 		#self.helpInfo = helptext.descriptions
 
 		self.extcmd = extcmd.extcmd()
 		#self.ladderOptionsList = utilities.plcOptions()
 		self.setupConnections()
 		self.show()
+		
 		#loadini.openini(self, 'mesa-5i25-7i76')
 		#loadini.openini(self, 'mesa-5i25-7i77')
 		#loadini.openini(self, 'mesa-7i76e')

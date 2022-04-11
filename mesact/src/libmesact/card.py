@@ -19,7 +19,7 @@ def readpd(parent):
 		return
 	if check_ip(parent):
 		ipAddress = parent.ipAddressCB.currentText()
-		arguments = ["--device", parent.board, "--addr", ipAddress, "--print-pd"]
+		arguments = ["--device", parent.device, "--addr", ipAddress, "--print-pd"]
 		parent.extcmd.job(cmd="mesaflash", args=arguments, dest=parent.machinePTE)
 
 def readhmid(parent):
@@ -28,7 +28,7 @@ def readhmid(parent):
 		return
 	if check_ip(parent):
 		ipAddress = parent.ipAddressCB.currentText()
-		arguments = ["--device", parent.board, "--addr", ipAddress, "--readhmid"]
+		arguments = ["--device", parent.device, "--addr", ipAddress, "--readhmid"]
 
 		parent.extcmd.job(cmd="mesaflash", args=arguments, dest=parent.machinePTE)
 
@@ -43,11 +43,11 @@ def flashCard(parent):
 		if parent.boardType == 'eth':
 			if check_ip(parent):
 				ipAddress = parent.ipAddressCB.currentText()
-				arguments = ["--device", parent.board, "--addr", ipAddress, "--write", firmware]
+				arguments = ["--device", parent.device, "--addr", ipAddress, "--write", firmware]
 			else:
 				return
 		elif parent.boardType == 'pci':
-			arguments = ["--device", parent.board, "--write", firmware]
+			arguments = ["--device", parent.device, "--write", firmware]
 
 		print(arguments)
 		return
@@ -65,7 +65,7 @@ def reloadCard(parent):
 		return
 	if check_ip(parent):
 		ipAddress = parent.ipAddressCB.currentText()
-		arguments = ["--device", parent.board, "--addr", ipAddress, "--reload"]
+		arguments = ["--device", parent.device, "--addr", ipAddress, "--reload"]
 		parent.extcmd.job(cmd="mesaflash", args=arguments, dest=parent.machinePTE)
 
 def verifyCard(parent):
@@ -75,7 +75,7 @@ def verifyCard(parent):
 	if check_ip(parent):
 		ipAddress = parent.ipAddressCB.currentText()
 		firmware = os.path.join(parent.lib_path, parent.firmwareCB.currentData())
-		arguments = ["--device", parent.board, "--addr", ipAddress, "--verify", firmware]
+		arguments = ["--device", parent.device, "--addr", ipAddress, "--verify", firmware]
 		parent.extcmd.job(cmd="mesaflash", args=arguments, dest=parent.machinePTE)
 
 def getCardPins(parent):

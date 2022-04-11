@@ -17,6 +17,17 @@ def isNumber(s):
 def checks(parent):
 	try:
 		subprocess.check_output('mesaflash', encoding='UTF-8')
+		try:
+			version = subprocess.check_output(['mesaflash', '--version'], encoding='UTF-8')[-6:]
+			print(version)
+			if int(version.replace('.', '')) >= 342:
+				parent.machinePTE.appendPlainText(f'Mesaflash Version: {version}')
+		except:
+			t = ('Mesaflash version is less than 3.4.2\n'
+				'The 7i76e Configuration Tool requires 3.4.2 or later.\n'
+				'Go to https://github.com/LinuxCNC/mesaflash\n'
+				'for installation/update instructions.')
+			parent.machinePTE.appendPlainText(t)
 	except FileNotFoundError:
 		#parent.errorMsgOk(('Mesaflash not found go to\n'
 		#	'https://github.com/LinuxCNC/mesaflash\n'
@@ -46,11 +57,14 @@ def boardChanged(parent):
 		parent.daughterCB_0.clear()
 		parent.daughterCB_1.clear()
 		parent.board = parent.boardCB.currentData()
+		if parent.boardCB.currentData() == '7i76e':
+			parent.device = '7i76e-16'
+		else:
+			parent.device = parent.boardCB.currentData()
+
 		# firmware combobox
 		parent.firmwareCB.clear()
-
 		path = os.path.join(parent.firmware_path, parent.boardCB.currentData())
-
 		files = sorted([entry.path for entry in os.scandir(path) if entry.is_file()])
 		bitFiles = False
 
@@ -599,7 +613,6 @@ def updateAxisInfo(parent):
 		getattr(parent, f'{card}_distanceJoint_' + joint).setText(f'{accelDistance:.2f} {parent.linearUnitsCB.currentData()}')
 		stepRate = scale * maxVelocity
 		getattr(parent, f'{card}_stepRateJoint_' + joint).setText(f'{abs(stepRate):.0f} pulses')
-
 
 def axisChanged(parent):
 	connector = parent.sender().objectName()[:3]
