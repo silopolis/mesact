@@ -90,7 +90,7 @@ def build(parent):
 		halContents.append(f'\nnet joint-{i}-enable <= joint.{i}.amp-enable-out\n')
 		halContents.append(f'net joint-{i}-enable => pid.{i}.enable\n')
 
-		if parent.cardType_0 == 'step':
+		if parent.cardType_0 == 'step' or parent.cardType_1 == 'step':
 			halContents.append(f'\nnet joint-{i}-enable => hm2_{board}.0.stepgen.0{i}.enable\n')
 
 			halContents.append(f'\nsetp hm2_{board}.0.stepgen.0{i}.dirsetup [JOINT_{i}]DIRSETUP\n')
@@ -116,7 +116,7 @@ def build(parent):
 
 		if parent.board in mainboards:
 			card = parent.board
-		if parent.cardType_0 == 'servo':
+		if parent.cardType_0 == 'servo' or parent.cardType_1 == 'servo':
 			halContents.append('# amp enable\n')
 			halContents.append(f'net amp-enable joint.0.amp-enable-out hm2_{board}.0.{card}.0.{port}.analogena\n')
 			halContents.append('\n# PWM setup\n')

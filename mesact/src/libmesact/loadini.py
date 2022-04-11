@@ -90,7 +90,6 @@ def loadini(parent, iniFile):
 		if config['MESA']['CARD_1']:
 			card = '1'
 
-
 	for i in range(6):
 			iniList.append([f'JOINT_{i}', 'AXIS', f'c{card}_axisCB_{i}'])
 			iniList.append([f'JOINT_{i}', 'DRIVE', f'c{card}_driveCB_{i}'])

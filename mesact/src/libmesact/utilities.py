@@ -466,10 +466,13 @@ def daughterCardChanged(parent):
 	outputs = {'7i76': '16', '7i77': '16', '7i78': '0'}
 	stepper = ['7i76', '7i78']
 	servo = ['7i77']
+	cardType = {'7i76': 'step', '7i77': 'servo', '7i78': 'step'}
 
 	if parent.sender().currentData():
+
 		parent.mainTabs.setTabEnabled(4, True)
 		if parent.sender().objectName() == 'daughterCB_0':
+			parent.cardType_0 = cardType[parent.sender().currentData()]
 			if parent.boardCB.currentData() in motherBoards:
 				parent.mainTabs.setTabEnabled(3, True)
 				parent.cardTabs.setTabText(0, parent.sender().currentData())
@@ -484,6 +487,7 @@ def daughterCardChanged(parent):
 					parent.jointTabs_0.setTabEnabled(5, False)
 
 		if parent.sender().objectName() == 'daughterCB_1':
+			parent.cardType_1 = cardType[parent.sender().currentData()]
 			if parent.boardCB.currentData() in motherBoards:
 				parent.mainTabs.setTabEnabled(3, True)
 				parent.cardTabs.setTabText(1, parent.sender().currentData())

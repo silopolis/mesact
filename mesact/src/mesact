@@ -61,6 +61,7 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 		self.boardType = '' # pci or eth
 		self.device = '' # needed for mesaflash
 		self.cardType_0 = '' # step or servo
+		self.cardType_1 = '' # step or servo
 		self.fw = firmware
 		self.axes = 0
 		buildcombos.build(self)
@@ -73,11 +74,11 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 		#self.ladderOptionsList = utilities.plcOptions()
 		self.setupConnections()
 		self.show()
-		
+
 		#loadini.openini(self, 'mesa-5i25-7i76')
 		#loadini.openini(self, 'mesa-5i25-7i77')
 		#loadini.openini(self, 'mesa-7i76e')
-		#loadini.openini(self, 'mesa-7i92-7i76')
+		loadini.openini(self, 'mesa-7i92-7i76')
 		#loadini.openini(self, 'mesa-7i95')
 		#loadini.openini(self, 'mesa-7i96')
 
