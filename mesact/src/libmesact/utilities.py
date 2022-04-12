@@ -247,6 +247,7 @@ def boardChanged(parent):
 			parent.stepgensCB.clear()
 			parent.stepgensCB.addItem('N/A', False)
 			parent.pwmgensCB.clear()
+			parent.pwmgensCB.addItem('N/A', False)
 			parent.encodersCB.clear()
 			parent.encodersCB.addItem('N/A', False)
 
@@ -434,6 +435,7 @@ def boardChanged(parent):
 
 def firmwareChanged(parent):
 	if parent.firmwareCB.currentData():
+		#print(parent.firmwareCB.currentText())
 		daughters = getattr(firmware, f'd{parent.board}')(parent)
 		if parent.firmwareCB.currentText() in daughters:
 			cards = daughters[parent.firmwareCB.currentText()]
@@ -455,21 +457,37 @@ def firmwareChanged(parent):
 		else:
 			parent.machinePTE.clear()
 			parent.machinePTE.setPlainText(f'No pin file found for {parent.firmwareCB.currentText()}')
+		options = getattr(firmware, f'o{parent.board}')(parent)
+
+		if parent.firmwareCB.currentText() in options:
+			#print(options[parent.firmwareCB.currentText()])
+			parent.stepgensCB.clear()
+			if options[parent.firmwareCB.currentText()][0]:
+				parent.stepgensCB.addItem(options[parent.firmwareCB.currentText()][0])
+			parent.pwmgensCB.clear()
+			if options[parent.firmwareCB.currentText()][1]:
+				parent.pwmgensCB.addItem(options[parent.firmwareCB.currentText()][1])
+			parent.encodersCB.clear()
+			if options[parent.firmwareCB.currentText()][2]:
+				for i in range(options[parent.firmwareCB.currentText()][2], -1, -1):
+					parent.encodersCB.addItem(f'{i}', f'{i}')
+
+
 	else:
 		parent.machinePTE.clear()
 
 
+
 def daughterCardChanged(parent):
 	motherBoards = ['5i25', '7i80db', '7i80hd', '7i92', '7i93', '7i98' ]
-	axes = {'7i76': '5', '7i77': '6', '7i78': '4'}
-	inputs = {'7i76': '32', '7i77': '32', '7i78': '0'}
-	outputs = {'7i76': '16', '7i77': '16', '7i78': '0'}
+	axes = {'7i76': '5', '7i77': '6', '7i78': '4', '5ABOB': '5'}
+	inputs = {'7i76': '32', '7i77': '32', '7i78': '0', '5ABOB': '5'}
+	outputs = {'7i76': '16', '7i77': '16', '7i78': '0', '5ABOB': '1'}
 	stepper = ['7i76', '7i78']
 	servo = ['7i77']
-	cardType = {'7i76': 'step', '7i77': 'servo', '7i78': 'step'}
+	cardType = {'7i76': 'step', '7i77': 'servo', '7i78': 'step', '5ABOB': 'step'}
 
 	if parent.sender().currentData():
-
 		parent.mainTabs.setTabEnabled(4, True)
 		if parent.sender().objectName() == 'daughterCB_0':
 			parent.cardType_0 = cardType[parent.sender().currentData()]
