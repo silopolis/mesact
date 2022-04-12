@@ -1657,22 +1657,6 @@ max speed</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="0" column="3">
-                    <widget class="QComboBox" name="c0_driveCB_0">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>150</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                    </widget>
-                   </item>
                    <item row="2" column="1">
                     <widget class="QLineEdit" name="c0_dirSetup_0">
                      <property name="sizePolicy">
@@ -1785,6 +1769,36 @@ max speed</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="3">
+                    <widget class="QCheckBox" name="c0_stepInvert_0">
+                     <property name="text">
+                      <string>Invert Step</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="3">
+                    <widget class="QComboBox" name="c0_driveCB_0">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>150</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="3">
+                    <widget class="QCheckBox" name="c0_dirInvert_0">
+                     <property name="text">
+                      <string>Invert Direction</string>
                      </property>
                     </widget>
                    </item>
@@ -2525,64 +2539,7 @@ usually set slower than Search Velocity</string>
                   <property name="title">
                    <string>StepGen Settings</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_8">
-                   <property name="leftMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="spacing">
-                    <number>5</number>
-                   </property>
-                   <item row="0" column="0">
-                    <widget class="QLabel" name="label_52">
-                     <property name="text">
-                      <string>Step Time</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="2">
-                    <widget class="QLabel" name="label_111">
-                     <property name="minimumSize">
-                      <size>
-                       <width>20</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>20</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>ns</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="0">
-                    <widget class="QLabel" name="label_53">
-                     <property name="text">
-                      <string>Step Space</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
+                  <layout class="QGridLayout" name="gridLayout_24">
                    <item row="1" column="2">
                     <widget class="QLabel" name="label_103">
                      <property name="minimumSize">
@@ -2615,6 +2572,28 @@ usually set slower than Search Velocity</string>
                      </property>
                     </widget>
                    </item>
+                   <item row="0" column="2">
+                    <widget class="QLabel" name="label_111">
+                     <property name="minimumSize">
+                      <size>
+                       <width>20</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>20</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>ns</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
                    <item row="2" column="2">
                     <widget class="QLabel" name="label_112">
                      <property name="minimumSize">
@@ -2637,132 +2616,10 @@ usually set slower than Search Velocity</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="3" column="0">
+                   <item row="4" column="0">
                     <widget class="QLabel" name="label_56">
                      <property name="text">
                       <string>Direction Hold</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="2">
-                    <widget class="QLabel" name="label_113">
-                     <property name="minimumSize">
-                      <size>
-                       <width>20</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>20</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>ns</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="3">
-                    <widget class="QComboBox" name="c0_driveCB_1">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>150</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="1">
-                    <widget class="QLineEdit" name="c0_dirSetup_1">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>60</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="1">
-                    <widget class="QLineEdit" name="c0_dirHold_1">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>60</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="1">
-                    <widget class="QLineEdit" name="c0_stepSpace_1">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>60</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2797,6 +2654,162 @@ usually set slower than Search Velocity</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_52">
+                     <property name="text">
+                      <string>Step Time</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="1">
+                    <widget class="QLineEdit" name="c0_dirHold_1">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QLineEdit" name="c0_dirSetup_1">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="2">
+                    <widget class="QLabel" name="label_113">
+                     <property name="minimumSize">
+                      <size>
+                       <width>20</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>20</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>ns</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="label_53">
+                     <property name="text">
+                      <string>Step Space</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="c0_stepSpace_1">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="3">
+                    <widget class="QComboBox" name="c0_driveCB_1">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>150</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="3">
+                    <widget class="QCheckBox" name="c0_stepInvert_1">
+                     <property name="text">
+                      <string>Invert Step</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="3">
+                    <widget class="QCheckBox" name="c0_dirInvert_1">
+                     <property name="text">
+                      <string>Invert Direction</string>
                      </property>
                     </widget>
                    </item>
@@ -3707,22 +3720,17 @@ usually set slower than Search Velocity</string>
                   <property name="title">
                    <string>StepGen Settings</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_12">
-                   <property name="leftMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="spacing">
-                    <number>5</number>
-                   </property>
+                  <layout class="QGridLayout" name="gridLayout_20">
+                   <item row="4" column="0">
+                    <widget class="QLabel" name="label_70">
+                     <property name="text">
+                      <string>Direction Hold</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
                    <item row="0" column="0">
                     <widget class="QLabel" name="label_61">
                      <property name="text">
@@ -3730,60 +3738,6 @@ usually set slower than Search Velocity</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="2">
-                    <widget class="QLabel" name="label_114">
-                     <property name="minimumSize">
-                      <size>
-                       <width>20</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>20</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>ns</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="0">
-                    <widget class="QLabel" name="label_65">
-                     <property name="text">
-                      <string>Step Space</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="2">
-                    <widget class="QLabel" name="label_104">
-                     <property name="minimumSize">
-                      <size>
-                       <width>20</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>20</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>ns</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                    </item>
@@ -3797,105 +3751,7 @@ usually set slower than Search Velocity</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="2" column="2">
-                    <widget class="QLabel" name="label_115">
-                     <property name="minimumSize">
-                      <size>
-                       <width>20</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>20</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>ns</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="0">
-                    <widget class="QLabel" name="label_70">
-                     <property name="text">
-                      <string>Direction Hold</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="2">
-                    <widget class="QLabel" name="label_116">
-                     <property name="minimumSize">
-                      <size>
-                       <width>20</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>20</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>ns</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="3">
-                    <widget class="QComboBox" name="c0_driveCB_2">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>150</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="1">
-                    <widget class="QLineEdit" name="c0_dirSetup_2">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>60</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="1">
+                   <item row="4" column="1">
                     <widget class="QLineEdit" name="c0_dirHold_2">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -3951,6 +3807,132 @@ usually set slower than Search Velocity</string>
                      </property>
                     </widget>
                    </item>
+                   <item row="1" column="2">
+                    <widget class="QLabel" name="label_104">
+                     <property name="minimumSize">
+                      <size>
+                       <width>20</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>20</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>ns</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QLineEdit" name="c0_dirSetup_2">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="2">
+                    <widget class="QLabel" name="label_116">
+                     <property name="minimumSize">
+                      <size>
+                       <width>20</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>20</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>ns</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="2">
+                    <widget class="QLabel" name="label_115">
+                     <property name="minimumSize">
+                      <size>
+                       <width>20</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>20</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>ns</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="label_65">
+                     <property name="text">
+                      <string>Step Space</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="QLabel" name="label_114">
+                     <property name="minimumSize">
+                      <size>
+                       <width>20</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>20</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>ns</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
                    <item row="0" column="1">
                     <widget class="QLineEdit" name="c0_stepTime_2">
                      <property name="sizePolicy">
@@ -3979,6 +3961,36 @@ usually set slower than Search Velocity</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="3">
+                    <widget class="QComboBox" name="c0_driveCB_2">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>150</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="3">
+                    <widget class="QCheckBox" name="c0_stepInvert_2">
+                     <property name="text">
+                      <string>Invert Step</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="3">
+                    <widget class="QCheckBox" name="c0_dirInvert_2">
+                     <property name="text">
+                      <string>Invert Direction</string>
                      </property>
                     </widget>
                    </item>
@@ -4720,25 +4732,28 @@ usually set slower than Search Velocity</string>
                    <string>StepGen Settings</string>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_16">
-                   <property name="leftMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="spacing">
-                    <number>5</number>
-                   </property>
-                   <item row="0" column="0">
-                    <widget class="QLabel" name="label_100">
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="c0_stepSpace_3">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
                      <property name="text">
-                      <string>Step Time</string>
+                      <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -4764,16 +4779,6 @@ usually set slower than Search Velocity</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="0">
-                    <widget class="QLabel" name="label_101">
-                     <property name="text">
-                      <string>Step Space</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
@@ -4809,134 +4814,18 @@ usually set slower than Search Velocity</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="2" column="2">
-                    <widget class="QLabel" name="label_118">
-                     <property name="minimumSize">
-                      <size>
-                       <width>20</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>20</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="label_101">
                      <property name="text">
-                      <string>ns</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="0">
-                    <widget class="QLabel" name="label_119">
-                     <property name="text">
-                      <string>Direction Hold</string>
+                      <string>Step Space</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="2">
-                    <widget class="QLabel" name="label_120">
-                     <property name="minimumSize">
-                      <size>
-                       <width>20</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>20</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>ns</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="3">
-                    <widget class="QComboBox" name="c0_driveCB_3">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>150</width>
-                       <height>0</height>
-                      </size>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="1">
                     <widget class="QLineEdit" name="c0_dirSetup_3">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>60</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="1">
-                    <widget class="QLineEdit" name="c0_dirHold_3">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>60</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="1">
-                    <widget class="QLineEdit" name="c0_stepSpace_3">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -4991,6 +4880,128 @@ usually set slower than Search Velocity</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="2">
+                    <widget class="QLabel" name="label_118">
+                     <property name="minimumSize">
+                      <size>
+                       <width>20</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>20</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>ns</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="1">
+                    <widget class="QLineEdit" name="c0_dirHold_3">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="0">
+                    <widget class="QLabel" name="label_119">
+                     <property name="text">
+                      <string>Direction Hold</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="2">
+                    <widget class="QLabel" name="label_120">
+                     <property name="minimumSize">
+                      <size>
+                       <width>20</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>20</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>ns</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_100">
+                     <property name="text">
+                      <string>Step Time</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="3">
+                    <widget class="QComboBox" name="c0_driveCB_3">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>150</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="3">
+                    <widget class="QCheckBox" name="c0_stepInvert_3">
+                     <property name="text">
+                      <string>Invert Step</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="3">
+                    <widget class="QCheckBox" name="c0_dirInvert_3">
+                     <property name="text">
+                      <string>Invert Direction</string>
                      </property>
                     </widget>
                    </item>
@@ -5731,26 +5742,42 @@ usually set slower than Search Velocity</string>
                   <property name="title">
                    <string>StepGen Settings</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_20">
-                   <property name="leftMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="spacing">
-                    <number>5</number>
-                   </property>
+                  <layout class="QGridLayout" name="gridLayout_12">
                    <item row="0" column="0">
                     <widget class="QLabel" name="label_132">
                      <property name="text">
                       <string>Step Time</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="c0_stepTime_4">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="inputMask">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -5789,6 +5816,34 @@ usually set slower than Search Velocity</string>
                      </property>
                     </widget>
                    </item>
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="c0_stepSpace_4">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
                    <item row="1" column="2">
                     <widget class="QLabel" name="label_135">
                      <property name="minimumSize">
@@ -5815,6 +5870,34 @@ usually set slower than Search Velocity</string>
                     <widget class="QLabel" name="label_136">
                      <property name="text">
                       <string>Direction Setup</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QLineEdit" name="c0_dirSetup_4">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -5853,72 +5936,6 @@ usually set slower than Search Velocity</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="3" column="2">
-                    <widget class="QLabel" name="label_139">
-                     <property name="minimumSize">
-                      <size>
-                       <width>20</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>20</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>ns</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="3">
-                    <widget class="QComboBox" name="c0_driveCB_4">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>150</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="1">
-                    <widget class="QLineEdit" name="c0_dirSetup_4">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>60</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
                    <item row="3" column="1">
                     <widget class="QLineEdit" name="c0_dirHold_4">
                      <property name="sizePolicy">
@@ -5947,62 +5964,55 @@ usually set slower than Search Velocity</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="1" column="1">
-                    <widget class="QLineEdit" name="c0_stepSpace_4">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
+                   <item row="3" column="2">
+                    <widget class="QLabel" name="label_139">
                      <property name="minimumSize">
                       <size>
-                       <width>0</width>
+                       <width>20</width>
                        <height>0</height>
                       </size>
                      </property>
                      <property name="maximumSize">
                       <size>
-                       <width>60</width>
+                       <width>20</width>
                        <height>16777215</height>
                       </size>
                      </property>
                      <property name="text">
-                      <string/>
+                      <string>ns</string>
                      </property>
                      <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                    </item>
-                   <item row="0" column="1">
-                    <widget class="QLineEdit" name="c0_stepTime_4">
+                   <item row="3" column="3">
+                    <widget class="QComboBox" name="c0_driveCB_4">
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
                      </property>
                      <property name="minimumSize">
                       <size>
-                       <width>0</width>
+                       <width>150</width>
                        <height>0</height>
                       </size>
                      </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>60</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="inputMask">
-                      <string/>
-                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="3">
+                    <widget class="QCheckBox" name="c0_stepInvert_4">
                      <property name="text">
-                      <string/>
+                      <string>Invert Step</string>
                      </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                    </widget>
+                   </item>
+                   <item row="2" column="3">
+                    <widget class="QCheckBox" name="c0_dirInvert_4">
+                     <property name="text">
+                      <string>Invert Direction</string>
                      </property>
                     </widget>
                    </item>
@@ -6743,26 +6753,71 @@ usually set slower than Search Velocity</string>
                   <property name="title">
                    <string>StepGen Settings</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_24">
-                   <property name="leftMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="spacing">
-                    <number>5</number>
-                   </property>
+                  <layout class="QGridLayout" name="gridLayout_8">
+                   <item row="2" column="2">
+                    <widget class="QLabel" name="label_757">
+                     <property name="minimumSize">
+                      <size>
+                       <width>20</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>20</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>ns</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="label_758">
+                     <property name="text">
+                      <string>Direction Setup</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
                    <item row="0" column="0">
                     <widget class="QLabel" name="label_754">
                      <property name="text">
                       <string>Step Time</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="1">
+                    <widget class="QLineEdit" name="c0_dirSetup_5">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -6791,49 +6846,45 @@ usually set slower than Search Velocity</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="1" column="0">
-                    <widget class="QLabel" name="label_756">
-                     <property name="text">
-                      <string>Step Space</string>
+                   <item row="2" column="1">
+                    <widget class="QLineEdit" name="c0_stepSpace_5">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
                      </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="2">
-                    <widget class="QLabel" name="label_757">
                      <property name="minimumSize">
                       <size>
-                       <width>20</width>
+                       <width>0</width>
                        <height>0</height>
                       </size>
                      </property>
                      <property name="maximumSize">
                       <size>
-                       <width>20</width>
+                       <width>60</width>
                        <height>16777215</height>
                       </size>
                      </property>
                      <property name="text">
-                      <string>ns</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="0">
-                    <widget class="QLabel" name="label_758">
-                     <property name="text">
-                      <string>Direction Setup</string>
+                      <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
-                   <item row="2" column="2">
+                   <item row="4" column="0">
+                    <widget class="QLabel" name="label_760">
+                     <property name="text">
+                      <string>Direction Hold</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="2">
                     <widget class="QLabel" name="label_759">
                      <property name="minimumSize">
                       <size>
@@ -6855,112 +6906,18 @@ usually set slower than Search Velocity</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="3" column="0">
-                    <widget class="QLabel" name="label_760">
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="label_756">
                      <property name="text">
-                      <string>Direction Hold</string>
+                      <string>Step Space</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
-                   <item row="3" column="2">
-                    <widget class="QLabel" name="label_761">
-                     <property name="minimumSize">
-                      <size>
-                       <width>20</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>20</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>ns</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="3">
-                    <widget class="QComboBox" name="c0_driveCB_5">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>150</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="1">
-                    <widget class="QLineEdit" name="c0_dirSetup_5">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>60</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="1">
+                   <item row="4" column="1">
                     <widget class="QLineEdit" name="c0_dirHold_5">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>60</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="1">
-                    <widget class="QLineEdit" name="c0_stepSpace_5">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -7015,6 +6972,58 @@ usually set slower than Search Velocity</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="2">
+                    <widget class="QLabel" name="label_761">
+                     <property name="minimumSize">
+                      <size>
+                       <width>20</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>20</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>ns</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="3">
+                    <widget class="QCheckBox" name="c0_dirInvert_5">
+                     <property name="text">
+                      <string>Invert Direction</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="3">
+                    <widget class="QComboBox" name="c0_driveCB_5">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>150</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="3">
+                    <widget class="QCheckBox" name="c0_stepInvert_5">
+                     <property name="text">
+                      <string>Invert Step</string>
                      </property>
                     </widget>
                    </item>
@@ -7613,25 +7622,41 @@ max speed</string>
                    <string>StepGen Settings</string>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_111">
-                   <property name="leftMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="spacing">
-                    <number>5</number>
-                   </property>
                    <item row="0" column="0">
                     <widget class="QLabel" name="label_836">
                      <property name="text">
                       <string>Step Time</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="c1_stepTime_0">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="inputMask">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -7660,10 +7685,45 @@ max speed</string>
                      </property>
                     </widget>
                    </item>
+                   <item row="0" column="3">
+                    <widget class="QCheckBox" name="c1_stepInvert_0">
+                     <property name="text">
+                      <string>Invert Step</string>
+                     </property>
+                    </widget>
+                   </item>
                    <item row="1" column="0">
                     <widget class="QLabel" name="label_838">
                      <property name="text">
                       <string>Step Space</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="c1_stepSpace_0">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -7702,76 +7762,6 @@ max speed</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="2" column="2">
-                    <widget class="QLabel" name="label_841">
-                     <property name="minimumSize">
-                      <size>
-                       <width>20</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>20</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>ns</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="0">
-                    <widget class="QLabel" name="label_842">
-                     <property name="text">
-                      <string>Direction Hold</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="2">
-                    <widget class="QLabel" name="label_843">
-                     <property name="minimumSize">
-                      <size>
-                       <width>20</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>20</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>ns</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="3">
-                    <widget class="QComboBox" name="c1_driveCB_0">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>150</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                    </widget>
-                   </item>
                    <item row="2" column="1">
                     <widget class="QLineEdit" name="c1_dirSetup_0">
                      <property name="sizePolicy">
@@ -7794,6 +7784,45 @@ max speed</string>
                      </property>
                      <property name="text">
                       <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="2">
+                    <widget class="QLabel" name="label_841">
+                     <property name="minimumSize">
+                      <size>
+                       <width>20</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>20</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>ns</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="3">
+                    <widget class="QCheckBox" name="c1_dirInvert_0">
+                     <property name="text">
+                      <string>Invert Direction</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="label_842">
+                     <property name="text">
+                      <string>Direction Hold</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -7828,62 +7857,41 @@ max speed</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="1" column="1">
-                    <widget class="QLineEdit" name="c1_stepSpace_0">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
+                   <item row="3" column="2">
+                    <widget class="QLabel" name="label_843">
                      <property name="minimumSize">
                       <size>
-                       <width>0</width>
+                       <width>20</width>
                        <height>0</height>
                       </size>
                      </property>
                      <property name="maximumSize">
                       <size>
-                       <width>60</width>
+                       <width>20</width>
                        <height>16777215</height>
                       </size>
                      </property>
                      <property name="text">
-                      <string/>
+                      <string>ns</string>
                      </property>
                      <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                    </item>
-                   <item row="0" column="1">
-                    <widget class="QLineEdit" name="c1_stepTime_0">
+                   <item row="3" column="3">
+                    <widget class="QComboBox" name="c1_driveCB_0">
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
                      </property>
                      <property name="minimumSize">
                       <size>
-                       <width>0</width>
+                       <width>150</width>
                        <height>0</height>
                       </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>60</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="inputMask">
-                      <string/>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
@@ -8795,26 +8803,42 @@ max speed</string>
                   <property name="title">
                    <string>StepGen Settings</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_137">
-                   <property name="leftMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="spacing">
-                    <number>5</number>
-                   </property>
+                  <layout class="QGridLayout" name="gridLayout_165">
                    <item row="0" column="0">
                     <widget class="QLabel" name="label_860">
                      <property name="text">
                       <string>Step Time</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="c1_stepTime_1">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="inputMask">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -8843,10 +8867,45 @@ max speed</string>
                      </property>
                     </widget>
                    </item>
+                   <item row="0" column="3">
+                    <widget class="QCheckBox" name="c1_stepInvert_1">
+                     <property name="text">
+                      <string>Invert Step</string>
+                     </property>
+                    </widget>
+                   </item>
                    <item row="1" column="0">
                     <widget class="QLabel" name="label_862">
                      <property name="text">
                       <string>Step Space</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="c1_stepSpace_1">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -8885,77 +8944,7 @@ max speed</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="2" column="2">
-                    <widget class="QLabel" name="label_865">
-                     <property name="minimumSize">
-                      <size>
-                       <width>20</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>20</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>ns</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="0">
-                    <widget class="QLabel" name="label_866">
-                     <property name="text">
-                      <string>Direction Hold</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="2">
-                    <widget class="QLabel" name="label_867">
-                     <property name="minimumSize">
-                      <size>
-                       <width>20</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>20</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>ns</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="3">
-                    <widget class="QComboBox" name="c1_driveCB_1">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>150</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="1">
+                   <item row="2" column="1" rowspan="2">
                     <widget class="QLineEdit" name="c1_dirSetup_1">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -8983,7 +8972,62 @@ max speed</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="3" column="1">
+                   <item row="2" column="2">
+                    <widget class="QLabel" name="label_865">
+                     <property name="minimumSize">
+                      <size>
+                       <width>20</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>20</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>ns</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="3">
+                    <widget class="QCheckBox" name="c1_dirInvert_1">
+                     <property name="text">
+                      <string>Invert Direction</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="3" rowspan="2">
+                    <widget class="QComboBox" name="c1_driveCB_1">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>150</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="0">
+                    <widget class="QLabel" name="label_866">
+                     <property name="text">
+                      <string>Direction Hold</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="1">
                     <widget class="QLineEdit" name="c1_dirHold_1">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -9011,62 +9055,25 @@ max speed</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="1" column="1">
-                    <widget class="QLineEdit" name="c1_stepSpace_1">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
+                   <item row="4" column="2">
+                    <widget class="QLabel" name="label_867">
                      <property name="minimumSize">
                       <size>
-                       <width>0</width>
+                       <width>20</width>
                        <height>0</height>
                       </size>
                      </property>
                      <property name="maximumSize">
                       <size>
-                       <width>60</width>
+                       <width>20</width>
                        <height>16777215</height>
                       </size>
                      </property>
                      <property name="text">
-                      <string/>
+                      <string>ns</string>
                      </property>
                      <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="1">
-                    <widget class="QLineEdit" name="c1_stepTime_1">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>60</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="inputMask">
-                      <string/>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                    </item>
@@ -9808,26 +9815,42 @@ max speed</string>
                   <property name="title">
                    <string>StepGen Settings</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_144">
-                   <property name="leftMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="spacing">
-                    <number>5</number>
-                   </property>
+                  <layout class="QGridLayout" name="gridLayout_158">
                    <item row="0" column="0">
                     <widget class="QLabel" name="label_898">
                      <property name="text">
                       <string>Step Time</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="c1_stepTime_2">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="inputMask">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -9856,10 +9879,45 @@ max speed</string>
                      </property>
                     </widget>
                    </item>
+                   <item row="0" column="3">
+                    <widget class="QCheckBox" name="c1_stepInvert_2">
+                     <property name="text">
+                      <string>Invert Step</string>
+                     </property>
+                    </widget>
+                   </item>
                    <item row="1" column="0">
                     <widget class="QLabel" name="label_900">
                      <property name="text">
                       <string>Step Space</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="c1_stepSpace_2">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -9898,76 +9956,6 @@ max speed</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="2" column="2">
-                    <widget class="QLabel" name="label_903">
-                     <property name="minimumSize">
-                      <size>
-                       <width>20</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>20</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>ns</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="0">
-                    <widget class="QLabel" name="label_904">
-                     <property name="text">
-                      <string>Direction Hold</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="2">
-                    <widget class="QLabel" name="label_905">
-                     <property name="minimumSize">
-                      <size>
-                       <width>20</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>20</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>ns</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="3">
-                    <widget class="QComboBox" name="c1_driveCB_2">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>150</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                    </widget>
-                   </item>
                    <item row="2" column="1">
                     <widget class="QLineEdit" name="c1_dirSetup_2">
                      <property name="sizePolicy">
@@ -9990,6 +9978,45 @@ max speed</string>
                      </property>
                      <property name="text">
                       <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="2">
+                    <widget class="QLabel" name="label_903">
+                     <property name="minimumSize">
+                      <size>
+                       <width>20</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>20</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>ns</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="3">
+                    <widget class="QCheckBox" name="c1_dirInvert_2">
+                     <property name="text">
+                      <string>Invert Direction</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="label_904">
+                     <property name="text">
+                      <string>Direction Hold</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -10024,62 +10051,41 @@ max speed</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="1" column="1">
-                    <widget class="QLineEdit" name="c1_stepSpace_2">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
+                   <item row="3" column="2">
+                    <widget class="QLabel" name="label_905">
                      <property name="minimumSize">
                       <size>
-                       <width>0</width>
+                       <width>20</width>
                        <height>0</height>
                       </size>
                      </property>
                      <property name="maximumSize">
                       <size>
-                       <width>60</width>
+                       <width>20</width>
                        <height>16777215</height>
                       </size>
                      </property>
                      <property name="text">
-                      <string/>
+                      <string>ns</string>
                      </property>
                      <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                    </item>
-                   <item row="0" column="1">
-                    <widget class="QLineEdit" name="c1_stepTime_2">
+                   <item row="3" column="3">
+                    <widget class="QComboBox" name="c1_driveCB_2">
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
                      </property>
                      <property name="minimumSize">
                       <size>
-                       <width>0</width>
+                       <width>150</width>
                        <height>0</height>
                       </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>60</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="inputMask">
-                      <string/>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
@@ -10822,25 +10828,41 @@ max speed</string>
                    <string>StepGen Settings</string>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_151">
-                   <property name="leftMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="spacing">
-                    <number>5</number>
-                   </property>
                    <item row="0" column="0">
                     <widget class="QLabel" name="label_936">
                      <property name="text">
                       <string>Step Time</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="c1_stepTime_3">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="inputMask">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -10869,10 +10891,45 @@ max speed</string>
                      </property>
                     </widget>
                    </item>
+                   <item row="0" column="3">
+                    <widget class="QCheckBox" name="c1_stepInvert_3">
+                     <property name="text">
+                      <string>Invert Step</string>
+                     </property>
+                    </widget>
+                   </item>
                    <item row="1" column="0">
                     <widget class="QLabel" name="label_938">
                      <property name="text">
                       <string>Step Space</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="c1_stepSpace_3">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -10911,76 +10968,6 @@ max speed</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="2" column="2">
-                    <widget class="QLabel" name="label_941">
-                     <property name="minimumSize">
-                      <size>
-                       <width>20</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>20</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>ns</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="0">
-                    <widget class="QLabel" name="label_942">
-                     <property name="text">
-                      <string>Direction Hold</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="2">
-                    <widget class="QLabel" name="label_943">
-                     <property name="minimumSize">
-                      <size>
-                       <width>20</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>20</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>ns</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="3">
-                    <widget class="QComboBox" name="c1_driveCB_3">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>150</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                    </widget>
-                   </item>
                    <item row="2" column="1">
                     <widget class="QLineEdit" name="c1_dirSetup_3">
                      <property name="sizePolicy">
@@ -11003,6 +10990,45 @@ max speed</string>
                      </property>
                      <property name="text">
                       <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="2">
+                    <widget class="QLabel" name="label_941">
+                     <property name="minimumSize">
+                      <size>
+                       <width>20</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>20</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>ns</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="3">
+                    <widget class="QCheckBox" name="c1_dirInvert_3">
+                     <property name="text">
+                      <string>Invert Direction</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="label_942">
+                     <property name="text">
+                      <string>Direction Hold</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -11037,62 +11063,41 @@ max speed</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="1" column="1">
-                    <widget class="QLineEdit" name="c1_stepSpace_3">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
+                   <item row="3" column="2">
+                    <widget class="QLabel" name="label_943">
                      <property name="minimumSize">
                       <size>
-                       <width>0</width>
+                       <width>20</width>
                        <height>0</height>
                       </size>
                      </property>
                      <property name="maximumSize">
                       <size>
-                       <width>60</width>
+                       <width>20</width>
                        <height>16777215</height>
                       </size>
                      </property>
                      <property name="text">
-                      <string/>
+                      <string>ns</string>
                      </property>
                      <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                    </item>
-                   <item row="0" column="1">
-                    <widget class="QLineEdit" name="c1_stepTime_3">
+                   <item row="3" column="3">
+                    <widget class="QComboBox" name="c1_driveCB_3">
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
                      </property>
                      <property name="minimumSize">
                       <size>
-                       <width>0</width>
+                       <width>150</width>
                        <height>0</height>
                       </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>60</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="inputMask">
-                      <string/>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
@@ -11834,26 +11839,42 @@ max speed</string>
                   <property name="title">
                    <string>StepGen Settings</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_158">
-                   <property name="leftMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="spacing">
-                    <number>5</number>
-                   </property>
+                  <layout class="QGridLayout" name="gridLayout_144">
                    <item row="0" column="0">
                     <widget class="QLabel" name="label_974">
                      <property name="text">
                       <string>Step Time</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="c1_stepTime_4">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="inputMask">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -11882,10 +11903,45 @@ max speed</string>
                      </property>
                     </widget>
                    </item>
+                   <item row="0" column="3">
+                    <widget class="QCheckBox" name="c1_stepInvert_4">
+                     <property name="text">
+                      <string>Invert Step</string>
+                     </property>
+                    </widget>
+                   </item>
                    <item row="1" column="0">
                     <widget class="QLabel" name="label_976">
                      <property name="text">
                       <string>Step Space</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="c1_stepSpace_4">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -11924,76 +11980,6 @@ max speed</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="2" column="2">
-                    <widget class="QLabel" name="label_979">
-                     <property name="minimumSize">
-                      <size>
-                       <width>20</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>20</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>ns</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="0">
-                    <widget class="QLabel" name="label_980">
-                     <property name="text">
-                      <string>Direction Hold</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="2">
-                    <widget class="QLabel" name="label_981">
-                     <property name="minimumSize">
-                      <size>
-                       <width>20</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>20</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>ns</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="3">
-                    <widget class="QComboBox" name="c1_driveCB_4">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>150</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                    </widget>
-                   </item>
                    <item row="2" column="1">
                     <widget class="QLineEdit" name="c1_dirSetup_4">
                      <property name="sizePolicy">
@@ -12016,6 +12002,45 @@ max speed</string>
                      </property>
                      <property name="text">
                       <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="2">
+                    <widget class="QLabel" name="label_979">
+                     <property name="minimumSize">
+                      <size>
+                       <width>20</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>20</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>ns</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="3">
+                    <widget class="QCheckBox" name="c1_dirInvert_4">
+                     <property name="text">
+                      <string>Invert Direction</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="label_980">
+                     <property name="text">
+                      <string>Direction Hold</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -12050,62 +12075,41 @@ max speed</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="1" column="1">
-                    <widget class="QLineEdit" name="c1_stepSpace_4">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
+                   <item row="3" column="2">
+                    <widget class="QLabel" name="label_981">
                      <property name="minimumSize">
                       <size>
-                       <width>0</width>
+                       <width>20</width>
                        <height>0</height>
                       </size>
                      </property>
                      <property name="maximumSize">
                       <size>
-                       <width>60</width>
+                       <width>20</width>
                        <height>16777215</height>
                       </size>
                      </property>
                      <property name="text">
-                      <string/>
+                      <string>ns</string>
                      </property>
                      <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                    </item>
-                   <item row="0" column="1">
-                    <widget class="QLineEdit" name="c1_stepTime_4">
+                   <item row="3" column="3">
+                    <widget class="QComboBox" name="c1_driveCB_4">
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
                      </property>
                      <property name="minimumSize">
                       <size>
-                       <width>0</width>
+                       <width>150</width>
                        <height>0</height>
                       </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>60</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="inputMask">
-                      <string/>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
@@ -12847,26 +12851,42 @@ max speed</string>
                   <property name="title">
                    <string>StepGen Settings</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_165">
-                   <property name="leftMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>10</number>
-                   </property>
-                   <property name="spacing">
-                    <number>5</number>
-                   </property>
+                  <layout class="QGridLayout" name="gridLayout_137">
                    <item row="0" column="0">
                     <widget class="QLabel" name="label_1012">
                      <property name="text">
                       <string>Step Time</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="c1_stepTime_5">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="inputMask">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -12895,10 +12915,45 @@ max speed</string>
                      </property>
                     </widget>
                    </item>
+                   <item row="0" column="3">
+                    <widget class="QCheckBox" name="c1_stepInvert_5">
+                     <property name="text">
+                      <string>Invert Step</string>
+                     </property>
+                    </widget>
+                   </item>
                    <item row="1" column="0">
                     <widget class="QLabel" name="label_1014">
                      <property name="text">
                       <string>Step Space</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="c1_stepSpace_5">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>60</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -12937,76 +12992,6 @@ max speed</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="2" column="2">
-                    <widget class="QLabel" name="label_1017">
-                     <property name="minimumSize">
-                      <size>
-                       <width>20</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>20</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>ns</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="0">
-                    <widget class="QLabel" name="label_1018">
-                     <property name="text">
-                      <string>Direction Hold</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="2">
-                    <widget class="QLabel" name="label_1019">
-                     <property name="minimumSize">
-                      <size>
-                       <width>20</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>20</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>ns</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="3">
-                    <widget class="QComboBox" name="c1_driveCB_5">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>150</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                    </widget>
-                   </item>
                    <item row="2" column="1">
                     <widget class="QLineEdit" name="c1_dirSetup_5">
                      <property name="sizePolicy">
@@ -13029,6 +13014,45 @@ max speed</string>
                      </property>
                      <property name="text">
                       <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="2">
+                    <widget class="QLabel" name="label_1017">
+                     <property name="minimumSize">
+                      <size>
+                       <width>20</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>20</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>ns</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="3">
+                    <widget class="QCheckBox" name="c1_dirInvert_5">
+                     <property name="text">
+                      <string>Invert Direction</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="label_1018">
+                     <property name="text">
+                      <string>Direction Hold</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -13063,62 +13087,41 @@ max speed</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="1" column="1">
-                    <widget class="QLineEdit" name="c1_stepSpace_5">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
+                   <item row="3" column="2">
+                    <widget class="QLabel" name="label_1019">
                      <property name="minimumSize">
                       <size>
-                       <width>0</width>
+                       <width>20</width>
                        <height>0</height>
                       </size>
                      </property>
                      <property name="maximumSize">
                       <size>
-                       <width>60</width>
+                       <width>20</width>
                        <height>16777215</height>
                       </size>
                      </property>
                      <property name="text">
-                      <string/>
+                      <string>ns</string>
                      </property>
                      <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                    </item>
-                   <item row="0" column="1">
-                    <widget class="QLineEdit" name="c1_stepTime_5">
+                   <item row="3" column="3">
+                    <widget class="QComboBox" name="c1_driveCB_5">
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
                      </property>
                      <property name="minimumSize">
                       <size>
-                       <width>0</width>
+                       <width>150</width>
                        <height>0</height>
                       </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>60</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="inputMask">
-                      <string/>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
