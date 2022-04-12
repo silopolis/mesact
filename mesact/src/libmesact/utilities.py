@@ -467,15 +467,14 @@ def firmwareChanged(parent):
 			if options[parent.firmwareCB.currentText()][1]:
 				parent.pwmgensCB.addItem(options[parent.firmwareCB.currentText()][1])
 			parent.encodersCB.clear()
+			'''
 			if options[parent.firmwareCB.currentText()][2]:
 				for i in range(options[parent.firmwareCB.currentText()][2], -1, -1):
 					parent.encodersCB.addItem(f'{i}', f'{i}')
-
+			'''
 
 	else:
 		parent.machinePTE.clear()
-
-
 
 def daughterCardChanged(parent):
 	motherBoards = ['5i25', '7i80db', '7i80hd', '7i92', '7i93', '7i98' ]
