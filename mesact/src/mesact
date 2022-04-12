@@ -179,16 +179,20 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 		else:
 			return False
 
-	def help(self, tab):
-		if tab == 0:
-			tab = self.tabWidget.currentIndex()
-		dialog = QDialog()
+	def help(self, index = False):
+		dialog = QtWidgets.QDialog()
 		dialog.ui = helpDialog()
 		dialog.ui.setupUi(dialog)
-		dialog.ui.label.setText(helptext.descriptions(tab))
+		if index:
+			dialog.ui.helpPTE.setPlainText(self.helpInfo(index))
+		else:
+			index = self.mainTabs.currentIndex()
+			if index == 7:
+				tab = {0: 70, 1: 71, 2:72, 3:73, 4:74, 5:75, 6:76, 7:77, 8:78}
+				dialog.ui.helpPTE.setPlainText(self.helpInfo(tab[self.smartSerialSW.currentIndex()]))
+			else:
+				dialog.ui.helpPTE.setPlainText(self.helpInfo(self.mainTabs.currentIndex()))
 		dialog.exec_()
-
-
 
 def main():
 	app = QApplication(sys.argv)
