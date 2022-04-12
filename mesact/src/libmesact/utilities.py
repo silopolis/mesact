@@ -521,12 +521,12 @@ def daughterCardChanged(parent):
 
 		if parent.daughterCB_0.currentData():
 			parent.cardTabs.setTabEnabled(0, True)
-			if cardType[parent.daughterCB_1.currentData()] == 'step':
+			if cardType[parent.daughterCB_0.currentData()] == 'step':
 				for i in range(5):
 					getattr(parent, f'c0_stepgenGB_{i}').setVisible(True)
 					getattr(parent, f'c0_analogGB_{i}').setVisible(False)
 					getattr(parent, f'c0_encoderGB_{i}').setVisible(False)
-			elif cardType[parent.daughterCB_1.currentData()] == 'servo':
+			elif cardType[parent.daughterCB_0.currentData()] == 'servo':
 				for i in range(5):
 					getattr(parent, f'c0_stepgenGB_{i}').setVisible(False)
 					getattr(parent, f'c0_analogGB_{i}').setVisible(True)
