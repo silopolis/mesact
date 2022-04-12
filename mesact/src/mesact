@@ -25,6 +25,9 @@ from libmesact import loadini
 from libmesact import checkconfig
 from libmesact import buildconfig
 from libmesact import extcmd
+from libmesact import helptext
+from libmesact.help import Ui_Dialog as helpDialog
+from libmesact.about import Ui_about as aboutDialog
 
 class VersionError(QMainWindow):
 	def __init__(self):
@@ -68,7 +71,7 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 		buildmenus.build(self)
 		utilities.setup(self)
 		utilities.checks(self)
-		#self.helpInfo = helptext.descriptions
+		self.helpInfo = helptext.descriptions
 
 		self.extcmd = extcmd.extcmd()
 		#self.ladderOptionsList = utilities.plcOptions()
@@ -91,6 +94,7 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 		self.actionOpen.triggered.connect(partial(loadini.openini, self))
 		self.actionCheck.triggered.connect(partial(checkconfig.checkit, self))
 		self.actionBuild.triggered.connect(partial(buildconfig.build, self))
+		self.actionTabHelp.triggered.connect(partial(self.help, 0))
 
 		# Machine Group
 		self.configName.textChanged[str].connect(partial(utilities.configNameChanged, self))

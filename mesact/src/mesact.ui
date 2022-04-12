@@ -22437,9 +22437,16 @@ configuration before trying to read tMax.</string>
     <addaction name="actionGerman"/>
     <addaction name="actionFrench"/>
    </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionTabHelp"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuConfig"/>
    <addaction name="menuLanguage"/>
+   <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
@@ -22496,6 +22503,14 @@ QToolButton {
   <action name="actionGerman">
    <property name="text">
     <string>Deutsch</string>
+   </property>
+  </action>
+  <action name="actionTabHelp">
+   <property name="text">
+    <string>Tab Help</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
    </property>
   </action>
  </widget>
