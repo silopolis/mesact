@@ -91,6 +91,12 @@ def build(parent):
 		halContents.append(f'net joint-{i}-enable => pid.{i}.enable\n')
 
 		if parent.cardType_0 == 'step' or parent.cardType_1 == 'step':
+			# need to change pin numbers based on connector used...
+			if parent.c0_stepInvert_0.isChecked():
+				halContents.append(f'setp hm2_{board}.0.stepgen.0{i}.step.invert_output True\n')
+			if parent.c0_dirInvert_0.isChecked():
+				halContents.append(f'setp hm2_{board}.0.stepgen.0{i}.direction.invert_output True\n')
+
 			halContents.append(f'\nnet joint-{i}-enable => hm2_{board}.0.stepgen.0{i}.enable\n')
 
 			halContents.append(f'\nsetp hm2_{board}.0.stepgen.0{i}.dirsetup [JOINT_{i}]DIRSETUP\n')
