@@ -171,7 +171,7 @@ def build(parent):
 			else:
 				iniContents.append(f'SCALE = {getattr(parent, f"{card}_scale_{i}").text()}\n')
 
-			if parent.cardType_0 == 'step':
+			if parent.cardType_0 == 'step' or parent.cardType_1 == 'step':
 				iniContents.append(f'DRIVE = {getattr(parent, f"{card}_driveCB_{i}").currentText()}\n')
 				iniContents.append(f'STEPGEN_MAX_VEL = {float(getattr(parent, f"{card}_maxVelocity_{i}").text()) * 1.2:.2f}\n')
 				iniContents.append(f'STEPGEN_MAX_ACC = {float(getattr(parent, f"{card}_maxAccel_{i}").text()) * 1.2:.2f}\n')
@@ -180,7 +180,7 @@ def build(parent):
 				iniContents.append(f'STEPLEN = {getattr(parent, f"{card}_stepTime_{i}").text()}\n')
 				iniContents.append(f'STEPSPACE = {getattr(parent, f"{card}_stepSpace_{i}").text()}\n')
 
-			if parent.cardType_0 == 'servo':
+			if parent.cardType_0 == 'servo' or parent.cardType_1 == 'servo':
 				iniContents.append(f'ENCODER_SCALE = {getattr(parent, f"{card}_encoderScale_{i}").text()}\n')
 				iniContents.append(f'ANALOG_SCALE_MAX = {getattr(parent, f"{card}_analogScaleMax_{i}").text()}\n')
 				iniContents.append(f'ANALOG_MIN_LIMIT = {getattr(parent, f"{card}_analogMinLimit_{i}").text()}\n')
