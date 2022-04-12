@@ -117,6 +117,24 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 				getattr(self, f'c{j}_pidDefault_{i}').clicked.connect(partial(utilities.pidSetDefault, self))
 				getattr(self, f'c{j}_driveCB_{i}').currentIndexChanged.connect(partial(utilities.driveChanged, self))
 
+		# Info Tab
+		pixmap = QPixmap(os.path.join(self.image_path, '7i33-card.png'))
+		self.card7i33LB.setPixmap(pixmap)
+		pixmap = QPixmap(os.path.join(self.image_path, '7i37-card.png'))
+		self.card7i37LB.setPixmap(pixmap)
+		pixmap = QPixmap(os.path.join(self.image_path, '7i47-card.png'))
+		self.card7i47LB.setPixmap(pixmap)
+		pixmap = QPixmap(os.path.join(self.image_path, '7i48-card.png'))
+		self.card7i48LB.setPixmap(pixmap)
+		pixmap = QPixmap(os.path.join(self.image_path, '7i76-card.png'))
+		self.card7i76LB.setPixmap(pixmap)
+		pixmap = QPixmap(os.path.join(self.image_path, '7i77-card.png'))
+		self.card7i77LB.setPixmap(pixmap)
+		pixmap = QPixmap(os.path.join(self.image_path, '7i85-card.png'))
+		self.card7i85LB.setPixmap(pixmap)
+		pixmap = QPixmap(os.path.join(self.image_path, '7i88-card.png'))
+		self.card7i88LB.setPixmap(pixmap)
+
 		# Spindle Tab
 		self.pidDefault_s.clicked.connect(partial(utilities.pidSetDefault, self))
 
