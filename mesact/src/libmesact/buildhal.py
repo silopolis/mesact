@@ -69,6 +69,11 @@ def build(parent):
 		halContents.append(f'addf pid.{i}.do-pid-calcs servo-thread\n')
 	halContents.append(f'addf hm2_{board}.0.write servo-thread\n')
 
+	if parent.daughterCB_0.currentData():
+		port = '0'
+	elif parent.daughterCB_0.currentData():
+		port = '1'
+
 	for i in range(parent.axes):
 		halContents.append(f'\n# Joint {i}\n')
 		halContents.append(f'# PID Setup\n')
@@ -90,11 +95,16 @@ def build(parent):
 		halContents.append(f'\nnet joint-{i}-enable <= joint.{i}.amp-enable-out\n')
 		halContents.append(f'net joint-{i}-enable => pid.{i}.enable\n')
 
+		# getattr(parent, f'inputPB_{i}').setEnabled(True)
 		if parent.cardType_0 == 'step' or parent.cardType_1 == 'step':
-			# need to change pin numbers based on connector used...
-			if parent.c0_stepInvert_0.isChecked():
+			if parent.daughterCB_0.currentData():
+				port = '0'
+			elif parent.daughterCB_1.currentData():
+				port = '1'
+
+			if getattr(parent, f'c{port}_stepInvert_{i}').isChecked():
 				halContents.append(f'setp hm2_{board}.0.stepgen.0{i}.step.invert_output True\n')
-			if parent.c0_dirInvert_0.isChecked():
+			if getattr(parent, f'c{port}_dirInvert_{i}').isChecked():
 				halContents.append(f'setp hm2_{board}.0.stepgen.0{i}.direction.invert_output True\n')
 
 			halContents.append(f'\nnet joint-{i}-enable => hm2_{board}.0.stepgen.0{i}.enable\n')
