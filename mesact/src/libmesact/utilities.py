@@ -19,7 +19,6 @@ def checks(parent):
 		subprocess.check_output('mesaflash', encoding='UTF-8')
 		try:
 			version = subprocess.check_output(['mesaflash', '--version'], encoding='UTF-8')[-6:]
-			print(version)
 			if int(version.replace('.', '')) >= 342:
 				parent.machinePTE.appendPlainText(f'Mesaflash Version: {version}')
 		except:
@@ -522,10 +521,30 @@ def daughterCardChanged(parent):
 
 		if parent.daughterCB_0.currentData():
 			parent.cardTabs.setTabEnabled(0, True)
+			if cardType[parent.daughterCB_1.currentData()] == 'step':
+				for i in range(5):
+					getattr(parent, f'c0_stepgenGB_{i}').setVisible(True)
+					getattr(parent, f'c0_analogGB_{i}').setVisible(False)
+					getattr(parent, f'c0_encoderGB_{i}').setVisible(False)
+			elif cardType[parent.daughterCB_1.currentData()] == 'servo':
+				for i in range(5):
+					getattr(parent, f'c0_stepgenGB_{i}').setVisible(False)
+					getattr(parent, f'c0_analogGB_{i}').setVisible(True)
+					getattr(parent, f'c0_encoderGB_{i}').setVisible(True)
 		else:
 			parent.cardTabs.setTabEnabled(0, False)
 		if parent.daughterCB_1.currentData():
 			parent.cardTabs.setTabEnabled(1, True)
+			if cardType[parent.daughterCB_1.currentData()] == 'step':
+				for i in range(5):
+					getattr(parent, f'c1_stepgenGB_{i}').setVisible(True)
+					getattr(parent, f'c1_analogGB_{i}').setVisible(False)
+					getattr(parent, f'c1_encoderGB_{i}').setVisible(False)
+			elif cardType[parent.daughterCB_1.currentData()] == 'servo':
+				for i in range(5):
+					getattr(parent, f'c1_stepgenGB_{i}').setVisible(False)
+					getattr(parent, f'c1_analogGB_{i}').setVisible(True)
+					getattr(parent, f'c1_encoderGB_{i}').setVisible(True)
 		else:
 			parent.cardTabs.setTabEnabled(1, False)
 
