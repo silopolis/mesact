@@ -5,50 +5,44 @@ Return text based on the tab number passed
 def descriptions(index):
 	if index == 0:   # Machine Tab
 		return text_0
-	elif index == 1: # Display Tab
+	if index == 1:   # Info Tab
 		return text_1
-	elif index == 2: # Axis Tab
+	elif index == 2: # Display Tab
 		return text_2
-	elif index == 3: # Spindle Tab
+	elif index == 3: # Cards Tab
 		return text_3
-	elif index == 4: # Inputs Tab
+	elif index == 4: # I/O Tab
 		return text_4
-	elif index == 5: # Outputs Tab
-		return text_5
-	elif index == 6: # Tool Changer Tab
+	elif index == 50: # SS Cards Tab 0 - 8
+		return text_50
+	elif index == 51: # SS Cards Tab 0 - 8
+		return text_51
+	elif index == 52: # SS Cards Tab 0 - 8
+		return text_52
+	elif index == 53: # SS Cards Tab 0 - 8
+		return text_53
+	elif index == 54: # SS Cards Tab 0 - 8
+		return text_54
+	elif index == 55: # SS Cards Tab 0 - 8
+		return text_55
+	elif index == 56: # SS Cards Tab 0 - 8
+		return text_56
+	elif index == 57: # SS Cards Tab 0 - 8
+		return text_57
+	elif index == 58: # SS Cards Tab 0 - 8
+		return text_58
+	elif index == 6: # Spindle Tab
 		return text_6
-	elif index == 70: # SS Cards Tab 0 - 8
-		return text_70
-	elif index == 71: # SS Cards Tab 0 - 8
-		return text_71
-	elif index == 72: # SS Cards Tab 0 - 8
-		return text_72
-	elif index == 73: # SS Cards Tab 0 - 8
-		return text_73
-	elif index == 74: # SS Cards Tab 0 - 8
-		return text_74
-	elif index == 75: # SS Cards Tab 0 - 8
-		return text_75
-	elif index == 76: # SS Cards Tab 0 - 8
-		return text_76
-	elif index == 77: # SS Cards Tab 0 - 8
-		return text_77
-	elif index == 78: # SS Cards Tab 0 - 8
-		return text_78
+	elif index == 7: # Tool Changer Tab
+		return text_7
 	elif index == 8: # Options Tab
 		return text_8
 	elif index == 9: # PLC Tab
 		return text_9
 	elif index == 10: # Pins Tab
 		return text_10
-	elif index == 11: # Info Tab
-		return text_11
 	elif index == 12: # PC Tab
 		return text_12
-	elif index == 20:
-		return text_20
-	elif index == 30:
-		return text_30
 	else:
 		return text_no
 
@@ -71,6 +65,10 @@ Only select encoders and stepgens if you want less that default.
 """
 
 text_1 = """
+Help Text for Info Tab
+"""
+
+text_2 = """
 Help Text for Display Tab
 
 Offset and Feedback display use relative (including offsets) or absolute machine.
@@ -78,8 +76,8 @@ Overrides use percent of programed value.
 QtPyVCP can only be installed on Debian 9
 """
 
-text_2 = """
-Help Text for Axis Tab
+text_3 = """
+Help Text for Cards Tab
 
 Joints must be configured starting with 0 and not skipping any.
 
@@ -112,63 +110,57 @@ Homing fields are optional.
 For gantry type of machines just select the same axis for each joint.
 """
 
-text_3 = """
-Help Text for Spindle Tab
-"""
-
 text_4 = """
-Help Text for Inputs Tab
+Help Text for I/O Tab
 
 Inputs are optional
 
 If the input is a type that is associated with an axis the axis must be
 specified.
-"""
-
-text_5 = """
-Help Text for Outputs Tab
 
 Outputs are optional.
 """
-
 text_6 = """
-Help Text for Tool Changer Tab
-
+Help Text for Spindle Tab
 """
 
-text_70 = """
+text_50 = """
 Help Text for SS Cards Tab
 """
 
-text_71 = """
+text_51 = """
 Help Text for 7i64 Tab
 """
-text_72 = """
+text_52 = """
 Help Text for 7i69 Tab
 """
-text_73 = """
+text_53 = """
 Help Text for 7i70 Tab
 """
-text_74 = """
+text_54 = """
 Help Text for 7i71 Tab
 """
-text_75 = """
+text_55 = """
 Help Text for 7i72 Tab
 """
-text_76 = """
+text_56 = """
 Help Text for 7i73 Tab
 
 Powered up no config running CR1 is solid red and CR2 is off
 Powered up and LinuxCNC running CR1 is off and CR2 is blinking green
 
 """
-text_77 = """
+text_57 = """
 Help Text for 7i84 Tab
 """
-text_78 = """
+text_58 = """
 Help Text for 7i87 Tab
 """
 
+text_7 = """
+Help Text for Tool Changer Tab
+
+"""
 
 text_8 = """
 Help Text for Options Tab
