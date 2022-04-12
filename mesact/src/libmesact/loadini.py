@@ -90,9 +90,11 @@ def loadini(parent, iniFile):
 		if config['MESA']['CARD_1']:
 			card = '1'
 
-	for i in range(6):
+	for i in range(6): # add step and dir invert
 			iniList.append([f'JOINT_{i}', 'AXIS', f'c{card}_axisCB_{i}'])
 			iniList.append([f'JOINT_{i}', 'DRIVE', f'c{card}_driveCB_{i}'])
+			iniList.append([f'JOINT_{i}', 'STEP_INVERT', f'c{card}_stepInvert_{i}'])
+			iniList.append([f'JOINT_{i}', 'DIR_INVERT', f'c{card}_dirInvert_{i}'])
 			iniList.append([f'JOINT_{i}', 'STEPLEN', f'c{card}_stepTime_{i}'])
 			iniList.append([f'JOINT_{i}', 'STEPSPACE', f'c{card}_stepSpace_{i}'])
 			iniList.append([f'JOINT_{i}', 'DIRSETUP', f'c{card}_dirSetup_{i}'])

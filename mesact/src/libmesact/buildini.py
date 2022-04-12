@@ -171,8 +171,10 @@ def build(parent):
 			else:
 				iniContents.append(f'SCALE = {getattr(parent, f"{card}_scale_{i}").text()}\n')
 
-			if parent.cardType_0 == 'step' or parent.cardType_1 == 'step':
+			if parent.cardType_0 == 'step' or parent.cardType_1 == 'step': # add step and dir invert
 				iniContents.append(f'DRIVE = {getattr(parent, f"{card}_driveCB_{i}").currentText()}\n')
+				iniContents.append(f'STEP_INVERT = {getattr(parent, f"{card}_stepInvert_{i}").isChecked()}\n')
+				iniContents.append(f'DIR_INVERT = {getattr(parent, f"{card}_dirInvert_{i}").isChecked()}\n')
 				iniContents.append(f'STEPGEN_MAX_VEL = {float(getattr(parent, f"{card}_maxVelocity_{i}").text()) * 1.2:.2f}\n')
 				iniContents.append(f'STEPGEN_MAX_ACC = {float(getattr(parent, f"{card}_maxAccel_{i}").text()) * 1.2:.2f}\n')
 				iniContents.append(f'DIRSETUP = {getattr(parent, f"{card}_dirSetup_{i}").text()}\n')
