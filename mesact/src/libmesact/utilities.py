@@ -545,6 +545,17 @@ def daughterCardChanged(parent):
 					getattr(parent, f'c1_stepgenGB_{i}').setVisible(False)
 					getattr(parent, f'c1_analogGB_{i}').setVisible(True)
 					getattr(parent, f'c1_encoderGB_{i}').setVisible(True)
+			dinput = int(inputs[parent.daughterCB_1.currentData()])
+			doutput = int(outputs[parent.daughterCB_1.currentData()])
+
+			for i in range(dinput):
+				getattr(parent, f'inputPB_{i}').setEnabled(True)
+			for i in range(doutput):
+				getattr(parent, f'outputPB_{i}').setEnabled(True)
+			for i in range(dinput,32):
+				getattr(parent, f'inputPB_{i}').setEnabled(False)
+			for i in range(doutput,16):
+				getattr(parent, f'outputPB_{i}').setEnabled(False)
 		else:
 			parent.cardTabs.setTabEnabled(1, False)
 
