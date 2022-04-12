@@ -29,6 +29,9 @@ def checkit(parent):
 	if parent.boardType == 'eth' and parent.ipAddressCB.currentText() == 'Select':
 		tabError = True
 		configErrors.append('\tAn IP address must be selected, 10.10.10.10 is recommended')
+	if parent.daughterCB_0.currentData() and parent.daughterCB_1.currentData():
+		tabError = True
+		configErrors.append('\tAt this time only one daughter card can be selected')
 
 	if tabError:
 		configErrors.insert(nextHeader, 'Machine Tab:')
@@ -62,15 +65,15 @@ def checkit(parent):
 	if len(parent.coordinatesLB.text()) == 0:
 		tabError = True
 		configErrors.append('\tAt least one Joint must be configured starting with Joint 0')
-
-
-
 	else: #check the joints
 		# make this a loop getattr(parent, f'_{i}')
 		coordinates = parent.coordinatesLB.text()
 
 		for i in range(6): # Card
-			card = 'c0' # read card later
+			if parent.daughterCB_0.currentData():
+				card = 'c0'
+			elif parent.daughterCB_1.currentData():
+				card = 'c1'
 			if getattr(parent, f'{card}_axisCB_{i}').currentText() != 'Select':
 				coordinates = coordinates[:1]
 				currentAxis = getattr(parent, f'{card}_axisCB_{i}').currentText()
