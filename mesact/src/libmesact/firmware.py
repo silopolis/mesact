@@ -81,6 +81,7 @@ def d7i80hd_25(parent):
 def d7i92(parent):
 	pass
 	daughters = {
+	'7i92_5ABOBx2D.bit':['5ABOB', '5ABOB'],
 	'7i92_7i76_7i74D.bit':['7i76', False],
 	'7i92_7i76_7i78D.bit':['7i76', '7i78'],
 	'7i92_7i76x1D.bit':['7i76', 'False'],
@@ -89,6 +90,19 @@ def d7i92(parent):
 	'7i92_7i77_7i76D.bit':['7i77', '7i76'],
 		}
 	return daughters
+
+def o7i92(parent):
+	# options stepgens, pwmgens, encoders
+	options = {
+	'7i92_5ABOBx2D.bit':[False, False, 2],
+	'7i92_7i76_7i74D.bit':['7i76', False],
+	'7i92_7i76_7i78D.bit':['7i76', '7i78'],
+	'7i92_7i76x1D.bit':['7i76', 'False'],
+	'7i92_7i76x2D.bit':['7i76', '7i76'],
+	'7i92_7i77_7i74D.bit':['7i77', False],
+	'7i92_7i77_7i76D.bit':['7i77', '7i76'],
+		}
+	return options
 
 def d7i93(parent):
 	pass
