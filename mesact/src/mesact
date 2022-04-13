@@ -183,6 +183,7 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 		dialog = QtWidgets.QDialog()
 		dialog.ui = helpDialog()
 		dialog.ui.setupUi(dialog)
+		dialog.ui.toClipboard.clicked.connect(partial(utilities.copyhelp, dialog.ui, self))
 		if index:
 			dialog.ui.helpPTE.setPlainText(self.helpInfo(index))
 		else:
