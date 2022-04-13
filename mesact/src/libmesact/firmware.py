@@ -13,14 +13,26 @@ def d5i25(parent):
 		}
 	return daughters
 
+def o5i25(parent):
+	# options stepgens, pwmgens, qcount
+	options = {
+	}
+	return options
+
 def d7i76e(parent):
 	daughters = {
-		'7i76e_7i76x1_7i77x1D.bit': ['7i76', '7i77'],
-		'7i76e_7i76x1_7i78x1D.bit': ['7i76', '7i78'],
-		'7i76e_7i76x1D.bit': ['7i76', False],
+		'7i76e_7i76x1_7i77x1D.bit': [False, '7i77'],
+		'7i76e_7i76x1_7i78x1D.bit': [False, '7i78'],
+		'7i76e_7i76x1D.bit': [False, False],
 		'7i76e_JUSTIO.bit': [False, False],
 		}
 	return daughters
+
+def o7i76e(parent):
+	# options stepgens, pwmgens, qcount
+	options = {
+	}
+	return options
 
 def d7i80db_16(parent):
 	daughters = {
@@ -33,6 +45,12 @@ def d7i80db_16(parent):
 	'7i80db_16_7i77x2_7i74x1D.bit':['7i77', '7i77'],
 		}
 	return daughters
+
+def o7i80db_16(parent):
+	# options stepgens, pwmgens, qcount
+	options = {
+	}
+	return options
 
 def d7i80db_25(parent):
 	daughters = {
@@ -52,6 +70,12 @@ def d7i80db_25(parent):
 		}
 	return daughters
 
+def o7i80db_25(parent):
+	# options stepgens, pwmgens, qcount
+	options = {
+	}
+	return options
+
 def d7i80hd_16(parent):
 	daughters = {
 	'7i80hd_16_st12.bit':['7i47', '7i47'],
@@ -62,6 +86,12 @@ def d7i80hd_16(parent):
 	'7i80hd_16_svst8_4.bit':['7i33', '7i47'],
 		}
 	return daughters
+
+def o7i80hd_16(parent):
+	# options stepgens, pwmgens, qcount
+	options = {
+	}
+	return options
 
 def d7i80hd_25(parent):
 	daughters = {
@@ -78,13 +108,18 @@ def d7i80hd_25(parent):
 		}
 	return daughters
 
+def o7i80hd_25(parent):
+	# options stepgens, pwmgens, qcount
+	options = {
+	}
+	return options
+
 def d7i92(parent):
-	pass
 	daughters = {
 	'7i92_5ABOBx2D.bit':['5ABOB', '5ABOB'],
 	'7i92_7i76_7i74D.bit':['7i76', False],
 	'7i92_7i76_7i78D.bit':['7i76', '7i78'],
-	'7i92_7i76x1D.bit':['7i76', 'False'],
+	'7i92_7i76x1D.bit':['7i76', False],
 	'7i92_7i76x2D.bit':['7i76', '7i76'],
 	'7i92_7i77_7i74D.bit':['7i77', False],
 	'7i92_7i77_7i76D.bit':['7i77', '7i76'],
@@ -92,17 +127,24 @@ def d7i92(parent):
 	return daughters
 
 def o7i92(parent):
-	# options stepgens, pwmgens, encoders
+	# options stepgens, pwmgens, qcount
 	options = {
-	'7i92_5ABOBx2D.bit':[False, False, 2],
-	'7i92_7i76_7i74D.bit':['7i76', False],
-	'7i92_7i76_7i78D.bit':['7i76', '7i78'],
-	'7i92_7i76x1D.bit':['7i76', 'False'],
-	'7i92_7i76x2D.bit':['7i76', '7i76'],
-	'7i92_7i77_7i74D.bit':['7i77', False],
-	'7i92_7i77_7i76D.bit':['7i77', '7i76'],
-		}
+	'7i92_5ABOBx2D.bit':[8, 2, 2],
+	'7i92_7i76_7i74D.bit':[5, False, 1],
+	'7i92_7i76_7i78D.bit':[9, 2, 2],
+	'7i92_7i76x1D.bit':[5, False, 1],
+	'7i92_7i76x2D.bit':[10, False, 2],
+	'7i92_7i77_7i74D.bit':[False, False, False],
+	'7i92_7i77_7i76D.bit':[5, False, False],
+	}
 	return options
+
+def io7i92(parent):
+	# pinmap firmware:[gpio, pin]
+	pinmap = {
+	'7i92_5ABOBx2D.bit':[['1','14'], False, 2],
+	}
+	return pinmap
 
 def d7i93(parent):
 	pass
@@ -118,12 +160,24 @@ def d7i93(parent):
 		}
 	return daughters
 
+def o7i93(parent):
+	# options stepgens, pwmgens, qcount
+	options = {
+	}
+	return options
+
 def d7i95(parent):
 	pass
 	daughters = {
 	'':['', ''],
 		}
 	return daughters
+
+def o7i95(parent):
+	# options stepgens, pwmgens, qcount
+	options = {
+	}
+	return options
 
 def d7i96(parent):
 	pass
@@ -138,6 +192,12 @@ def d7i96(parent):
 		}
 	return daughters
 
+def o7i96(parent):
+	# options stepgens, pwmgens, qcount
+	options = {
+	}
+	return options
+
 def d7i97(parent):
 	pass
 	daughters = {
@@ -145,10 +205,23 @@ def d7i97(parent):
 		}
 	return daughters
 
+def o7i97(parent):
+	# options stepgens, pwmgens, qcount
+	options = {
+	}
+	return options
+
 def d7i98(parent):
 	pass
 	daughters = {
 	'7i98_7i77_7i74d.bit':['7i77', False],
 		}
 	return daughters
+
+def o7i98(parent):
+	# options stepgens, pwmgens, qcount
+	options = {
+	}
+	return options
+
 
