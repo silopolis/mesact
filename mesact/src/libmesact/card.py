@@ -34,7 +34,6 @@ def readhmid(parent):
 
 def flashCard(parent):
 	arguments = []
-	print(board)
 	if check_emc():
 		parent.errorMsgOk(f'LinuxCNC must NOT be running\n to flash the {parent.board}', 'Error')
 		return
@@ -48,16 +47,13 @@ def flashCard(parent):
 				return
 		elif parent.boardType == 'pci':
 			arguments = ["--device", parent.device, "--write", firmware]
-
-		print(arguments)
-		return
+		parent.statusbar.showMessage(f'Flashing the {parent.device}...')
+		parent.extcmd.job(cmd="mesaflash", args=arguments, dest=parent.machinePTE)
 
 	else:
 		parent.errorMsgOk('A firmware must be selected', 'Error!')
 		return
 
-	parent.statusbar.showMessage(f'Flashing the {board}...')
-	parent.extcmd.job(cmd="mesaflash", args=arguments, dest=parent.machinePTE)
 
 def reloadCard(parent):
 	if check_emc():

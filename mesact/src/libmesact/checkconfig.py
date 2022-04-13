@@ -74,6 +74,8 @@ def checkit(parent):
 				card = 'c0'
 			elif parent.daughterCB_1.currentData():
 				card = 'c1'
+			else:
+				card = 'c0'
 			if getattr(parent, f'{card}_axisCB_{i}').currentText() != 'Select':
 				coordinates = coordinates[:1]
 				currentAxis = getattr(parent, f'{card}_axisCB_{i}').currentText()
