@@ -111,6 +111,7 @@ def boardChanged(parent):
 
 		# 5 axes of step & dir 32 sinking inputs and 16 sourcing outputs
 		elif parent.boardCB.currentData() == '7i76e':
+			parent.machinePTE.appendPlainText('Field Power is required for the I/O')
 			parent.boardType = 'eth'
 			parent.cardType_0 = 'step'
 			parent.mainTabs.setTabEnabled(3, True)
@@ -457,27 +458,30 @@ def firmwareChanged(parent):
 			parent.machinePTE.clear()
 			parent.machinePTE.setPlainText(f'No pin file found for {parent.firmwareCB.currentText()}')
 		options = getattr(firmware, f'o{parent.board}')(parent)
-
+		# options stepgens, pwmgens, qcount
 		if parent.firmwareCB.currentText() in options:
 			#print(options[parent.firmwareCB.currentText()])
 			parent.stepgensCB.clear()
 			if options[parent.firmwareCB.currentText()][0]:
-				parent.stepgensCB.addItem(options[parent.firmwareCB.currentText()][0])
+				for i in range(options[parent.firmwareCB.currentText()][0], -1, -1):
+					parent.stepgensCB.addItem(f'{i}', f'{i}')
+				#parent.stepgensCB.addItem(options[parent.firmwareCB.currentText()][0])
 			parent.pwmgensCB.clear()
 			if options[parent.firmwareCB.currentText()][1]:
-				parent.pwmgensCB.addItem(options[parent.firmwareCB.currentText()][1])
+				for i in range(options[parent.firmwareCB.currentText()][1], -1, -1):
+					parent.pwmgensCB.addItem(f'{i}', f'{i}')
+				#parent.pwmgensCB.addItem(options[parent.firmwareCB.currentText()][1])
 			parent.encodersCB.clear()
-			'''
 			if options[parent.firmwareCB.currentText()][2]:
 				for i in range(options[parent.firmwareCB.currentText()][2], -1, -1):
 					parent.encodersCB.addItem(f'{i}', f'{i}')
-			'''
+
 
 	else:
 		parent.machinePTE.clear()
 
 def daughterCardChanged(parent):
-	motherBoards = ['5i25', '7i80db', '7i80hd', '7i92', '7i93', '7i98' ]
+	motherBoards = ['5i25', '7i80db', '7i80hd', '7i92', '7i93', '7i98']
 	axes = {'7i76': '5', '7i77': '6', '7i78': '4', '5ABOB': '5'}
 	inputs = {'7i76': '32', '7i77': '32', '7i78': '0', '5ABOB': '5'}
 	outputs = {'7i76': '16', '7i77': '16', '7i78': '0', '5ABOB': '1'}
@@ -1064,6 +1068,11 @@ def fileSaveAs(parent):
 def copyOutput(parent):
 	qclip = QApplication.clipboard()
 	qclip.setText(parent.machinePTE.toPlainText())
+	parent.statusbar.showMessage('Output copied to clipboard')
+
+def copyhelp(ui, parent):
+	qclip = QApplication.clipboard()
+	qclip.setText(ui.helpPTE.toPlainText())
 	parent.statusbar.showMessage('Output copied to clipboard')
 
 def add_menu(data, menu_obj):
