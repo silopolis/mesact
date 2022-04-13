@@ -49,7 +49,7 @@ def build(parent):
 	if parent.pwmgensCB.currentData():
 		if parent.stepgensCB.currentData() or parent.encodersCB.currentData():
 			halContents.append(' ')
-		halContents.append('num_pwmgens=[HM2](PWMS)')
+		halContents.append('num_pwmgens=[HM2](PWMGENS)')
 	if config:
 		halContents.append('"\n')
 	
@@ -101,6 +101,8 @@ def build(parent):
 				port = '0'
 			elif parent.daughterCB_1.currentData():
 				port = '1'
+			else:
+				port = '0'
 
 			if getattr(parent, f'c{port}_stepInvert_{i}').isChecked():
 				halContents.append(f'setp hm2_{board}.0.stepgen.0{i}.step.invert_output True\n')
