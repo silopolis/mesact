@@ -1,6 +1,8 @@
 import os
 from datetime import datetime
 
+from libmesact import firmware
+
 def build(parent):
 	#card = parent.cardCB.currentText()
 	#port = parent.ioPort
@@ -102,30 +104,60 @@ def build(parent):
 
 	# build inputs from qpushbutton menus
 	'''
+	hm2_7i76e.0.7i76.0.0.input-00
+	hm2_7i76e.0.7i76.0.0.input-00-not
+	hm2_7i76e.0.7i76.0.0.output-00
+	hm2_7i76e.0.7i76.0.0.spindir
+	hm2_7i76e.0.7i76.0.0.spinena
+	hm2_7i76e.0.7i76.0.0.spinout
+
 	hm2_7i92.0.7i76.0.0.input-00
 	hm2_7i92.0.7i76.0.0.input-00-not
 	hm2_7i92.0.7i76.0.0.output-00
 	hm2_7i92.0.7i76.0.0.spindir
 	hm2_7i92.0.7i76.0.0.spinena
 	hm2_7i92.0.7i76.0.0.spinout
+
+	hm2_7i95.0.inmux.00.input-00
+	hm2_7i95.0.inmux.00.input-00-not
+	hm2_7i95.0.inmux.00.input-00-slow
+	
+
+	hm2_7i96.0.gpio.000.in
+	hm2_7i96.0.gpio.000.in_not
+	
+
+	hm2_7i97.0.inmux.00.input-00
+	hm2_7i97.0.inmux.00.input-00-not
+	hm2_7i97.0.inmux.00.input-00-slow
 	'''
+	motherBoards = ['5i25', '7i80db', '7i80hd', '7i92', '7i93', '7i98']
+	daughterBoards =['7i76', '7i77', '7i78']
 	for i in range(32):
 
 		key = getattr(parent, 'inputPB_' + str(i)).text()
 		invert = '-not' if getattr(parent, 'inputInvertCB_' + str(i)).isChecked() else ''
+		if input_dict.get(key, False): # return False if key is not in dictionary
+			if parent.board in motherBoards:
+				if parent.daughterCB_0.currentData():
+					card = parent.daughterCB_0.currentText()
+				elif parent.daughterCB_1.currentData():
+					card = parent.daughterCB_1.currentText()
+					if card in daughterBoards: # use input-00-not and output-00
+						contents.append(input_dict[key] + f'hm2_{parent.board}.0.{card}.0.0.input-{i:02}{invert}\n')
+
+
 		#hm2_7i92.0.7i77.0.0.input-00 hm2_7i92.0.7i77.0.0.input-00-not
 
-		if input_dict.get(key, False): # return False if key is not in dictionary
 			if parent.board == '7i76e':
-				pass
-
+				contents.append(input_dict[key] + f'hm2_7i76e.0.7i76.0.0.input-{i:02}{invert}\n')
 			if parent.board == '7i95':
 				contents.append(input_dict[key] + f'hm2_7i95.0.inmux.00.input-{i:02}{invert}\n')
 			if parent.board == '7i96':
-				pass
+				invert = '_not' if getattr(parent, 'inputInvertCB_' + str(i)).isChecked() else ''
+				contents.append(input_dict[key] + f'hm2_7i96.0.gpio.{i:03}.in{invert}\n')
 			if parent.board == '7i97':
-				pass
-				contents.append(input_dict[key] + f'hm2_7i92.0.{card}.0.{port}.input-{i:02}{invert}\n')
+				contents.append(input_dict[key] + f'hm2_7i97.0.inmux.00.input-{i:02}{invert}\n')
 		else: # handle special cases
 			if key == 'Home All':
 				contents.append('\n# Home All Joints\n')
