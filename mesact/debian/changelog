@@ -1,6 +1,7 @@
-mesact (0.1.0) UNRELEASED; urgency=medium
+mesact (0.2.0) unstable; urgency=medium
 
   * Initial release.
   * Build ini file
+  * Get working configuratons for most combos
 
- -- John Thornton <jt@gnipsel.com>  Sat, 02 Apr 2022 05:54:33 -0500
+ -- John Thornton <jt@gnipsel.com>  Wed, 13 Apr 2022 12:10:32 -0500
