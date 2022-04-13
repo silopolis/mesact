@@ -189,11 +189,12 @@ def build(parent):
 				iniContents.append(f'ANALOG_MAX_LIMIT = {getattr(parent, f"{card}_analogMaxLimit_{i}").text()}\n')
 
 			if parent.linearUnitsCB.currentData()  == 'inch':
-				iniContents.append('FERROR = 0.5\n')
-				iniContents.append('MIN_FERROR = 0.05\n')
-			else:
 				iniContents.append('FERROR = 0.0051\n')
 				iniContents.append('MIN_FERROR = 0.0025\n')
+			else:
+				iniContents.append('FERROR = 0.5\n')
+				iniContents.append('MIN_FERROR = 0.05\n')
+
 
 			iniContents.append(f'DEADBAND = {getattr(parent, f"{card}_deadband_{i}").text()}\n')
 			iniContents.append(f'P = {getattr(parent, f"{card}_p_{i}").text()}\n')
