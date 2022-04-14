@@ -61,6 +61,11 @@ def build(parent):
 		except OSError:
 			parent.machinePTE.appendPlainText(f'OS error\n {traceback.print_exc()}')
 
+	if parent.readmePTE.toPlainText():
+		readmeFilePath = os.path.join(parent.configPath, 'README')
+		with open(readmeFilePath, 'w') as readmeFile:
+			readmeFile.writelines(parent.readmePTE.toPlainText())
+
 	# create the tool file if not there
 	toolFilePath = os.path.join(parent.configPath, 'tool.tbl')
 	toolContents = []

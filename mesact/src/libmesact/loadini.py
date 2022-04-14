@@ -52,6 +52,7 @@ def openini(parent, configName = ''):
 				'Try and open?')
 			if parent.errorMsg(msg, 'No Version'):
 				loadini(parent, iniFile)
+		loadReadMe(parent, configName)
 
 def loadini(parent, iniFile):
 	# Section, Item, Object Name
@@ -202,3 +203,12 @@ def loadini(parent, iniFile):
 			parent.ssCardCB.setCurrentIndex(index)
 		loadss.load(parent, config)
 	parent.machinePTE.appendPlainText('Smart Serial file Loaded')
+
+def loadReadMe(parent, configName):
+	configsDir = os.path.expanduser('~/linuxcnc/configs')
+	readmeFile = os.path.join(configsDir, configName, 'README')
+	if os.path.isfile(readmeFile):
+		with open(readmeFile) as f:
+			contents = f.read()
+		parent.readmePTE.appendPlainText(contents)
+
