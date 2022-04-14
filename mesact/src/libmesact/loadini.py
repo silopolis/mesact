@@ -92,7 +92,7 @@ def loadini(parent, iniFile):
 	else:
 		card = 'c0'
 
-	for i in range(6): # add step and dir invert
+	for i in range(6):
 			iniList.append([f'JOINT_{i}', 'AXIS', f'{card}_axisCB_{i}'])
 			iniList.append([f'JOINT_{i}', 'DRIVE', f'{card}_driveCB_{i}'])
 			iniList.append([f'JOINT_{i}', 'STEP_INVERT', f'{card}_stepInvert_{i}'])
