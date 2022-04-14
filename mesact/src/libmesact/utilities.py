@@ -706,6 +706,19 @@ def maxVelChanged(parent, text):
 	else:
 		parent.maxVelMinLB.setText('  units/min')
 
+def ferrorSetDefault(parent):
+	if not parent.linearUnitsCB.currentData():
+		QMessageBox.warning(parent,'Warning', 'Machine Tab\nLinear Units\nmust be selected', QMessageBox.Ok)
+		return
+	connector = parent.sender().objectName()[:3]
+	joint = parent.sender().objectName()[-1]
+	if parent.linearUnitsCB.currentData() == 'inch':
+		getattr(parent, f'{connector}ferror_{joint}').setText(' 0.0002')
+		getattr(parent, f'{connector}min_ferror_{joint}').setText(' 0.0001')
+	else:
+		getattr(parent, f'{connector}ferror_{joint}').setText(' 0.005')
+		getattr(parent, f'{connector}min_ferror_{joint}').setText(' 0.0025')
+
 def pidSetDefault(parent):
 	connector = parent.sender().objectName()[:3]
 	joint = parent.sender().objectName()[-1]
