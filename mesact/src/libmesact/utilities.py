@@ -112,6 +112,7 @@ def boardChanged(parent):
 		# 5 axes of step & dir 32 sinking inputs and 16 sourcing outputs
 		elif parent.boardCB.currentData() == '7i76e':
 			parent.machinePTE.appendPlainText('Field Power is required for the I/O')
+			parent.machinePTE.appendPlainText('Default Firmware is 7i76e_7i76x1D.bit')
 			parent.boardType = 'eth'
 			parent.cardType_0 = 'step'
 			parent.mainTabs.setTabEnabled(3, True)
