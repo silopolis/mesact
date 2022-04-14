@@ -135,6 +135,8 @@ def build(parent):
 		if parent.board in mainboards:
 			card = parent.board
 		if parent.cardType_0 == 'servo' or parent.cardType_1 == 'servo':
+			if parent.cardType_0: port = '1'
+			elif parent.cardType_1: port = '0'
 			halContents.append('# amp enable\n')
 			halContents.append(f'net amp-enable joint.0.amp-enable-out hm2_{board}.0.{card}.0.{port}.analogena\n')
 			halContents.append('\n# PWM setup\n')
