@@ -19,6 +19,8 @@ def openini(parent, configName = ''):
 		caption="Select Configuration INI File", directory=configsDir,
 		filter='*.ini', options=QFileDialog.DontUseNativeDialog,)
 		iniFile = fileName[0]
+		base = os.path.basename(iniFile)
+		configName = os.path.splitext(base)[0]
 	else: # we passed a file name
 		configsDir = os.path.expanduser('~/linuxcnc/configs')
 		iniFile = os.path.join(configsDir, configName, configName + '.ini')
