@@ -86,7 +86,7 @@ def loadini(parent, iniFile):
 	if config.has_option('MESA', 'CARD_0'):
 		if config['MESA']['CARD_0']:
 			card = 'c0'
-	elif config.has_option('MESA', 'CARD_1'):
+	if config.has_option('MESA', 'CARD_1'):
 		if config['MESA']['CARD_1']:
 			card = 'c1'
 	else:
