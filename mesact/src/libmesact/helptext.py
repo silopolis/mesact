@@ -108,6 +108,23 @@ Axis, PID Settings and StepGen Settings are required.
 Homing fields are optional.
 
 For gantry type of machines just select the same axis for each joint.
+
+MIN_FERROR (Minimum Following Error) is the value in machine units by which the
+joint is permitted to deviate from commanded position at very low speeds. If
+MIN_FERROR is smaller than FERROR, the two produce a ramp of error trip points.
+As speed increases the amount of following error also increases toward the FERROR value.
+
+FERROR (Following Error) is the maximum allowable following error, in machine
+units. If the difference between commanded and sensed position exceeds this
+amount, the controller disables servo calculations, sets all the outputs to 0.0,
+and disables the amplifiers. If MIN_FERROR is present in the .ini file,
+velocity-proportional following errors are used. Here, the maximum allowable
+following error is proportional to the speed, with FERROR applying to the rapid
+rate set by [TRAJ]MAX_VELOCITY, and proportionally smaller following errors for
+slower speeds. The maximum allowable following error will always be greater than
+MIN_FERROR. This prevents small following errors for stationary axes from
+inadvertently aborting motion. Small following errors will always be present due
+to vibration, etc.
 """
 
 text_4 = """
