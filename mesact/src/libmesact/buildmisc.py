@@ -61,6 +61,7 @@ def build(parent):
 		except OSError:
 			parent.machinePTE.appendPlainText(f'OS error\n {traceback.print_exc()}')
 
+	# create the readme file if text in readmePTE
 	if parent.readmePTE.toPlainText():
 		readmeFilePath = os.path.join(parent.configPath, 'README')
 		with open(readmeFilePath, 'w') as readmeFile:
