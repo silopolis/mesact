@@ -112,7 +112,7 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 
 
 		# Joint Tabs
-		for i in range(6): # First Card Only for now
+		for i in range(6):
 			for j in range(2):
 				getattr(self, f'c{j}_axisCB_{i}').currentIndexChanged.connect(partial(utilities.axisChanged, self))
 				getattr(self, f'c{j}_scale_{i}').textChanged.connect(partial(utilities.updateAxisInfo, self))
@@ -120,6 +120,7 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 				getattr(self, f'c{j}_maxAccel_{i}').textChanged.connect(partial(utilities.updateAxisInfo, self))
 				getattr(self, f'c{j}_ferrorDefault_{i}').clicked.connect(partial(utilities.ferrorSetDefault, self))
 				getattr(self, f'c{j}_pidDefault_{i}').clicked.connect(partial(utilities.pidSetDefault, self))
+				getattr(self, f'c{j}_analogDefault_{i}').clicked.connect(partial(utilities.analogSetDefault, self))
 				getattr(self, f'c{j}_driveCB_{i}').currentIndexChanged.connect(partial(utilities.driveChanged, self))
 
 		# Info Tab
