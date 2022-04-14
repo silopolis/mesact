@@ -21634,8 +21634,8 @@ For Spindle On, Spindle CW/CCW use an output.</string>
        <widget class="QGroupBox" name="groupBox_6">
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>210</y>
+          <x>20</x>
+          <y>130</y>
           <width>191</width>
           <height>151</height>
          </rect>
@@ -21680,8 +21680,8 @@ For Spindle On, Spindle CW/CCW use an output.</string>
        <widget class="QGroupBox" name="groupBox_10">
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>400</y>
+          <x>30</x>
+          <y>300</y>
           <width>164</width>
           <height>86</height>
          </rect>
@@ -21725,8 +21725,8 @@ For Spindle On, Spindle CW/CCW use an output.</string>
        <widget class="QGroupBox" name="groupBox_14">
         <property name="geometry">
          <rect>
-          <x>530</x>
-          <y>280</y>
+          <x>40</x>
+          <y>410</y>
           <width>231</width>
           <height>111</height>
          </rect>
@@ -21774,8 +21774,8 @@ For Spindle On, Spindle CW/CCW use an output.</string>
        <widget class="QGroupBox" name="groupBox_71">
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>100</y>
+          <x>20</x>
+          <y>60</y>
           <width>166</width>
           <height>53</height>
          </rect>
@@ -21788,6 +21788,31 @@ For Spindle On, Spindle CW/CCW use an output.</string>
           <widget class="QCheckBox" name="noforcehomingCB">
            <property name="text">
             <string>No Force Homing</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_84">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>200</y>
+          <width>611</width>
+          <height>571</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>ReadMe File</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_106">
+         <item row="1" column="0" colspan="2">
+          <widget class="QPlainTextEdit" name="readmePTE"/>
+         </item>
+         <item row="0" column="0" colspan="2">
+          <widget class="QLabel" name="label_1068">
+           <property name="text">
+            <string>Text entered here will be put in the ReadMe file, if blank none will be created</string>
            </property>
           </widget>
          </item>
