@@ -1,3 +1,9 @@
+mesact (0.3.0) unstable; urgency=medium
+
+  * 7i76e configuration tested
+
+ -- John Thornton <jt@gnipsel.com>  Fri, 15 Apr 2022 06:37:06 -0500
+
 mesact (0.2.0) unstable; urgency=medium
 
   * Initial release.
