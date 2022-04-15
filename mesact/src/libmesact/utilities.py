@@ -670,6 +670,18 @@ def updateAxisInfo(parent):
 		stepRate = scale * maxVelocity
 		getattr(parent, f'{card}_stepRateJoint_' + joint).setText(f'{abs(stepRate):.0f} pulses')
 
+def unitsChanged(parent):
+	if parent.linearUnitsCB.currentData() == 'mm':
+		parent.defaultJogSpeedDSB.setSuffix(' mms')
+		parent.jogSpeedLB.setText(f'{parent.defaultJogSpeedDSB.value() * 60} m/min')
+	if parent.linearUnitsCB.currentData() == 'inch':
+		parent.defaultJogSpeedDSB.setSuffix(' ips')
+		parent.jogSpeedLB.setText(f'{parent.defaultJogSpeedDSB.value() * 60} IPM')
+	if not parent.linearUnitsCB.currentData():
+		parent.defaultJogSpeedDSB.setSuffix('')
+		parent.jogSpeedLB.setText('')
+
+
 def axisChanged(parent):
 	connector = parent.sender().objectName()[:3]
 	joint = parent.sender().objectName()[-1]
