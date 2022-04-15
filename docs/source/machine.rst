@@ -1,7 +1,7 @@
 Machine Tab
 ===========
 
-.. image:: images/machine-tab.png
+.. image:: images/machine-tab-01.png
     :align: center
     :scale: 75%
 
@@ -19,11 +19,41 @@ Machine Group
 Configuration Setup
 -------------------
 
+* `Board Tab`
+
 * `Board` - Select the main board being used.
 * `IP Address` - If the main board is an Ethernet Board select the IP address of
 	the board.
 * `Daughter Card` - After selecting the firmware you can select a daugher card
 	for which header you're using. The header numbers are added to the Daughter
-	Card when a board is selected.
+	Card when a board is selected. At this time only one daughter card is
+	supported.
 
+* `Options Tab`
 
+After selecting a `Firmware` the Options are populated. Select a lower
+amount to free up GPIO on some boards. 
+
+* `Step Generators`
+* `PWM Generators`
+* `Encoders`
+
+Firmware
+--------
+
+After selecting a board the Firmware combobox is populated with firmware
+for that board.
+
+* `Read PD` - Read Pin Descriptions, gives more information than Read HMID
+* `Read HMID` - Shows General Configuration Information
+* `Flash` - After selecting a firmware this will flash the board
+* `Reload` - After flashing firmware this will reload the new firmware
+* `Verify` - After the board boots up this will verify the selected firmware
+* `Copy` - Copies the contents of display window to the clipboard
+
+Backups
+-------
+
+* `Enable Backups` - When this is checked a backup copy is saved to a
+	.zip file in the backups directory before building a new configuration.
+	The backup file is named with the date and time of the save.
