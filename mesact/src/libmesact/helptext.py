@@ -125,6 +125,12 @@ slower speeds. The maximum allowable following error will always be greater than
 MIN_FERROR. This prevents small following errors for stationary axes from
 inadvertently aborting motion. Small following errors will always be present due
 to vibration, etc.
+
+For a Gantry type machine the Home Sequence must be a negitive number.
+Home Sequence starts with either 0 or 1 and you can't skip a number.
+The first Joint for the gantry sets the Minimum Limit, Maximum Limit,
+Maximum Velocity and Maximum Acceleration, however both joints need all fields
+entered.
 """
 
 text_4 = """
