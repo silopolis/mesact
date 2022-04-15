@@ -952,7 +952,7 @@ QGroupBox::title {
          <item row="0" column="1">
           <widget class="QDoubleSpinBox" name="defaultJogSpeedDSB">
            <property name="suffix">
-            <string> ips</string>
+            <string/>
            </property>
            <property name="decimals">
             <number>1</number>
@@ -983,28 +983,6 @@ QGroupBox::title {
           </widget>
          </item>
         </layout>
-       </widget>
-       <widget class="QLabel" name="label_8">
-        <property name="geometry">
-         <rect>
-          <x>480</x>
-          <y>110</y>
-          <width>466</width>
-          <height>82</height>
-         </rect>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
-        </property>
-        <property name="text">
-         <string>For a Gantry type machine the Home Sequence must be a negitive number.Home Sequence starts with either 0 or 1 and you can't skip a number.The first Joint for the gantry sets the Minimum Limit, Maximum Limit,Maximum Velocity andMaximum Acceleration.</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-        </property>
-        <property name="wordWrap">
-         <bool>true</bool>
-        </property>
        </widget>
       </widget>
       <widget class="QWidget" name="p1">
