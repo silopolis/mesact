@@ -194,8 +194,7 @@ def build(parent):
 		key = getattr(parent, 'outputPB_' + str(i)).text()
 		if output_dict.get(key, False): # return False if key is not in dictionary
 			if parent.board == '7i76e':
-				pass
-
+				contents.append(output_dict[key] + f'hm2_7i76e.0.7i76.0.0.output-{i:02}\n')
 			if parent.board == '7i95': # hm2_7i95.0.ssr.00.out-00
 				contents.append(output_dict[key] + f'hm2_7i95.0.ssr.00.out-{i:02}\n')
 			if parent.board == '7i96':
