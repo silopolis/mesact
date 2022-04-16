@@ -2,7 +2,7 @@ import os, configparser
 from PyQt5.QtWidgets import (QFileDialog, QLabel, QLineEdit, QSpinBox,
 	QDoubleSpinBox, QCheckBox, QGroupBox, QComboBox, QPushButton)
 
-from lib7i92 import loadss
+from libmesact import loadss
 
 config = configparser.ConfigParser(strict=False)
 config.optionxform = str
