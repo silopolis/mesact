@@ -120,6 +120,8 @@ def loadini(parent, iniFile):
 			iniList.append([f'JOINT_{i}', 'BIAS', f'{card}_bias_{i}'])
 			iniList.append([f'JOINT_{i}', 'MAX_OUTPUT', f'{card}_maxOutput_{i}'])
 			iniList.append([f'JOINT_{i}', 'MAX_ERROR', f'{card}_maxError_{i}'])
+			iniList.append([f'JOINT_{i}', 'FERROR', f'{card}_ferror_{i}'])
+			iniList.append([f'JOINT_{i}', 'MIN_FERROR', f'{card}_min_ferror_{i}'])
 
 			iniList.append([f'JOINT_{i}', 'ENCODER_SCALE', f'{card}_encoderScale_{i}'])
 			iniList.append([f'JOINT_{i}', 'ANALOG_SCALE_MAX', f'{card}_analogScaleMax_{i}'])
