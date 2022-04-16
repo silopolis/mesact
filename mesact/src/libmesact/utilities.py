@@ -6,7 +6,8 @@ from PyQt5.QtGui import QPixmap
 
 from libmesact import firmware
 
-MAIN_BOARDS = ['5i25', '7i80db', '7i80hd', '7i92', '7i93', '7i98']
+MAIN_BOARDS = ['5i25', '7i80db_16', '7i80db_25', '7i80hd_16', '7i80hd_25',
+	'7i92', '7i93', '7i98']
 
 def isNumber(s):
 	try:
@@ -438,6 +439,7 @@ def boardChanged(parent):
 
 def firmwareChanged(parent):
 	if parent.firmwareCB.currentData():
+		print(parent.boardCB.currentData())
 		if parent.boardCB.currentData() in MAIN_BOARDS:
 
 			#print(parent.firmwareCB.currentText()) here
