@@ -123,6 +123,7 @@ def d7i92(parent):
 	'7i92_7i76x2D.bit':['7i76', '7i76'],
 	'7i92_7i77_7i74D.bit':['7i77', False],
 	'7i92_7i77_7i76D.bit':['7i77', '7i76'],
+	'7i92_7i77x2D.bit':['7i77', '7i77'],
 		}
 	return daughters
 
