@@ -2,7 +2,8 @@
 
 """
 To Do:
-Make it work!
+Make all cards on Card 0
+Store Connector used for building config
 
 """
 VERSION = '0.3.0'
@@ -60,7 +61,8 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 		self.version = VERSION
 		self.emcVersion = '1.1'
 		self.setWindowTitle(f'Mesa Configuration Tool Version {self.version}')
-		self.board = ''
+		self.board = '' # main board
+		self.card = '' # daughter card
 		self.boardType = '' # pci or eth
 		self.device = '' # needed for mesaflash
 		self.cardType_0 = '' # step or servo

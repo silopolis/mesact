@@ -24,9 +24,8 @@ def build(parent):
 	iniContents.append(f'VERSION = {parent.version}\n')
 	iniContents.append(f'BOARD = {parent.boardCB.currentData()}\n')
 	iniContents.append(f'FIRMWARE = {parent.firmwareCB.currentText()}\n')
-	iniContents.append(f'CARD_0 = {parent.daughterCB_0.currentData()}\n') 
-	iniContents.append(f'CARD_1 = {parent.daughterCB_1.currentData()}\n') 
-	#iniContents.append(f'CONNECTOR = {parent.connectorCB.currentText()}\n')
+	iniContents.append(f'CARD_0 = {parent.daughterCB_0.currentData()}\n')
+	iniContents.append(f'CARD_1 = {parent.daughterCB_1.currentData()}\n')
 
 	# build the [EMC] section
 	iniContents.append('\n[EMC]\n')

@@ -297,10 +297,14 @@ QGroupBox::title {
                <item row="1" column="2">
                 <widget class="QComboBox" name="ipAddressCB"/>
                </item>
-               <item row="3" column="2">
-                <widget class="QComboBox" name="daughterCB_0"/>
+               <item row="3" column="1">
+                <widget class="QLabel" name="label_193">
+                 <property name="text">
+                  <string>Daughter Card</string>
+                 </property>
+                </widget>
                </item>
-               <item row="3" column="0">
+               <item row="2" column="0">
                 <widget class="QLabel" name="daughterLB_0">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
@@ -319,7 +323,13 @@ QGroupBox::title {
                  </property>
                 </widget>
                </item>
-               <item row="2" column="0">
+               <item row="2" column="2">
+                <widget class="QComboBox" name="daughterCB_0"/>
+               </item>
+               <item row="3" column="2">
+                <widget class="QComboBox" name="daughterCB_1"/>
+               </item>
+               <item row="3" column="0">
                 <widget class="QLabel" name="daughterLB_1">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
@@ -331,16 +341,6 @@ QGroupBox::title {
                   <string/>
                  </property>
                 </widget>
-               </item>
-               <item row="3" column="1">
-                <widget class="QLabel" name="label_193">
-                 <property name="text">
-                  <string>Daughter Card</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="2">
-                <widget class="QComboBox" name="daughterCB_1"/>
                </item>
               </layout>
              </widget>

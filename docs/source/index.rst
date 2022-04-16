@@ -10,4 +10,6 @@ The Mesa Configuration Tool creates LinuxCNC configuration files for
 
    install
    machine
+   info
+   display
 

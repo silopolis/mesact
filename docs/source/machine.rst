@@ -5,6 +5,38 @@ Machine Tab
     :align: center
     :scale: 75%
 
+Menu
+----
+
+File
+^^^^
+
+* `Open .ini File` - Opens a file selector so you can pick an ini file
+	to load, same as the Tool Bar button
+
+Tools
+^^^^^
+
+* `Check Config` - Checks the Configuration for errors
+* `Build Config` - Builds the Congiguration after checking for errors
+
+Language
+^^^^^^^^
+
+Select the language to use, currently German is mostly translated.
+
+Help
+^^^^
+
+* `Tab Help` - Displays help information for the current tab, same as F1
+
+Tool Bar
+--------
+
+* `Open .ini File` - Opens a file selector so you can pick an ini file to load
+* `Check Config` - Checks the Configuration for errors
+* `Build Config` - Builds the Congiguration after checking for errors
+
 Machine Group
 -------------
 

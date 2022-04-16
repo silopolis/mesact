@@ -86,15 +86,7 @@ def loadini(parent, iniFile):
 	iniList.append(['TRAJ', 'COORDINATES', 'coordinatesLB'])
 	iniList.append(['TRAJ', 'MAX_LINEAR_VELOCITY', 'maxLinearVel'])
 
-	if config.has_option('MESA', 'CARD_0'):
-		if config['MESA']['CARD_0']:
-			card = 'c0'
-	if config.has_option('MESA', 'CARD_1'):
-		if config['MESA']['CARD_1']:
-			card = 'c1'
-	else:
-		card = 'c0'
-
+	card = 'c0'
 	for i in range(6):
 			iniList.append([f'JOINT_{i}', 'AXIS', f'{card}_axisCB_{i}'])
 			iniList.append([f'JOINT_{i}', 'DRIVE', f'{card}_driveCB_{i}'])
