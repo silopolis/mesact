@@ -20,9 +20,10 @@ def checkit(parent):
 		if not isNumber(parent.maxLinearVel.text()):
 			tabError = True
 			configErrors.append(f'\tThe Maximum Linear Velocity {validNumber}')
-	if parent.boardCB.currentData() and not parent.firmwareCB.currentData():
-		tabError = True
-		configErrors.append(f'\tFirmware must be selected for {parent.board}')
+	if parent.firmwareCB.currentData() is not None:
+		if parent.boardCB.currentData() and not parent.firmwareCB.currentData():
+			tabError = True
+			configErrors.append(f'\tFirmware must be selected for {parent.board}')
 	if not parent.boardCB.currentData():
 		tabError = True
 		configErrors.append('\tA Board must be selected')
@@ -231,7 +232,7 @@ def checkit(parent):
 						tabError = True
 						configErrors.append(f'\tThe Analog Max Limit for Joint {i} must be specified')
 					else: # make sure it's a valid number
-						if not isNumber(getattr(parent, f'{card}analogMaxLimit_{i}').text()):
+						if not isNumber(getattr(parent, f'{card}_analogMaxLimit_{i}').text()):
 							tabError = True
 							configErrors.append(f'\tThe Analog Max Limit for Joint {i} {validNumber}')
 
