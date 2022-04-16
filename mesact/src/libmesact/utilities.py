@@ -497,11 +497,26 @@ def daughterCardChanged(parent):
 	if parent.sender().currentText() == 'Select':
 		parent.daughterCB_0.setEnabled(True)
 		parent.daughterCB_1.setEnabled(True)
+		parent.mainTabs.setTabEnabled(3, False)
+		parent.mainTabs.setTabEnabled(4, False)
 	else:
 		if parent.sender().objectName() == 'daughterCB_0':
 			parent.daughterCB_1.setEnabled(False)
 		elif parent.sender().objectName() == 'daughterCB_1':
 			parent.daughterCB_0.setEnabled(False)
+		parent.mainTabs.setTabEnabled(3, True)
+		parent.mainTabs.setTabEnabled(4, True)
+
+		parent.cardTabs.setTabText(0, parent.sender().currentData())
+		if axes[parent.sender().currentData()] == '6':
+			parent.jointTabs_0.setTabEnabled(4, True)
+			parent.jointTabs_0.setTabEnabled(5, True)
+		elif axes[parent.sender().currentData()] == '5':
+			parent.jointTabs_0.setTabEnabled(4, True)
+			parent.jointTabs_0.setTabEnabled(5, False)
+		elif axes[parent.sender().currentData()] == '4':
+			parent.jointTabs_0.setTabEnabled(4, False)
+			parent.jointTabs_0.setTabEnabled(5, False)
 
 
 	'''
@@ -511,17 +526,7 @@ def daughterCardChanged(parent):
 
 			parent.cardType_0 = cardType[parent.sender().currentData()]
 			if parent.boardCB.currentData() in motherBoards:
-				parent.mainTabs.setTabEnabled(3, True)
-				parent.cardTabs.setTabText(0, parent.sender().currentData())
-				if axes[parent.sender().currentData()] == '6':
-					parent.jointTabs_0.setTabEnabled(4, True)
-					parent.jointTabs_0.setTabEnabled(5, True)
-				elif axes[parent.sender().currentData()] == '5':
-					parent.jointTabs_0.setTabEnabled(4, True)
-					parent.jointTabs_0.setTabEnabled(5, False)
-				elif axes[parent.sender().currentData()] == '4':
-					parent.jointTabs_0.setTabEnabled(4, False)
-					parent.jointTabs_0.setTabEnabled(5, False)
+
 
 			parent.cardType_1 = cardType[parent.sender().currentData()]
 			if parent.boardCB.currentData() in motherBoards:
