@@ -439,7 +439,7 @@ def boardChanged(parent):
 
 def firmwareChanged(parent):
 	if parent.firmwareCB.currentData():
-		print(parent.boardCB.currentData())
+		#print(parent.boardCB.currentData())
 		if parent.boardCB.currentData() in MAIN_BOARDS:
 
 			#print(parent.firmwareCB.currentText()) here
