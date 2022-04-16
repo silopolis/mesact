@@ -227,7 +227,7 @@ def checkit(parent):
 							tabError = True
 							configErrors.append(f'\tThe Analog Min Limit for Joint {i} {validNumber}')
 
-					if not getattr(parent, f'analogMaxLimit_{i}').text():
+					if not getattr(parent, f'{card}_analogMaxLimit_{i}').text():
 						tabError = True
 						configErrors.append(f'\tThe Analog Max Limit for Joint {i} must be specified')
 					else: # make sure it's a valid number
