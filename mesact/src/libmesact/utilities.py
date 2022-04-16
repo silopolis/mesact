@@ -510,6 +510,8 @@ def daughterCardChanged(parent):
 		parent.mainTabs.setTabEnabled(4, True)
 
 		parent.cardTabs.setTabText(0, parent.sender().currentData())
+		parent.cardType_0 = cardType[parent.sender().currentData()]
+
 		if axes[parent.sender().currentData()] == '6':
 			parent.jointTabs_0.setTabEnabled(4, True)
 			parent.jointTabs_0.setTabEnabled(5, True)
@@ -520,13 +522,37 @@ def daughterCardChanged(parent):
 			parent.jointTabs_0.setTabEnabled(4, False)
 			parent.jointTabs_0.setTabEnabled(5, False)
 
+		if parent.daughterCB_0.currentData():
+			if cardType[parent.daughterCB_0.currentData()] == 'step':
+				for i in range(5):
+					getattr(parent, f'c0_stepgenGB_{i}').setVisible(True)
+					getattr(parent, f'c0_analogGB_{i}').setVisible(False)
+					getattr(parent, f'c0_encoderGB_{i}').setVisible(False)
+			elif cardType[parent.daughterCB_0.currentData()] == 'servo':
+				for i in range(5):
+					getattr(parent, f'c0_stepgenGB_{i}').setVisible(False)
+					getattr(parent, f'c0_analogGB_{i}').setVisible(True)
+					getattr(parent, f'c0_encoderGB_{i}').setVisible(True)
+
+		if parent.daughterCB_1.currentData():
+			if cardType[parent.daughterCB_1.currentData()] == 'step':
+				for i in range(5):
+					getattr(parent, f'c0_stepgenGB_{i}').setVisible(True)
+					getattr(parent, f'c0_analogGB_{i}').setVisible(False)
+					getattr(parent, f'c0_encoderGB_{i}').setVisible(False)
+			elif cardType[parent.daughterCB_1.currentData()] == 'servo':
+				for i in range(5):
+					getattr(parent, f'c0_stepgenGB_{i}').setVisible(False)
+					getattr(parent, f'c0_analogGB_{i}').setVisible(True)
+					getattr(parent, f'c0_encoderGB_{i}').setVisible(True)
+
 
 	'''
 		#parent.mainTabs.setTabEnabled(4, True)
 		# only allow one daughter card
 
 
-			parent.cardType_0 = cardType[parent.sender().currentData()]
+
 			if parent.boardCB.currentData() in motherBoards:
 
 
@@ -545,18 +571,9 @@ def daughterCardChanged(parent):
 					parent.jointTabs_1.setTabEnabled(4, False)
 					parent.jointTabs_1.setTabEnabled(5, False)
 
-		if parent.daughterCB_0.currentData():
+
 			parent.cardTabs.setTabEnabled(0, True)
-			if cardType[parent.daughterCB_0.currentData()] == 'step':
-				for i in range(5):
-					getattr(parent, f'c0_stepgenGB_{i}').setVisible(True)
-					getattr(parent, f'c0_analogGB_{i}').setVisible(False)
-					getattr(parent, f'c0_encoderGB_{i}').setVisible(False)
-			elif cardType[parent.daughterCB_0.currentData()] == 'servo':
-				for i in range(5):
-					getattr(parent, f'c0_stepgenGB_{i}').setVisible(False)
-					getattr(parent, f'c0_analogGB_{i}').setVisible(True)
-					getattr(parent, f'c0_encoderGB_{i}').setVisible(True)
+
 		else:
 			parent.cardTabs.setTabEnabled(0, False)
 		if parent.daughterCB_1.currentData():
