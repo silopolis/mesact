@@ -147,7 +147,6 @@ def build(parent):
 			iniContents.append(f'MAX_ACCELERATION = {getattr(parent, f"{card}_maxAccel_{i}").text()}\n')
 
 	'''
-		card = 'c0'
 		i = 0
 		test = []
 		#print(getattr(self, f'{card}_minLimit_{i}').text())
@@ -155,6 +154,7 @@ def build(parent):
 		print(test)
 	'''
 
+	card = 'c0'
 	# build the [JOINT_n] sections
 	for i in range(6):
 		if getattr(parent, f'{card}_axisCB_{i}').currentData():
