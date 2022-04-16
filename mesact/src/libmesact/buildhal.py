@@ -8,6 +8,8 @@ def build(parent):
 		card = parent.daughterCB_0.currentData()
 	elif parent.daughterCB_1.currentData():
 		card = parent.daughterCB_1.currentData()
+	else:
+		card = parent.boardCB.currentData()
 
 	#card = parent.cardCB.currentText()
 	#port = parent.analogPort
@@ -136,32 +138,63 @@ def build(parent):
 			halContents.append(f'\nnet joint.{i}.output <= pid.{i}.output\n')
 			halContents.append(f'net joint.{i}.output => hm2_{board}.0.stepgen.0{i}.velocity-cmd\n')
 
+
 		#if parent.board in mainboards:
 		#	card = parent.board
 		if parent.cardType_0 == 'servo' or parent.cardType_1 == 'servo':
 			if parent.cardType_0: port = '1'
 			elif parent.cardType_1: port = '0'
-			#halContents.append('# amp enable\n')
-			halContents.append(f'net joint-0-enable => hm2_{board}.0.{card}.0.{port}.analogena\n')
-			halContents.append('\n# PWM setup\n')
-			halContents.append(f'setp hm2_{board}.0.{card}.0.{port}.analogout{i}-scalemax [JOINT_{i}]ANALOG_SCALE_MAX\n')
-			halContents.append(f'setp hm2_{board}.0.{card}.0.{port}.analogout{i}-minlim [JOINT_{i}]ANALOG_MIN_LIMIT\n')
-			halContents.append(f'setp hm2_{board}.0.{card}.0.{port}.analogout{i}-maxlim [JOINT_{i}]ANALOG_MAX_LIMIT\n\n')
 
-			halContents.append('\n# Encoder Setup\n')
-			halContents.append(f'setp hm2_{board}.0.encoder.0{i}.scale  [JOINT_0]ENCODER_SCALE\n')
-			halContents.append(f'setp hm2_{board}.0.encoder.0{i}.counter-mode 0\n')
-			halContents.append(f'setp hm2_{board}.0.encoder.0{i}.filter 1\n')
-			halContents.append(f'setp hm2_{board}.0.encoder.0{i}.index-invert 0\n')
-			halContents.append(f'setp hm2_{board}.0.encoder.0{i}.index-mask 0\n')
-			halContents.append(f'setp hm2_{board}.0.encoder.0{i}.index-mask-invert 0\n')
+			if board == '7i97':
+				halContents.append('\n# joint enable chain\n')
+				halContents.append(f'net joint-{i}-index-enable <=> pid.{i}.index-enable\n')
+				halContents.append(f'net joint-{i}-enable => pid.{i}.enable\n')
+				halContents.append(f'net joint-{i}-enable => hm2_{board}.0.pwmgen.0{i}.enable\n')
 
-			halContents.append('\n# Position Command and Feedback\n')
-			halContents.append(f'net joint-{i}-fb <= hm2_{board}.0.encoder.0{i}.position\n')
-			halContents.append(f'net joint-{i}-output => hm2_{board}.0.{card}.0.{port}.analogout{i}\n')
-			halContents.append(f'net joint-{i}-pos-cmd <= joint.{i}.motor-pos-cmd\n')
+				halContents.append('\n# position command and feedback\n')
+				halContents.append(f'net joint-{i}-pos-cmd => pid.{i}.command\n')
+				halContents.append(f'net joint-{i}-pos-fb => pid.{i}.feedback\n')
+				halContents.append(f'net joint-{i}-output <= pid.{i}.output\n')
 
-			# halContents.append(f'\n')
+				halContents.append('\n# PWM setup\n')
+				halContents.append(f'setp hm2_{board}.0.pwmgen.00.output-type 1 #PWM pin0\n')
+				halContents.append(f'setp hm2_{board}.0.pwmgen.00.offset-mode 1 # offset mode so 50% = 0\n')
+				halContents.append(f'setp hm2_{board}.0.pwmgen.00.scale [JOINT_0]SCALE\n')
+
+				halContents.append('\n# Encoder Setup\n')
+				halContents.append(f'setp hm2_{board}.0.encoder.0{i}.scale  [JOINT_0]ENCODER_SCALE\n')
+				halContents.append(f'setp hm2_{board}.0.encoder.0{i}.counter-mode 0\n')
+				halContents.append(f'setp hm2_{board}.0.encoder.0{i}.filter 1\n')
+				halContents.append(f'setp hm2_{board}.0.encoder.0{i}.index-invert 0\n')
+				halContents.append(f'setp hm2_{board}.0.encoder.0{i}.index-mask 0\n')
+				halContents.append(f'setp hm2_{board}.0.encoder.0{i}.index-mask-invert 0\n')
+
+				halContents.append('\n# Position Command and Feedback\n')
+				halContents.append(f'net joint-{i}-fb <= hm2_{board}.0.encoder.0{i}.position\n')
+				halContents.append(f'net joint-{i}-pos-cmd <= joint.{i}.motor-pos-cmd\n')
+
+			else:
+				#halContents.append('# amp enable\n')
+				halContents.append(f'net joint-0-enable => hm2_{board}.0.{card}.0.{port}.analogena\n')
+				halContents.append('\n# PWM setup\n')
+				halContents.append(f'setp hm2_{board}.0.{card}.0.{port}.analogout{i}-scalemax [JOINT_{i}]ANALOG_SCALE_MAX\n')
+				halContents.append(f'setp hm2_{board}.0.{card}.0.{port}.analogout{i}-minlim [JOINT_{i}]ANALOG_MIN_LIMIT\n')
+				halContents.append(f'setp hm2_{board}.0.{card}.0.{port}.analogout{i}-maxlim [JOINT_{i}]ANALOG_MAX_LIMIT\n\n')
+
+				halContents.append('\n# Encoder Setup\n')
+				halContents.append(f'setp hm2_{board}.0.encoder.0{i}.scale  [JOINT_0]ENCODER_SCALE\n')
+				halContents.append(f'setp hm2_{board}.0.encoder.0{i}.counter-mode 0\n')
+				halContents.append(f'setp hm2_{board}.0.encoder.0{i}.filter 1\n')
+				halContents.append(f'setp hm2_{board}.0.encoder.0{i}.index-invert 0\n')
+				halContents.append(f'setp hm2_{board}.0.encoder.0{i}.index-mask 0\n')
+				halContents.append(f'setp hm2_{board}.0.encoder.0{i}.index-mask-invert 0\n')
+
+				halContents.append('\n# Position Command and Feedback\n')
+				halContents.append(f'net joint-{i}-fb <= hm2_{board}.0.encoder.0{i}.position\n')
+				halContents.append(f'net joint-{i}-output => hm2_{board}.0.{card}.0.{port}.analogout{i}\n')
+				halContents.append(f'net joint-{i}-pos-cmd <= joint.{i}.motor-pos-cmd\n')
+
+				# halContents.append(f'\n')
 
 	halContents.append('\n# Spindle\n')
 	s = parent.axes
