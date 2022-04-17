@@ -6,7 +6,7 @@ Make all cards on Card 0
 Store Connector used for building config
 
 """
-VERSION = '0.3.0'
+VERSION = 'v0.4.0'
 
 import sys, os
 from functools import partial
@@ -101,6 +101,7 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 		self.actionCheck.triggered.connect(partial(checkconfig.checkit, self))
 		self.actionBuild.triggered.connect(partial(buildconfig.build, self))
 		self.actionTabHelp.triggered.connect(partial(self.help, 0))
+		self.actionCheckUpdates.triggered.connect(partial(utilities.getUpdates, self))
 
 		# Machine Group
 		self.configName.textChanged[str].connect(partial(utilities.configNameChanged, self))

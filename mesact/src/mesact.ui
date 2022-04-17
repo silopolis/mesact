@@ -23793,6 +23793,7 @@ configuration before trying to read tMax.</string>
      <string>Help</string>
     </property>
     <addaction name="actionTabHelp"/>
+    <addaction name="actionCheckUpdates"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuConfig"/>
@@ -23862,6 +23863,11 @@ QToolButton {
    </property>
    <property name="shortcut">
     <string>F1</string>
+   </property>
+  </action>
+  <action name="actionCheckUpdates">
+   <property name="text">
+    <string>Check Updates</string>
    </property>
   </action>
  </widget>
