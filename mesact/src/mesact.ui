@@ -349,6 +349,19 @@ QGroupBox::title {
                <string>Options</string>
               </attribute>
               <layout class="QGridLayout" name="gridLayout_26">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_1500">
+                 <property name="text">
+                  <string>Step Generators</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QComboBox" name="pwmgensCB"/>
+               </item>
+               <item row="2" column="1">
+                <widget class="QComboBox" name="encodersCB"/>
+               </item>
                <item row="0" column="1">
                 <widget class="QComboBox" name="stepgensCB"/>
                </item>
@@ -359,25 +372,12 @@ QGroupBox::title {
                  </property>
                 </widget>
                </item>
-               <item row="0" column="0">
-                <widget class="QLabel" name="label_1500">
-                 <property name="text">
-                  <string>Step Generators</string>
-                 </property>
-                </widget>
-               </item>
                <item row="2" column="0">
                 <widget class="QLabel" name="label_1502">
                  <property name="text">
                   <string>Encoders</string>
                  </property>
                 </widget>
-               </item>
-               <item row="1" column="1">
-                <widget class="QComboBox" name="pwmgensCB"/>
-               </item>
-               <item row="2" column="1">
-                <widget class="QComboBox" name="encodersCB"/>
                </item>
               </layout>
              </widget>
@@ -23794,6 +23794,8 @@ configuration before trying to read tMax.</string>
     </property>
     <addaction name="actionTabHelp"/>
     <addaction name="actionCheckUpdates"/>
+    <addaction name="actionDownloadDeb"/>
+    <addaction name="actionDownloadZip"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuConfig"/>
@@ -23867,7 +23869,17 @@ QToolButton {
   </action>
   <action name="actionCheckUpdates">
    <property name="text">
-    <string>Check Updates</string>
+    <string>Check for Updates</string>
+   </property>
+  </action>
+  <action name="actionDownloadDeb">
+   <property name="text">
+    <string>Download Deb</string>
+   </property>
+  </action>
+  <action name="actionDownloadZip">
+   <property name="text">
+    <string>Download Zip</string>
    </property>
   </action>
  </widget>

@@ -6,14 +6,14 @@ Make all cards on Card 0
 Store Connector used for building config
 
 """
-VERSION = 'v0.4.0'
+VERSION = '0.4.0'
 
 import sys, os
 from functools import partial
 
 from PyQt5 import QtCore, uic, QtWidgets
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QMessageBox,
-	QDialog, qApp)
+	QDialog, qApp, QProgressBar)
 from PyQt5.QtGui import QPixmap
 
 from libmesact.ui_mesact import Ui_mainWindow
@@ -26,6 +26,7 @@ from libmesact import loadini
 from libmesact import checkconfig
 from libmesact import buildconfig
 from libmesact import extcmd
+from libmesact import updates
 from libmesact import helptext
 from libmesact.help import Ui_Dialog as helpDialog
 from libmesact.about import Ui_about as aboutDialog
@@ -61,6 +62,10 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 		self.version = VERSION
 		self.emcVersion = '1.1'
 		self.setWindowTitle(f'Mesa Configuration Tool Version {self.version}')
+		self.progressBar = QProgressBar()
+		self.statusBar().addPermanentWidget(self.progressBar)
+		#self.progressBar.setGeometry(30, -10, 200, 35) does nothing
+		#self.progressBar.setValue(50)
 		self.board = '' # main board
 		self.card = '' # daughter card
 		self.boardType = '' # pci or eth
@@ -101,7 +106,9 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 		self.actionCheck.triggered.connect(partial(checkconfig.checkit, self))
 		self.actionBuild.triggered.connect(partial(buildconfig.build, self))
 		self.actionTabHelp.triggered.connect(partial(self.help, 0))
-		self.actionCheckUpdates.triggered.connect(partial(utilities.getUpdates, self))
+		self.actionCheckUpdates.triggered.connect(partial(updates.checkUpdates, self))
+		self.actionDownloadDeb.triggered.connect(partial(updates.downloadDeb, self))
+		self.actionDownloadZip.triggered.connect(partial(updates.downloadtZip, self))
 
 		# Machine Group
 		self.configName.textChanged[str].connect(partial(utilities.configNameChanged, self))

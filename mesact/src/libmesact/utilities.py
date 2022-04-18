@@ -47,17 +47,6 @@ def checks(parent):
 		parent.reloadPB.setEnabled(False)
 		parent.statusbar.showMessage('Mesaflash not found!')
 
-def getUpdates(parent):
-	response = requests.get("https://api.github.com/repos/jethornton/mesact/releases/latest")
-	repoVersion = response.json()["name"]
-	if version.parse(repoVersion) > version.parse(parent.version):
-		parent.machinePTE.appendPlainText(f'A newer version {repoVersion} is available for download')
-	elif version.parse(repoVersion) == version.parse(parent.version):
-		parent.machinePTE.appendPlainText(f'The Repo version {repoVersion} is the same as this version')
-
-	#print(repoVersion)
-	#print(parent.version)
-
 def configNameChanged(parent, text):
 	if text:
 		parent.configNameUnderscored = text.replace(' ','_').lower()
