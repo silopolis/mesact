@@ -12,9 +12,6 @@ def checkUpdates(parent):
 	elif version.parse(repoVersion) == version.parse(parent.version):
 		parent.machinePTE.appendPlainText(f'The Repo version {repoVersion} is the same as this version')
 
-	#print(repoVersion)
-	#print(parent.version)
-
 def downloadDeb(parent):
 	directory = str(QFileDialog.getExistingDirectory(parent, "Select Directory"))
 	parent.statusbar.showMessage('Checking Repo')
@@ -25,6 +22,18 @@ def downloadDeb(parent):
 	deburl = os.path.join('https://github.com/jethornton/mesact/raw/master/mesact_' + repoVersion + '_amd64.deb')
 	download(parent, deburl, destination)
 	parent.statusbar.showMessage(f'Mesa Configuration Tool Version {repoVersion} Download Complete')
+
+def downloadtZip(parent):
+	directory = str(QFileDialog.getExistingDirectory(parent, "Select Directory"))
+	parent.statusbar.showMessage('Checking Repo')
+	response = requests.get("https://api.github.com/repos/jethornton/mesact/releases/latest")
+	repoVersion = response.json()["name"]
+	parent.statusbar.showMessage(f'Mesa Configuration Tool Version {repoVersion} Download Starting')
+	destination = os.path.join(directory, 'mesact_' + repoVersion + '.zip')
+	zipurl = 'https://github.com/jethornton/mesact/archive/master.zip'
+	download(parent, zipurl, destination)
+	parent.statusbar.showMessage(f'Mesa Configuration Tool Version {repoVersion} Download Complete')
+
 
 def download(parent, down_url, save_loc):
 	def Handle_Progress(blocknum, blocksize, totalsize):
@@ -37,7 +46,4 @@ def download(parent, down_url, save_loc):
 	urllib.request.urlretrieve(down_url, save_loc, Handle_Progress)
 	parent.progressBar.setValue(100)
 
-def downloadtZip(parent):
-	pass
-	#parent.progressBar.setValue(50)
 
