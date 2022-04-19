@@ -23772,6 +23772,8 @@ configuration before trying to read tMax.</string>
      <string>File</string>
     </property>
     <addaction name="actionOpen"/>
+    <addaction name="actionDownloadDeb"/>
+    <addaction name="actionDownloadZip"/>
    </widget>
    <widget class="QMenu" name="menuConfig">
     <property name="title">
@@ -23794,8 +23796,6 @@ configuration before trying to read tMax.</string>
     </property>
     <addaction name="actionTabHelp"/>
     <addaction name="actionCheckUpdates"/>
-    <addaction name="actionDownloadDeb"/>
-    <addaction name="actionDownloadZip"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuConfig"/>
