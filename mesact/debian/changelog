@@ -1,3 +1,9 @@
+mesact (0.4.1) unstable; urgency=medium
+
+  * Get I/O working and add download
+
+ -- John Thornton <jt@gnipsel.com>  Wed, 20 Apr 2022 07:20:46 -0500
+
 mesact (0.4.0) unstable; urgency=medium
 
   * Get most cards axes working
