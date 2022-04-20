@@ -96,6 +96,8 @@ def boardChanged(parent):
 			parent.cardType_0 = ''
 			parent.mainTabs.setTabEnabled(3, False)
 			parent.mainTabs.setTabEnabled(4, False)
+			for i in range(32):
+				getattr(parent, f'inputDebounceCB_{i}').setEnabled(False)
 			parent.boardTW.setTabText(0, '5i25')
 			parent.ipAddressCB.setEnabled(False)
 			parent.daughterCB_0.setEnabled(True)
@@ -124,6 +126,8 @@ def boardChanged(parent):
 			parent.mainTabs.setTabEnabled(4, True)
 			for i in range(32):
 				getattr(parent, f'inputPB_{i}').setEnabled(True)
+				getattr(parent, f'inputInvertCB_{i}').setEnabled(True)
+				getattr(parent, f'inputDebounceCB_{i}').setEnabled(False)
 			for i in range(16):
 				getattr(parent, f'outputPB_{i}').setEnabled(True)
 			parent.cardTabs.setTabText(0, '7i76e')
@@ -283,10 +287,14 @@ def boardChanged(parent):
 			parent.mainTabs.setTabEnabled(4, True)
 			for i in range(24):
 				getattr(parent, f'inputPB_{i}').setEnabled(True)
+				getattr(parent, f'inputInvertCB_{i}').setEnabled(True)
 			for i in range(6):
 				getattr(parent, f'outputPB_{i}').setEnabled(True)
 			for i in range(24,32):
 				getattr(parent, f'inputPB_{i}').setEnabled(False)
+				getattr(parent, f'inputInvertCB_{i}').setEnabled(False)
+			for i in range(32):
+				getattr(parent, f'inputDebounceCB_{i}').setEnabled(False)
 			for i in range(6,16):
 				getattr(parent, f'outputPB_{i}').setEnabled(False)
 			parent.cardTabs.setTabText(0, '7i95')
@@ -319,10 +327,14 @@ def boardChanged(parent):
 			parent.mainTabs.setTabEnabled(4, True)
 			for i in range(11):
 				getattr(parent, f'inputPB_{i}').setEnabled(True)
+				getattr(parent, f'inputInvertCB_{i}').setEnabled(True)
 			for i in range(6):
 				getattr(parent, f'outputPB_{i}').setEnabled(True)
+			for i in range(32):
+				getattr(parent, f'inputDebounceCB_{i}').setEnabled(False)
 			for i in range(11,32):
 				getattr(parent, f'inputPB_{i}').setEnabled(False)
+				getattr(parent, f'inputInvertCB_{i}').setEnabled(False)
 			for i in range(6,16):
 				getattr(parent, f'outputPB_{i}').setEnabled(False)
 			parent.cardTabs.setTabText(0, '7i96')
@@ -354,10 +366,14 @@ def boardChanged(parent):
 			parent.mainTabs.setTabEnabled(4, True)
 			for i in range(11):
 				getattr(parent, f'inputPB_{i}').setEnabled(True)
+				getattr(parent, f'inputInvertCB_{i}').setEnabled(True)
+				getattr(parent, f'inputDebounceCB_{i}').setEnabled(True)
 			for i in range(6):
 				getattr(parent, f'outputPB_{i}').setEnabled(True)
 			for i in range(11,32):
 				getattr(parent, f'inputPB_{i}').setEnabled(False)
+				getattr(parent, f'inputInvertCB_{i}').setEnabled(False)
+				getattr(parent, f'inputDebounceCB_{i}').setEnabled(False)
 			for i in range(6,16):
 				getattr(parent, f'outputPB_{i}').setEnabled(False)
 			parent.cardTabs.setTabText(0, '7i96S')
@@ -389,10 +405,14 @@ def boardChanged(parent):
 			parent.mainTabs.setTabEnabled(4, True)
 			for i in range(16):
 				getattr(parent, f'inputPB_{i}').setEnabled(True)
+				getattr(parent, f'inputInvertCB_{i}').setEnabled(True)
+				getattr(parent, f'inputDebounceCB_{i}').setEnabled(True)
 			for i in range(6):
 				getattr(parent, f'outputPB_{i}').setEnabled(True)
 			for i in range(16,32):
 				getattr(parent, f'inputPB_{i}').setEnabled(False)
+				getattr(parent, f'inputInvertCB_{i}').setEnabled(False)
+				getattr(parent, f'inputDebounceCB_{i}').setEnabled(False)
 			for i in range(6,16):
 				getattr(parent, f'outputPB_{i}').setEnabled(False)
 			parent.cardTabs.setTabText(0, '7i97')
@@ -585,6 +605,11 @@ def daughterCardChanged(parent):
 
 
 	'''
+
+			for i in range(32):
+				getattr(parent, f'inputDebounceCB_{i}').setEnabled(False)
+
+
 		#parent.mainTabs.setTabEnabled(4, True)
 		# only allow one daughter card
 
