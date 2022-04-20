@@ -14540,7 +14540,7 @@ max speed</string>
         <string>I/O</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_114">
-        <item row="0" column="2">
+        <item row="0" column="3">
          <widget class="QGroupBox" name="groupBox_65">
           <property name="title">
            <string>Outputs</string>
@@ -14773,56 +14773,33 @@ max speed</string>
           </layout>
          </widget>
         </item>
-        <item row="1" column="0">
-         <spacer name="verticalSpacer_16">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
         <item row="0" column="0">
          <widget class="QGroupBox" name="groupBox">
           <property name="title">
-           <string>Inputs</string>
+           <string>Inputs 0-15</string>
           </property>
           <layout class="QGridLayout" name="gridLayout_105">
-           <item row="14" column="2">
-            <widget class="QCheckBox" name="inputInvertCB_14">
+           <item row="0" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_0">
              <property name="text">
               <string>Invert</string>
              </property>
             </widget>
            </item>
-           <item row="9" column="0">
-            <widget class="QLabel" name="label_480">
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_477">
              <property name="text">
-              <string>9</string>
+              <string>2</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
              </property>
             </widget>
            </item>
-           <item row="3" column="1">
-            <widget class="QPushButton" name="inputPB_3">
+           <item row="6" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_6">
              <property name="text">
-              <string>Select</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_473">
-             <property name="text">
-              <string>0</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
+              <string>Invert</string>
              </property>
             </widget>
            </item>
@@ -14836,6 +14813,123 @@ max speed</string>
              </property>
             </widget>
            </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_471">
+             <property name="text">
+              <string>7</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="label_480">
+             <property name="text">
+              <string>9</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QCheckBox" name="inputDebounceCB_0">
+             <property name="text">
+              <string>Debounce</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_473">
+             <property name="text">
+              <string>0</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QPushButton" name="inputPB_3">
+             <property name="text">
+              <string>Select</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_9">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0">
+            <widget class="QLabel" name="label_476">
+             <property name="text">
+              <string>10</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QPushButton" name="inputPB_6">
+             <property name="text">
+              <string>Select</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QPushButton" name="inputPB_7">
+             <property name="text">
+              <string>Select</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_10">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QPushButton" name="inputPB_4">
+             <property name="text">
+              <string>Select</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_11">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_7">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="15" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_15">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_3">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
            <item row="9" column="1">
             <widget class="QPushButton" name="inputPB_9">
              <property name="text">
@@ -14843,68 +14937,10 @@ max speed</string>
              </property>
             </widget>
            </item>
-           <item row="1" column="1">
-            <widget class="QPushButton" name="inputPB_1">
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_479">
              <property name="text">
-              <string>Select</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="3">
-            <widget class="QLabel" name="label_782">
-             <property name="text">
-              <string>16</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QPushButton" name="inputPB_2">
-             <property name="text">
-              <string>Select</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="label_474">
-             <property name="text">
-              <string>5</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="12" column="0">
-            <widget class="QLabel" name="label_778">
-             <property name="text">
-              <string>12</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="2">
-            <widget class="QCheckBox" name="inputInvertCB_0">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="11" column="1">
-            <widget class="QPushButton" name="inputPB_11">
-             <property name="text">
-              <string>Select</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="label_477">
-             <property name="text">
-              <string>2</string>
+              <string>6</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
@@ -14921,27 +14957,20 @@ max speed</string>
              </property>
             </widget>
            </item>
+           <item row="13" column="0">
+            <widget class="QLabel" name="label_779">
+             <property name="text">
+              <string>13</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
            <item row="12" column="2">
             <widget class="QCheckBox" name="inputInvertCB_12">
              <property name="text">
               <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="4">
-            <widget class="QPushButton" name="inputPB_19">
-             <property name="text">
-              <string>Select</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="3">
-            <widget class="QLabel" name="label_784">
-             <property name="text">
-              <string>18</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
              </property>
             </widget>
            </item>
@@ -14955,247 +14984,10 @@ max speed</string>
              </property>
             </widget>
            </item>
-           <item row="1" column="2">
-            <widget class="QCheckBox" name="inputInvertCB_1">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="2">
-            <widget class="QCheckBox" name="inputInvertCB_2">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="1">
-            <widget class="QPushButton" name="inputPB_7">
-             <property name="text">
-              <string>Select</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="0">
-            <widget class="QLabel" name="label_479">
-             <property name="text">
-              <string>6</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="2">
-            <widget class="QCheckBox" name="inputInvertCB_6">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="2">
-            <widget class="QCheckBox" name="inputInvertCB_5">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="13" column="2">
-            <widget class="QCheckBox" name="inputInvertCB_13">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="15" column="2">
-            <widget class="QCheckBox" name="inputInvertCB_15">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="label_472">
-             <property name="text">
-              <string>3</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="10" column="2">
-            <widget class="QCheckBox" name="inputInvertCB_10">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="3">
-            <widget class="QLabel" name="label_783">
-             <property name="text">
-              <string>17</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="label_478">
-             <property name="text">
-              <string>4</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="14" column="0">
-            <widget class="QLabel" name="label_780">
-             <property name="text">
-              <string>14</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="13" column="1">
-            <widget class="QPushButton" name="inputPB_13">
-             <property name="text">
-              <string>Select</string>
-             </property>
-            </widget>
-           </item>
-           <item row="10" column="0">
-            <widget class="QLabel" name="label_476">
-             <property name="text">
-              <string>10</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
-            <widget class="QPushButton" name="inputPB_4">
-             <property name="text">
-              <string>Select</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QPushButton" name="inputPB_0">
-             <property name="text">
-              <string>Select</string>
-             </property>
-            </widget>
-           </item>
-           <item row="12" column="1">
-            <widget class="QPushButton" name="inputPB_12">
-             <property name="text">
-              <string>Select</string>
-             </property>
-            </widget>
-           </item>
            <item row="8" column="2">
             <widget class="QCheckBox" name="inputInvertCB_8">
              <property name="text">
               <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="2">
-            <widget class="QCheckBox" name="inputInvertCB_7">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="11" column="0">
-            <widget class="QLabel" name="label_777">
-             <property name="text">
-              <string>11</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="10" column="1">
-            <widget class="QPushButton" name="inputPB_10">
-             <property name="text">
-              <string>Select</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="3">
-            <widget class="QLabel" name="label_785">
-             <property name="text">
-              <string>19</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="2">
-            <widget class="QCheckBox" name="inputInvertCB_4">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="2">
-            <widget class="QCheckBox" name="inputInvertCB_3">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="9" column="2">
-            <widget class="QCheckBox" name="inputInvertCB_9">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="13" column="0">
-            <widget class="QLabel" name="label_779">
-             <property name="text">
-              <string>13</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="1">
-            <widget class="QPushButton" name="inputPB_5">
-             <property name="text">
-              <string>Select</string>
-             </property>
-            </widget>
-           </item>
-           <item row="8" column="1">
-            <widget class="QPushButton" name="inputPB_8">
-             <property name="text">
-              <string>Select</string>
-             </property>
-            </widget>
-           </item>
-           <item row="11" column="2">
-            <widget class="QCheckBox" name="inputInvertCB_11">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="4">
-            <widget class="QPushButton" name="inputPB_18">
-             <property name="text">
-              <string>Select</string>
              </property>
             </widget>
            </item>
@@ -15213,357 +15005,293 @@ max speed</string>
              </property>
             </widget>
            </item>
-           <item row="1" column="4">
-            <widget class="QPushButton" name="inputPB_17">
+           <item row="2" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_2">
              <property name="text">
-              <string>Select</string>
+              <string>Invert</string>
              </property>
             </widget>
            </item>
-           <item row="0" column="4">
-            <widget class="QPushButton" name="inputPB_16">
+           <item row="14" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_14">
              <property name="text">
-              <string>Select</string>
+              <string>Invert</string>
              </property>
             </widget>
            </item>
-           <item row="6" column="1">
-            <widget class="QPushButton" name="inputPB_6">
+           <item row="13" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_13">
              <property name="text">
-              <string>Select</string>
+              <string>Invert</string>
              </property>
             </widget>
            </item>
-           <item row="7" column="0">
-            <widget class="QLabel" name="label_471">
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_472">
              <property name="text">
-              <string>7</string>
+              <string>3</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
              </property>
             </widget>
            </item>
-           <item row="0" column="5">
-            <widget class="QCheckBox" name="inputInvertCB_16">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="5">
-            <widget class="QCheckBox" name="inputInvertCB_17">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="5">
-            <widget class="QCheckBox" name="inputInvertCB_18">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="5">
-            <widget class="QCheckBox" name="inputInvertCB_19">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="5">
-            <widget class="QCheckBox" name="inputInvertCB_20">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="5">
-            <widget class="QCheckBox" name="inputInvertCB_21">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="5">
-            <widget class="QCheckBox" name="inputInvertCB_22">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="5">
-            <widget class="QCheckBox" name="inputInvertCB_23">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="8" column="5">
-            <widget class="QCheckBox" name="inputInvertCB_24">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="9" column="5">
-            <widget class="QCheckBox" name="inputInvertCB_25">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="10" column="5">
-            <widget class="QCheckBox" name="inputInvertCB_26">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="11" column="5">
-            <widget class="QCheckBox" name="inputInvertCB_27">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="12" column="5">
-            <widget class="QCheckBox" name="inputInvertCB_28">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="13" column="5">
-            <widget class="QCheckBox" name="inputInvertCB_29">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="14" column="5">
-            <widget class="QCheckBox" name="inputInvertCB_30">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="15" column="5">
-            <widget class="QCheckBox" name="inputInvertCB_31">
-             <property name="text">
-              <string>Invert</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="4">
-            <widget class="QPushButton" name="inputPB_20">
+           <item row="8" column="1">
+            <widget class="QPushButton" name="inputPB_8">
              <property name="text">
               <string>Select</string>
              </property>
             </widget>
            </item>
-           <item row="5" column="4">
-            <widget class="QPushButton" name="inputPB_21">
+           <item row="2" column="1">
+            <widget class="QPushButton" name="inputPB_2">
              <property name="text">
               <string>Select</string>
              </property>
             </widget>
            </item>
-           <item row="6" column="4">
-            <widget class="QPushButton" name="inputPB_22">
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_478">
+             <property name="text">
+              <string>4</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="1">
+            <widget class="QPushButton" name="inputPB_11">
              <property name="text">
               <string>Select</string>
              </property>
             </widget>
            </item>
-           <item row="7" column="4">
-            <widget class="QPushButton" name="inputPB_23">
+           <item row="1" column="1">
+            <widget class="QPushButton" name="inputPB_1">
              <property name="text">
               <string>Select</string>
              </property>
             </widget>
            </item>
-           <item row="8" column="4">
-            <widget class="QPushButton" name="inputPB_24">
+           <item row="11" column="0">
+            <widget class="QLabel" name="label_777">
+             <property name="text">
+              <string>11</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="0">
+            <widget class="QLabel" name="label_778">
+             <property name="text">
+              <string>12</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_4">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QPushButton" name="inputPB_10">
              <property name="text">
               <string>Select</string>
              </property>
             </widget>
            </item>
-           <item row="9" column="4">
-            <widget class="QPushButton" name="inputPB_25">
+           <item row="13" column="1">
+            <widget class="QPushButton" name="inputPB_13">
              <property name="text">
               <string>Select</string>
              </property>
             </widget>
            </item>
-           <item row="10" column="4">
-            <widget class="QPushButton" name="inputPB_26">
+           <item row="12" column="1">
+            <widget class="QPushButton" name="inputPB_12">
              <property name="text">
               <string>Select</string>
              </property>
             </widget>
            </item>
-           <item row="11" column="4">
-            <widget class="QPushButton" name="inputPB_27">
+           <item row="14" column="0">
+            <widget class="QLabel" name="label_780">
+             <property name="text">
+              <string>14</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_474">
+             <property name="text">
+              <string>5</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_5">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_1">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QPushButton" name="inputPB_5">
              <property name="text">
               <string>Select</string>
              </property>
             </widget>
            </item>
-           <item row="12" column="4">
-            <widget class="QPushButton" name="inputPB_28">
+           <item row="0" column="1">
+            <widget class="QPushButton" name="inputPB_0">
              <property name="text">
               <string>Select</string>
              </property>
             </widget>
            </item>
-           <item row="13" column="4">
-            <widget class="QPushButton" name="inputPB_29">
+           <item row="1" column="3">
+            <widget class="QCheckBox" name="inputDebounceCB_1">
              <property name="text">
-              <string>Select</string>
+              <string>Debounce</string>
              </property>
             </widget>
            </item>
-           <item row="14" column="4">
-            <widget class="QPushButton" name="inputPB_30">
+           <item row="2" column="3">
+            <widget class="QCheckBox" name="inputDebounceCB_2">
              <property name="text">
-              <string>Select</string>
+              <string>Debounce</string>
              </property>
             </widget>
            </item>
-           <item row="15" column="4">
-            <widget class="QPushButton" name="inputPB_31">
+           <item row="3" column="3">
+            <widget class="QCheckBox" name="inputDebounceCB_3">
              <property name="text">
-              <string>Select</string>
+              <string>Debounce</string>
              </property>
             </widget>
            </item>
            <item row="4" column="3">
-            <widget class="QLabel" name="label_786">
+            <widget class="QCheckBox" name="inputDebounceCB_4">
              <property name="text">
-              <string>20</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
+              <string>Debounce</string>
              </property>
             </widget>
            </item>
            <item row="5" column="3">
-            <widget class="QLabel" name="label_787">
+            <widget class="QCheckBox" name="inputDebounceCB_5">
              <property name="text">
-              <string>21</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
+              <string>Debounce</string>
              </property>
             </widget>
            </item>
            <item row="6" column="3">
-            <widget class="QLabel" name="label_788">
+            <widget class="QCheckBox" name="inputDebounceCB_6">
              <property name="text">
-              <string>22</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
+              <string>Debounce</string>
              </property>
             </widget>
            </item>
            <item row="7" column="3">
-            <widget class="QLabel" name="label_789">
+            <widget class="QCheckBox" name="inputDebounceCB_7">
              <property name="text">
-              <string>23</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
+              <string>Debounce</string>
              </property>
             </widget>
            </item>
            <item row="8" column="3">
-            <widget class="QLabel" name="label_790">
+            <widget class="QCheckBox" name="inputDebounceCB_8">
              <property name="text">
-              <string>24</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
+              <string>Debounce</string>
              </property>
             </widget>
            </item>
            <item row="9" column="3">
-            <widget class="QLabel" name="label_791">
+            <widget class="QCheckBox" name="inputDebounceCB_9">
              <property name="text">
-              <string>25</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
+              <string>Debounce</string>
              </property>
             </widget>
            </item>
            <item row="10" column="3">
-            <widget class="QLabel" name="label_792">
+            <widget class="QCheckBox" name="inputDebounceCB_10">
              <property name="text">
-              <string>26</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
+              <string>Debounce</string>
              </property>
             </widget>
            </item>
            <item row="11" column="3">
-            <widget class="QLabel" name="label_793">
+            <widget class="QCheckBox" name="inputDebounceCB_11">
              <property name="text">
-              <string>27</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
+              <string>Debounce</string>
              </property>
             </widget>
            </item>
            <item row="12" column="3">
-            <widget class="QLabel" name="label_794">
+            <widget class="QCheckBox" name="inputDebounceCB_12">
              <property name="text">
-              <string>28</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
+              <string>Debounce</string>
              </property>
             </widget>
            </item>
            <item row="13" column="3">
-            <widget class="QLabel" name="label_795">
+            <widget class="QCheckBox" name="inputDebounceCB_13">
              <property name="text">
-              <string>29</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
+              <string>Debounce</string>
              </property>
             </widget>
            </item>
            <item row="14" column="3">
-            <widget class="QLabel" name="label_796">
+            <widget class="QCheckBox" name="inputDebounceCB_14">
              <property name="text">
-              <string>30</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
+              <string>Debounce</string>
              </property>
             </widget>
            </item>
            <item row="15" column="3">
-            <widget class="QLabel" name="label_797">
+            <widget class="QCheckBox" name="inputDebounceCB_15">
              <property name="text">
-              <string>31</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
+              <string>Debounce</string>
              </property>
             </widget>
            </item>
           </layout>
          </widget>
         </item>
-        <item row="0" column="1">
+        <item row="1" column="0">
+         <spacer name="verticalSpacer_16">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="2">
          <spacer name="horizontalSpacer_2">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
@@ -15575,6 +15303,511 @@ max speed</string>
            </size>
           </property>
          </spacer>
+        </item>
+        <item row="0" column="1">
+         <widget class="QGroupBox" name="groupBox_85">
+          <property name="title">
+           <string>Inputs 16-31</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_108">
+           <item row="14" column="0">
+            <widget class="QLabel" name="label_796">
+             <property name="text">
+              <string>30</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_784">
+             <property name="text">
+              <string>18</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QPushButton" name="inputPB_21">
+             <property name="text">
+              <string>Select</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="1">
+            <widget class="QPushButton" name="inputPB_27">
+             <property name="text">
+              <string>Select</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_789">
+             <property name="text">
+              <string>23</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="0">
+            <widget class="QLabel" name="label_795">
+             <property name="text">
+              <string>29</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_785">
+             <property name="text">
+              <string>19</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_26">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="0">
+            <widget class="QLabel" name="label_794">
+             <property name="text">
+              <string>28</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="15" column="0">
+            <widget class="QLabel" name="label_797">
+             <property name="text">
+              <string>31</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_28">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_788">
+             <property name="text">
+              <string>22</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="inputPB_17">
+             <property name="text">
+              <string>Select</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QPushButton" name="inputPB_19">
+             <property name="text">
+              <string>Select</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_18">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="15" column="1">
+            <widget class="QPushButton" name="inputPB_31">
+             <property name="text">
+              <string>Select</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QPushButton" name="inputPB_22">
+             <property name="text">
+              <string>Select</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QPushButton" name="inputPB_20">
+             <property name="text">
+              <string>Select</string>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="1">
+            <widget class="QPushButton" name="inputPB_29">
+             <property name="text">
+              <string>Select</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_782">
+             <property name="text">
+              <string>16</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_17">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_22">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_16">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="14" column="1">
+            <widget class="QPushButton" name="inputPB_30">
+             <property name="text">
+              <string>Select</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="0">
+            <widget class="QLabel" name="label_793">
+             <property name="text">
+              <string>27</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <widget class="QPushButton" name="inputPB_24">
+             <property name="text">
+              <string>Select</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="label_791">
+             <property name="text">
+              <string>25</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_786">
+             <property name="text">
+              <string>20</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0">
+            <widget class="QLabel" name="label_792">
+             <property name="text">
+              <string>26</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QPushButton" name="inputPB_18">
+             <property name="text">
+              <string>Select</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QPushButton" name="inputPB_26">
+             <property name="text">
+              <string>Select</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_20">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_783">
+             <property name="text">
+              <string>17</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="15" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_31">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_787">
+             <property name="text">
+              <string>21</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_21">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_29">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_24">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QPushButton" name="inputPB_23">
+             <property name="text">
+              <string>Select</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_23">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_27">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPushButton" name="inputPB_16">
+             <property name="text">
+              <string>Select</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_25">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="14" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_30">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QCheckBox" name="inputInvertCB_19">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="label_790">
+             <property name="text">
+              <string>24</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="1">
+            <widget class="QPushButton" name="inputPB_28">
+             <property name="text">
+              <string>Select</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QPushButton" name="inputPB_25">
+             <property name="text">
+              <string>Select</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QCheckBox" name="inputDebounceCB_16">
+             <property name="text">
+              <string>Debounce</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QCheckBox" name="inputDebounceCB_17">
+             <property name="text">
+              <string>Debounce</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QCheckBox" name="inputDebounceCB_18">
+             <property name="text">
+              <string>Debounce</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QCheckBox" name="inputDebounceCB_19">
+             <property name="text">
+              <string>Debounce</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="3">
+            <widget class="QCheckBox" name="inputDebounceCB_20">
+             <property name="text">
+              <string>Debounce</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="3">
+            <widget class="QCheckBox" name="inputDebounceCB_21">
+             <property name="text">
+              <string>Debounce</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="3">
+            <widget class="QCheckBox" name="inputDebounceCB_22">
+             <property name="text">
+              <string>Debounce</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="3">
+            <widget class="QCheckBox" name="inputDebounceCB_23">
+             <property name="text">
+              <string>Debounce</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="3">
+            <widget class="QCheckBox" name="inputDebounceCB_24">
+             <property name="text">
+              <string>Debounce</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="3">
+            <widget class="QCheckBox" name="inputDebounceCB_25">
+             <property name="text">
+              <string>Debounce</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="3">
+            <widget class="QCheckBox" name="inputDebounceCB_26">
+             <property name="text">
+              <string>Debounce</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="3">
+            <widget class="QCheckBox" name="inputDebounceCB_27">
+             <property name="text">
+              <string>Debounce</string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="3">
+            <widget class="QCheckBox" name="inputDebounceCB_28">
+             <property name="text">
+              <string>Debounce</string>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="3">
+            <widget class="QCheckBox" name="inputDebounceCB_29">
+             <property name="text">
+              <string>Debounce</string>
+             </property>
+            </widget>
+           </item>
+           <item row="14" column="3">
+            <widget class="QCheckBox" name="inputDebounceCB_30">
+             <property name="text">
+              <string>Debounce</string>
+             </property>
+            </widget>
+           </item>
+           <item row="15" column="3">
+            <widget class="QCheckBox" name="inputDebounceCB_31">
+             <property name="text">
+              <string>Debounce</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </item>
        </layout>
       </widget>
