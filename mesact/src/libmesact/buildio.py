@@ -133,6 +133,7 @@ def build(parent):
 	'''
 	motherBoards = ['5i25', '7i80db', '7i80hd', '7i92', '7i93', '7i98']
 	daughterBoards =['7i76', '7i77', '7i78']
+	# build inputs, check for debounce
 	for i in range(32):
 
 		key = getattr(parent, 'inputPB_' + str(i)).text()
