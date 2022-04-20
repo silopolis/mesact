@@ -76,7 +76,6 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 		self.fw = firmware
 		self.axes = 0
 		self.timer=QTimer()
-
 		buildcombos.build(self)
 		buildmenus.build(self)
 		utilities.setup(self)

@@ -53,3 +53,6 @@ def download(parent, down_url, save_loc):
 def clearProgressBar(parent):
 	parent.progressBar.setValue(0)
 	parent.statusbar.clearMessage()
+	parent.machinePTE.clear()
+	parent.machinePTE.appendPlainText('Close the Configuration Tool and reinstall')
+
