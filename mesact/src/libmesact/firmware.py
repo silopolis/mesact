@@ -181,7 +181,6 @@ def o7i95(parent):
 	return options
 
 def d7i96(parent):
-	pass
 	daughters = {
 	'7i96_7i76d.bit':['7i76', False],
 	'7i96_7i76d.pin':['7i76', False],
@@ -198,6 +197,9 @@ def o7i96(parent):
 	options = {
 	}
 	return options
+
+def d7i96s(parent):
+	pass
 
 def d7i97(parent):
 	pass

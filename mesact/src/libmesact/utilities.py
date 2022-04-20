@@ -28,7 +28,7 @@ def checks(parent):
 				parent.machinePTE.appendPlainText(f'Mesaflash Version: {version}')
 		except:
 			t = ('Mesaflash version is less than 3.4.2\n'
-				'The 7i76e Configuration Tool requires 3.4.2 or later.\n'
+				'The Mesa Configuration Tool requires 3.4.2 or later.\n'
 				'Go to https://github.com/LinuxCNC/mesaflash\n'
 				'for installation/update instructions.')
 			parent.machinePTE.appendPlainText(t)
@@ -331,6 +331,41 @@ def boardChanged(parent):
 			parent.ipAddressCB.setEnabled(True)
 			pixmap = QPixmap(os.path.join(parent.image_path, '7i96-card.png'))
 			parent.boardLB.setPixmap(pixmap)
+			parent.daughterLB_0.setText('P1')
+			parent.daughterLB_1.setText('N/A')
+			parent.stepgensCB.clear()
+			parent.stepgensCB.addItem('5', False)
+			for i in range(4, -1, -1):
+				parent.stepgensCB.addItem(f'{i}', f'{i}')
+			parent.pwmgensCB.clear()
+			parent.pwmgensCB.addItem('N/A', False)
+			parent.encodersCB.clear()
+			parent.encodersCB.addItem('N/A', False)
+			for i in range(5):
+				getattr(parent, f'c0_stepgenGB_{i}').setVisible(True)
+				getattr(parent, f'c0_analogGB_{i}').setVisible(False)
+				getattr(parent, f'c0_encoderGB_{i}').setVisible(False)
+
+		# 5 axes of step & dir 11 isolated inputs 6 isolated outputs
+		elif parent.boardCB.currentData() == '7i96s':
+			parent.boardType = 'eth'
+			parent.cardType_0 = 'step'
+			parent.mainTabs.setTabEnabled(3, True)
+			parent.mainTabs.setTabEnabled(4, True)
+			for i in range(11):
+				getattr(parent, f'inputPB_{i}').setEnabled(True)
+			for i in range(6):
+				getattr(parent, f'outputPB_{i}').setEnabled(True)
+			for i in range(11,32):
+				getattr(parent, f'inputPB_{i}').setEnabled(False)
+			for i in range(6,16):
+				getattr(parent, f'outputPB_{i}').setEnabled(False)
+			parent.cardTabs.setTabText(0, '7i96S')
+			parent.jointTabs_0.setTabEnabled(5, False)
+			parent.boardTW.setTabText(0, '7i96S')
+			parent.ipAddressCB.setEnabled(True)
+			#pixmap = QPixmap(os.path.join(parent.image_path, '7i96s-card.png'))
+			#parent.boardLB.setPixmap(pixmap)
 			parent.daughterLB_0.setText('P1')
 			parent.daughterLB_1.setText('N/A')
 			parent.stepgensCB.clear()

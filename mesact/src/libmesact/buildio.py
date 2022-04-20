@@ -156,6 +156,8 @@ def build(parent):
 			if parent.board == '7i96':
 				invert = '_not' if getattr(parent, 'inputInvertCB_' + str(i)).isChecked() else ''
 				contents.append(input_dict[key] + f'hm2_7i96.0.gpio.{i:03}.in{invert}\n')
+			if parent.board == '7i96s':
+				pass
 			if parent.board == '7i97':
 				contents.append(input_dict[key] + f'hm2_7i97.0.inmux.00.input-{i:02}{invert}\n')
 		else: # handle special cases
@@ -200,6 +202,8 @@ def build(parent):
 			if parent.board == '7i96':
 				contents.append(f'setp hm2_7i96.0.gpio.0{i:02}.is_output True\n')
 				contents.append(output_dict[key] + f'hm2_7i96.0.gpio.0{i:02}.out\n')
+			if parent.board == '7i96s':
+				pass
 			if parent.board == '7i97':
 				contents.append(output_dict[key] + f'hm2_7i97.0.ssr.00.out-{i:02}\n')
 

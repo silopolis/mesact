@@ -96,6 +96,7 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 		#loadini.openini(self, 'mesa-7i93')
 		#loadini.openini(self, 'mesa-7i95')
 		#loadini.openini(self, 'mesa-7i96')
+		#loadini.openini(self, 'mesa-7i96s')
 		#loadini.openini(self, 'mesa-7i97')
 		#loadini.openini(self, 'mesa-7i98')
 
