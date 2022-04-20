@@ -11,6 +11,7 @@ VERSION = '0.4.0'
 import sys, os
 from functools import partial
 
+from PyQt5.QtCore import QTimer
 from PyQt5 import QtCore, uic, QtWidgets
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QMessageBox,
 	QDialog, qApp, QProgressBar)
@@ -74,6 +75,8 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 		self.cardType_1 = '' # step or servo
 		self.fw = firmware
 		self.axes = 0
+		self.timer=QTimer()
+
 		buildcombos.build(self)
 		buildmenus.build(self)
 		utilities.setup(self)
@@ -109,6 +112,7 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 		self.actionCheckUpdates.triggered.connect(partial(updates.checkUpdates, self))
 		self.actionDownloadDeb.triggered.connect(partial(updates.downloadDeb, self))
 		self.actionDownloadZip.triggered.connect(partial(updates.downloadtZip, self))
+		self.timer.timeout.connect(partial(updates.clearProgressBar, self))
 
 		# Machine Group
 		self.configName.textChanged[str].connect(partial(utilities.configNameChanged, self))

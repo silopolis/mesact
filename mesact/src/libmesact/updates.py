@@ -2,10 +2,13 @@ import os, requests
 import urllib.request
 
 from packaging import version
+
 from PyQt5.QtWidgets import QApplication, QFileDialog
 
+REPO = 'mesact'
+
 def checkUpdates(parent):
-	response = requests.get("https://api.github.com/repos/jethornton/mesact/releases/latest")
+	response = requests.get(f"https://api.github.com/repos/jethornton/{REPO}/releases/latest")
 	repoVersion = response.json()["name"]
 	if version.parse(repoVersion) > version.parse(parent.version):
 		parent.machinePTE.appendPlainText(f'A newer version {repoVersion} is available for download')
@@ -15,22 +18,22 @@ def checkUpdates(parent):
 def downloadDeb(parent):
 	directory = str(QFileDialog.getExistingDirectory(parent, "Select Directory"))
 	parent.statusbar.showMessage('Checking Repo')
-	response = requests.get("https://api.github.com/repos/jethornton/mesact/releases/latest")
+	response = requests.get(f"https://api.github.com/repos/jethornton/{REPO}/releases/latest")
 	repoVersion = response.json()["name"]
 	parent.statusbar.showMessage(f'Mesa Configuration Tool Version {repoVersion} Download Starting')
-	destination = os.path.join(directory, 'mesact_' + repoVersion + '_amd64.deb')
-	deburl = os.path.join('https://github.com/jethornton/mesact/raw/master/mesact_' + repoVersion + '_amd64.deb')
+	destination = os.path.join(directory, f'{REPO}_' + repoVersion + '_amd64.deb')
+	deburl = os.path.join(f'https://github.com/jethornton/{REPO}/raw/master/{REPO}_' + repoVersion + '_amd64.deb')
 	download(parent, deburl, destination)
 	parent.statusbar.showMessage(f'Mesa Configuration Tool Version {repoVersion} Download Complete')
 
 def downloadtZip(parent):
 	directory = str(QFileDialog.getExistingDirectory(parent, "Select Directory"))
 	parent.statusbar.showMessage('Checking Repo')
-	response = requests.get("https://api.github.com/repos/jethornton/mesact/releases/latest")
+	response = requests.get("https://api.github.com/repos/jethornton/{REPO}/releases/latest")
 	repoVersion = response.json()["name"]
 	parent.statusbar.showMessage(f'Mesa Configuration Tool Version {repoVersion} Download Starting')
-	destination = os.path.join(directory, 'mesact_' + repoVersion + '.zip')
-	zipurl = 'https://github.com/jethornton/mesact/archive/master.zip'
+	destination = os.path.join(directory, f'{REPO}_' + repoVersion + '.zip')
+	zipurl = 'https://github.com/jethornton/{REPO}/archive/master.zip'
 	download(parent, zipurl, destination)
 	parent.statusbar.showMessage(f'Mesa Configuration Tool Version {repoVersion} Download Complete')
 
@@ -45,5 +48,8 @@ def download(parent, down_url, save_loc):
 			QApplication.processEvents()
 	urllib.request.urlretrieve(down_url, save_loc, Handle_Progress)
 	parent.progressBar.setValue(100)
+	parent.timer.start(10000)
 
-
+def clearProgressBar(parent):
+	parent.progressBar.setValue(0)
+	parent.statusbar.clearMessage()
