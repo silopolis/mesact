@@ -135,9 +135,9 @@ def build(parent):
 	daughterBoards =['7i76', '7i77', '7i78']
 	# build inputs, check for debounce
 	for i in range(32):
-
 		key = getattr(parent, 'inputPB_' + str(i)).text()
 		invert = '-not' if getattr(parent, 'inputInvertCB_' + str(i)).isChecked() else ''
+		slow = '-slow' if getattr(parent, 'inputDebounceCB_' + str(i)).isChecked() else ''
 		if input_dict.get(key, False): # return False if key is not in dictionary
 			if parent.board in motherBoards:
 				if parent.daughterCB_0.currentData():
@@ -146,7 +146,6 @@ def build(parent):
 					card = parent.daughterCB_1.currentText()
 					if card in daughterBoards: # use input-00-not and output-00
 						contents.append(input_dict[key] + f'hm2_{parent.board}.0.{card}.0.0.input-{i:02}{invert}\n')
-
 
 		#hm2_7i92.0.7i77.0.0.input-00 hm2_7i92.0.7i77.0.0.input-00-not
 
@@ -158,9 +157,9 @@ def build(parent):
 				invert = '_not' if getattr(parent, 'inputInvertCB_' + str(i)).isChecked() else ''
 				contents.append(input_dict[key] + f'hm2_7i96.0.gpio.{i:03}.in{invert}\n')
 			if parent.board == '7i96s':
-				pass
+				contents.append(input_dict[key] + f'hm2_7i96s.0.inmux.00.input-{i:02}{invert}{slow}\n')
 			if parent.board == '7i97':
-				contents.append(input_dict[key] + f'hm2_7i97.0.inmux.00.input-{i:02}{invert}\n')
+				contents.append(input_dict[key] + f'hm2_7i97.0.inmux.00.input-{i:02}{invert}{slow}\n')
 		else: # handle special cases
 			if key == 'Home All':
 				contents.append('\n# Home All Joints\n')

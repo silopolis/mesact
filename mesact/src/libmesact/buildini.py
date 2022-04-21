@@ -247,6 +247,7 @@ def build(parent):
 	for i in range(32):
 		iniContents.append(f'INPUT_PB_{i} = {getattr(parent, "inputPB_" + str(i)).text()}\n')
 		iniContents.append(f'INPUT_INVERT_{i} = {getattr(parent, "inputInvertCB_" + str(i)).isChecked()}\n')
+		iniContents.append(f'INPUT_SLOW_{i} = {getattr(parent, "inputDebounceCB_" + str(i)).isChecked()}\n')
 
 	# build the [OUTPUTS] section from pushbuttons
 	iniContents.append('\n[OUTPUT_PB]\n')
