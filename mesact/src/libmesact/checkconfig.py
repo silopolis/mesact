@@ -252,31 +252,28 @@ def checkit(parent):
 							tabError = True
 							configErrors.append(f'\tThe Encoder Scale for Joint {i} {validNumber}')
 
-	'''
-					# add sanity check for home entries
-					if getattr(parent, f'home_{i}').text():
-						if not isNumber(getattr(parent, f'home_{i}').text()):
-							tabError = True
-							configErrors.append(f'\tThe Home Location for Joint {i} {validNumber}')
-					if getattr(parent, f'homeOffset_{i}').text():
-						if not isNumber(getattr(parent, f'homeOffset_{i}').text()):
-							tabError = True
-							configErrors.append(f'\tThe Home Offset for Joint {i} {validNumber}')
-					if getattr(parent, f'homeSearchVel_{i}').text():
-						if not isNumber(getattr(parent, f'homeSearchVel_{i}').text()):
-							tabError = True
-							configErrors.append(f'\tThe Home Search Velocity for Joint {i} {validNumber}')
-					if getattr(parent, f'homeLatchVel_{i}').text():
-						if not isNumber(getattr(parent, f'homeLatchVel_{i}').text()):
-							tabError = True
-							configErrors.append(f'\tThe Home Latch Velocity for Joint {i} {validNumber}')
-					if getattr(parent, f'homeSequence_{i}').text():
-						if not isNumber(getattr(parent, f'homeSequence_{i}').text()):
-							tabError = True
-							hs = getattr(parent, f'homeSequence_{i}').text()
-							configErrors.append(f'\tThe Home Sequence for Joint {i} {validNumber}')
-
-	'''
+				# add sanity check for home entries
+				if getattr(parent, f'{card}_home_{i}').text():
+					if not isNumber(getattr(parent, f'{card}_home_{i}').text()):
+						tabError = True
+						configErrors.append(f'\tThe Home Location for Joint {i} {validNumber}')
+				if getattr(parent, f'{card}_homeOffset_{i}').text():
+					if not isNumber(getattr(parent, f'{card}_homeOffset_{i}').text()):
+						tabError = True
+						configErrors.append(f'\tThe Home Offset for Joint {i} {validNumber}')
+				if getattr(parent, f'{card}_homeSearchVel_{i}').text():
+					if not isNumber(getattr(parent, f'{card}_homeSearchVel_{i}').text()):
+						tabError = True
+						configErrors.append(f'\tThe Home Search Velocity for Joint {i} {validNumber}')
+				if getattr(parent, f'{card}_homeLatchVel_{i}').text():
+					if not isNumber(getattr(parent, f'{card}_homeLatchVel_{i}').text()):
+						tabError = True
+						configErrors.append(f'\tThe Home Latch Velocity for Joint {i} {validNumber}')
+				if getattr(parent, f'{card}_homeSequence_{i}').text():
+					if not isNumber(getattr(parent, f'{card}_homeSequence_{i}').text()):
+						tabError = True
+						hs = getattr(parent, f'{card}_homeSequence_{i}').text()
+						configErrors.append(f'\tThe Home Sequence for Joint {i} {validNumber}')
 
 	if tabError:
 		configErrors.insert(nextHeader, f'Cards, {parent.cardTabs.tabText(0)} Tab:')
@@ -284,22 +281,21 @@ def checkit(parent):
 		tabError = False
 	# end of Axis Tab
 
-	'''
-
 	# check the I/O Tab for errors
 	for i in range(32):
+		# check for home all
 		if getattr(parent, f'inputPB_{i}').text() == 'Home All':
 			seq = []
 			seqStart = ['-1', '-0', '0', '1']
-			for i in range(5):
-				if getattr(parent, f'axisCB_{i}').currentText() != 'Select':
+			for i in range(6):
+				if getattr(parent, f'{card}_axisCB_{i}').currentText() != 'Select':
 					# need to also check for a valid home sequence
-					if not isNumber(getattr(parent, f'homeSequence_{i}').text()):
+					if not isNumber(getattr(parent, f'{card}_homeSequence_{i}').text()):
 						tabError = True
-						e = getattr(parent, f'homeSequence_{i}').text()
+						e = getattr(parent, f'{card}_homeSequence_{i}').text()
 						configErrors.append(f'\tThe Home All Input requires the Home Sequence for Joint {i} be a number not {e}')
 					else:
-						seq.append(getattr(parent, f'homeSequence_{i}').text())
+						seq.append(getattr(parent, f'{card}_homeSequence_{i}').text())
 			seqRemoveDups = list(dict.fromkeys(seq))
 			seqSorted = sorted(seqRemoveDups)
 			if seqSorted[0] not in seqStart:
@@ -311,6 +307,13 @@ def checkit(parent):
 				tabError = True
 				configErrors.append(f'\tThe Home All Input requires the Home Sequence to not skip a number {numList}')
 
+	# check for invert and debounce
+	for i in range(32):
+		invert = getattr(parent, f'inputInvertCB_{i}').isChecked()
+		debounce = getattr(parent, f'inputDebounceCB_{i}').isChecked()
+		if invert and debounce:
+			tabError = True
+			configErrors.append(f'\tInvert and Debouce for Joint {i} can not be used together')
 
 	if tabError:
 		configErrors.insert(nextHeader, 'I/O Tab:')
@@ -318,7 +321,6 @@ def checkit(parent):
 		tabError = False
 
 	# end of I/O Tab
-	'''
 
 	parent.machinePTE.clear()
 	if configErrors:
