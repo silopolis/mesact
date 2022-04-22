@@ -120,7 +120,7 @@ QGroupBox::title {
             </widget>
            </item>
            <item row="3" column="2">
-            <widget class="QLabel" name="label_34">
+            <widget class="QLabel" name="maxLinearVelLB">
              <property name="minimumSize">
               <size>
                <width>100</width>
@@ -131,22 +131,9 @@ QGroupBox::title {
               <enum>QFrame::Box</enum>
              </property>
              <property name="text">
-              <string>Selected Linear Units per Second</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1" colspan="2">
-            <widget class="QLabel" name="coordinatesLB">
-             <property name="frameShape">
-              <enum>QFrame::Box</enum>
-             </property>
-             <property name="text">
               <string/>
              </property>
             </widget>
-           </item>
-           <item row="2" column="1" colspan="2">
-            <widget class="QComboBox" name="linearUnitsCB"/>
            </item>
            <item row="1" column="1" colspan="2">
             <widget class="QLabel" name="pathLabel">
@@ -164,6 +151,19 @@ QGroupBox::title {
               <string>Any combination of letters and digits
 including the dash and underscore.
 Spaces are replaced with underscore.</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QComboBox" name="linearUnitsCB"/>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLabel" name="coordinatesLB">
+             <property name="frameShape">
+              <enum>QFrame::Box</enum>
+             </property>
+             <property name="text">
+              <string/>
              </property>
             </widget>
            </item>
@@ -1211,7 +1211,7 @@ Limit</string>
                 </widget>
                </item>
                <item row="0" column="7">
-                <widget class="QLabel" name="c0_units_0">
+                <widget class="QLabel" name="c0_unitsLB_0">
                  <property name="font">
                   <font>
                    <pointsize>11</pointsize>
@@ -3321,7 +3321,7 @@ Limit</string>
                 </widget>
                </item>
                <item row="0" column="7">
-                <widget class="QLabel" name="c0_units_1">
+                <widget class="QLabel" name="c0_unitsLB_1">
                  <property name="frameShape">
                   <enum>QFrame::Box</enum>
                  </property>
@@ -3595,7 +3595,7 @@ Limit</string>
                 </widget>
                </item>
                <item row="0" column="7">
-                <widget class="QLabel" name="c0_units_2">
+                <widget class="QLabel" name="c0_unitsLB_2">
                  <property name="frameShape">
                   <enum>QFrame::Box</enum>
                  </property>
@@ -4720,7 +4720,7 @@ Limit</string>
                 </widget>
                </item>
                <item row="0" column="7">
-                <widget class="QLabel" name="c0_units_3">
+                <widget class="QLabel" name="c0_unitsLB_3">
                  <property name="frameShape">
                   <enum>QFrame::Box</enum>
                  </property>
@@ -5845,7 +5845,7 @@ Limit</string>
                 </widget>
                </item>
                <item row="0" column="7">
-                <widget class="QLabel" name="c0_units_4">
+                <widget class="QLabel" name="c0_unitsLB_4">
                  <property name="frameShape">
                   <enum>QFrame::Box</enum>
                  </property>
@@ -6970,7 +6970,7 @@ Limit</string>
                 </widget>
                </item>
                <item row="0" column="7">
-                <widget class="QLabel" name="c0_units_5">
+                <widget class="QLabel" name="c0_unitsLB_5">
                  <property name="frameShape">
                   <enum>QFrame::Box</enum>
                  </property>
