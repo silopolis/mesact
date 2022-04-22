@@ -3,7 +3,7 @@
 <context>
     <name>mainWindow</name>
     <message>
-        <location filename="ui_mesact.py" line="10099"/>
+        <location filename="ui_mesact.py" line="10100"/>
         <source>Main Window</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13,34 +13,29 @@
         <translation>Maschine</translation>
     </message>
     <message>
-        <location filename="ui_mesact.py" line="10101"/>
+        <location filename="ui_mesact.py" line="10102"/>
         <source>File Path</source>
         <translation>Dateipfad</translation>
     </message>
     <message>
-        <location filename="ui_mesact.py" line="10102"/>
+        <location filename="ui_mesact.py" line="10103"/>
         <source>Linear Units</source>
         <translation>Lineare Einheiten</translation>
     </message>
     <message>
-        <location filename="ui_mesact.py" line="10103"/>
+        <location filename="ui_mesact.py" line="10104"/>
         <source>Max Linear Velocity</source>
         <translation>Max. Lineargeschwindigkeit</translation>
     </message>
     <message>
-        <location filename="ui_mesact.py" line="10104"/>
+        <location filename="ui_mesact.py" line="10105"/>
         <source>Configuration Name</source>
         <translation>Konfigurationsname</translation>
     </message>
     <message>
-        <location filename="ui_mesact.py" line="10105"/>
+        <location filename="ui_mesact.py" line="10106"/>
         <source>Coordinates</source>
         <translation>Koordinaten</translation>
-    </message>
-    <message>
-        <location filename="ui_mesact.py" line="10106"/>
-        <source>Selected Linear Units per Second</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="ui_mesact.py" line="10107"/>
