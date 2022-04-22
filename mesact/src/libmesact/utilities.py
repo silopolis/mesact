@@ -775,15 +775,20 @@ def updateAxisInfo(parent):
 
 def unitsChanged(parent):
 	if parent.linearUnitsCB.currentData() == 'mm':
-		parent.defaultJogSpeedDSB.setSuffix(' mms')
+		parent.defaultJogSpeedDSB.setSuffix(' mm/sec')
 		parent.jogSpeedLB.setText(f'{parent.defaultJogSpeedDSB.value() * 60} m/min')
+		for i in range(6):
+			getattr(parent, f'c0_units_{i}').setText('Vel & Acc\nmm/sec')
 	if parent.linearUnitsCB.currentData() == 'inch':
-		parent.defaultJogSpeedDSB.setSuffix(' ips')
-		parent.jogSpeedLB.setText(f'{parent.defaultJogSpeedDSB.value() * 60} IPM')
+		parent.defaultJogSpeedDSB.setSuffix(' in/sec')
+		parent.jogSpeedLB.setText(f'{parent.defaultJogSpeedDSB.value() * 60} in/min')
+		for i in range(6):
+			getattr(parent, f'c0_units_{i}').setText('Vel & Acc\nin/sec')
 	if not parent.linearUnitsCB.currentData():
 		parent.defaultJogSpeedDSB.setSuffix('')
 		parent.jogSpeedLB.setText('')
-
+		for i in range(6):
+			getattr(parent, f'c0_units_{i}').setText('Select Units\nMachine Tab')
 
 def axisChanged(parent):
 	connector = parent.sender().objectName()[:3]
