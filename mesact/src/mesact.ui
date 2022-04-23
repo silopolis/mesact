@@ -985,12 +985,12 @@ QGroupBox::title {
         </layout>
        </widget>
       </widget>
-      <widget class="QWidget" name="p1">
+      <widget class="QWidget" name="">
        <property name="enabled">
         <bool>true</bool>
        </property>
        <attribute name="title">
-        <string>Cards</string>
+        <string>Axes</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
@@ -14609,16 +14609,6 @@ max speed</string>
              </widget>
             </item>
            </layout>
-          </widget>
-          <widget class="QWidget" name="tab_11">
-           <attribute name="title">
-            <string>Card 2</string>
-           </attribute>
-          </widget>
-          <widget class="QWidget" name="tab_12">
-           <attribute name="title">
-            <string>Card 3</string>
-           </attribute>
           </widget>
          </widget>
         </item>

@@ -31,6 +31,7 @@ from libmesact import updates
 from libmesact import helptext
 from libmesact.help import Ui_Dialog as helpDialog
 from libmesact.about import Ui_about as aboutDialog
+from libmesact.ui_mesact import Ui_mainWindow
 
 class VersionError(QMainWindow):
 	def __init__(self):
@@ -168,7 +169,7 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 
 	def change_language(self, translationFile = None):
 		#print(self.sender().text())
-		if translationFile:
+		if translationFile is not None:
 			self.trans.load(os.path.join(self.lib_path, translationFile))
 			QtWidgets.QApplication.instance().installTranslator(self.trans)
 			self.retranslateUi(self)
