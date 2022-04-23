@@ -250,10 +250,10 @@ def build(parent):
 		iniContents.append(f'INPUT_SLOW_{i} = {getattr(parent, "inputDebounceCB_" + str(i)).isChecked()}\n')
 
 	# build the [OUTPUTS] section from pushbuttons
-	iniContents.append('\n[OUTPUT_PB]\n')
+	iniContents.append('\n[OUTPUTS]\n')
 	iniContents.append('# DO NOT change the outputs text\n')
 	for i in range(16):
-		iniContents.append(f'OUTPUT_PB_{i} = {getattr(parent, "outputPB_" + str(i)).text()}\n')
+		iniContents.append(f'OUTPUT_{i} = {getattr(parent, "outputPB_" + str(i)).text()}\n')
 
 	# build the [OPTIONS] section
 	iniContents.append('\n[OPTIONS]\n')

@@ -149,7 +149,7 @@ def loadini(parent, iniFile):
 		iniList.append(['INPUTS', f'INPUT_SLOW_{i}', f'inputDebounceCB_{i}'])
 
 	for i in range(16):
-		iniList.append(['OUTPUT_PB', f'OUTPUT_PB_{i}', f'outputPB_{i}'])
+		iniList.append(['OUTPUTS', f'OUTPUT_{i}', f'outputPB_{i}'])
 
 	iniList.append(['OPTIONS', 'INTRO_GRAPHIC', 'introGraphicLE'])
 	iniList.append(['OPTIONS', 'INTRO_GRAPHIC_TIME', 'splashScreenSB'])
