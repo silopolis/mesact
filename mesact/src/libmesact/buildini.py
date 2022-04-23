@@ -242,10 +242,10 @@ def build(parent):
 	iniContents.append('# setup the Configuration Tool when loading the ini.\n')
 
 	# build the [INPUTS] section from pushbuttons
-	iniContents.append('\n[INPUT_PB]\n')
+	iniContents.append('\n[INPUTS]\n')
 	iniContents.append('# DO NOT change the inputs text\n')
 	for i in range(32):
-		iniContents.append(f'INPUT_PB_{i} = {getattr(parent, "inputPB_" + str(i)).text()}\n')
+		iniContents.append(f'INPUT_{i} = {getattr(parent, "inputPB_" + str(i)).text()}\n')
 		iniContents.append(f'INPUT_INVERT_{i} = {getattr(parent, "inputInvertCB_" + str(i)).isChecked()}\n')
 		iniContents.append(f'INPUT_SLOW_{i} = {getattr(parent, "inputDebounceCB_" + str(i)).isChecked()}\n')
 

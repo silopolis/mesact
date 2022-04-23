@@ -144,9 +144,9 @@ def loadini(parent, iniFile):
 	iniList.append(['SPINDLE', 'MAX_ERROR', 'maxError_s'])
 
 	for i in range(32):
-		iniList.append(['INPUT_PB', f'INPUT_PB_{i}', f'inputPB_{i}'])
-		iniList.append(['INPUT_PB', f'INPUT_INVERT_{i}', f'inputInvertCB_{i}'])
-		iniList.append(['INPUT_PB', f'INPUT_SLOW_{i}', f'inputDebounceCB_{i}'])
+		iniList.append(['INPUTS', f'INPUT_{i}', f'inputPB_{i}'])
+		iniList.append(['INPUTS', f'INPUT_INVERT_{i}', f'inputInvertCB_{i}'])
+		iniList.append(['INPUTS', f'INPUT_SLOW_{i}', f'inputDebounceCB_{i}'])
 
 	for i in range(16):
 		iniList.append(['OUTPUT_PB', f'OUTPUT_PB_{i}', f'outputPB_{i}'])
