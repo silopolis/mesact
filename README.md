@@ -1,8 +1,6 @@
 # mesact
 Mesa Configuration Tool
 
-https://gnipsel.com/mesa/index.html
-
 The Mesa Configuration Tool is designed to create LinuxCNC configuration for the
 following boards 5i25, 6i25, 7i76e, 7i80db, 7i80hd, 7i92, 7i93, 7i95, 7i96, 7i97
 and 7i98.
@@ -20,7 +18,7 @@ ini file.
 
 The Mesa Configuration Tool requires Python 3.6 or newer to work.
 
-See the [documentation](https://gnipsel.com/mesa/index.html) for installation and
+See the [documentation](https://gnipsel.com/mesa/mesact/index.html) for installation and
 usage instructions.
 
 Note: The Mesa requires LinuxCNC 2.8 Uspace or newer to work.
