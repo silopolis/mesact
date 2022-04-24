@@ -539,16 +539,12 @@ def firmwareChanged(parent):
 				if options[parent.firmwareCB.currentText()][2]:
 					for i in range(options[parent.firmwareCB.currentText()][2], -1, -1):
 						parent.encodersCB.addItem(f'{i}', f'{i}')
-
-
 	else:
 		parent.machinePTE.clear()
 
 def daughterCardChanged(parent):
 	if parent.sender().currentData() == None:
 		return
-	print(parent.sender().currentText())
-	print(parent.sender().currentData())
 	#motherBoards = ['5i25', '7i80db', '7i80hd', '7i92', '7i93', '7i98']
 	axes = {'7i33': '4', '7i47': '6', '7i76': '5', '7i77': '6', '7i78': '4', '5ABOB': '5'}
 	inputs = {'7i76': '32', '7i77': '32', '7i78': '0', '5ABOB': '5'}
