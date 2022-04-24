@@ -12,5 +12,6 @@ The Mesa Configuration Tool creates LinuxCNC configuration files for
    machine
    info
    display
-   cards
+   axes
+   
 
