@@ -6,7 +6,7 @@ Make all cards on Card 0
 Store Connector used for building config
 
 """
-VERSION = '0.4.0'
+VERSION = '0.4.2'
 
 import sys, os
 from functools import partial
