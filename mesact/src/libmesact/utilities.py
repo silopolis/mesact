@@ -603,6 +603,18 @@ def daughterCardChanged(parent):
 					getattr(parent, f'c0_analogGB_{i}').setVisible(True)
 					getattr(parent, f'c0_encoderGB_{i}').setVisible(True)
 
+		for i in range(int(inputs[parent.sender().currentData()])):
+			getattr(parent, f'inputPB_{i}').setEnabled(True)
+			getattr(parent, f'inputInvertCB_{i}').setEnabled(True)
+		for i in range(int(inputs[parent.sender().currentData()]),32):
+			getattr(parent, f'inputPB_{i}').setEnabled(False)
+			getattr(parent, f'inputInvertCB_{i}').setEnabled(False)
+		for i in range(32):
+			getattr(parent, f'inputDebounceCB_{i}').setEnabled(False)
+		for i in range(int(outputs[parent.sender().currentData()])):
+			getattr(parent, f'outputPB_{i}').setEnabled(True)
+		for i in range(int(outputs[parent.sender().currentData()]),16):
+			getattr(parent, f'outputPB_{i}').setEnabled(False)
 
 	'''
 
@@ -1229,8 +1241,8 @@ def add_menu(data, menu_obj):
 
 def setup(parent):
 	parent.mainTabs.setTabEnabled(3, False)
-	for i in range(1,4):
-		parent.cardTabs.setTabEnabled(i, False)
+	parent.mainTabs.setTabEnabled(4, False)
+	parent.cardTabs.setTabEnabled(1, False)
 	pixmap = QPixmap(os.path.join(parent.lib_path, '7i76.png'))
 	parent.card7i76LB.setPixmap(pixmap)
 	pixmap = QPixmap(os.path.join(parent.lib_path, '7i77.png'))
