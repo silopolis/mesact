@@ -2,7 +2,7 @@
 
 """
 To Do:
-Make all cards on Card 0
+
 Store Connector used for building config
 
 """
@@ -118,6 +118,7 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 		# Machine Group
 		self.configName.textChanged[str].connect(partial(utilities.configNameChanged, self))
 		self.linearUnitsCB.currentIndexChanged.connect(partial(utilities.unitsChanged, self))
+		self.maxLinVelDSB.valueChanged.connect(partial(utilities.maxVelChanged, self))
 		self.boardCB.currentIndexChanged.connect(partial(utilities.boardChanged, self))
 		self.firmwareCB.currentIndexChanged.connect(partial(utilities.firmwareChanged, self))
 		for i in range(2):

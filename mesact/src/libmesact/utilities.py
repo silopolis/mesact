@@ -603,18 +603,20 @@ def daughterCardChanged(parent):
 					getattr(parent, f'c0_analogGB_{i}').setVisible(True)
 					getattr(parent, f'c0_encoderGB_{i}').setVisible(True)
 
-		for i in range(int(inputs[parent.sender().currentData()])):
-			getattr(parent, f'inputPB_{i}').setEnabled(True)
-			getattr(parent, f'inputInvertCB_{i}').setEnabled(True)
-		for i in range(int(inputs[parent.sender().currentData()]),32):
-			getattr(parent, f'inputPB_{i}').setEnabled(False)
-			getattr(parent, f'inputInvertCB_{i}').setEnabled(False)
-		for i in range(32):
-			getattr(parent, f'inputDebounceCB_{i}').setEnabled(False)
-		for i in range(int(outputs[parent.sender().currentData()])):
-			getattr(parent, f'outputPB_{i}').setEnabled(True)
-		for i in range(int(outputs[parent.sender().currentData()]),16):
-			getattr(parent, f'outputPB_{i}').setEnabled(False)
+		if inputs[parent.sender().currentData()]:
+			for i in range(int(inputs[parent.sender().currentData()])):
+				getattr(parent, f'inputPB_{i}').setEnabled(True)
+				getattr(parent, f'inputInvertCB_{i}').setEnabled(True)
+			for i in range(int(inputs[parent.sender().currentData()]),32):
+				getattr(parent, f'inputPB_{i}').setEnabled(False)
+				getattr(parent, f'inputInvertCB_{i}').setEnabled(False)
+			for i in range(32):
+				getattr(parent, f'inputDebounceCB_{i}').setEnabled(False)
+		if outputs[parent.sender().currentData()]:
+			for i in range(int(outputs[parent.sender().currentData()])):
+				getattr(parent, f'outputPB_{i}').setEnabled(True)
+			for i in range(int(outputs[parent.sender().currentData()]),16):
+				getattr(parent, f'outputPB_{i}').setEnabled(False)
 
 	'''
 
@@ -787,23 +789,26 @@ def updateAxisInfo(parent):
 
 def unitsChanged(parent):
 	if parent.linearUnitsCB.currentData() == 'mm':
-		parent.maxLinearVelLB.setText('mm/sec')
+		parent.maxLinVelDSB.setSuffix(' mm/sec')
 		parent.defaultJogSpeedDSB.setSuffix(' mm/sec')
 		parent.jogSpeedLB.setText(f'{parent.defaultJogSpeedDSB.value() * 60} m/min')
 		for i in range(6):
 			getattr(parent, f'c0_unitsLB_{i}').setText('Vel & Acc\nmm/sec')
+		maxVelChanged(parent)
 	if parent.linearUnitsCB.currentData() == 'inch':
-		parent.maxLinearVelLB.setText('in/sec')
+		parent.maxLinVelDSB.setSuffix(' in/sec')
 		parent.defaultJogSpeedDSB.setSuffix(' in/sec')
 		parent.jogSpeedLB.setText(f'{parent.defaultJogSpeedDSB.value() * 60} in/min')
 		for i in range(6):
 			getattr(parent, f'c0_unitsLB_{i}').setText('Vel & Acc\nin/sec')
+		maxVelChanged(parent)
 	if not parent.linearUnitsCB.currentData():
-		parent.maxLinearVelLB.setText('')
+		parent.maxLinVelDSB.setSuffix('')
 		parent.defaultJogSpeedDSB.setSuffix('')
 		parent.jogSpeedLB.setText('')
 		for i in range(6):
 			getattr(parent, f'c0_unitsLB_{i}').setText('Select Units\nMachine Tab')
+		maxVelChanged(parent)
 
 def axisChanged(parent):
 	connector = parent.sender().objectName()[:3]
@@ -831,15 +836,15 @@ def axisChanged(parent):
 		parent.coordinatesLB.setText(''.join(coordList))
 		parent.axes = len(parent.coordinatesLB.text())
 
-def maxVelChanged(parent, text):
-	if text:
-		if isNumber(text):
-			val = float(text)
-			parent.maxVelMinLB.setText(F'{val * 60} units/min')
-		else:
-			parent.maxVelMinLB.setText('ERROR')
+def maxVelChanged(parent):
+	if parent.maxLinVelDSB.value() > 0:
+		val = parent.maxLinVelDSB.value()
+		if parent.linearUnitsCB.currentData() == 'mm':
+			parent.mlvPerMinLB.setText(F'{val * 60} mm/min')
+		if parent.linearUnitsCB.currentData() == 'inch':
+			parent.mlvPerMinLB.setText(F'{val * 60} in/min')
 	else:
-		parent.maxVelMinLB.setText('  units/min')
+		parent.mlvPerMinLB.setText('')
 
 def ferrorSetDefault(parent):
 	if not parent.linearUnitsCB.currentData():
