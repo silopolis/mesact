@@ -116,6 +116,7 @@ def o7i80hd_25(parent):
 
 def d7i92(parent):
 	daughters = {
+	'7i92_5ABOB_Enc.bit':[False, '5ABOB'],
 	'7i92_5ABOBx2D.bit':['5ABOB', '5ABOB'],
 	'7i92_7i76_7i74D.bit':['7i76', False],
 	'7i92_7i76_7i78D.bit':['7i76', '7i78'],
