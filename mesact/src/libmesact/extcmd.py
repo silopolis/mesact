@@ -73,6 +73,15 @@ class extcmd:
 		if self.destination:
 			self.message(f"Executing process {self.p1.program()}")
 
+	def sudojob(self, **kwargs):
+		cmd = kwargs.get('cmd')
+		args = kwargs.get('args')
+		self.destination = kwargs.get('dest')
+		if self.destination:
+			self.message('PCI requires sudo privileges.')
+			self.message('Copy and paste the next line in a terminal')
+			self.message(f'{cmd} {args[0]} {args[1]} {args[2]} {args[3]}')
+
 	def p1_handle_stderr(self):
 		data = self.p1.readAllStandardError()
 		stderr = bytes(data).decode("utf8")

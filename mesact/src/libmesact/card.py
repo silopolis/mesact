@@ -48,7 +48,10 @@ def flashCard(parent):
 		elif parent.boardType == 'pci':
 			arguments = ["--device", parent.device, "--write", firmware]
 		parent.statusbar.showMessage(f'Flashing the {parent.device}...')
-		parent.extcmd.job(cmd="mesaflash", args=arguments, dest=parent.machinePTE)
+		if parent.boardType == 'pci':
+			parent.extcmd.sudojob(cmd="mesaflash", args=arguments, dest=parent.machinePTE)
+		if parent.boardType == 'eth':
+			parent.extcmd.job(cmd="mesaflash", args=arguments, dest=parent.machinePTE)
 
 	else:
 		parent.errorMsgOk('A firmware must be selected', 'Error!')
