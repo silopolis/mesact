@@ -164,6 +164,7 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 
 		# Spindle Tab
 		self.pidDefault_s.clicked.connect(partial(utilities.pidSetDefault, self))
+		self.spindleCB.currentIndexChanged.connect(partial(utilities.spindleChanged, self))
 
 		# Smart Serial Tab
 		self.ssCardCB.currentIndexChanged.connect(partial(utilities.ssCardChanged, self))

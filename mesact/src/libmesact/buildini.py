@@ -222,21 +222,28 @@ def build(parent):
 
 	# build the [SPINDLE] section if enabled
 
-	iniContents.append('\n[SPINDLE]\n')
-	iniContents.append(f'SCALE = {parent.spindleScale.value()}\n')
-	iniContents.append(f'PWM_FREQUENCY = {parent.pwmFrequencySB.value()}\n')
-	iniContents.append(f'MAX_RPM = {parent.spindleMaxRpm.value()}\n')
-	iniContents.append(f'MIN_RPM = {parent.spindleMinRpm.value()}\n')
-	iniContents.append(f'DEADBAND = {parent.deadband_s.value()}\n')
-	iniContents.append(f'P = {parent.p_s.value()}\n')
-	iniContents.append(f'I = {parent.i_s.value()}\n')
-	iniContents.append(f'D = {parent.d_s.value()}\n')
-	iniContents.append(f'FF0 = {parent.ff0_s.value()}\n')
-	iniContents.append(f'FF1 = {parent.ff1_s.value()}\n')
-	iniContents.append(f'FF2 = {parent.ff2_s.value()}\n')
-	iniContents.append(f'BIAS = {parent.bias_s.value()}\n')
-	iniContents.append(f'MAX_ERROR = {parent.maxError_s.value()}\n')
-	iniContents.append(f'MAX_OUTPUT = {parent.maxOutput_s.value()}\n')
+	if parent.spindleCB.currentData():
+		if parent.spindleCB.currentData() == 'analog':
+			print(parent.spindleCB.currentData())
+			iniContents.append('\n[SPINDLE]\n')
+			iniContents.append(f'SCALE = {parent.spindleScale.value()}\n')
+			iniContents.append(f'PWM_FREQUENCY = {parent.pwmFrequencySB.value()}\n')
+			iniContents.append(f'MAX_RPM = {parent.spindleMaxRpm.value()}\n')
+			iniContents.append(f'MIN_RPM = {parent.spindleMinRpm.value()}\n')
+			iniContents.append(f'DEADBAND = {parent.deadband_s.value()}\n')
+			iniContents.append(f'P = {parent.p_s.value()}\n')
+			iniContents.append(f'I = {parent.i_s.value()}\n')
+			iniContents.append(f'D = {parent.d_s.value()}\n')
+			iniContents.append(f'FF0 = {parent.ff0_s.value()}\n')
+			iniContents.append(f'FF1 = {parent.ff1_s.value()}\n')
+			iniContents.append(f'FF2 = {parent.ff2_s.value()}\n')
+			iniContents.append(f'BIAS = {parent.bias_s.value()}\n')
+			iniContents.append(f'MAX_ERROR = {parent.maxError_s.value()}\n')
+			iniContents.append(f'MAX_OUTPUT = {parent.maxOutput_s.value()}\n')
+
+
+		if parent.spindleCB.currentData()[:7] == 'stepgen':
+			print(parent.spindleCB.currentData())
 
 	iniContents.append('\n# Everything below this line is only used to\n')
 	iniContents.append('# setup the Configuration Tool when loading the ini.\n')

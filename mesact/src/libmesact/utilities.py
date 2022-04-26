@@ -122,6 +122,7 @@ def boardChanged(parent):
 			parent.machinePTE.appendPlainText('Default Firmware is 7i76e_7i76x1D.bit')
 			parent.boardType = 'eth'
 			parent.cardType_0 = 'step'
+			parent.axes = 5
 			parent.mainTabs.setTabEnabled(3, True)
 			parent.mainTabs.setTabEnabled(4, True)
 			for i in range(32):
@@ -150,6 +151,12 @@ def boardChanged(parent):
 				getattr(parent, f'c0_stepgenGB_{i}').setVisible(True)
 				getattr(parent, f'c0_analogGB_{i}').setVisible(False)
 				getattr(parent, f'c0_encoderGB_{i}').setVisible(False)
+			parent.spindleCB.clear()
+			parent.spindleCB.addItem('Select', False)
+			parent.spindleCB.addItem('Analog', 'analog')
+			parent.spindleCB.addItem('Digital', 'digital')
+			for i in range(parent.axes):
+				parent.spindleCB.addItem(f'Stepgen {i}', f'stepgen_{i}')
 
 		elif parent.boardCB.currentData() == '7i80db_16':
 			parent.boardType = 'eth'
@@ -283,6 +290,7 @@ def boardChanged(parent):
 		elif parent.boardCB.currentData() == '7i95':
 			parent.boardType = 'eth'
 			parent.cardType_0 = 'step'
+			parent.axes = 6
 			parent.mainTabs.setTabEnabled(3, True)
 			parent.mainTabs.setTabEnabled(4, True)
 			for i in range(24):
@@ -318,11 +326,18 @@ def boardChanged(parent):
 				getattr(parent, f'c0_stepgenGB_{i}').setVisible(True)
 				getattr(parent, f'c0_analogGB_{i}').setVisible(False)
 				getattr(parent, f'c0_encoderGB_{i}').setVisible(False)
+			parent.spindleCB.clear()
+			parent.spindleCB.addItem('Select', False)
+			parent.spindleCB.addItem('Analog', 'analog')
+			parent.spindleCB.addItem('Digital', 'digital')
+			for i in range(parent.axes):
+				parent.spindleCB.addItem(f'Stepgen {i}', f'stepgen_{i}')
 
 		# 5 axes of step & dir 11 isolated inputs 6 isolated outputs
 		elif parent.boardCB.currentData() == '7i96':
 			parent.boardType = 'eth'
 			parent.cardType_0 = 'step'
+			parent.axes = 5
 			parent.mainTabs.setTabEnabled(3, True)
 			parent.mainTabs.setTabEnabled(4, True)
 			for i in range(11):
@@ -362,6 +377,7 @@ def boardChanged(parent):
 		elif parent.boardCB.currentData() == '7i96s':
 			parent.boardType = 'eth'
 			parent.cardType_0 = 'step'
+			parent.axes = 5
 			parent.mainTabs.setTabEnabled(3, True)
 			parent.mainTabs.setTabEnabled(4, True)
 			for i in range(11):
@@ -401,6 +417,7 @@ def boardChanged(parent):
 		elif parent.boardCB.currentData() == '7i97':
 			parent.boardType = 'eth'
 			parent.cardType_0 = 'servo'
+			parent.axes = 6
 			parent.mainTabs.setTabEnabled(3, True)
 			parent.mainTabs.setTabEnabled(4, True)
 			for i in range(16):
@@ -963,6 +980,25 @@ def updateJointInfo(parent):
 	else:
 		getattr(parent, 'stepRateJoint_' + joint).setText('N/A')
 
+def spindleChanged(parent):
+	if parent.spindleCB.currentData() == False or parent.spindleCB.currentData() == None:
+		return
+	if parent.spindleCB.currentData() == 'analog':
+		parent.spindlepidGB.setEnabled(True)
+		for i in range(parent.axes):
+			parent.jointTabs_0.setTabEnabled(i, True)
+	if parent.spindleCB.currentData() == 'digital':
+		parent.spindlepidGB.setEnabled(False)
+		for i in range(parent.axes):
+			parent.jointTabs_0.setTabEnabled(i, True)
+	if parent.spindleCB.currentData()[:7] == 'stepgen':
+		parent.spindlepidGB.setEnabled(True)
+		for i in range(parent.axes):
+			if i == int(parent.spindleCB.currentData()[-1]):
+				parent.jointTabs_0.setTabEnabled(i, False)
+			else:
+				parent.jointTabs_0.setTabEnabled(i, True)
+
 def spindleTypeChanged(parent): 
 	if parent.spindleTypeCB.currentData():
 		parent.spindleGB.setEnabled(True)
@@ -1248,6 +1284,9 @@ def setup(parent):
 	parent.mainTabs.setTabEnabled(3, False)
 	parent.mainTabs.setTabEnabled(4, False)
 	parent.cardTabs.setTabEnabled(1, False)
+	parent.spindleGB.setEnabled(False)
+	parent.encoderGB.setEnabled(False)
+	parent.spindlepidGB.setEnabled(False)
 	pixmap = QPixmap(os.path.join(parent.lib_path, '7i76.png'))
 	parent.card7i76LB.setPixmap(pixmap)
 	pixmap = QPixmap(os.path.join(parent.lib_path, '7i77.png'))

@@ -21533,14 +21533,13 @@ TB2 PIN	SIGNAL	CAT5 PIN	CAT5 568B COLOR
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>20</y>
+          <y>10</y>
           <width>431</width>
-          <height>51</height>
+          <height>31</height>
          </rect>
         </property>
         <property name="text">
-         <string>Spindle PWM requires the 4 axis plus PWM configuration.
-For Spindle On, Spindle CW/CCW use an output.</string>
+         <string>For Spindle On, Spindle CW/CCW use an output.</string>
         </property>
        </widget>
        <widget class="QGroupBox" name="spindlepidGB">
@@ -21549,8 +21548,8 @@ For Spindle On, Spindle CW/CCW use an output.</string>
         </property>
         <property name="geometry">
          <rect>
-          <x>380</x>
-          <y>80</y>
+          <x>420</x>
+          <y>140</y>
           <width>341</width>
           <height>281</height>
          </rect>
@@ -21762,8 +21761,8 @@ For Spindle On, Spindle CW/CCW use an output.</string>
         </property>
         <property name="geometry">
          <rect>
-          <x>30</x>
-          <y>80</y>
+          <x>40</x>
+          <y>170</y>
           <width>281</width>
           <height>81</height>
          </rect>
@@ -21803,8 +21802,8 @@ For Spindle On, Spindle CW/CCW use an output.</string>
         </property>
         <property name="geometry">
          <rect>
-          <x>29</x>
-          <y>170</y>
+          <x>40</x>
+          <y>270</y>
           <width>281</width>
           <height>131</height>
          </rect>
@@ -21867,6 +21866,41 @@ For Spindle On, Spindle CW/CCW use an output.</string>
             <number>25000</number>
            </property>
           </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_86">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>60</y>
+          <width>281</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Spindle</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_131">
+         <item row="0" column="1">
+          <widget class="QComboBox" name="spindleCB"/>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_8">
+           <property name="text">
+            <string>Output</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_34">
+           <property name="text">
+            <string>Feedback</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="spindleFeedbackCB"/>
          </item>
         </layout>
        </widget>
