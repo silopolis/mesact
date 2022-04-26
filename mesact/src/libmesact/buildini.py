@@ -102,7 +102,7 @@ def build(parent):
 	iniContents.append(f'COORDINATES = {parent.coordinatesLB.text()}\n')
 	iniContents.append(f'LINEAR_UNITS = {parent.linearUnitsCB.currentData()}\n')
 	iniContents.append('ANGULAR_UNITS = degree\n')
-	iniContents.append(f'MAX_LINEAR_VELOCITY = {parent.maxLinearVel.text()}\n')
+	iniContents.append(f'MAX_LINEAR_VELOCITY = {parent.maxLinVelDSB.value()}\n')
 	if parent.noforcehomingCB.isChecked():
 		iniContents.append(f'NO_FORCE_HOMING = 0\n')
 	else:

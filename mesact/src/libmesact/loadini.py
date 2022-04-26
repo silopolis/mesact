@@ -84,7 +84,7 @@ def loadini(parent, iniFile):
 
 	iniList.append(['TRAJ', 'LINEAR_UNITS', 'linearUnitsCB'])
 	iniList.append(['TRAJ', 'COORDINATES', 'coordinatesLB'])
-	iniList.append(['TRAJ', 'MAX_LINEAR_VELOCITY', 'maxLinearVel'])
+	iniList.append(['TRAJ', 'MAX_LINEAR_VELOCITY', 'maxLinVelDSB'])
 
 	card = 'c0'
 	for i in range(6):

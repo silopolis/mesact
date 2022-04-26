@@ -13,13 +13,9 @@ def checkit(parent):
 	if parent.linearUnitsCB.currentText() == 'Select':
 		tabError = True
 		configErrors.append('\tLinear Units must be selected')
-	if not parent.maxLinearVel.text():
+	if parent.maxLinVelDSB.value() == 0:
 		tabError = True
-		configErrors.append('\tMaximum Linear Velocity must be set')
-	else: # make sure it's a valid number
-		if not isNumber(parent.maxLinearVel.text()):
-			tabError = True
-			configErrors.append(f'\tThe Maximum Linear Velocity {validNumber}')
+		configErrors.append('\tMaximum Linear Velocity must be more than 0')
 	if parent.firmwareCB.currentData() is not None:
 		if parent.boardCB.currentData() and not parent.firmwareCB.currentData():
 			tabError = True
