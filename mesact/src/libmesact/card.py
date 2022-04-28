@@ -43,6 +43,7 @@ def flashCard(parent):
 				ipAddress = parent.ipAddressCB.currentText()
 				arguments = ["--device", parent.device, "--addr", ipAddress, "--write", firmware]
 				parent.statusbar.showMessage(f'Flashing the {parent.device}...')
+				parent.extcmd.job(cmd="mesaflash", args=arguments, dest=parent.machinePTE)
 			else:
 				return
 		elif parent.boardType == 'pci':
