@@ -78,7 +78,12 @@ def loadini(parent, iniFile):
 	iniList.append(['DISPLAY', 'POSITION_OFFSET', 'positionOffsetCB'])
 	iniList.append(['DISPLAY', 'POSITION_FEEDBACK', 'positionFeedbackCB'])
 	iniList.append(['DISPLAY', 'MAX_FEED_OVERRIDE', 'maxFeedOverrideSB'])
-	iniList.append(['DISPLAY', 'DEFAULT_LINEAR_VELOCITY', 'defaultJogSpeedDSB'])
+	iniList.append(['DISPLAY', 'MIN_VELOCITY', 'minLinearVelocityDSB'])
+	iniList.append(['DISPLAY', 'DEFAULT_LINEAR_VELOCITY', 'defaultLinearVelocityDSB'])
+	iniList.append(['DISPLAY', 'MAX_LINEAR_VELOCITY', 'maxLinearVelocityDSB'])
+	iniList.append(['DISPLAY', 'MIN_ANGULAR_VELOCITY', 'minAngularVelocityDSB'])
+	iniList.append(['DISPLAY', 'DEFAULT_ANGULAR_VELOCITY', 'defaultAngularVelocityDSB'])
+	iniList.append(['DISPLAY', 'MAX_ANGULAR_VELOCITY', 'maxAngularVelocityDSB'])
 
 	iniList.append(['EMCMOT', 'SERVO_PERIOD', 'servoPeriodSB'])
 

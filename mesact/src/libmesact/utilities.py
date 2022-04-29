@@ -814,8 +814,8 @@ def unitsChanged(parent):
 		maxVelChanged(parent)
 	if parent.linearUnitsCB.currentData() == 'inch':
 		parent.maxLinVelDSB.setSuffix(' in/sec')
-		parent.defaultJogSpeedDSB.setSuffix(' in/sec')
-		parent.jogSpeedLB.setText(f'{parent.defaultJogSpeedDSB.value() * 60} in/min')
+		parent.defaultLinearVelocityDSB.setSuffix(' in/sec')
+		parent.jogSpeedLB.setText(f'{parent.defaultLinearVelocityDSB.value() * 60} in/min')
 		for i in range(6):
 			getattr(parent, f'c0_unitsLB_{i}').setText('Vel & Acc\nin/sec')
 		maxVelChanged(parent)
