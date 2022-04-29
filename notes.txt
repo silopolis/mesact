@@ -3,7 +3,7 @@ loadrt hostmot2
 loadrt hm2_eth board_ip=10.10.10.10
 
 halcmd show > 7i80HD-All.txt
-
+halcmd show all > 7i96S-pins.txt
 loadrt hm2_pci config="num_encoders=3 num_pwmgens=3 num_stepgens=3 sserial_port_0=0000"
 
 help.py
