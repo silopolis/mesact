@@ -130,7 +130,7 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 		self.flashPB.clicked.connect(partial(card.flashCard, self))
 		self.reloadPB.clicked.connect(partial(card.reloadCard, self))
 		self.verifyPB.clicked.connect(partial(card.verifyCard, self))
-
+		self.copyPB.clicked.connect(partial(utilities.copyOutput, self))
 
 		# Joint Tabs
 		for i in range(6):
