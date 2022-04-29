@@ -39,6 +39,11 @@ def flashCard(parent):
 	if parent.firmwareCB.currentData():
 		firmware = os.path.join(parent.lib_path, parent.firmwareCB.currentData())
 		if parent.boardType == 'eth':
+			# check to make sure card is the same as parent.board and that it's
+			# found at the address selected
+			# mesaflash --device ethernet --addr 10.10.10.10
+			# ETH device 7I92 at ip=10.10.10.10
+
 			if check_ip(parent):
 				ipAddress = parent.ipAddressCB.currentText()
 				arguments = ["--device", parent.device, "--addr", ipAddress, "--write", firmware]
@@ -77,7 +82,7 @@ def getCardPins(parent):
 	if check_ip(parent):
 		with open('temp.hal', 'w') as f:
 			f.write('loadrt hostmot2\n')
-			f.write(f'loadrt hm2_eth board_ip={parent.ipAddressCB.currentData()}\n')
+			f.write(f'loadrt hm2_eth board_ip={parent.ipAddressCB.currentText()}\n')
 			f.write('quit')
 		arguments = ["-f", "temp.hal"]
 		parent.extcmd.job(cmd="halrun", args=arguments, dest=parent.pinsPTE, clean='temp.hal')

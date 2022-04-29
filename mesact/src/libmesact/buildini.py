@@ -37,7 +37,7 @@ def build(parent):
 	iniContents.append('\n[HM2]\n')
 	if parent.boardType == 'eth':
 		iniContents.append('DRIVER = hm2_eth\n')
-		iniContents.append(f'IPADDRESS = {parent.ipAddressCB.currentData()}\n')
+		iniContents.append(f'IPADDRESS = {parent.ipAddressCB.currentText()}\n')
 	elif parent.boardType == 'pci':
 		iniContents.append('DRIVER = hm2_pci\n')
 	iniContents.append(f'STEPGENS = {parent.stepgensCB.currentData()}\n')
