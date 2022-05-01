@@ -31,7 +31,11 @@ def build(parent):
 	halContents.append('servo_period_nsec=[EMCMOT]SERVO_PERIOD ')
 	halContents.append('num_joints=[KINS]JOINTS\n\n')
 	halContents.append('# standard components\n')
-	halContents.append(f'loadrt pid num_chan={parent.axes + 1} \n\n')
+	if parent.spindleTypeCB.currentData():
+		pids = len(parent.coordinatesLB.text()) + 1
+	else:
+		pids = len(parent.coordinatesLB.text())
+	halContents.append(f'loadrt pid num_chan={pids} \n\n')
 	halContents.append('# hostmot2 driver\n')
 	halContents.append('loadrt hostmot2\n\n')
 
@@ -72,7 +76,7 @@ def build(parent):
 	halContents.append('addf motion-controller servo-thread\n')
 
 
-	for i in range(parent.axes + 1):
+	for i in range(pids):
 		halContents.append(f'addf pid.{i}.do-pid-calcs servo-thread\n')
 	halContents.append(f'addf hm2_{board}.0.write servo-thread\n')
 
@@ -81,7 +85,7 @@ def build(parent):
 	elif parent.daughterCB_0.currentData():
 		port = '1'
 
-	for i in range(parent.axes):
+	for i in range(len(parent.coordinatesLB.text())):
 		halContents.append(f'\n# Joint {i}\n')
 		halContents.append(f'# PID Setup\n')
 		halContents.append(f'setp pid.{i}.Pgain [JOINT_{i}]P\n')
@@ -196,40 +200,41 @@ def build(parent):
 
 				# halContents.append(f'\n')
 
-	halContents.append('\n# Spindle\n')
-	s = parent.axes
-	halContents.append(f'setp pid.{s}.Pgain [SPINDLE]P\n')
-	halContents.append(f'setp pid.{s}.Igain [SPINDLE]I\n')
-	halContents.append(f'setp pid.{s}.Dgain [SPINDLE]D\n')
-	halContents.append(f'setp pid.{s}.bias [SPINDLE]BIAS\n')
-	halContents.append(f'setp pid.{s}.FF0 [SPINDLE]FF0\n')
-	halContents.append(f'setp pid.{s}.FF1 [SPINDLE]FF1\n')
-	halContents.append(f'setp pid.{s}.FF2 [SPINDLE]FF2\n')
-	halContents.append(f'setp pid.{s}.deadband [SPINDLE]DEADBAND\n')
-	halContents.append(f'setp pid.{s}.maxoutput [SPINDLE]MAX_OUTPUT\n')
-	halContents.append(f'setp pid.{s}.error-previous-target true\n')
-	halContents.append(f'net spindle-index-enable <=> pid.{s}.index-enable\n')
-	halContents.append(f'net spindle-enable pid.{s}.enable\n')
-	halContents.append(f'net spindle-vel-cmd-rpm => pid.{s}.command\n')
-	halContents.append(f'net spindle-vel-fb-rpm => pid.{s}.feedback\n')
-	halContents.append(f'net spindle-output <= pid.{s}.output\n')
-	halContents.append('\n# Spindle Velocity Pins\n')
-	halContents.append('net spindle-vel-cmd-rps <=  spindle.0.speed-out-rps\n')
-	halContents.append('net spindle-vel-cmd-rps-abs <= spindle.0.speed-out-rps-abs\n')
-	halContents.append('net spindle-vel-cmd-rpm <= spindle.0.speed-out\n')
-	halContents.append('net spindle-vel-cmd-rpm-abs <= spindle.0.speed-out-abs\n')
-	halContents.append('\n# Spindle Command Pins\n')
-	#halContents.append('net spindle-enable <= spindle.0.on\n')
-	halContents.append('net spindle-cw <= spindle.0.forward\n')
-	halContents.append('net spindle-ccw <= spindle.0.reverse\n')
-	halContents.append('net spindle-brake <= spindle.0.brake\n')
-	halContents.append('net spindle-revs => spindle.0.revs\n')
-	halContents.append('net spindle-at-speed => spindle.0.at-speed\n')
-	halContents.append('net spindle-vel-fb-rps => spindle.0.speed-in\n')
-	halContents.append('net spindle-index-enable => spindle.0.index-enable\n')
-	halContents.append('\n# Set spindle at speed signal\n')
-	halContents.append('sets spindle-at-speed true\n')
-	halContents.append('\n')
+	if parent.spindleTypeCB.currentData() == 'analog':
+		halContents.append('\n# Spindle\n')
+		s = pids - 1
+		halContents.append(f'setp pid.{s}.Pgain [SPINDLE]P\n')
+		halContents.append(f'setp pid.{s}.Igain [SPINDLE]I\n')
+		halContents.append(f'setp pid.{s}.Dgain [SPINDLE]D\n')
+		halContents.append(f'setp pid.{s}.bias [SPINDLE]BIAS\n')
+		halContents.append(f'setp pid.{s}.FF0 [SPINDLE]FF0\n')
+		halContents.append(f'setp pid.{s}.FF1 [SPINDLE]FF1\n')
+		halContents.append(f'setp pid.{s}.FF2 [SPINDLE]FF2\n')
+		halContents.append(f'setp pid.{s}.deadband [SPINDLE]DEADBAND\n')
+		halContents.append(f'setp pid.{s}.maxoutput [SPINDLE]MAX_OUTPUT\n')
+		halContents.append(f'setp pid.{s}.error-previous-target true\n')
+		halContents.append(f'net spindle-index-enable <=> pid.{s}.index-enable\n')
+		halContents.append(f'net spindle-enable pid.{s}.enable\n')
+		halContents.append(f'net spindle-vel-cmd-rpm => pid.{s}.command\n')
+		halContents.append(f'net spindle-vel-fb-rpm => pid.{s}.feedback\n')
+		halContents.append(f'net spindle-output <= pid.{s}.output\n')
+		halContents.append('\n# Spindle Velocity Pins\n')
+		halContents.append('net spindle-vel-cmd-rps <=  spindle.0.speed-out-rps\n')
+		halContents.append('net spindle-vel-cmd-rps-abs <= spindle.0.speed-out-rps-abs\n')
+		halContents.append('net spindle-vel-cmd-rpm <= spindle.0.speed-out\n')
+		halContents.append('net spindle-vel-cmd-rpm-abs <= spindle.0.speed-out-abs\n')
+		halContents.append('\n# Spindle Command Pins\n')
+		#halContents.append('net spindle-enable <= spindle.0.on\n')
+		halContents.append('net spindle-cw <= spindle.0.forward\n')
+		halContents.append('net spindle-ccw <= spindle.0.reverse\n')
+		halContents.append('net spindle-brake <= spindle.0.brake\n')
+		halContents.append('net spindle-revs => spindle.0.revs\n')
+		halContents.append('net spindle-at-speed => spindle.0.at-speed\n')
+		halContents.append('net spindle-vel-fb-rps => spindle.0.speed-in\n')
+		halContents.append('net spindle-index-enable => spindle.0.index-enable\n')
+		halContents.append('\n# Set spindle at speed signal\n')
+		halContents.append('sets spindle-at-speed true\n')
+		halContents.append('\n')
 
 	#halContents.append('setp hm2_{board}.0.pwmgen.00.output-type [SPINDLE]OUTPUT_TYPE\n')
 	#halContents.append('setp hm2_{board}.0.pwmgen.00.scale [SPINDLE]MAX_RPM\n')
