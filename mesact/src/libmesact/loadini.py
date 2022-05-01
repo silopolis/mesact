@@ -78,18 +78,18 @@ def loadini(parent, iniFile):
 	iniList.append(['DISPLAY', 'POSITION_OFFSET', 'positionOffsetCB'])
 	iniList.append(['DISPLAY', 'POSITION_FEEDBACK', 'positionFeedbackCB'])
 	iniList.append(['DISPLAY', 'MAX_FEED_OVERRIDE', 'maxFeedOverrideSB'])
-	iniList.append(['DISPLAY', 'MIN_VELOCITY', 'minLinearVelocityDSB'])
-	iniList.append(['DISPLAY', 'DEFAULT_LINEAR_VELOCITY', 'defaultLinearVelocityDSB'])
-	iniList.append(['DISPLAY', 'MAX_LINEAR_VELOCITY', 'maxLinearVelocityDSB'])
-	iniList.append(['DISPLAY', 'MIN_ANGULAR_VELOCITY', 'minAngularVelocityDSB'])
-	iniList.append(['DISPLAY', 'DEFAULT_ANGULAR_VELOCITY', 'defaultAngularVelocityDSB'])
-	iniList.append(['DISPLAY', 'MAX_ANGULAR_VELOCITY', 'maxAngularVelocityDSB'])
+	iniList.append(['DISPLAY', 'MIN_VELOCITY', 'minLinJogVelDSB'])
+	iniList.append(['DISPLAY', 'DEFAULT_LINEAR_VELOCITY', 'defLinJogVelDSB'])
+	iniList.append(['DISPLAY', 'MAX_LINEAR_VELOCITY', 'maxLinJogVelDSB'])
+	iniList.append(['DISPLAY', 'MIN_ANGULAR_VELOCITY', 'minAngJogVelDSB'])
+	iniList.append(['DISPLAY', 'DEFAULT_ANGULAR_VELOCITY', 'defAngJogVelDSB'])
+	iniList.append(['DISPLAY', 'MAX_ANGULAR_VELOCITY', 'maxAngJogVelDSB'])
 
 	iniList.append(['EMCMOT', 'SERVO_PERIOD', 'servoPeriodSB'])
 
 	iniList.append(['TRAJ', 'LINEAR_UNITS', 'linearUnitsCB'])
 	iniList.append(['TRAJ', 'COORDINATES', 'coordinatesLB'])
-	iniList.append(['TRAJ', 'MAX_LINEAR_VELOCITY', 'maxLinVelDSB'])
+	iniList.append(['TRAJ', 'MAX_LINEAR_VELOCITY', 'trajMaxLinVelDSB'])
 
 	card = 'c0'
 	for i in range(6):

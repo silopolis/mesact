@@ -55,11 +55,19 @@ def build(parent):
 	iniContents.append(f'POSITION_OFFSET = {parent.positionOffsetCB.currentData()}\n')
 	iniContents.append(f'POSITION_FEEDBACK = {parent.positionFeedbackCB.currentData()}\n')
 	iniContents.append(f'MAX_FEED_OVERRIDE = {parent.maxFeedOverrideSB.value()}\n')
-	iniContents.append(f'DEFAULT_LINEAR_VELOCITY = {parent.defaultJogSpeedDSB.value()}\n')
+	if set('XYZUVW')&set(parent.coordinatesLB.text()):
+		iniContents.append(f'MIN_VELOCITY = {parent.minLinJogVelDSB.value()}\n')
+		iniContents.append(f'DEFAULT_LINEAR_VELOCITY = {parent.defLinJogVelDSB.value()}\n')
+		iniContents.append(f'MAX_LINEAR_VELOCITY = {parent.maxLinJogVelDSB.value()}\n')
+	if set('ABC')&set(parent.coordinatesLB.text()):
+		iniContents.append(f'MIN_ANGULAR_VELOCITY = {parent.minAngJogVelDSB.value()}\n')
+		iniContents.append(f'DEFAULT_ANGULAR_VELOCITY = {parent.defAngJogVelDSB.value()}\n')
+		iniContents.append(f'MAX_ANGULAR_VELOCITY = {parent.maxAngJogVelDSB.value()}\n')
+
 	iniContents.append('CYCLE_TIME = 0.1\n')
 	iniContents.append(f'INTRO_GRAPHIC = {parent.introGraphicLE.text()}\n')
 	iniContents.append(f'INTRO_TIME = {parent.splashScreenSB.value()}\n')
-	iniContents.append('OPEN_FILE = "{}"\n'.format(''))
+	iniContents.append('OPEN_FILE = ""\n')
 	if parent.pyvcpCB.isChecked():
 		iniContents.append(f'PYVCP = {parent.configNameUnderscored}.xml\n')
 	if parent.frontToolLatheCB.isChecked():
@@ -102,7 +110,7 @@ def build(parent):
 	iniContents.append(f'COORDINATES = {parent.coordinatesLB.text()}\n')
 	iniContents.append(f'LINEAR_UNITS = {parent.linearUnitsCB.currentData()}\n')
 	iniContents.append('ANGULAR_UNITS = degree\n')
-	iniContents.append(f'MAX_LINEAR_VELOCITY = {parent.maxLinVelDSB.value()}\n')
+	iniContents.append(f'MAX_LINEAR_VELOCITY = {parent.trajMaxLinVelDSB.value()}\n')
 	if parent.noforcehomingCB.isChecked():
 		iniContents.append(f'NO_FORCE_HOMING = 0\n')
 	else:
@@ -157,6 +165,7 @@ def build(parent):
 	card = 'c0'
 	# build the [JOINT_n] sections
 	for i in range(6):
+		#print(getattr(parent, f'{card}_axisCB_{i}').currentData())
 		if getattr(parent, f'{card}_axisCB_{i}').currentData():
 			iniContents.append(f'\n[JOINT_{i}]\n')
 			iniContents.append(f'AXIS = {getattr(parent, f"{card}_axisCB_{i}").currentData()}\n')
@@ -222,28 +231,27 @@ def build(parent):
 
 	# build the [SPINDLE] section if enabled
 
-	if parent.spindleCB.currentData():
-		if parent.spindleCB.currentData() == 'analog':
-			print(parent.spindleCB.currentData())
-			iniContents.append('\n[SPINDLE]\n')
-			iniContents.append(f'SCALE = {parent.spindleScale.value()}\n')
-			iniContents.append(f'PWM_FREQUENCY = {parent.pwmFrequencySB.value()}\n')
-			iniContents.append(f'MAX_RPM = {parent.spindleMaxRpm.value()}\n')
-			iniContents.append(f'MIN_RPM = {parent.spindleMinRpm.value()}\n')
-			iniContents.append(f'DEADBAND = {parent.deadband_s.value()}\n')
-			iniContents.append(f'P = {parent.p_s.value()}\n')
-			iniContents.append(f'I = {parent.i_s.value()}\n')
-			iniContents.append(f'D = {parent.d_s.value()}\n')
-			iniContents.append(f'FF0 = {parent.ff0_s.value()}\n')
-			iniContents.append(f'FF1 = {parent.ff1_s.value()}\n')
-			iniContents.append(f'FF2 = {parent.ff2_s.value()}\n')
-			iniContents.append(f'BIAS = {parent.bias_s.value()}\n')
-			iniContents.append(f'MAX_ERROR = {parent.maxError_s.value()}\n')
-			iniContents.append(f'MAX_OUTPUT = {parent.maxOutput_s.value()}\n')
+	if parent.spindleTypeCB.currentData() == 'analog':
+		#print(parent.spindleCB.currentData())
+		iniContents.append('\n[SPINDLE]\n')
+		iniContents.append(f'SCALE = {parent.spindleScale.value()}\n')
+		iniContents.append(f'PWM_FREQUENCY = {parent.pwmFrequencySB.value()}\n')
+		iniContents.append(f'MAX_RPM = {parent.spindleMaxRpm.value()}\n')
+		iniContents.append(f'MIN_RPM = {parent.spindleMinRpm.value()}\n')
+		iniContents.append(f'DEADBAND = {parent.deadband_s.value()}\n')
+		iniContents.append(f'P = {parent.p_s.value()}\n')
+		iniContents.append(f'I = {parent.i_s.value()}\n')
+		iniContents.append(f'D = {parent.d_s.value()}\n')
+		iniContents.append(f'FF0 = {parent.ff0_s.value()}\n')
+		iniContents.append(f'FF1 = {parent.ff1_s.value()}\n')
+		iniContents.append(f'FF2 = {parent.ff2_s.value()}\n')
+		iniContents.append(f'BIAS = {parent.bias_s.value()}\n')
+		iniContents.append(f'MAX_ERROR = {parent.maxError_s.value()}\n')
+		iniContents.append(f'MAX_OUTPUT = {parent.maxOutput_s.value()}\n')
 
 
-		if parent.spindleCB.currentData()[:7] == 'stepgen':
-			print(parent.spindleCB.currentData())
+		if parent.spindleTypeCB.currentData()[:7] == 'stepgen':
+			print(parent.spindleTypeCB.currentData())
 
 	iniContents.append('\n# Everything below this line is only used to\n')
 	iniContents.append('# setup the Configuration Tool when loading the ini.\n')

@@ -13,7 +13,7 @@ def checkit(parent):
 	if parent.linearUnitsCB.currentText() == 'Select':
 		tabError = True
 		configErrors.append('\tLinear Units must be selected')
-	if parent.maxLinVelDSB.value() == 0:
+	if parent.trajMaxLinVelDSB.value() == 0:
 		tabError = True
 		configErrors.append('\tMaximum Linear Velocity must be more than 0')
 	if parent.firmwareCB.currentData() is not None:
@@ -52,6 +52,20 @@ def checkit(parent):
 	if parent.frontToolLatheCB.isChecked() and parent.backToolLatheCB.isChecked():
 		configErrors.append('\tOnly one lathe display option can be checked')
 		tabError = True
+	if set('XYZUVW')&set(parent.coordinatesLB.text()):
+		if parent.defLinJogVelDSB.value() == 0.0:
+			tabError = True
+			configErrors.append('\tDefault Linear Jog Velocity must be greater than zero')
+		if parent.maxLinJogVelDSB.value() == 0.0:
+			tabError = True
+			configErrors.append('\tMaximum Linear Jog Velocity must be greater than zero')
+	if set('ABC')&set(parent.coordinatesLB.text()):
+		if parent.defAngJogVelDSB.value() == 0.0:
+			tabError = True
+			configErrors.append('\tDefault Angular Jog Velocity must be greater than zero')
+		if parent.maxAngJogVelDSB.value() == 0.0:
+			tabError = True
+			configErrors.append('\tMaximum Angular Jog Velocity must be greater than zero')
 	if tabError:
 		configErrors.insert(nextHeader, 'Display Tab:')
 		nextHeader = len(configErrors)

@@ -118,7 +118,7 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 		# Machine Group
 		self.configName.textChanged[str].connect(partial(utilities.configNameChanged, self))
 		self.linearUnitsCB.currentIndexChanged.connect(partial(utilities.unitsChanged, self))
-		self.maxLinVelDSB.valueChanged.connect(partial(utilities.maxVelChanged, self))
+		self.trajMaxLinVelDSB.valueChanged.connect(partial(utilities.maxVelChanged, self))
 		self.boardCB.currentIndexChanged.connect(partial(utilities.boardChanged, self))
 		self.firmwareCB.currentIndexChanged.connect(partial(utilities.firmwareChanged, self))
 		for i in range(2):
@@ -162,9 +162,17 @@ class MainWindow(QMainWindow, Ui_mainWindow):
 		pixmap = QPixmap(os.path.join(self.image_path, '7i88-card.png'))
 		self.card7i88LB.setPixmap(pixmap)
 
+		# Display Tab
+		self.minLinJogVelDSB.valueChanged.connect(partial(utilities.unitsChanged, self))
+		self.defLinJogVelDSB.valueChanged.connect(partial(utilities.unitsChanged, self))
+		self.maxLinJogVelDSB.valueChanged.connect(partial(utilities.unitsChanged, self))
+		self.minAngJogVelDSB.valueChanged.connect(partial(utilities.unitsChanged, self))
+		self.defAngJogVelDSB.valueChanged.connect(partial(utilities.unitsChanged, self))
+		self.maxAngJogVelDSB.valueChanged.connect(partial(utilities.unitsChanged, self))
+
 		# Spindle Tab
 		self.pidDefault_s.clicked.connect(partial(utilities.pidSetDefault, self))
-		self.spindleCB.currentIndexChanged.connect(partial(utilities.spindleChanged, self))
+		self.spindleTypeCB.currentIndexChanged.connect(partial(utilities.spindleChanged, self))
 
 		# Smart Serial Tab
 		self.ssCardCB.currentIndexChanged.connect(partial(utilities.ssCardChanged, self))
