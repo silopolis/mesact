@@ -151,12 +151,12 @@ def boardChanged(parent):
 				getattr(parent, f'c0_stepgenGB_{i}').setVisible(True)
 				getattr(parent, f'c0_analogGB_{i}').setVisible(False)
 				getattr(parent, f'c0_encoderGB_{i}').setVisible(False)
-			parent.spindleCB.clear()
-			parent.spindleCB.addItem('Select', False)
-			parent.spindleCB.addItem('Analog', 'analog')
-			parent.spindleCB.addItem('Digital', 'digital')
+			parent.spindleTypeCB.clear()
+			parent.spindleTypeCB.addItem('Select', False)
+			parent.spindleTypeCB.addItem('Analog', 'analog')
+			parent.spindleTypeCB.addItem('Digital', 'digital')
 			for i in range(parent.axes):
-				parent.spindleCB.addItem(f'Stepgen {i}', f'stepgen_{i}')
+				parent.spindleTypeCB.addItem(f'Stepgen {i}', f'stepgen_{i}')
 
 		elif parent.boardCB.currentData() == '7i80db_16':
 			parent.boardType = 'eth'
@@ -326,12 +326,12 @@ def boardChanged(parent):
 				getattr(parent, f'c0_stepgenGB_{i}').setVisible(True)
 				getattr(parent, f'c0_analogGB_{i}').setVisible(False)
 				getattr(parent, f'c0_encoderGB_{i}').setVisible(False)
-			parent.spindleCB.clear()
-			parent.spindleCB.addItem('Select', False)
-			parent.spindleCB.addItem('Analog', 'analog')
-			parent.spindleCB.addItem('Digital', 'digital')
+			parent.spindleTypeCB.clear()
+			parent.spindleTypeCB.addItem('Select', False)
+			parent.spindleTypeCB.addItem('Analog', 'analog')
+			parent.spindleTypeCB.addItem('Digital', 'digital')
 			for i in range(parent.axes):
-				parent.spindleCB.addItem(f'Stepgen {i}', f'stepgen_{i}')
+				parent.spindleTypeCB.addItem(f'Stepgen {i}', f'stepgen_{i}')
 
 		# 5 axes of step & dir 11 isolated inputs 6 isolated outputs
 		elif parent.boardCB.currentData() == '7i96':
@@ -563,7 +563,7 @@ def daughterCardChanged(parent):
 	if parent.sender().currentData() == None:
 		return
 	#motherBoards = ['5i25', '7i80db', '7i80hd', '7i92', '7i93', '7i98']
-	axes = {'7i33': '4', '7i47': '6', '7i76': '5', '7i77': '6', '7i78': '4', '5ABOB': '5'}
+	axes = {'7i33': 4, '7i47': 6, '7i76': 5, '7i77': 6, '7i78': 4, '5ABOB': 5}
 	inputs = {'7i76': '32', '7i77': '32', '7i78': '0', '5ABOB': '5'}
 	outputs = {'7i76': '16', '7i77': '16', '7i78': '0', '5ABOB': '1'}
 	stepper = ['7i76', '7i78']
@@ -582,6 +582,8 @@ def daughterCardChanged(parent):
 			parent.daughterCB_0.setEnabled(False)
 		parent.mainTabs.setTabEnabled(3, True)
 		parent.mainTabs.setTabEnabled(4, True)
+		parent.axes = axes[parent.sender().currentData()]
+		#print(axes[parent.sender().currentData()])
 
 		parent.cardTabs.setTabText(0, parent.sender().currentData())
 		parent.cardType_0 = cardType[parent.sender().currentData()]
@@ -806,22 +808,28 @@ def updateAxisInfo(parent):
 
 def unitsChanged(parent):
 	if parent.linearUnitsCB.currentData() == 'mm':
-		parent.maxLinVelDSB.setSuffix(' mm/sec')
-		parent.defaultJogSpeedDSB.setSuffix(' mm/sec')
-		parent.jogSpeedLB.setText(f'{parent.defaultJogSpeedDSB.value() * 60} m/min')
+		parent.trajMaxLinVelDSB.setSuffix(' mm/sec')
+		parent.minLinJogVelDSB.setSuffix(' mm/sec')
+		parent.defLinJogVelDSB.setSuffix(' mm/sec')
+		parent.maxLinJogVelDSB.setSuffix(' mm/sec')
+		parent.jogSpeedLB.setText(f'{parent.defLinJogVelDSB.value() * 60} m/min')
 		for i in range(6):
 			getattr(parent, f'c0_unitsLB_{i}').setText('Vel & Acc\nmm/sec')
 		maxVelChanged(parent)
 	if parent.linearUnitsCB.currentData() == 'inch':
-		parent.maxLinVelDSB.setSuffix(' in/sec')
-		parent.defaultLinearVelocityDSB.setSuffix(' in/sec')
-		parent.jogSpeedLB.setText(f'{parent.defaultLinearVelocityDSB.value() * 60} in/min')
+		parent.trajMaxLinVelDSB.setSuffix(' in/sec')
+		parent.minLinJogVelDSB.setSuffix(' in/sec')
+		parent.defLinJogVelDSB.setSuffix(' in/sec')
+		parent.maxLinJogVelDSB.setSuffix(' in/sec')
+		parent.jogSpeedLB.setText(f'{parent.defLinJogVelDSB.value() * 60} in/min')
 		for i in range(6):
 			getattr(parent, f'c0_unitsLB_{i}').setText('Vel & Acc\nin/sec')
 		maxVelChanged(parent)
 	if not parent.linearUnitsCB.currentData():
-		parent.maxLinVelDSB.setSuffix('')
-		parent.defaultJogSpeedDSB.setSuffix('')
+		parent.trajMaxLinVelDSB.setSuffix('')
+		parent.minLinJogVelDSB.setSuffix('')
+		parent.defLinJogVelDSB.setSuffix('')
+		parent.maxLinJogVelDSB.setSuffix('')
 		parent.jogSpeedLB.setText('')
 		for i in range(6):
 			getattr(parent, f'c0_unitsLB_{i}').setText('Select Units\nMachine Tab')
@@ -844,18 +852,20 @@ def axisChanged(parent):
 		if axisLetter != 'Select':
 			coordList.append(axisLetter)
 		parent.coordinatesLB.setText(''.join(coordList))
-		parent.axes = len(parent.coordinatesLB.text())
+		#parent.axes = len(parent.coordinatesLB.text())
 
+	'''
 	for i in range(6): # Card 1
 		axisLetter = getattr(parent, f'c1_axisCB_{i}').currentText()
 		if axisLetter != 'Select':
 			coordList.append(axisLetter)
 		parent.coordinatesLB.setText(''.join(coordList))
 		parent.axes = len(parent.coordinatesLB.text())
+	'''
 
 def maxVelChanged(parent):
-	if parent.maxLinVelDSB.value() > 0:
-		val = parent.maxLinVelDSB.value()
+	if parent.trajMaxLinVelDSB.value() > 0:
+		val = parent.trajMaxLinVelDSB.value()
 		if parent.linearUnitsCB.currentData() == 'mm':
 			parent.mlvPerMinLB.setText(F'{val * 60} mm/min')
 		if parent.linearUnitsCB.currentData() == 'inch':
@@ -981,20 +991,21 @@ def updateJointInfo(parent):
 		getattr(parent, 'stepRateJoint_' + joint).setText('N/A')
 
 def spindleChanged(parent):
-	if parent.spindleCB.currentData() == False or parent.spindleCB.currentData() == None:
+	#print(parent.axes)
+	if parent.spindleTypeCB.currentData() == False or parent.spindleTypeCB.currentData() == None:
 		return
-	if parent.spindleCB.currentData() == 'analog':
+	if parent.spindleTypeCB.currentData() == 'analog':
 		parent.spindlepidGB.setEnabled(True)
 		for i in range(parent.axes):
 			parent.jointTabs_0.setTabEnabled(i, True)
-	if parent.spindleCB.currentData() == 'digital':
+	if parent.spindleTypeCB.currentData() == 'digital':
 		parent.spindlepidGB.setEnabled(False)
 		for i in range(parent.axes):
 			parent.jointTabs_0.setTabEnabled(i, True)
-	if parent.spindleCB.currentData()[:7] == 'stepgen':
+	if parent.spindleTypeCB.currentData()[:7] == 'stepgen':
 		parent.spindlepidGB.setEnabled(True)
 		for i in range(parent.axes):
-			if i == int(parent.spindleCB.currentData()[-1]):
+			if i == int(parent.spindleTypeCB.currentData()[-1]):
 				parent.jointTabs_0.setTabEnabled(i, False)
 			else:
 				parent.jointTabs_0.setTabEnabled(i, True)
