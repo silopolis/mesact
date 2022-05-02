@@ -125,21 +125,24 @@ def build(parent):
 		for item in drives:
 			getattr(parent, f'c0_driveCB_{i}').addItem(item[0], item[1])
 			getattr(parent, f'c1_driveCB_{i}').addItem(item[0], item[1])
+		getattr(parent, f'c0_driveCB_{i}').setEditable(True)
+
 	for item in drives:
 		getattr(parent, 'spindleDriveCB').addItem(item[0], item[1])
+	getattr(parent, 'spindleDriveCB').setEditable(True)
 
 
-		spindle = [
-		['None', False],
-		['Analog', 'analog'],
-		['Digital', 'digital'],
-		['Stepgen_0', 'stepgen_0'],
-		['Stepgen_1', 'stepgen_1'],
-		['Stepgen_2', 'stepgen_2'],
-		['Stepgen_3', 'stepgen_3'],
-		['Stepgen_4', 'stepgen_4'],
-		['Stepgen_5', 'stepgen_5'],
-		]
+	spindle = [
+	['None', False],
+	['Analog', 'analog'],
+	['Digital', 'digital'],
+	['Stepgen_0', 'stepgen_0'],
+	['Stepgen_1', 'stepgen_1'],
+	['Stepgen_2', 'stepgen_2'],
+	['Stepgen_3', 'stepgen_3'],
+	['Stepgen_4', 'stepgen_4'],
+	['Stepgen_5', 'stepgen_5'],
+	]
 
 	for item in spindle:
 		parent.spindleTypeCB.addItem(item[0], item[1])

@@ -189,6 +189,13 @@ def loadini(parent, iniFile):
 				getattr(parent, item[2]).setChecked(eval(config[item[0]][item[1]]))
 			elif isinstance(getattr(parent, item[2]), QComboBox):
 				index = getattr(parent, item[2]).findData(config[item[0]][item[1]])
+				if item[1] == 'DRIVE':
+					index = getattr(parent, item[2]).findText(config[item[0]][item[1]])
+					if index >= 0:
+						getattr(parent, item[2]).setCurrentIndex(index)
+					if index == -1:
+						#print(config[item[0]][item[1]])
+						getattr(parent, item[2]).setItemText(0, config[item[0]][item[1]])
 				if item[1] in lookupText:
 					index = getattr(parent, item[2]).findText(config[item[0]][item[1]])
 				if index >= 0:

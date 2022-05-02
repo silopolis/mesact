@@ -934,6 +934,7 @@ def driveChanged(parent):
 	connector = parent.sender().objectName()[:3]
 	joint = parent.sender().objectName()[-1]
 	if timing:
+		parent.sender().setEditable(False)
 		getattr(parent, f'{connector}stepTime_{joint}').setText(timing[0])
 		getattr(parent, f'{connector}stepSpace_{joint}').setText(timing[1])
 		getattr(parent, f'{connector}dirSetup_{joint}').setText(timing[2])
@@ -943,6 +944,7 @@ def driveChanged(parent):
 		getattr(parent, f'{connector}dirSetup_{joint}').setEnabled(False)
 		getattr(parent, f'{connector}dirHold_{joint}').setEnabled(False)
 	else:
+		parent.sender().setEditable(True)
 		getattr(parent, f'{connector}stepTime_{joint}').setEnabled(True)
 		getattr(parent, f'{connector}stepSpace_{joint}').setEnabled(True)
 		getattr(parent, f'{connector}dirSetup_{joint}').setEnabled(True)
