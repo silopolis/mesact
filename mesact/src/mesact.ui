@@ -1153,7 +1153,7 @@ QGroupBox::title {
              <enum>QTabWidget::North</enum>
             </property>
             <property name="currentIndex">
-             <number>5</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="joint0tab">
              <attribute name="title">

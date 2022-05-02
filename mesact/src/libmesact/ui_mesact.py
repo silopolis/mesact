@@ -10575,7 +10575,7 @@ class Ui_mainWindow(object):
         self.tabWidget_3.setCurrentIndex(0)
         self.boardTW.setCurrentIndex(0)
         self.cardTabs.setCurrentIndex(0)
-        self.jointTabs_0.setCurrentIndex(5)
+        self.jointTabs_0.setCurrentIndex(0)
         self.jointTabs_1.setCurrentIndex(0)
         self.smartSerialSW.setCurrentIndex(0)
         self.tabWidget_2.setCurrentIndex(0)
