@@ -172,7 +172,6 @@ def loadini(parent, iniFile):
 
 #iniList.append(['', '', ''])
 	# iniList section, item, value
-	lookupText = ['DRIVE', 'FIRMWARE']
 	for item in iniList:
 		if config.has_option(item[0], item[1]):
 			if isinstance(getattr(parent, item[2]), QLabel):
@@ -182,7 +181,8 @@ def loadini(parent, iniFile):
 			elif isinstance(getattr(parent, item[2]), QSpinBox):
 				getattr(parent, item[2]).setValue(abs(int(config[item[0]][item[1]])))
 			elif isinstance(getattr(parent, item[2]), QDoubleSpinBox):
-				getattr(parent, item[2]).setValue(float(config[item[0]][item[1]]))
+				if config[item[0]][item[1]]:
+					getattr(parent, item[2]).setValue(float(config[item[0]][item[1]]))
 			elif isinstance(getattr(parent, item[2]), QCheckBox):
 				getattr(parent, item[2]).setChecked(eval(config[item[0]][item[1]]))
 			elif isinstance(getattr(parent, item[2]), QGroupBox):
@@ -194,9 +194,8 @@ def loadini(parent, iniFile):
 					if index >= 0:
 						getattr(parent, item[2]).setCurrentIndex(index)
 					if index == -1:
-						#print(config[item[0]][item[1]])
 						getattr(parent, item[2]).setItemText(0, config[item[0]][item[1]])
-				if item[1] in lookupText:
+				if item[1] == 'FIRMWARE':
 					index = getattr(parent, item[2]).findText(config[item[0]][item[1]])
 				if index >= 0:
 					getattr(parent, item[2]).setCurrentIndex(index)
