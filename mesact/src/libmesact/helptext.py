@@ -77,7 +77,7 @@ QtPyVCP can only be installed on Debian 9
 """
 
 text_3 = """
-Help Text for Cards Tab
+Help Text for Axes Tab
 
 Joints must be configured starting with 0 and not skipping any.
 
