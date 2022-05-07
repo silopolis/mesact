@@ -28,7 +28,7 @@ def checks(parent):
 				parent.machinePTE.appendPlainText(f'Mesaflash Version: {version}')
 		except:
 			t = ('Mesaflash version is less than 3.4.2\n'
-				'The Mesa Configuration Tool requires 3.4.2 or later.\n'
+				'The Mesa 7i96S requires Mesaflash 3.4.2 or later.\n'
 				'Go to https://github.com/LinuxCNC/mesaflash\n'
 				'for installation/update instructions.')
 			parent.machinePTE.appendPlainText(t)
@@ -412,7 +412,9 @@ def boardChanged(parent):
 				getattr(parent, f'c0_stepgenGB_{i}').setVisible(True)
 				getattr(parent, f'c0_analogGB_{i}').setVisible(False)
 				getattr(parent, f'c0_encoderGB_{i}').setVisible(False)
-
+			parent.machinePTE.clear()
+			parent.machinePTE.appendPlainText('The 7i96S requires LinuxCNC Uspace 2.9 Febuary 24, 2022 or newer!')
+			parent.machinePTE.appendPlainText('The 7i96S requires Mesaflash version 3.4.2 or newer!')
 		# 6 axes of analog servo 16 isolated inputs 6 isolated outputs
 		elif parent.boardCB.currentData() == '7i97':
 			parent.boardType = 'eth'
@@ -529,9 +531,9 @@ def firmwareChanged(parent):
 					parent.daughterCB_1.addItem('Select', False)
 					parent.daughterCB_1.addItem(cards[1], cards[1])
 			path = os.path.splitext(parent.firmwareCB.currentData())[0]
-			bitfile = os.path.join(path + '.pin')
-			if os.path.exists(bitfile):
-				with open(bitfile, 'r') as file:
+			pinfile = os.path.join(path + '.pin')
+			if os.path.exists(pinfile):
+				with open(pinfile, 'r') as file:
 					data = file.read()
 				parent.machinePTE.clear()
 				parent.machinePTE.setPlainText(data)
