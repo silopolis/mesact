@@ -16,8 +16,9 @@ def checkit(parent):
 	if parent.trajMaxLinVelDSB.value() == 0:
 		tabError = True
 		configErrors.append('\tMaximum Linear Velocity must be more than 0')
-	if parent.firmwareCB.currentData() is not None:
-		if parent.boardCB.currentData() and not parent.firmwareCB.currentData():
+	required = ['5i25', '7i92', '7i93', '7i80db_16',  '7i80db_25', '7i80hd_16', '7i80hd_25','7i98']
+	if parent.boardCB.currentData() in required:
+		if not parent.firmwareCB.currentData():
 			tabError = True
 			configErrors.append(f'\tFirmware must be selected for {parent.board}')
 	if not parent.boardCB.currentData():
