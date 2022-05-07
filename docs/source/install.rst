@@ -32,9 +32,20 @@ If you don't have Gdebi installed you can install it from a terminal
 
 	sudo apt install gdebi
 
+If the graphical version of gdebi has problems you can run it from a
+terminal in the directory where you downloaded the deb with:
+::
+
+	sudo gdebi mesact_0.4.3_amd64.deb
+
 If you don't have LinuxCNC installed then the mesact Configuration tool
 will show up in the Applications > Other menu otherwise it will be in
 the CNC menu.
+
+If you have problems try running from a terminal with:
+::
+
+	mesact
 
 To flash firmware to the mesact you need to install 
 `mesaflash <https://github.com/LinuxCNC/mesaflash>`_ from the LinuxCNC
