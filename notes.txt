@@ -6,6 +6,18 @@ halcmd show > 7i80HD-All.txt
 halcmd show all > 7i96S-pins.txt
 loadrt hm2_pci config="num_encoders=3 num_pwmgens=3 num_stepgens=3 sserial_port_0=0000"
 
+For example:
+
+mesaflash --device 7i96 -- addr 10.10.10.10 --readhmid > pinout.txt
+
+sudo mesaflash --device 5i25 --readhmid > pinout.txt
+
+Or if you want the daughtercard pinout:
+
+mesaflash --device 7i92 --addr 10.10.10.10 --readhmid --dbname1 5abob > pinout.txt
+
+sudo mesaflash --device 5i24 --readhmid --dbname1 7i47s --dbname2 7i37 
+
 help.py
 python3 -m PyQt5.uic.pyuic -x help.ui -o help.py
 about.py
