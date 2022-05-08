@@ -38,6 +38,13 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
 
+# The document name of the “root” document, that is, the document that
+# contains the root toctree directive. Default is 'index'.
+# Changed in version 2.0: The default is changed to 'index' from
+#   'contents'.
+# Changed in version 4.0: Renamed root_doc from master_doc.
+master_doc = 'index'
+#root_doc = 'index'
 
 # -- Options for HTML output -------------------------------------------------
 
